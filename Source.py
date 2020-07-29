@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[17]:
+# In[44]:
 
 
 from time import time
@@ -13,6 +13,7 @@ import pandas as pd
 import json
 import numpy as np
 from pathlib import Path
+import os
 
 class Source:
     #def adjustment(df)
@@ -117,25 +118,25 @@ class Source:
         
         #(3). Creating  a table with average threat allowed by teams and GW threat allowed
 
-        TableDefence = Teams.copy()
-        TableDefence.columns = ['id', 'Teams', 'Threat allowed av', 'Matches']
+        TeamDefence = Teams.copy()
+        TeamDefence.columns = ['id', 'Teams', 'Threat allowed av', 'Matches']
 
         for j in range(lastGW,0,-1):
-            TableDefence['Threat allowed GW'+str(j)] = [[] for _ in range(team_number)]
+            TeamDefence['Threat allowed GW'+str(j)] = [[] for _ in range(team_number)]
             for i in range(team_number):
                 for k in range(len(Team_fixtures.at[i, 'GW'+str(j)])):
-                    TableDefence.at[i,'Threat allowed GW'+str(j)].append(Table[(Table['fixture']==                         Team_fixtures.at[i, 'GW'+str(j)][k])&(Table['opponent_team']==i+1)]['threat'].sum())
+                    TeamDefence.at[i,'Threat allowed GW'+str(j)].append(Table[(Table['fixture']==                         Team_fixtures.at[i, 'GW'+str(j)][k])&(Table['opponent_team']==i+1)]['threat'].sum())
 
 
-        TableDefence['Threat allowed av'] = [Table[Table['opponent_team']==i]['threat'].sum()
+        TeamDefence['Threat allowed av'] = [Table[Table['opponent_team']==i]['threat'].sum()
                         for i in range(1,team_number+1)]/noZ(Teams['Matches'])
 
-        threatAllowedAv = TableDefence['Threat allowed av'].mean()
+        threatAllowedAv = TeamDefence['Threat allowed av'].mean()
         
         print('\t\t 3.3. TeamDefence is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
-        class_data = [Teams, Players, Team_fixtures, Player_fixtures, Team_opponent_team,        Player_opponent_team, TeamThreat, TableDefence, threatAllowedAv, lastGW]
+        class_data = [Teams, Players, Team_fixtures, Player_fixtures, Team_opponent_team,        Player_opponent_team, TeamThreat, TeamDefence, threatAllowedAv, lastGW]
         #(4). Creating  a table with average adjusted threat and GW threats adj for teams
 
         TeamThreatAd = adjustment(TeamThreat, class_data)       
@@ -150,7 +151,7 @@ class Source:
         
         #(6). Creating  a table with average threat allowed adjusted by teams and GW threat allowed adjusted
 
-        TableDefenceAd = adjustment(TableDefence, class_data)
+        TeamDefenceAd = adjustment(TeamDefence, class_data)
         print('\t\t 3.6. TeamDefenceAd is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
 
@@ -165,8 +166,8 @@ class Source:
         TableTeams['Threat'] = TeamThreat['Threat av']
         TableTeams['Creativity adjusted'] = TeamCreativityAd['Creativity av adj']
         TableTeams['Creativity'] = TeamCreativity['Creativity av']
-        TableTeams['Threat allowed adjusted'] = TableDefenceAd['Threat allowed av adj']
-        TableTeams['Threat allowed'] = TableDefence['Threat allowed av']
+        TableTeams['Threat allowed adjusted'] = TeamDefenceAd['Threat allowed av adj']
+        TableTeams['Threat allowed'] = TeamDefence['Threat allowed av']
         
         print('\t\t 3.7. TableTeams is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
@@ -248,10 +249,10 @@ class Source:
         #Save before modifying while riting into files
         self.TT = TeamThreat.copy()
         self.TC = TeamCreativity.copy()
-        self.TD = TableDefence.copy()
+        self.TD = TeamDefence.copy()
         self.TTA = TeamThreatAd.copy()
         self.TCA = TeamCreativityAd.copy()
-        self.TDA = TableDefenceAd.copy()
+        self.TDA = TeamDefenceAd.copy()
         self.TaTe = TableTeams.copy() 
         self.PT = PlayerThreat.copy()
         self.PC = PlayerCreativity.copy()
@@ -261,10 +262,10 @@ class Source:
         self.TeamThreat, self.TeamThreat_MA =            write_table(TeamThreat, 'TeamThreat', 'Threat av', self.source, self.ma_num)
         self.TeamCreativity, self.Creativity_MA = (write_table
             (TeamCreativity, 'TeamCreativity', 'Creativity av', self.source, self.ma_num))
-        self.TableDefence, self.TableDefence_MA =            write_table(TableDefence, 'TableDefence', 'Threat allowed av', self.source, self.ma_num)
+        self.TeamDefence, self.TeamDefence_MA =            write_table(TeamDefence, 'TeamDefence', 'Threat allowed av', self.source, self.ma_num)
         self.TeamThreatAd, self.TeamThreatAd_MA =            write_table(TeamThreatAd, 'TeamThreatAd', 'Threat av adj', self.source, self.ma_num)
         self.TeamCreativityAd, self.CreativityAd_MA =            write_table(TeamCreativityAd, 'TeamCreativityAd', 'Creativity av adj', self.source, self.ma_num)
-        self.TableDefenceAd, self.TableDefenceAd_MA =            write_table(TableDefenceAd, 'TableDefenceAd', 'Threat allowed av adj', self.source, self.ma_num)
+        self.TeamDefenceAd, self.TeamDefenceAd_MA =            write_table(TeamDefenceAd, 'TeamDefenceAd', 'Threat allowed av adj', self.source, self.ma_num)
         self.TableTeams, self.TableTeams_MA =            write_table(TableTeams, 'TableTeams', 'Threat adjusted', self.source, self.ma_num)
         
         self.PlayerThreat, self.PlayerThreat_MA =            write_table(PlayerThreat, 'PlayerThreat', 'Threat per fixture', self.source, self.ma_num)
@@ -302,8 +303,10 @@ class Source:
         
         constti.DRDC(self.TeamThreat)
         constti.DRDC(self.TeamCreativity)
+        constti.DRDC(self.TeamDefence)
         constti.DRDC(self.TeamThreatAd)
         constti.DRDC(self.TeamCreativityAd)
+        constti.DRDC(self.TeamDefenceAd)
         constti.DRDC(self.TableTeams)
         constti.DRDC(self.PlayerThreat)
         constti.DRDC(self.PlayerCreativity)
@@ -323,7 +326,13 @@ def write_table(df, name, key_col, source, ma_num):
     del df['id']
     if 'Team number' in df.columns:
         del df['Team number']
-    df.sort_values(key_col, ascending = False, inplace = True)
+    
+    # Sort decreasing for attack an increasing for defence
+    if 'Defence' in name:
+        df.sort_values(key_col, ascending = True, inplace = True)
+    else:
+        df.sort_values(key_col, ascending = False, inplace = True)
+        
     df.index = np.arange(1, len(df) + 1)
     df = no_lists(df)
     if ma_num == 0:
@@ -501,7 +510,7 @@ def MA(Out_T, d):
 # Players = Understat.Players
 # Teams = Understat.Teams
 # threatAllowedAv = Understat.threatAllowedAv
-# TableDefence = Understat.TD
+# TeamDefence = Understat.TD
 # Team_fixtures = Understat.Team_fixtures
 # Team_opponent_team = Understat.Team_opponent_team
 # Player_opponent_team = Understat.Player_opponent_team
@@ -515,7 +524,7 @@ def MA(Out_T, d):
 
 
 def adjustment(df, class_data):
-    [Teams, Players, Team_fixtures, Player_fixtures, Team_opponent_team, Player_opponent_team,     TeamThreat, TableDefence, threatAllowedAv, lastGW]    = class_data
+    [Teams, Players, Team_fixtures, Player_fixtures, Team_opponent_team, Player_opponent_team,     TeamThreat, TeamDefence, threatAllowedAv, lastGW]    = class_data
     if len(df)==len(Teams):
         dfAd = Teams.copy()
         for i in df.columns:
@@ -548,7 +557,7 @@ def adjustment(df, class_data):
         Weighting_table = TeamThreat
         col = 'Threat av'
     else:
-        Weighting_table = TableDefence
+        Weighting_table = TeamDefence
         col = 'Threat allowed av'
         
     for j in range(lastGW,0,-1):
@@ -567,16 +576,52 @@ def adjustment(df, class_data):
     
     
     return dfAd
+
+#Creating Template Tables for getting all colors for the Main Table, Team Tables and Player Tables
+def templateTable(df):
+    template = pd.DataFrame(0, index=range(1,21), columns = df.columns)
+    print(len(template))
+    #template.columns = df.columns
+    for i in range(len(template.columns)):
+        if (template.columns[i] == 'Teams')|(template.columns[i] == 'Name'):
+            template[template.columns[i]] = ['Team green', 'Team light green', 'Team pink', 'Team red', 'Team white']*4
+        elif 'color' in template.columns[i].split():
+            template[template.columns[i]] = ['green', 'light green', 'pink', 'red', 'white']*4
+        else: template[template.columns[i]] = [1,1,1,1,1]*4
+    return template
+#templateTable(MA(Understat.TeamThreatAd, 7)).to_csv(Path('out/TeamTemplate.csv'))
+#templateTable(MA(Understat.PlayerThreatAd, 7)).to_csv(Path('out/PlayerTemplate.csv'))
+#templateTable(MA(Understat.TableTeams, 7)).to_csv(Path('out/TTTemplate.csv'))
+
+#Changing all Headers for the same to be able to copy stylr in datawrapper
+def unifyHeader(df, colTeams, colPlayers):
+    if df.columns[0] == 'Teams':
+        df.columns = colTeams
+    elif df.columns[0] == 'Name':
+        df.columns = colPlayers
+    return df
+
+def changeAllHeaders(path):
+    
+    colTeams = pd.read_csv(Path('out/FPL/TeamThreatAd.csv')).columns[1:]
+    colPlayers = pd.read_csv(Path('out/FPL/PlayerThreatAd.csv')).columns[1:]
+    
+    for filename in os.listdir(path):
+        print(filename)
+        df = pd.read_csv(Path(f'{path}/{filename}'))
+        del df['Unnamed: 0']
+        unifyHeader(df, colTeams, colPlayers).to_csv(Path(f'{path}/{filename}'))
+
+#path = Path('out/Understat')
+#changeAllHeaders(path)
+#path = Path('out/FPL')
+#changeAllHeaders(path)
         
 if __name__ == '__main__':
-    Understat = Source('Understat', ma_num=5)
+    Understat = Source('Understat', ma_num=7)
     Understat.test()
+    FPL = Source('FPL', ma_num=7)
+    FPL.test()
     display(MA(Understat.TeamThreatAd, 8))
     pass
-
-
-# In[ ]:
-
-
-
 
