@@ -16,7 +16,7 @@ def long_request(url):
             #break
         except Exception as e:
             print(e)
-    return CAN_NOT_CONNECT
+    return 'CAN_NOT_CONNECT'
 
 # 2. Checks if list has the same elements
 def Doubles(a):
