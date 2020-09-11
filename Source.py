@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[44]:
+# In[3]:
 
 
 from time import time
@@ -26,7 +26,17 @@ class Source:
         
 #1. Reading nessesry data from files.
         
-        Table = pd.read_csv(Path('in/Table_'+source+'.csv')) # Main data from source containing rows for each player
+        try:
+            Table = pd.read_csv(Path('in/Table_'+source+'.csv')) # Main data from source containing rows for each player
+        except:
+            print('!!!!!!!!')
+            Table = pd.DataFrame()
+            self.Table = Table
+            return
+        if len(Table)<1:
+            Table = pd.DataFrame()
+            self.Table = Table
+            return
         #in a game with columns 'element', 'round', 'fixture', 'threat', 'creativity', 'team', opponent_team'
         Fixtures = pd.read_csv(Path('in/Fixtures.csv')) # Table of rows for each fixture
         Teams = pd.read_csv(Path('in/Teams.csv')) # Table of rows as teams with columns 'id', 'Teams',
@@ -299,6 +309,9 @@ class Source:
         return Mistakes, No_Names
         
     def test(self):
+        if self.Table.empty:
+            print(f'Nothing to test. {self.source} table is empty.')
+            return
         start = time()
         
         constti.DRDC(self.TeamThreat)
@@ -622,6 +635,12 @@ if __name__ == '__main__':
     Understat.test()
     FPL = Source('FPL', ma_num=7)
     FPL.test()
-    display(MA(Understat.TeamThreatAd, 8))
+    #display(MA(Understat.TeamThreatAd, 8))
     pass
+
+
+# In[ ]:
+
+
+
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
+# In[3]:
 
 
 #Downloadting Data from understat.com(Understat)
@@ -149,7 +149,10 @@ def add_match_to_dict(game_number, Dictionary):
     return match_players, Dictionary
 
 #Read data from fantasy.premierleague.com(FPL) to compare with
-Table_FPL = pd.read_csv('in/Table_FPL.csv') #Main table of FPL
+try:
+    Table_FPL = pd.read_csv('in/Table_FPL.csv') #Main table of FPL
+except:
+    Table_FPL = pd.DataFrame()
 Fixtures = pd.read_csv('in/Fixtures.csv') #All fixtures with postponed
 Teams = pd.read_csv('in/Teams.csv') #Team Tables Template
 Players = pd.read_csv('in/Players.csv') #Player Table Template 
@@ -183,10 +186,11 @@ teams_dict = dict(zip(teams_dtable['understat'], teams_dtable['fpl']))
 #Downloads all match data
 Table_Understat = pd.DataFrame()
 Name_Dictionary = pd.DataFrame(columns=["name_un", "id_un", 'name_fpl', 'id_fpl', 'web_name_fpl'])
-for i in range(len(Schedule)):
-    if Schedule.at[i,'isResult']:
-        MP, Name_Dictionary = add_match_to_dict(Schedule.at[i,'id'], Name_Dictionary)
-        Table_Understat = Table_Understat.append(MP, ignore_index=True)
+if not Table_FPL.empty:
+    for i in range(len(Schedule)):
+        if Schedule.at[i,'isResult']:
+            MP, Name_Dictionary = add_match_to_dict(Schedule.at[i,'id'], Name_Dictionary)
+            Table_Understat = Table_Understat.append(MP, ignore_index=True)
 
 print(f'\t All Data Downloaded.\t It takes {time() - start} sec')
 start = time()

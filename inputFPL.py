@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[19]:
 
 
 #Downloadting Data from fantasy.premierleague.com(FPL)
@@ -66,9 +66,10 @@ for i in bigTable['id']:
     d = json.loads(p.text)
     dd = pd.DataFrame(d['history'])
     Table = Table.append(dd, ignore_index=True)
-Table['threat'] = pd.to_numeric(Table['threat'])
-Table['creativity'] = pd.to_numeric(Table['creativity'])
-Table['team'] = [teamplayers[Table.at[i,'element']] for i in Table.index]
+if 'threat' in Table.columns:
+    Table['threat'] = pd.to_numeric(Table['threat'])
+    Table['creativity'] = pd.to_numeric(Table['creativity'])
+    Table['team'] = [teamplayers[Table.at[i,'element']] for i in Table.index]
 
 #Making Teams Template Table
 Teams = pd.DataFrame()
@@ -85,7 +86,8 @@ Players['web_name'] = constti.strip_accents_pdlist(pd.DataFrame(bigTable['web_na
 Players['Team number'] = [bigTable[bigTable['id'] == i]['team'].sum() for i in Players['id']]
 Players['Team'] = [dict(zip(pd.DataFrame(d1['teams'])['id'],pd.DataFrame(d1['teams'])['name']))                   [Players.at[i,'Team number']] for i in Players.index]
 Players['Team games'] = [Teams.at[Players.at[i,'Team number']-1,'Matches'] for i in Players.index]
-Players['Played'] = [len(Table[(Table['element']==i)&(Table['minutes']>0)])                         for i in Players['id']]
+if  not Table.empty:
+    Players['Played'] = [len(Table[(Table['element']==i)&(Table['minutes']>0)])                         for i in Players['id']]
 
 
 print('\t Downloads FPL is over.\t It takes ' + str(time() - start) + ' sec')
@@ -108,13 +110,14 @@ for j in range(lastGW,0,-1):
 Player_all = pd.DataFrame()
 Player_fixtures = pd.DataFrame()
 Player_opponent_team = pd.DataFrame()
-for j in range(lastGW,0,-1):
+if  not Table.empty:
+    for j in range(lastGW,0,-1):
 
-    Player_all['GW'+str(j)] = [Table[(Table['element']==i)&    (Table['round']==j)][['fixture', 'opponent_team']].values for i in Players['id']]
+        Player_all['GW'+str(j)] = [Table[(Table['element']==i)&        (Table['round']==j)][['fixture', 'opponent_team']].values for i in Players['id']]
 
-    Player_fixtures['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[0]) for i in Player_all.index]
+        Player_fixtures['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[0]) for i in Player_all.index]
 
-    Player_opponent_team['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[1])    for i in Player_all.index]
+        Player_opponent_team['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[1])        for i in Player_all.index]
 
 print('\t Fixtures are over.\t It takes ' + str(time() - start) + ' sec')
 
@@ -141,10 +144,4 @@ print('inputFPL is over.\t It takes ' + str(time() - start_module) + ' sec\n')
 
 if __name__ == '__main__':
     display(Table)
-
-
-# In[ ]:
-
-
-
 
