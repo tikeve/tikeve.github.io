@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[48]:
 
 
 #Downloadting Data from understat.com(Understat)
@@ -84,6 +84,9 @@ def add_match_to_dict(game_number, Dictionary):
     home_players = pd.DataFrame(tempList[2]['h']).transpose()
     match_players = away_players.append(home_players)
     
+    if tempList[1]['team_h'] == 'Tottenham': tempList[1]['team_h'] = 'Spurs' 
+    if tempList[1]['team_a'] == 'Tottenham': tempList[1]['team_h'] = 'Spurs'
+    
     match_players['team_h_name'] = [teams_dict[tempList[1]['team_h']] for i in range(len(match_players))]
     match_players['team_a_name'] = [teams_dict[tempList[1]['team_a']] for i in range(len(match_players))]
     match_players['team_name'] = [match_players.at[i,'team_a_name'] if match_players.at[i,'h_a'] == 'a'                                            else match_players.at[i,'team_h_name'] for i in match_players.index]
@@ -98,8 +101,10 @@ def add_match_to_dict(game_number, Dictionary):
     
     
     FPL_names = constti.strip_accents_pdlist(pd.DataFrame([dict(zip(Players['id'], Players['Name']))                  [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element']]                    for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index], columns = ['player']))
+    #print(FPL_names)
+    #print(match_players['fixture'].mean())
     FPL_names['web_name'] = constti.strip_accents_pdlist(pd.DataFrame([dict(zip(Players['id'], Players['web_name']))                  [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element']]                    for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index]))
-
+    #print('!')
     FPL_names['id'] = [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element']                    for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index]
     
     
@@ -140,13 +145,23 @@ def add_match_to_dict(game_number, Dictionary):
                             Dictionary.at[u,'web_name_fpl'] = web_name_fpl  
             else:
 
-                Dictionary = Dictionary.append(pd.DataFrame(                    [[name_un, match_players.at[i, 'player_id'], name_fpl, id_fpl, web_name_fpl]],                    columns=["name_un", "id_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
+                Dictionary = Dictionary.append(pd.DataFrame(                    [[name_un, name_fpl, id_fpl, web_name_fpl]],                    columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
         else:
             match_players.at[i, 'player'] = dict(zip(Dictionary['name_un'], Dictionary['name_fpl']))                [match_players.at[i, 'player']]
             match_players.at[i,'in_FPL'] = 1
 
     #print(FPL_names)                    
     return match_players, Dictionary
+
+# 4. Adding exceptions to Name_Dictionary
+def Exc_dict(Name_Dictionary, name_understat, name_fpl):
+    Name_Dictionary = Name_Dictionary.append(pd.DataFrame([[name_understat,name_fpl,'','']], 
+    columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
+    Name_Dictionary.at[len(Name_Dictionary)-1, 'id_fpl'] = Players[Players['Name']==name_fpl]['id'].mean()
+    Name_Dictionary.at[len(Name_Dictionary)-1, 'web_name_fpl'] = Players[Players['Name']==name_fpl]['web_name'].iat[0]
+    #print(Name_Dictionary)
+    #print(name_understat)
+    return Name_Dictionary
 
 #Read data from fantasy.premierleague.com(FPL) to compare with
 try:
@@ -178,17 +193,25 @@ Schedule = pd.DataFrame(a[0])
 
 #Словарь для перевода understat команд к FPL именам Name_Dictionary
 teams_dtable = pd.DataFrame()
-teams_dtable['understat'] = TT.sort_values(by=['title'])['title']
+teams_dtable['understat'] = ['Spurs' if i == 'Tottenham' else i for i in TT.sort_values(by=['title'])['title']]
 teams_dtable.index = np.arange(0, len(teams_dtable))
-teams_dtable['fpl'] = Teams.sort_values(by=['Teams'])['Teams']
+teams_dtable['fpl'] = list(Teams.sort_values(by=['Teams'])['Teams'])
 teams_dict = dict(zip(teams_dtable['understat'], teams_dtable['fpl']))
 
 #Downloads all match data
 Table_Understat = pd.DataFrame()
-Name_Dictionary = pd.DataFrame(columns=["name_un", "id_un", 'name_fpl', 'id_fpl', 'web_name_fpl'])
+Name_Dictionary = pd.DataFrame(columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl'])
+
+#Adding exceptions to Dictionary
+#Name_Dictionary.append(['Franck Zambo','','Andre-Frank Zambo Anguissa','',''])
+Name_Dictionary = Exc_dict(Name_Dictionary, 'Franck Zambo','Andre-Frank Zambo Anguissa')
+Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby Decordova-Reid')
+#display(Name_Dictionary)
+
 if not Table_FPL.empty:
     for i in range(len(Schedule)):
         if Schedule.at[i,'isResult']:
+            #print(Schedule.at[i,'id'])
             MP, Name_Dictionary = add_match_to_dict(Schedule.at[i,'id'], Name_Dictionary)
             Table_Understat = Table_Understat.append(MP, ignore_index=True)
 
