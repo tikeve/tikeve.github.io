@@ -1,21 +1,21 @@
-,Teams,Threat av,Matches,Threat GW1
-1,Liverpool,385.0,1,385.0
-2,Arsenal,232.0,1,232.0
-3,Leicester,211.0,1,211.0
-4,West Ham,209.0,1,209.0
-5,Spurs,187.0,1,187.0
-6,Newcastle,180.0,1,180.0
-7,Everton,160.0,1,160.0
-8,Chelsea,150.0,1,150.0
-9,Southampton,137.0,1,137.0
-10,Sheffield Utd,128.0,1,128.0
-11,Brighton,123.0,1,123.0
-12,Wolves,111.0,1,111.0
-13,Leeds,98.0,1,98.0
-14,Crystal Palace,77.0,1,77.0
-15,West Brom,70.0,1,70.0
-16,Fulham,39.0,1,39.0
-17,Man Utd,0.0,0,
-18,Burnley,0.0,0,
-19,Aston Villa,0.0,0,
-20,Man City,0.0,0,
+,Teams,Threat av,Matches,Threat GW2,Threat GW1
+1,Liverpool,306.0,2,227.0,385.0
+2,Leicester,240.5,2,270.0,211.0
+3,Everton,236.5,2,313.0,160.0
+4,Aston Villa,213.0,1,213.0,
+5,Man Utd,206.0,1,206.0,
+6,Man City,186.0,1,186.0,
+7,Arsenal,184.5,2,137.0,232.0
+8,West Ham,182.5,2,156.0,209.0
+9,Burnley,180.0,1,180.0,
+10,Spurs,175.5,2,164.0,187.0
+11,Southampton,156.0,2,175.0,137.0
+12,Brighton,131.0,2,139.0,123.0
+13,Leeds,122.5,2,147.0,98.0
+14,Crystal Palace,122.0,2,167.0,77.0
+15,Chelsea,111.5,2,73.0,150.0
+16,Newcastle,111.5,2,43.0,180.0
+17,Wolves,101.5,2,92.0,111.0
+18,Sheffield Utd,92.0,2,56.0,128.0
+19,Fulham,91.0,2,143.0,39.0
+20,West Brom,76.5,2,83.0,70.0

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[48]:
+# In[5]:
 
 
 #Downloadting Data from understat.com(Understat)
@@ -85,7 +85,7 @@ def add_match_to_dict(game_number, Dictionary):
     match_players = away_players.append(home_players)
     
     if tempList[1]['team_h'] == 'Tottenham': tempList[1]['team_h'] = 'Spurs' 
-    if tempList[1]['team_a'] == 'Tottenham': tempList[1]['team_h'] = 'Spurs'
+    if tempList[1]['team_a'] == 'Tottenham': tempList[1]['team_a'] = 'Spurs'
     
     match_players['team_h_name'] = [teams_dict[tempList[1]['team_h']] for i in range(len(match_players))]
     match_players['team_a_name'] = [teams_dict[tempList[1]['team_a']] for i in range(len(match_players))]

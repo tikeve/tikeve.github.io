@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[122]:
 
 
 from time import time
@@ -16,7 +16,6 @@ from pathlib import Path
 import os
 
 class Source:
-    #def adjustment(df)
     def __init__(self, source, ma_num=0):
         self.source = source
         print(f'Start Creating {self.source} Tables:')
@@ -269,19 +268,19 @@ class Source:
         self.PTA = PlayerThreatAd.copy()
         self.PCA = PlayerCreativityAd.copy()
         
-        self.TeamThreat, self.TeamThreat_MA =            write_table(TeamThreat, 'TeamThreat', 'Threat av', self.source, self.ma_num)
-        self.TeamCreativity, self.Creativity_MA = (write_table
+        self.TeamThreat =            write_table(TeamThreat, 'TeamThreat', 'Threat av', self.source, self.ma_num)
+        self.TeamCreativity = (write_table
             (TeamCreativity, 'TeamCreativity', 'Creativity av', self.source, self.ma_num))
-        self.TeamDefence, self.TeamDefence_MA =            write_table(TeamDefence, 'TeamDefence', 'Threat allowed av', self.source, self.ma_num)
-        self.TeamThreatAd, self.TeamThreatAd_MA =            write_table(TeamThreatAd, 'TeamThreatAd', 'Threat av adj', self.source, self.ma_num)
-        self.TeamCreativityAd, self.CreativityAd_MA =            write_table(TeamCreativityAd, 'TeamCreativityAd', 'Creativity av adj', self.source, self.ma_num)
-        self.TeamDefenceAd, self.TeamDefenceAd_MA =            write_table(TeamDefenceAd, 'TeamDefenceAd', 'Threat allowed av adj', self.source, self.ma_num)
-        self.TableTeams, self.TableTeams_MA =            write_table(TableTeams, 'TableTeams', 'Threat adjusted', self.source, self.ma_num)
+        self.TeamDefence =            write_table(TeamDefence, 'TeamDefence', 'Threat allowed av', self.source, self.ma_num)
+        self.TeamThreatAd =            write_table(TeamThreatAd, 'TeamThreatAd', 'Threat av adj', self.source, self.ma_num)
+        self.TeamCreativityAd =            write_table(TeamCreativityAd, 'TeamCreativityAd', 'Creativity av adj', self.source, self.ma_num)
+        self.TeamDefenceAd =            write_table(TeamDefenceAd, 'TeamDefenceAd', 'Threat allowed av adj', self.source, self.ma_num)
+        self.TableTeams =            write_table(TableTeams, 'TableTeams', 'Threat adjusted', self.source, self.ma_num)
         
-        self.PlayerThreat, self.PlayerThreat_MA =            write_table(PlayerThreat, 'PlayerThreat', 'Threat per fixture', self.source, self.ma_num)
-        self.PlayerCreativity, self.PlayerCreativity_MA =            write_table(PlayerCreativity, 'PlayerCreativity', 'Creativity per fixture', self.source, self.ma_num)
-        self.PlayerThreatAd, self.PlayerThreatAd_MA =            write_table(PlayerThreatAd, 'PlayerThreatAd', 'Threat per fixture adj', self.source, self.ma_num)
-        self.PlayerCreativityAd, self.PlayerCreativityAd_MA =            write_table(PlayerCreativityAd, 'PlayerCreativityAd', 'Creativity per fixture adj', self.source, self.ma_num)
+        self.PlayerThreat =            write_table(PlayerThreat, 'PlayerThreat', 'Threat per fixture', self.source, self.ma_num)
+        self.PlayerCreativity =            write_table(PlayerCreativity, 'PlayerCreativity', 'Creativity per fixture', self.source, self.ma_num)
+        self.PlayerThreatAd =            write_table(PlayerThreatAd, 'PlayerThreatAd', 'Threat per fixture adj', self.source, self.ma_num)
+        self.PlayerCreativityAd =            write_table(PlayerCreativityAd, 'PlayerCreativityAd', 'Creativity per fixture adj', self.source, self.ma_num)
         
         print('\t 5. Writing to files is over.\t It takes ' + str(time() - start) + ' sec')
         print(f'{self.source} is created./t It takes {time() - start_module} sec\n')
@@ -303,7 +302,8 @@ class Source:
                 if abs(Table_Source.at[i,'minutes'] - FPLmin) > 10:
                     Mistakes = Mistakes.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'element'],                        Table_Source.at[i,'fixture'], Table_Source.at[i,'minutes'], FPLmin]], columns = ['player',                        'element', 'fixture', 'minutes', 'FPL_minutes']), ignore_index=True)
             else:
-                 No_Names = No_Names.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'fixture']]],                    columns = ['player', 'fixture']), ignore_index=True)
+                No_Names = No_Names.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'team_name'], Table_Source.at[i,'fixture']]],                                                         columns = ['player', 'team_name', 'fixture']), ignore_index=True)
+                #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         display(Mistakes)
         display(No_Names)
         return Mistakes, No_Names
@@ -332,10 +332,19 @@ class Source:
 
 # 7. Useful not class functions
 
+def html_name(table_name):
+    '''
+    Converts the name of the table into the name of the html file
+    '''
+    return (table_name.replace('Threat', '_Attack').replace('Defence', '_Defence')
+            .replace('Creativity', '_Creativity').replace('Ad','_Ad'))
+
 # Writing final tables to files and returning table itself and MA variant also
 # df - Table to make final table out of it, name - the name of the table, key_col - column to sort,
-# source - Understat o FPL, ma_num - number for MA
+# source - Understat or FPL, ma_num - number for MA(currently unused just calculated)
 def write_table(df, name, key_col, source, ma_num):
+    
+    #Removes redundant columns
     del df['id']
     if 'Team number' in df.columns:
         del df['Team number']
@@ -345,97 +354,107 @@ def write_table(df, name, key_col, source, ma_num):
         df.sort_values(key_col, ascending = True, inplace = True)
     else:
         df.sort_values(key_col, ascending = False, inplace = True)
-        
+    
+    # Removes lists in celss which are needed for double gameweeks
     df.index = np.arange(1, len(df) + 1)
     df = no_lists(df)
+    
+    # If moving average number is 0 no calculation needed. Use it to fasten the debug!
     if ma_num == 0:
         df_ma = df
     else:
         df_ma = MA(df, ma_num)
-    df_ma.to_csv(Path('out/' + source + '/' + name + '.csv'))
-    return df, df_ma
+    
+    #Writes result to file
+    df.to_csv(Path('out/' + source + '/' + name + '.csv'))
+    
+    
+    # Add table to existing html file replacing table tag with a new one
+    #Also adding a new css
+    html_table = df.style.apply(color_table, axis=None).render().replace('\n', '')
+    BS_table = BeautifulSoup(html_table, 'html.parser')
+    css = str(BS_table('style')[0])
+    html_ = str(BS_table('table')[0])
+    
+    #Getting right paths for different tables
+    if source=='FPL' and name=='TableTeams':
+        html_path = Path('index.html')
+        css_path = Path(f'html/fpl/css/TableTeams.css')
+    elif name=='TableTeams':
+        html_path = Path('html/uns/main.html')
+        css_path = Path(f'html/uns/css/TableTeams.css')
+    elif source=='FPL':
+        html_path = Path(f'html/{source.lower()}/{html_name(name)}.html')
+        css_path = Path(f'html/{source.lower()}/css/{html_name(name)}.css')
+    else:
+        html_path = Path(f'html/uns/{html_name(name)}.html')
+        css_path = Path(f'html/uns/css/{html_name(name)}.css')
+        
+    #Rewriting html and css
+    with open(html_path, 'r', encoding="utf-8") as file:
+        old_file = file.read()
+    tag_to_replace = str(BeautifulSoup(old_file)('table')[0])
+    new_file = old_file.replace(tag_to_replace, html_)
+    with open(html_path, 'w', encoding="utf-8") as file:
+        file.write(new_file)
+    with open(Path('html/FPLstyle.css'), 'r', encoding="utf-8") as file:
+        css_template = file.read()
+    with open(css_path, 'w', encoding="utf-8") as file:
+        file.write(css_template+css)
+    
+    return df
+
+
+#Makes colored tables
+def color_table(df):
+    def table_type(df):
+        if df.columns[2]=='Threat': return 'TableTeams'
+        elif 'allowed' in df.columns[1]: return 'Defence'
+        elif df.columns[0]=='Teams': return 'Team'
+        else: return 'Player'
+    def color_TeamThreat(val):
+        if type(val)==str: color = 'white'
+        elif val>200: color = '#09bb9f'
+        elif val>140: color = '#82f5cf'
+        elif val>120: color = '#c4c4c4'
+        else: color = '#15607a'
+        return f'Background-color: {color}'
+    def color_PlayerThreat(val):
+        if type(val)==str: color = 'white'
+        elif val>50: color = '#09bb9f'
+        elif val>25: color = '#82f5cf'
+        elif val>10: color = '#c4c4c4'
+        else: color = '#15607a'
+        return f'Background-color: {color}'
+    def color_Defence(val):
+        if type(val)==str: color = 'white'
+        elif val<120: color = '#09bb9f'
+        elif val<150: color = '#82f5cf'
+        elif val<180: color = '#c4c4c4'
+        else: color = '#15607a'
+        return f'Background-color: {color}'
+    
+    #function for style.apply by rows where x is a table type
+    def color_table_row(row, x):
+        if x=='Team':
+            return [color_TeamThreat(i) if row.name != 'Matches' else 'Background-color: white' for i in row]
+        elif x=='Player':
+            return [color_PlayerThreat(i) if not (row.name  in ['Team games', 'Played'])                    else 'Background-color: white' for i in row]
+        elif x=='Defence':
+            return [color_Defence(i) if row.name != 'Matches' else 'Background-color: white' for i in row]
+        elif x=='TableTeams':
+            return [color_TeamThreat(i) if row.name in ['Threat adjusted', 'Threat', 'Creativity', 'Creativity adjusted']                   else color_Defence(i) for i in row]
+        
+    return df.apply(color_table_row, x=table_type(df), axis=0)
+
 
 # Returns the table with d mean average for table Out_T
 # If less than d matches played returns zero. If no match played in gameweeek previous gameweek taken.
-
-
-# def MA(Out_T, d):
-#     # Filling the column with averages. Subfunction for MA
-#     def d_av(T, j, GW_columns, d):
-#         T[GW_columns[j] +' '+ str(d) + ' - average'] = [0.0 for i in T.itertuples()]
-#         for i in T.index:
-#             u = 0
-#             k = 0
-#             while (u < d)&(j-k>=0):
-#                 if T.at[i, GW_columns[j-k]] != '':
-#                     T.at[i, GW_columns[j] +' '+ str(d) + ' - average'] += T.at[i, GW_columns[j-k]]
-#                     u+=1
-#                     k+=1
-#                 else: k+=1
-#             if u==d:
-#                 T.at[i, GW_columns[j] +' '+ str(d) + ' - average'] = T.at[i, GW_columns[j] +' '+ str(d) + ' - average']/d
-#             else:
-#                 T.loc[i, GW_columns[j] +' '+ str(d) + ' - average'] = ''
-#         return T[GW_columns[j] +' '+ str(d) + ' - average']
-#     T = Out_T.copy()
-#     GW_columns = []
-#     gw_col=0
-#     for col in T.columns:
-#         if 'GW' in col:
-#             GW_columns.append(col)
-#             gw_col+=1
-#     GW_columns = [GW_columns[i] for i in range(len(GW_columns)-1, -1, -1)]
-#     #print(GW_columns)
-#     if d>gw_col:
-#         return T
-#     else:
-#         for j in range(gw_col-1, d-2, -1):
-#             #print(j)
-#             T[GW_columns[j] +' '+ str(d) + ' - average'] = d_av(T, j, GW_columns, d)#[0 for i in T.itertuples()]
-#     return T
-
-def color(num, x):
-    if x=='Team':
-        if num == '':
-            return 'white'
-        elif num<120:
-            return 'red'
-        elif num<140:
-            return 'pink'
-        elif num<200:
-            return 'light green'
-        else:
-            return 'green'
-    elif x=='Defence':
-        if num == '':
-            return 'white'
-        elif num<120:
-            return 'green'
-        elif num<150:
-            return 'light green'
-        elif num<180:
-            return 'pink'
-        else:
-            return 'red'
-    else: #'PLayer'
-        if num == '':
-            return 'white'
-        elif num<10:
-            return 'red'
-        elif num<25:
-            return 'pink'
-        elif num<50:
-            return 'light green'
-        else:
-            return 'green'
-
 def MA(Out_T, d):
     
     # Filling the column with averages. Subfunction for MA
     #Adds d - averages for j-th GW_column (not GWj but j-th in order) of table T
     def d_av(T, j, GW_columns, d):
-        #T = df.copy()
-        #T[f'{GW_columns[j]} {str(d)} - average'] = [0.0 for i in T.itertuples()]
         T.insert(T.columns.get_loc(GW_columns[-1]), f'{GW_columns[j]} {str(d)} - average', [0.0 for i in T.itertuples()])
         for i in T.index:
             u = 0
@@ -452,67 +471,28 @@ def MA(Out_T, d):
                 T.loc[i, f'{GW_columns[j]} {str(d)} - average'] = ''
         return None
     
-    #Adds color columns for columns with GW data
-    def color_columns(df, GW_columns, table_type):
-        for i in range(len(GW_columns)):
-            df.insert(df.columns.get_loc(GW_columns[i]), f'{GW_columns[i]} color',            df[GW_columns[i]].apply(lambda x: color(x, table_type)))
-        return df
-    
-    
-    #Adds color columns to the TableTeams table
-    def colorTableTeams(T):
-        df = T.copy()
-        dfcol = df.columns.copy()
-        for i in range(len(dfcol)):
-            if 'allowed' in dfcol[i]:
-                df.insert(df.columns.get_loc(dfcol[i]), f'{dfcol[i]} color',                df[dfcol[i]].apply(lambda x: color(x, 'Defence')))
-            elif ('Threat' in dfcol[i]) | ('Creativity' in dfcol[i]):
-                df.insert(df.columns.get_loc(dfcol[i]), f'{dfcol[i]} color',                df[dfcol[i]].apply(lambda x: color(x, 'Team')))
-        return df
-    
-    
-#     #Adds color columns to the TableTeams table
-#     colorTableTeams(df):
-#         for i in range(len(df.columns)):
-#             if ('Threat' in df.columns[i]) ||
-    
-    
-    
-    
-    
     T = Out_T.copy()
     
     #Creating the list of GW_columns for the table T
     GW_columns = []
     gw_col=0
+        
     for col in T.columns:
         if 'GW' in col:
             GW_columns.append(col)
             gw_col+=1
     GW_columns = [GW_columns[i] for i in range(len(GW_columns)-1, -1, -1)] #makes the opposite order of the list
-    #print(GW_columns)
     
-    #Add averages for GW_columns using d_av function defined above
-    if d>gw_col: #gw_col is the length of GW_columns
-        #returning colored MA table depends on whether it is TableTeams or not
-        if GW_columns == []: return colorTableTeams(T)
-        else: return T
-    else:
+    #returning colored MA table if it is TableTeams
+    if GW_columns == []: return T
+    
+    #Add averages for GW_columns using d_av function defined above returning colored MA table if it is not TableTeams
+    # Add MA columns only id d not larger than GW played
+    if d<=gw_col:
         for j in range(gw_col-1, d-2, -1):
-            #print(j)
-            #T[f'{GW_columns[j]} {str(d)} - average'] = d_av(T, j, GW_columns, d)
-            #T.insert(T.columns.get_loc('Matches')+1, f'{GW_columns[j]} {str(d)} - average', d_av(T, j, GW_columns, d))
             d_av(T, j, GW_columns, d)
-    #print(GW_columns[-1])
-    if T.columns[0] == 'Name':
-        table_type = 'Player'
-    elif 'allowed' in GW_columns[0]:
-        table_type = 'Defence'
-    else:
-        table_type = 'Team'
-        
 
-    return color_columns(T, GW_columns, table_type)
+    return T
     
     
 ######################################For Debugging
@@ -543,7 +523,6 @@ def adjustment(df, class_data):
         for i in df.columns:
             if ' av' in i:
                 key_par = i[:-3]
-        #key_par = df.columns[2][:-3]
         av  = 'av'
         dfAd.columns = ['id', 'Teams', f'{key_par} av adj', 'Matches']
         the_fixtures = Team_fixtures
@@ -553,10 +532,7 @@ def adjustment(df, class_data):
         for i in df.columns:
             if 'per fixture' in i:
                 key_par = i[:-12]
-        #key_par = df.columns[4][:-12]
         av = 'per game'
-        #dfAd[f'{key_par} per fixture adj'] = np.zeros(len(Players))
-        #dfAd[f'{key_par} per game adj'] = np.zeros(len(Players))
         
         dfAd.insert(dfAd.columns.get_loc('Team games'), f'{key_par} per fixture adj',        [0.0 for i in dfAd.itertuples()])
         dfAd.insert(dfAd.columns.get_loc('Team games'), f'{key_par} per game adj',        [0.0 for i in dfAd.itertuples()])
@@ -564,9 +540,7 @@ def adjustment(df, class_data):
         
         the_fixtures = Player_fixtures
         the_opponent_team = Player_opponent_team
-    #print(key_par)
     if key_par[-7:] == 'allowed':
-        #print('Defence!')
         Weighting_table = TeamThreat
         col = 'Threat av'
     else:
@@ -577,7 +551,6 @@ def adjustment(df, class_data):
         dfAd[f'{key_par} GW{j} adj'] = [[] for _ in range(len(df))]
         for i in range(len(df)):
              for k in range(len(the_fixtures.at[i, 'GW'+str(j)])):
-                #print(f'{TeamThreat.at[i,f'Threat GW{j}']} {Team_opponent_team.at[i,f'GW{j}']} {})
                 dfAd.at[i,f'{key_par} GW{j} adj'].append(df.at[i,f'{key_par} GW{j}'][k]                *threatAllowedAv/ Weighting_table.at[the_opponent_team.at[i,f'GW{j}'][k]-1, col])
 
                 dfAd.at[i,f'{key_par} {av} adj'] += dfAd.at[i,f'{key_par} GW{j} adj'][k]
@@ -590,45 +563,6 @@ def adjustment(df, class_data):
     
     return dfAd
 
-#Creating Template Tables for getting all colors for the Main Table, Team Tables and Player Tables
-def templateTable(df):
-    template = pd.DataFrame(0, index=range(1,21), columns = df.columns)
-    print(len(template))
-    #template.columns = df.columns
-    for i in range(len(template.columns)):
-        if (template.columns[i] == 'Teams')|(template.columns[i] == 'Name'):
-            template[template.columns[i]] = ['Team green', 'Team light green', 'Team pink', 'Team red', 'Team white']*4
-        elif 'color' in template.columns[i].split():
-            template[template.columns[i]] = ['green', 'light green', 'pink', 'red', 'white']*4
-        else: template[template.columns[i]] = [1,1,1,1,1]*4
-    return template
-#templateTable(MA(Understat.TeamThreatAd, 7)).to_csv(Path('out/TeamTemplate.csv'))
-#templateTable(MA(Understat.PlayerThreatAd, 7)).to_csv(Path('out/PlayerTemplate.csv'))
-#templateTable(MA(Understat.TableTeams, 7)).to_csv(Path('out/TTTemplate.csv'))
-
-#Changing all Headers for the same to be able to copy stylr in datawrapper
-def unifyHeader(df, colTeams, colPlayers):
-    if df.columns[0] == 'Teams':
-        df.columns = colTeams
-    elif df.columns[0] == 'Name':
-        df.columns = colPlayers
-    return df
-
-def changeAllHeaders(path):
-    
-    colTeams = pd.read_csv(Path('out/FPL/TeamThreatAd.csv')).columns[1:]
-    colPlayers = pd.read_csv(Path('out/FPL/PlayerThreatAd.csv')).columns[1:]
-    
-    for filename in os.listdir(path):
-        print(filename)
-        df = pd.read_csv(Path(f'{path}/{filename}'))
-        del df['Unnamed: 0']
-        unifyHeader(df, colTeams, colPlayers).to_csv(Path(f'{path}/{filename}'))
-
-#path = Path('out/Understat')
-#changeAllHeaders(path)
-#path = Path('out/FPL')
-#changeAllHeaders(path)
         
 if __name__ == '__main__':
     Understat = Source('Understat', ma_num=7)
