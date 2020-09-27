@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[122]:
+# In[1]:
 
 
 from time import time
@@ -393,7 +393,7 @@ def write_table(df, name, key_col, source, ma_num):
     #Rewriting html and css
     with open(html_path, 'r', encoding="utf-8") as file:
         old_file = file.read()
-    tag_to_replace = str(BeautifulSoup(old_file)('table')[0])
+    tag_to_replace = str(BeautifulSoup(old_file, 'html.parser')('table')[0])
     new_file = old_file.replace(tag_to_replace, html_)
     with open(html_path, 'w', encoding="utf-8") as file:
         file.write(new_file)
