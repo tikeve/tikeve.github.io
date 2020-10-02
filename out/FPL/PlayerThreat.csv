@@ -1,552 +1,557 @@
 ,Name,Team,Threat per fixture,Threat per game,Team games,Played,Threat GW3,Threat GW2,Threat GW1
-1,Mohamed Salah,Liverpool,106.0,106.0,2,2,0.0,51.0,161.0
-2,Harvey Barnes,Leicester,82.5,82.5,2,2,0.0,99.0,66.0
-3,Dominic Calvert-Lewin,Everton,74.33333333333333,74.33333333333333,3,3,45.0,144.0,34.0
-4,Michail Antonio,West Ham,66.5,66.5,2,2,0.0,70.0,63.0
-5,Kevin De Bruyne,Man City,64.0,64.0,1,1,0.0,64.0,
-6,Sadio Mane,Liverpool,62.0,62.0,2,2,0.0,49.0,75.0
-7,Heung-Min Son,Spurs,60.5,60.5,2,2,0.0,86.0,35.0
-8,Richarlison de Andrade,Everton,57.0,57.0,3,3,25.0,79.0,67.0
+1,Mohamed Salah,Liverpool,85.33333333333333,85.33333333333333,3,3,44.0,51.0,161.0
+2,Dominic Calvert-Lewin,Everton,74.33333333333333,74.33333333333333,3,3,45.0,144.0,34.0
+3,Sadio Mane,Liverpool,69.33333333333333,69.33333333333333,3,3,84.0,49.0,75.0
+4,Harry Kane,Spurs,64.66666666666667,64.66666666666667,3,3,138.0,35.0,21.0
+5,Harvey Barnes,Leicester,61.0,61.0,3,3,18.0,99.0,66.0
+6,Michail Antonio,West Ham,59.0,59.0,3,3,44.0,70.0,63.0
+7,Richarlison de Andrade,Everton,57.0,57.0,3,3,25.0,79.0,67.0
+8,Jack Grealish,Aston Villa,55.0,55.0,2,2,61.0,49.0,
 9,Timo Werner,Chelsea,49.333333333333336,49.333333333333336,3,3,58.0,11.0,79.0
-10,Jack Grealish,Aston Villa,49.0,49.0,1,1,0.0,49.0,
-11,Gabriel Fernando de Jesus,Man City,45.0,45.0,1,1,0.0,45.0,
+10,Aleksandar Mitrovic,Fulham,45.0,45.0,3,3,52.0,76.0,7.0
+11,Alexandre Lacazette,Arsenal,44.666666666666664,44.666666666666664,3,3,55.0,31.0,48.0
 12,Neal Maupay,Brighton,43.333333333333336,43.333333333333336,3,3,62.0,60.0,8.0
-13,Roberto Firmino,Liverpool,43.0,43.0,2,2,0.0,48.0,38.0
-14,Aleksandar Mitrovic,Fulham,41.5,41.5,2,2,0.0,76.0,7.0
-15,Wilfried Zaha,Crystal Palace,41.333333333333336,41.333333333333336,3,3,46.0,57.0,21.0
-16,Raul Jimenez,Wolves,40.5,40.5,2,2,0.0,33.0,48.0
+13,Heung-Min Son,Spurs,43.0,43.0,3,3,8.0,86.0,35.0
+14,Jamie Vardy,Leicester,43.0,43.0,3,3,71.0,22.0,36.0
+15,Raul Jimenez,Wolves,42.666666666666664,42.666666666666664,3,3,47.0,33.0,48.0
+16,Wilfried Zaha,Crystal Palace,41.333333333333336,41.333333333333336,3,3,46.0,57.0,21.0
 17,Danny Ings,Southampton,40.333333333333336,40.333333333333336,3,3,23.0,38.0,60.0
-18,Alexandre Lacazette,Arsenal,39.5,39.5,2,2,0.0,31.0,48.0
-19,Pierre-Emerick Aubameyang,Arsenal,34.5,34.5,2,2,0.0,15.0,54.0
-20,Ollie Watkins,Aston Villa,34.0,34.0,1,1,0.0,34.0,
-21,Dennis Praet,Leicester,34.0,34.0,2,2,0.0,35.0,33.0
-22,Che Adams,Southampton,33.666666666666664,33.666666666666664,3,3,8.0,72.0,21.0
-23,Ezri Konsa Ngoyo,Aston Villa,33.0,33.0,1,1,0.0,33.0,
-24,Chris Wood,Burnley,32.5,32.5,2,2,21.0,44.0,
-25,Georginio Wijnaldum,Liverpool,32.0,32.0,2,2,0.0,29.0,35.0
-26,Matej Vydra,Burnley,31.5,31.5,2,2,27.0,36.0,
+18,Tomas Soucek,West Ham,40.0,40.0,3,3,60.0,14.0,46.0
+19,Lucas Rodrigues Moura da Silva,Spurs,39.0,39.0,3,3,82.0,0.0,35.0
+20,Kevin De Bruyne,Man City,37.0,37.0,2,2,10.0,64.0,
+21,Roberto Firmino,Liverpool,36.0,36.0,3,3,22.0,48.0,38.0
+22,Raheem Sterling,Man City,34.5,34.5,2,2,40.0,29.0,
+23,Chris Wood,Burnley,34.5,34.5,2,2,25.0,44.0,
+24,Che Adams,Southampton,33.666666666666664,33.666666666666664,3,3,8.0,72.0,21.0
+25,Matej Vydra,Burnley,31.5,31.5,2,2,27.0,36.0,
+26,Patrick Bamford,Leeds,30.666666666666668,30.666666666666668,3,3,44.0,21.0,27.0
 27,Mason Mount,Chelsea,30.333333333333332,30.333333333333332,3,3,81.0,1.0,9.0
-28,Tomas Soucek,West Ham,30.0,30.0,2,2,0.0,14.0,46.0
-29,Callum Wilson,Newcastle,30.0,30.0,2,2,0.0,10.0,50.0
-30,Jamie Vardy,Leicester,29.0,29.0,2,2,0.0,22.0,36.0
-31,Raheem Sterling,Man City,29.0,29.0,1,1,0.0,29.0,
-32,Solomon March,Brighton,28.666666666666668,28.666666666666668,3,3,66.0,0.0,20.0
-33,Anthony Martial,Man Utd,28.0,28.0,2,2,28.0,28.0,
-34,Harry Kane,Spurs,28.0,28.0,2,2,0.0,35.0,21.0
-35,Ayoze Perez,Leicester,26.0,26.0,2,2,0.0,28.0,24.0
-36,Douglas Luiz Soares de Paulo,Aston Villa,26.0,26.0,1,1,0.0,26.0,
-37,Andy Carroll,Newcastle,25.0,25.0,2,2,0.0,2.0,48.0
-38,Marcus Rashford,Man Utd,24.5,24.5,2,2,39.0,10.0,
-39,Patrick Bamford,Leeds,24.0,24.0,2,2,0.0,21.0,27.0
-40,Jarrod Bowen,West Ham,23.0,23.0,2,2,0.0,34.0,12.0
-41,Phil Foden,Man City,23.0,23.0,1,1,0.0,23.0,
-42,Josh Brownhill,Burnley,22.5,22.5,2,2,36.0,9.0,
-43,Oliver McBurnie,Sheffield Utd,22.5,22.5,2,2,0.0,4.0,41.0
-44,Bruno Miguel Borges Fernandes,Man Utd,22.0,22.0,2,2,19.0,25.0,
-45,Timothy Castagne,Leicester,21.5,21.5,2,2,0.0,8.0,35.0
-46,Willian Borges Da Silva,Arsenal,21.0,21.0,2,2,0.0,4.0,38.0
-47,Aaron Connolly,Brighton,21.0,21.0,3,3,8.0,23.0,32.0
-48,Mateusz Klich,Leeds,21.0,21.0,2,2,0.0,19.0,23.0
-49,Caglar Soyuncu,Leicester,21.0,21.0,2,2,0.0,36.0,6.0
-50,Helder Wander Sousa de Azevedo e Costa,Leeds,21.0,21.0,2,2,0.0,36.0,6.0
-51,Tammy Abraham,Chelsea,20.666666666666668,31.0,3,2,45.0,17.0,0.0
-52,Jordan Ayew,Crystal Palace,20.666666666666668,20.666666666666668,3,3,2.0,41.0,19.0
-53,Virgil van Dijk,Liverpool,20.5,20.5,2,2,0.0,4.0,37.0
-54,Cheikhou Kouyate,Crystal Palace,20.333333333333332,20.333333333333332,3,3,42.0,2.0,17.0
-55,Romain Saiss,Wolves,20.0,20.0,2,2,0.0,2.0,38.0
-56,Robin Koch,Leeds,19.5,19.5,2,2,0.0,21.0,18.0
-57,Mahmoud Ahmed Ibrahim Hassan,Aston Villa,19.0,19.0,1,1,0.0,19.0,
-58,John McGinn,Aston Villa,19.0,19.0,1,1,0.0,19.0,
-59,Jimmy Dunne,Burnley,19.0,19.0,2,2,8.0,30.0,
-60,James Rodriguez,Everton,19.0,19.0,3,3,25.0,9.0,23.0
-61,Grady Diangana,West Brom,19.0,19.0,3,3,12.0,36.0,9.0
-62,Ben Davies,Spurs,18.0,18.0,2,2,0.0,0.0,36.0
-63,Erik Lamela,Spurs,17.5,35.0,2,1,0.0,35.0,0.0
-64,Lucas Rodrigues Moura da Silva,Spurs,17.5,17.5,2,2,0.0,0.0,35.0
-65,Matt Doherty,Spurs,17.5,17.5,2,2,0.0,0.0,35.0
-66,Gabriel Magalhaes,Arsenal,17.5,17.5,2,2,0.0,2.0,33.0
-67,Jonjo Shelvey,Newcastle,17.0,17.0,2,2,0.0,12.0,22.0
-68,Callum Robinson,West Brom,16.666666666666668,16.666666666666668,3,3,35.0,13.0,2.0
-69,James Justin,Leicester,16.5,16.5,2,2,0.0,31.0,2.0
-70,Mason Greenwood,Man Utd,16.0,16.0,2,2,6.0,26.0,
-71,Matthew Cash,Aston Villa,16.0,16.0,1,1,0.0,16.0,
-72,Leandro Trossard,Brighton,15.666666666666666,15.666666666666666,3,3,23.0,13.0,11.0
-73,Jack Harrison,Leeds,15.5,15.5,2,2,0.0,12.0,19.0
-74,Bukayo Saka,Arsenal,15.0,30.0,2,1,0.0,30.0,0.0
-75,Andrew Robertson,Liverpool,15.0,15.0,2,2,0.0,26.0,4.0
-76,Tariq Lamptey,Brighton,14.333333333333334,14.333333333333334,3,3,2.0,21.0,20.0
-77,Michael Keane,Everton,14.333333333333334,14.333333333333334,3,3,2.0,41.0,0.0
-78,George Baldock,Sheffield Utd,14.0,14.0,2,2,0.0,2.0,26.0
-79,Scott McTominay,Man Utd,14.0,28.0,2,1,0.0,28.0,
-80,Andros Townsend,Crystal Palace,14.0,14.0,3,3,0.0,40.0,2.0
-81,Sebastien Haller,West Ham,14.0,14.0,2,2,0.0,0.0,28.0
-82,Ruben Diogo da Silva Neves,Wolves,13.0,13.0,2,2,0.0,26.0,0.0
-83,Naby Keita,Liverpool,13.0,13.0,2,2,0.0,2.0,24.0
-84,Andriy Yarmolenko,West Ham,13.0,13.0,2,2,0.0,0.0,26.0
-85,Sander Berge,Sheffield Utd,13.0,13.0,2,2,0.0,26.0,0.0
-86,Angelo Ogbonna,West Ham,12.5,12.5,2,2,0.0,19.0,6.0
-87,Donny van de Beek,Man Utd,12.5,12.5,2,2,2.0,23.0,
-88,Abdoulaye Doucoure,Everton,12.333333333333334,12.333333333333334,3,3,33.0,0.0,4.0
-89,Matheus Pereira,West Brom,12.333333333333334,12.333333333333334,3,3,0.0,11.0,26.0
-90,Jeff Hendrick,Newcastle,12.0,12.0,2,2,0.0,1.0,23.0
-91,Daniel Ceballos Fernandez,Arsenal,12.0,12.0,2,2,0.0,20.0,4.0
-92,Jorge Luiz Frello Filho,Chelsea,12.0,18.0,3,2,0.0,19.0,17.0
-93,Kyle Walker,Man City,12.0,12.0,1,1,0.0,12.0,
-94,Eberechi Eze,Crystal Palace,11.666666666666666,11.666666666666666,3,3,29.0,2.0,4.0
-95,James Ward-Prowse,Southampton,11.666666666666666,11.666666666666666,3,3,0.0,31.0,4.0
-96,Billy Sharp,Sheffield Utd,11.5,23.0,2,1,0.0,0.0,23.0
-97,Kurt Zouma,Chelsea,11.333333333333334,17.0,3,2,0.0,17.0,17.0
-98,Neeskens Kebano,Fulham,11.0,11.0,2,2,0.0,4.0,18.0
-99,Daniel James,Man Utd,11.0,22.0,2,1,0.0,22.0,
-100,Pedro Lomba Neto,Wolves,11.0,11.0,2,2,0.0,18.0,4.0
-101,Miguel Almiron,Newcastle,11.0,11.0,2,2,0.0,2.0,20.0
-102,Harry Maguire,Man Utd,11.0,11.0,2,2,18.0,4.0,
-103,Kyle Bartley,West Brom,11.0,11.0,3,3,33.0,0.0,0.0
-104,Kai Havertz,Chelsea,10.666666666666666,10.666666666666666,3,3,32.0,0.0,0.0
-105,Edward Nketiah,Arsenal,10.5,10.5,2,2,0.0,21.0,0.0
-106,Granit Xhaka,Arsenal,10.5,10.5,2,2,0.0,0.0,21.0
-107,Bamidele Alli,Spurs,10.5,21.0,2,1,0.0,0.0,21.0
-108,Callum Hudson-Odoi,Chelsea,10.333333333333334,15.5,3,2,31.0,0.0,0.0
-109,Bobby Decordova-Reid,Fulham,9.5,9.5,2,2,0.0,17.0,2.0
-110,Ezgjan Alioski,Leeds,9.5,19.0,2,1,0.0,19.0,0.0
-111,Adama Traore,Wolves,9.5,9.5,2,2,0.0,2.0,17.0
-112,John Lundstram,Sheffield Utd,9.5,9.5,2,2,0.0,17.0,2.0
-113,Alireza Jahanbakhsh,Brighton,9.333333333333334,9.333333333333334,3,3,10.0,18.0,0.0
-114,Declan Rice,West Ham,9.0,9.0,2,2,0.0,10.0,8.0
-115,Michael Hector,Fulham,9.0,9.0,2,2,0.0,18.0,0.0
-116,Pablo Fornals,West Ham,9.0,9.0,2,2,0.0,0.0,18.0
-117,Mohamed Naser El Sayed Elneny,Arsenal,9.0,18.0,2,1,0.0,0.0,18.0
-118,Youri Tielemans,Leicester,9.0,9.0,2,2,0.0,9.0,9.0
-119,Robbie Brady,Burnley,8.5,17.0,2,1,0.0,17.0,
-120,Erik Pieters,Burnley,8.5,17.0,2,1,0.0,17.0,
-121,Moussa Djenepo,Southampton,8.333333333333334,8.333333333333334,3,3,8.0,17.0,0.0
-122,Paul Pogba,Man Utd,8.0,8.0,2,2,0.0,16.0,
-123,Timothy Fosu-Mensah,Man Utd,8.0,16.0,2,1,0.0,16.0,
-124,Lucas Digne,Everton,8.0,8.0,3,3,12.0,12.0,0.0
-125,Benjamin Mendy,Man City,8.0,8.0,1,1,0.0,8.0,
-126,Steven Alzate,Brighton,7.666666666666667,7.666666666666667,3,3,4.0,2.0,17.0
-127,Nathan Redmond,Southampton,7.666666666666667,23.0,3,1,0.0,0.0,23.0
-128,Andre Filipe Tavares Gomes,Everton,7.333333333333333,7.333333333333333,3,3,0.0,2.0,20.0
-129,Jeffrey Schlupp,Crystal Palace,7.333333333333333,11.0,3,2,0.0,22.0,0.0
-130,John Fleck,Sheffield Utd,7.0,7.0,2,2,0.0,0.0,14.0
-131,Nicolas Pepe,Arsenal,7.0,7.0,2,2,0.0,8.0,6.0
-132,Marcos Alonso,Chelsea,6.666666666666667,6.666666666666667,3,3,16.0,2.0,2.0
-133,Kyle Edwards,West Brom,6.666666666666667,10.0,3,2,0.0,0.0,20.0
-134,Stuart Armstrong,Southampton,6.666666666666667,10.0,3,2,14.0,6.0,0.0
-135,Jay Rodriguez,Burnley,6.5,13.0,2,1,0.0,13.0,
-136,Jake Livermore,West Brom,6.333333333333333,6.333333333333333,3,3,0.0,19.0,0.0
-137,Tyrone Mings,Aston Villa,6.0,6.0,1,1,0.0,6.0,
-138,Dale Stephens,Burnley,6.0,12.0,2,1,12.0,0.0,0.0
-139,Adam Webster,Brighton,6.0,6.0,3,3,17.0,0.0,1.0
-140,Keinan Davis,Aston Villa,6.0,6.0,1,1,0.0,6.0,
-141,Darnell Furlong,West Brom,6.0,6.0,3,3,4.0,2.0,12.0
-142,Reece James,Chelsea,5.666666666666667,5.666666666666667,3,3,4.0,2.0,11.0
-143,Jack Stephens,Southampton,5.666666666666667,8.5,3,2,0.0,0.0,17.0
-144,Trent Alexander-Arnold,Liverpool,5.5,5.5,2,2,0.0,11.0,0.0
-145,Tyler Roberts,Leeds,5.5,5.5,2,2,0.0,11.0,0.0
-146,Isaac Hayden,Newcastle,5.0,5.0,2,2,0.0,10.0,0.0
-147,Seamus Coleman,Everton,5.0,5.0,3,3,2.0,6.0,7.0
-148,Kevin Long,Burnley,5.0,5.0,2,2,4.0,6.0,
-149,Charlie Taylor,Burnley,4.5,4.5,2,2,7.0,2.0,
-150,Nemanja Matic,Man Utd,4.5,9.0,2,1,9.0,0.0,
-151,Cesar Azpilicueta,Chelsea,4.333333333333333,6.5,3,2,11.0,0.0,2.0
-152,Denis Odoi,Fulham,4.0,4.0,2,2,0.0,1.0,7.0
-153,Giovani Lo Celso,Spurs,4.0,8.0,2,1,0.0,8.0,0.0
-154,Fernando Luiz Rosa,Man City,4.0,4.0,1,1,0.0,4.0,
-155,Andre-Frank Zambo Anguissa,Fulham,4.0,4.0,2,2,0.0,8.0,0.0
-156,Joelinton Cassio Apolinario de Lira,Newcastle,4.0,4.0,2,2,0.0,0.0,8.0
-157,Harrison Reed,Fulham,4.0,4.0,2,2,0.0,8.0,0.0
-158,David McGoldrick,Sheffield Utd,4.0,4.0,2,2,0.0,0.0,8.0
-159,Moise Kean,Everton,3.6666666666666665,5.5,3,2,0.0,7.0,4.0
-160,Aboubakar Kamara,Fulham,3.5,3.5,2,2,0.0,2.0,5.0
-161,Daniel Castelo Podence,Wolves,3.5,3.5,2,2,0.0,7.0,0.0
-162,Jordan Henderson,Liverpool,3.5,3.5,2,2,0.0,0.0,7.0
-163,N'Golo Kante,Chelsea,3.3333333333333335,3.3333333333333335,3,3,2.0,4.0,4.0
-164,Pascal Groß,Brighton,3.3333333333333335,5.0,3,2,10.0,0.0,0.0
-165,James McArthur,Crystal Palace,3.3333333333333335,3.3333333333333335,3,3,2.0,2.0,6.0
-166,Phil Bardsley,Burnley,3.0,3.0,2,2,0.0,6.0,
-167,Hector Bellerin,Arsenal,3.0,3.0,2,2,0.0,2.0,4.0
-168,Enda Stevens,Sheffield Utd,3.0,3.0,2,2,0.0,0.0,6.0
-169,Hal Robson-Kanu,West Brom,3.0,4.5,3,2,8.0,0.0,1.0
-170,Chris Basham,Sheffield Utd,3.0,3.0,2,2,0.0,4.0,2.0
-171,John Egan,Sheffield Utd,3.0,3.0,2,2,0.0,0.0,6.0
-172,Conor Hourihane,Aston Villa,3.0,3.0,1,1,0.0,3.0,
-173,Ryan Fredericks,West Ham,3.0,3.0,2,2,0.0,4.0,2.0
-174,Lewis Dunk,Brighton,3.0,3.0,3,3,2.0,0.0,7.0
-175,Stuart Dallas,Leeds,3.0,3.0,2,2,0.0,4.0,2.0
-176,Scott Dann,Crystal Palace,2.6666666666666665,8.0,3,1,0.0,0.0,8.0
-177,Matt Phillips,West Brom,2.6666666666666665,4.0,3,2,8.0,0.0,0.0
-178,Ryan Bertrand,Southampton,2.6666666666666665,2.6666666666666665,3,3,2.0,4.0,2.0
-179,Allan Marques Loureiro,Everton,2.6666666666666665,2.6666666666666665,3,3,1.0,7.0,0.0
-180,James McCarthy,Crystal Palace,2.6666666666666665,2.6666666666666665,3,3,8.0,0.0,0.0
-181,Joe Bryan,Fulham,2.5,2.5,2,2,0.0,5.0,0.0
-182,Allan Saint-Maximin,Newcastle,2.5,2.5,2,2,0.0,0.0,5.0
-183,Yves Bissouma,Brighton,2.3333333333333335,3.5,3,2,0.0,2.0,5.0
-184,Ross Barkley,Chelsea,2.3333333333333335,3.5,3,2,0.0,0.0,7.0
-185,Olivier Giroud,Chelsea,2.0,6.0,3,1,6.0,0.0,0.0
-186,Jamaal Lascelles,Newcastle,2.0,2.0,2,2,0.0,4.0,0.0
-187,Ainsley Maitland-Niles,Arsenal,2.0,4.0,2,1,0.0,0.0,4.0
-188,Dwight McNeil,Burnley,2.0,2.0,2,2,4.0,0.0,
-189,James Milner,Liverpool,2.0,4.0,2,1,0.0,4.0,0.0
-190,Leander Dendoncker,Wolves,2.0,2.0,2,2,0.0,0.0,4.0
-191,Sead Kolasinac,Arsenal,2.0,4.0,2,1,0.0,4.0,0.0
-192,Matt Targett,Aston Villa,2.0,2.0,1,1,0.0,2.0,
-193,Shane Long,Southampton,2.0,3.0,3,2,0.0,4.0,2.0
-194,Luke Shaw,Man Utd,2.0,2.0,2,2,2.0,2.0,
-195,Rodrigo Moreno,Leeds,2.0,2.0,2,2,0.0,4.0,0.0
-196,Willy Boly,Wolves,2.0,2.0,2,2,0.0,4.0,0.0
-197,Victor Lindelof,Man Utd,2.0,2.0,2,2,0.0,4.0,
-198,Arthur Masuaku,West Ham,1.5,3.0,2,1,0.0,3.0,0.0
-199,Jan Bednarek,Southampton,1.3333333333333333,1.3333333333333333,3,3,4.0,0.0,0.0
-200,Jannik Vestergaard,Southampton,1.3333333333333333,2.0,3,2,0.0,0.0,4.0
-201,Kyle Walker-Peters,Southampton,1.3333333333333333,1.3333333333333333,3,3,0.0,0.0,4.0
-202,Conor Townsend,West Brom,1.3333333333333333,4.0,3,1,4.0,0.0,0.0
-203,Alex Iwobi,Everton,1.3333333333333333,2.0,3,2,0.0,4.0,0.0
-204,Christian Benteke,Crystal Palace,1.3333333333333333,4.0,3,1,4.0,0.0,0.0
-205,Kenny Tete,Fulham,1.0,2.0,2,1,0.0,2.0,0.0
-206,Curtis Jones,Liverpool,1.0,2.0,2,1,0.0,0.0,2.0
-207,Ryan Fraser,Newcastle,1.0,2.0,2,1,0.0,2.0,0.0
-208,Michy Batshuayi,Crystal Palace,1.0,1.5,3,2,2.0,1.0,0.0
-209,Steven Bergwijn,Spurs,1.0,1.0,2,2,0.0,0.0,2.0
-210,Marc Albrighton,Leicester,1.0,1.0,2,2,0.0,2.0,0.0
-211,Javier Manquillo,Newcastle,1.0,1.0,2,2,0.0,0.0,2.0
-212,Odion Ighalo,Man Utd,1.0,2.0,2,1,0.0,2.0,
-213,Pablo Hernandez Dominguez,Leeds,1.0,2.0,2,1,0.0,0.0,2.0
-214,Federico Fernandez,Newcastle,1.0,1.0,2,2,0.0,0.0,2.0
-215,Fabio Henrique Tavares,Liverpool,1.0,1.0,2,2,0.0,0.0,2.0
-216,Oliver Burke,Sheffield Utd,1.0,2.0,2,1,0.0,2.0,0.0
-217,Rodrigo Hernandez,Man City,1.0,1.0,1,1,0.0,1.0,
-218,Yerry Mina,Everton,1.0,1.0,3,3,0.0,2.0,1.0
-219,Felipe Anderson Pereira Gomes,West Ham,1.0,1.0,2,2,0.0,2.0,0.0
-220,Takumi Minamino,Liverpool,1.0,2.0,2,1,0.0,2.0,0.0
-221,Josh Onomah,Fulham,1.0,1.0,2,2,0.0,2.0,0.0
-222,Nathan Tella,Southampton,1.0,1.5,3,2,0.0,3.0,0.0
-223,Kieran Tierney,Arsenal,1.0,2.0,2,1,0.0,0.0,2.0
-224,Toby Alderweireld,Spurs,1.0,2.0,2,1,0.0,0.0,2.0
-225,Kieran Gibbs,West Brom,0.6666666666666666,1.0,3,2,0.0,2.0,0.0
-226,Andreas Christensen,Chelsea,0.6666666666666666,0.6666666666666666,3,3,0.0,0.0,2.0
-227,Adam Lallana,Brighton,0.6666666666666666,0.6666666666666666,3,3,0.0,0.0,2.0
-228,Ben White,Brighton,0.6666666666666666,0.6666666666666666,3,3,2.0,0.0,0.0
-229,Mamadou Sakho,Crystal Palace,0.6666666666666666,1.0,3,2,2.0,0.0,0.0
-230,Tyrick Mitchell,Crystal Palace,0.6666666666666666,0.6666666666666666,3,3,2.0,0.0,0.0
-231,Thiago Alcantara do Nascimento,Liverpool,0.5,1.0,2,1,0.0,1.0,
-232,Kalvin Phillips,Leeds,0.5,0.5,2,2,0.0,0.0,1.0
-233,Ethan Ampadu,Sheffield Utd,0.5,1.0,2,1,0.0,1.0,0.0
-234,Mateo Kovacic,Chelsea,0.3333333333333333,0.5,3,2,1.0,0.0,0.0
-235,Romaine Sawyers,West Brom,0.3333333333333333,0.3333333333333333,3,3,1.0,0.0,0.0
-236,Yoshinori Muto,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-237,Ryan Bennett,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-238,Ben Johnson,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-239,Matthew Longstaff,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-240,Rui Pedro dos Santos Patricio,Wolves,0.0,0.0,2,2,0.0,0.0,0.0
-241,Sean Longstaff,Newcastle,0.0,0.0,2,1,0.0,0.0,0.0
-242,Kelland Watts,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-243,John Ruddy,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-244,Joao Filipe Iria Santos Moutinho,Wolves,0.0,0.0,2,2,0.0,0.0,0.0
-245,Sergio Reguilon,Spurs,0.0,0.0,2,0,0.0,,
-246,Conor Coady,Wolves,0.0,0.0,2,2,0.0,0.0,0.0
-247,Aaron Wan-Bissaka,Man Utd,0.0,0.0,2,1,0.0,0.0,
-248,Morgan Gibbs-White,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-249,Teden Mengi,Man Utd,0.0,0.0,2,0,0.0,0.0,
-250,Brandon Williams,Man Utd,0.0,0.0,2,0,0.0,0.0,
-251,James Garner,Man Utd,0.0,0.0,2,0,0.0,0.0,
-252,Tahith Chong,Man Utd,0.0,0.0,2,0,0.0,0.0,
-253,Jose Diogo Dalot Teixeira,Man Utd,0.0,0.0,2,0,0.0,0.0,
-254,Bruno Andre Cavaco Jordao,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-255,Jonathan Castro Otto,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-256,Leonardo Campana,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-257,Fabio Silva,Wolves,0.0,0.0,2,1,0.0,0.0,0.0
-258,Eric Bailly,Man Utd,0.0,0.0,2,1,0.0,0.0,
-259,Fernando Marcal,Wolves,0.0,0.0,2,2,0.0,0.0,0.0
-260,Vitor Ferreira,Wolves,0.0,0.0,2,1,0.0,0.0,0.0
-261,Ki-Jana Hoever,Wolves,0.0,0.0,2,0,0.0,,
-262,Matija Sarkic,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-263,Matt Ritchie,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-264,Ruben Goncalo Silva Nascimento Vinagre,Wolves,0.0,0.0,2,1,0.0,0.0,0.0
-265,Ciaran Clark,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-266,Karl Darlow,Newcastle,0.0,0.0,2,2,0.0,0.0,0.0
-267,Martin Dubravka,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-268,Florian Lejeune,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-269,Max Kilman,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-270,Dwight Gayle,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-271,Oskar Buur,Wolves,0.0,0.0,2,1,0.0,0.0,0.0
-272,Christian Atsu,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-273,Paul Dummett,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-274,Emil Krafth,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-275,Fabian Schar,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-276,DeAndre Yedlin,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-277,Leo Bonatini,Wolves,0.0,0.0,2,0,0.0,0.0,0.0
-278,Rolando Aarons,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-279,Mark Gillespie,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-280,Roberto Jimenez Gago,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-281,Jacob Murphy,Newcastle,0.0,0.0,2,0,0.0,0.0,0.0
-282,Fraser Forster,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
-283,Serge Aurier,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-284,Sam Johnstone,West Brom,0.0,0.0,3,3,0.0,0.0,0.0
-285,Moussa Sissoko,Spurs,0.0,0.0,2,1,0.0,0.0,0.0
-286,Danny Rose,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-287,Oluwasemilogo Adesewo Ibidapo Ajayi,West Brom,0.0,0.0,3,3,0.0,0.0,0.0
-288,Hugo Lloris,Spurs,0.0,0.0,2,2,0.0,0.0,0.0
-289,Mohammed Salisu,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
-290,Eric Dier,Spurs,0.0,0.0,2,2,0.0,0.0,0.0
-291,Jonathan Leko,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
-292,Michael Obafemi,Southampton,0.0,0.0,3,1,0.0,0.0,0.0
-293,Jake Vokins,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
-294,William Smallbone,Southampton,0.0,0.0,3,2,0.0,0.0,0.0
-295,Sam Field,West Brom,0.0,0.0,3,2,0.0,0.0,0.0
-296,Yan Valery,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
-297,Kenneth Zohore,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
-298,Charlie Austin,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
-299,Issa Diop,West Ham,0.0,0.0,2,2,0.0,0.0,0.0
-300,Japhet Tanganga,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-301,Joe Hart,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-302,Gareth Bale,Spurs,0.0,0.0,2,0,0.0,,
-303,Juan Foyth,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-304,David Button,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
-305,Tanguy Ndombele,Spurs,0.0,0.0,2,2,0.0,0.0,0.0
-306,Oliver Skipp,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-307,Gedson Carvalho Fernandes,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-308,Ahmed El-Sayed Hegazy,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
-309,Kamil Grosicki,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
-310,Ryan Sessegnon,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-311,Davinson Sanchez,Spurs,0.0,0.0,2,1,0.0,0.0,0.0
-312,Harry Winks,Spurs,0.0,0.0,2,2,0.0,0.0,0.0
-313,Pierre-Emile Højbjerg,Spurs,0.0,0.0,2,2,0.0,0.0,0.0
-314,Paulo Gazzaniga,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-315,Dara O'Shea,West Brom,0.0,0.0,3,3,0.0,0.0,0.0
-316,Rekeem Harper,West Brom,0.0,0.0,3,1,0.0,0.0,0.0
-317,Josh Sims,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
-318,Manuel Lanzini,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-319,Jack Wilshere,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-320,Lys Mousset,Sheffield Utd,0.0,0.0,2,0,0.0,0.0,0.0
-321,Aaron Cresswell,West Ham,0.0,0.0,2,2,0.0,0.0,0.0
-322,Ben Osborn,Sheffield Utd,0.0,0.0,2,1,0.0,0.0,0.0
-323,Jack O'Connell,Sheffield Utd,0.0,0.0,2,2,0.0,0.0,0.0
-324,Jack Robinson,Sheffield Utd,0.0,0.0,2,0,0.0,0.0,0.0
-325,Fabian Balbuena,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-326,Sofiane Boufal,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
-327,Wes Foderingham,Sheffield Utd,0.0,0.0,2,0,0.0,0.0,0.0
-328,Oliver Norwood,Sheffield Utd,0.0,0.0,2,1,0.0,0.0,0.0
-329,Simon Moore,Sheffield Utd,0.0,0.0,2,0,0.0,0.0,0.0
-330,Jordan Hugill,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-331,Albian Ajeti,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-332,Jamal Lewis,Newcastle,0.0,0.0,2,2,0.0,0.0,0.0
-333,Cameron Carter-Vickers,Spurs,0.0,0.0,2,0,0.0,0.0,0.0
-334,Luke Freeman,Sheffield Utd,0.0,0.0,2,0,0.0,0.0,0.0
-335,Lukasz Fabianski,West Ham,0.0,0.0,2,2,0.0,0.0,0.0
-336,Aaron Ramsdale,Sheffield Utd,0.0,0.0,2,2,0.0,0.0,0.0
-337,Jayden Bogle,Sheffield Utd,0.0,0.0,2,0,0.0,0.0,0.0
-338,Max Lowe,Sheffield Utd,0.0,0.0,2,0,0.0,0.0,0.0
-339,Darren Randolph,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-340,David Martin,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-341,Phil Jagielka,Sheffield Utd,0.0,0.0,2,0,0.0,0.0,0.0
-342,Robert Snodgrass,West Ham,0.0,0.0,2,0,0.0,0.0,0.0
-343,Mark Noble,West Ham,0.0,0.0,2,1,0.0,0.0,0.0
-344,Alex McCarthy,Southampton,0.0,0.0,3,3,0.0,0.0,0.0
-345,Oriol Romeu Vidal,Southampton,0.0,0.0,3,3,0.0,0.0,0.0
-346,Conor Gallagher,West Brom,0.0,0.0,3,0,0.0,,
-347,Branislav Ivanovic,West Brom,0.0,0.0,3,0,0.0,0.0,
-348,Cedric Kipre,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
-349,Angus Gunn,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
-350,Axel Tuanzebe,Man Utd,0.0,0.0,2,0,0.0,0.0,
-351,Mesut Ozil,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-352,Dean Henderson,Man Utd,0.0,0.0,2,0,0.0,0.0,
-353,Josh Benson,Burnley,0.0,0.0,2,0,0.0,0.0,
-354,Fikayo Tomori,Chelsea,0.0,0.0,3,1,0.0,0.0,0.0
-355,Christian Pulisic,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
-356,Ruben Loftus-Cheek,Chelsea,0.0,0.0,3,1,0.0,0.0,0.0
-357,Hakim Ziyech,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
-358,Kepa Arrizabalaga,Chelsea,0.0,0.0,3,2,0.0,0.0,0.0
-359,Emerson Palmieri dos Santos,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
-360,Antonio Rudiger,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
-361,Willy Caballero,Chelsea,0.0,0.0,3,1,0.0,0.0,0.0
-362,Mace Goodridge,Burnley,0.0,0.0,2,0,0.0,,
-363,Anthony Driscoll-Glennon,Burnley,0.0,0.0,2,0,0.0,0.0,
-364,Bobby Thomas,Burnley,0.0,0.0,2,0,0.0,0.0,
-365,Andreas Pereira,Man Utd,0.0,0.0,2,0,0.0,0.0,
-366,Bailey Peacock-Farrell,Burnley,0.0,0.0,2,0,0.0,0.0,
-367,Nick Pope,Burnley,0.0,0.0,2,2,0.0,0.0,
-368,Ben Gibson,Burnley,0.0,0.0,2,0,0.0,0.0,
-369,Matthew Lowton,Burnley,0.0,0.0,2,0,0.0,0.0,
-370,Johann Berg Gudmundsson,Burnley,0.0,0.0,2,0,0.0,0.0,
-371,Ashley Westwood,Burnley,0.0,0.0,2,2,0.0,0.0,
-372,Ben Mee,Burnley,0.0,0.0,2,0,0.0,0.0,
-373,Ashley Barnes,Burnley,0.0,0.0,2,0,0.0,0.0,
-374,Jack Cork,Burnley,0.0,0.0,2,0,0.0,0.0,
-375,James Tarkowski,Burnley,0.0,0.0,2,0,0.0,0.0,
-376,Billy Gilmour,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
-377,Benjamin Chilwell,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
-378,Thiago Thiago,Chelsea,0.0,0.0,3,1,0.0,0.0,0.0
-379,Edouard Mendy,Chelsea,0.0,0.0,3,0,0.0,,
-380,Bernard Anicio Caldeira Duarte,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-381,Cenk Tosun,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-382,Jonas Lossl,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-383,Gylfi Sigurdsson,Everton,0.0,0.0,3,3,0.0,0.0,0.0
-384,Fabian Delph,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-385,Theo Walcott,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-386,Ryan Inniss,Crystal Palace,0.0,0.0,3,0,0.0,0.0,
-387,Sam Woods,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-388,Brandon Pierrick,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-389,Nathan Ferguson,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-390,Jairo Riedewald,Crystal Palace,0.0,0.0,3,1,0.0,0.0,0.0
-391,Max Meyer,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-392,Patrick van Aanholt,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-393,Luka Milivojevic,Crystal Palace,0.0,0.0,3,2,0.0,0.0,0.0
-394,Connor Wickham,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-395,Martin Kelly,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-396,Joel Ward,Crystal Palace,0.0,0.0,3,3,0.0,0.0,0.0
-397,James Tomkins,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-398,Vicente Guaita,Crystal Palace,0.0,0.0,3,3,0.0,0.0,0.0
-399,Wayne Hennessey,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-400,Gary Cahill,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
-401,Jayson Molumby,Brighton,0.0,0.0,3,0,0.0,,
-402,Jason Steele,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-403,Christian Walton,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-404,Jose Ignacio Peleteiro Romallo,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-405,Neil Taylor,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-406,Henri Lansbury,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-407,Ahmed El Mohamady,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-408,Tom Heaton,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-409,Emiliano Martinez,Aston Villa,0.0,0.0,1,1,0.0,0.0,
-410,Runar Alex Runarsson,Arsenal,0.0,0.0,2,0,0.0,,
-411,Matt Macey,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-412,William Saliba,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-413,Gabriel Teodoro Martinelli Silva,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-414,Matteo Guendouzi,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-415,Emile Smith Rowe,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-416,Reiss Nelson,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-417,Joseph Willock,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-418,Lucas Torreira,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-419,Rob Holding,Arsenal,0.0,0.0,2,2,0.0,0.0,0.0
-420,Calum Chambers,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-421,Pablo Mari,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-422,Bernd Leno,Arsenal,0.0,0.0,2,2,0.0,0.0,0.0
-423,Shkodran Mustafi,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-424,Cedric Soares,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-425,David Luiz Moreira Marinho,Arsenal,0.0,0.0,2,1,0.0,0.0,0.0
-426,Jed Steer,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-427,Ørjan Nyland,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-428,Alexis Mac Allister,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-429,Bjorn Engels,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-430,Bernardo Fernandes da Silva Junior,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-431,Matthew Clarke,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-432,Jose Izquierdo,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-433,Mathew Ryan,Brighton,0.0,0.0,3,3,0.0,0.0,0.0
-434,Joel Veltman,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-435,Florin Andone,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-436,Martin Montoya,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-437,Dan Burn,Brighton,0.0,0.0,3,1,0.0,0.0,0.0
-438,Aaron Mooy,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-439,Davy Propper,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-440,Shane Duffy,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-441,Glenn Murray,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
-442,Bertrand Traore,Aston Villa,0.0,0.0,1,0,0.0,,
-443,Indiana Vassilev,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-444,Mbwana Samatta,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-445,Wesley Moraes,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-446,Frederic Guilbert,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-447,Anwar El Ghazi,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-448,Marvelous Nakamba,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-449,James Bree,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-450,Kortney Hause,Aston Villa,0.0,0.0,1,0,0.0,0.0,
-451,Jordan Pickford,Everton,0.0,0.0,3,3,0.0,0.0,0.0
-452,Jonjoe Kenny,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-453,Jean-Philippe Gbamin,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-454,Nicolas Otamendi,Man City,0.0,0.0,1,0,0.0,0.0,
-455,Claudio Bravo,Man City,0.0,0.0,1,0,0.0,0.0,
-456,Diogo Jota,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-457,Harvey Elliott,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-458,Neco Williams,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-459,Rhian Brewster,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-460,Joseph Gomez,Liverpool,0.0,0.0,2,1,0.0,0.0,0.0
-461,Harry Wilson,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-462,Divock Origi,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-463,Alisson Ramses Becker,Liverpool,0.0,0.0,2,2,0.0,0.0,0.0
-464,Alex Oxlade-Chamberlain,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-465,Xherdan Shaqiri,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-466,Joel Matip,Liverpool,0.0,0.0,2,1,0.0,0.0,0.0
-467,Adrian San Miguel del Castillo,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-468,Konstantinos Tsimikas,Liverpool,0.0,0.0,2,0,0.0,0.0,0.0
-469,Diego Llorente,Leeds,0.0,0.0,2,0,0.0,,
-470,Mateusz Bogusz,Leeds,0.0,0.0,2,0,0.0,0.0,
-471,Elia Caprile,Leeds,0.0,0.0,2,0,0.0,0.0,
-472,Sokratis Papastathopoulos,Arsenal,0.0,0.0,2,0,0.0,0.0,0.0
-473,Oliver Casey,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-474,Leif Davis,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-475,Illan Meslier,Leeds,0.0,0.0,2,2,0.0,0.0,0.0
-476,Sergio Aguero,Man City,0.0,0.0,1,0,0.0,0.0,
-477,Ilkay Gundogan,Man City,0.0,0.0,1,0,0.0,0.0,
-478,Pascal Struijk,Leeds,0.0,0.0,2,1,0.0,0.0,0.0
-479,John Stones,Man City,0.0,0.0,1,1,0.0,0.0,
-480,Jesse Lingard,Man Utd,0.0,0.0,2,0,0.0,0.0,
-481,Frederico Rodrigues de Paula Santos,Man Utd,0.0,0.0,2,1,0.0,0.0,
-482,Phil Jones,Man Utd,0.0,0.0,2,0,0.0,0.0,
-483,Marcos Rojo,Man Utd,0.0,0.0,2,0,0.0,0.0,
-484,Chris Smalling,Man Utd,0.0,0.0,2,0,0.0,0.0,
-485,David de Gea,Man Utd,0.0,0.0,2,2,0.0,0.0,
-486,Juan Mata,Man Utd,0.0,0.0,2,0,0.0,0.0,
-487,Sergio Romero,Man Utd,0.0,0.0,2,0,0.0,0.0,
-488,Liam Delap,Man City,0.0,0.0,1,0,0.0,0.0,
-489,Zack Steffen,Man City,0.0,0.0,1,0,0.0,0.0,
-490,Adrian Bernabe,Man City,0.0,0.0,1,0,0.0,0.0,
-491,Eric Garcia,Man City,0.0,0.0,1,0,0.0,0.0,
-492,Ferran Torres,Man City,0.0,0.0,1,1,0.0,0.0,
-493,Tommy Doyle,Man City,0.0,0.0,1,0,0.0,0.0,
-494,Oleksandr Zinchenko,Man City,0.0,0.0,1,0,0.0,0.0,
-495,Bernardo Mota Veiga de Carvalho e Silva,Man City,0.0,0.0,1,0,0.0,0.0,
-496,Aymeric Laporte,Man City,0.0,0.0,1,0,0.0,0.0,
-497,Nathan Ake,Man City,0.0,0.0,1,1,0.0,0.0,
-498,Ederson Santana de Moraes,Man City,0.0,0.0,1,1,0.0,0.0,
-499,Joao Pedro Cavaco Cancelo,Man City,0.0,0.0,1,0,0.0,0.0,
-500,Riyad Mahrez,Man City,0.0,0.0,1,0,0.0,0.0,
-501,Jordan Stevens,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-502,Jamie Shackleton,Leeds,0.0,0.0,2,1,0.0,0.0,0.0
-503,Tom Davies,Everton,0.0,0.0,3,2,0.0,0.0,0.0
-504,Kasper Schmeichel,Leicester,0.0,0.0,2,2,0.0,0.0,0.0
-505,Alphonse Areola,Fulham,0.0,0.0,2,1,0.0,0.0,0.0
-506,Mario Lemina,Fulham,0.0,0.0,2,1,0.0,0.0,0.0
-507,Antonee Robinson,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-508,Zeze Steven Sessegnon,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-509,Jean Michael Seri,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-510,Ivan Ricardo Neves Abreu Cavaleiro,Fulham,0.0,0.0,2,2,0.0,0.0,0.0
-511,Marek Rodak,Fulham,0.0,0.0,2,1,0.0,0.0,0.0
-512,Alfie Mawson,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-513,Marcus Bettinelli,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-514,Cyrus Christie,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-515,Anthony Knockaert,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-516,Tim Ream,Fulham,0.0,0.0,2,1,0.0,0.0,0.0
-517,Tom Cairney,Fulham,0.0,0.0,2,1,0.0,0.0,0.0
-518,Stefan Johansen,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-519,Maxime Le Marchand,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-520,Kevin McDonald,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-521,Fabricio Agosto Ramirez,Fulham,0.0,0.0,2,0,0.0,0.0,0.0
-522,Jarrad Branthwaite,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-523,Anthony Gordon,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-524,Joao Virginia,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-525,Mason Holgate,Everton,0.0,0.0,3,0,0.0,0.0,0.0
-526,Wes Morgan,Leicester,0.0,0.0,2,1,0.0,0.0,0.0
-527,Christian Fuchs,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-528,Ian Carlo Poveda-Ocampo,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-529,Jonny Evans,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-530,Kamil Miazek,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-531,Jay-Roy Grot,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-532,Adam Forshaw,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-533,Luke Ayling,Leeds,0.0,0.0,2,2,0.0,0.0,0.0
-534,Barry Douglas,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-535,Liam Cooper,Leeds,0.0,0.0,2,1,0.0,0.0,0.0
-536,Francisco Casilla Cortes,Leeds,0.0,0.0,2,0,0.0,0.0,0.0
-537,Cengiz Under,Leicester,0.0,0.0,2,0,0.0,,
-538,Nampalys Mendy,Leicester,0.0,0.0,2,2,0.0,0.0,0.0
-539,Luke Thomas,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-540,Filip Benkovic,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-541,Wilfred Ndidi,Leicester,0.0,0.0,2,2,0.0,0.0,0.0
-542,Hamza Choudhury,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-543,Kelechi Iheanacho,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-544,James Maddison,Leicester,0.0,0.0,2,2,0.0,0.0,0.0
-545,Demarai Gray,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-546,Daniel Amartey,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-547,Ricardo Domingos Barbosa Pereira,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-548,Danny Ward,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-549,Matty James,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-550,Adrien Silva,Leicester,0.0,0.0,2,0,0.0,0.0,0.0
-551,Nelson Cabral Semedo,Wolves,0.0,0.0,2,0,0.0,,
+28,Jarrod Bowen,West Ham,30.333333333333332,30.333333333333332,3,3,45.0,34.0,12.0
+29,Solomon March,Brighton,28.666666666666668,28.666666666666668,3,3,66.0,0.0,20.0
+30,Anthony Martial,Man Utd,28.0,28.0,2,2,28.0,28.0,
+31,Callum Wilson,Newcastle,26.333333333333332,26.333333333333332,3,3,19.0,10.0,50.0
+32,John McGinn,Aston Villa,25.0,25.0,2,2,31.0,19.0,
+33,Marcus Rashford,Man Utd,24.5,24.5,2,2,39.0,10.0,
+34,Ollie Watkins,Aston Villa,24.5,24.5,2,2,15.0,34.0,
+35,Georginio Wijnaldum,Liverpool,24.333333333333332,24.333333333333332,3,3,9.0,29.0,35.0
+36,Pierre-Emerick Aubameyang,Arsenal,24.333333333333332,24.333333333333332,3,3,4.0,15.0,54.0
+37,Andy Carroll,Newcastle,24.0,24.0,3,3,22.0,2.0,48.0
+38,Dennis Praet,Leicester,22.666666666666668,22.666666666666668,3,3,0.0,35.0,33.0
+39,Gabriel Fernando de Jesus,Man City,22.5,45.0,2,1,0.0,45.0,
+40,Josh Brownhill,Burnley,22.5,22.5,2,2,36.0,9.0,
+41,Mahmoud Ahmed Ibrahim Hassan,Aston Villa,22.5,22.5,2,2,26.0,19.0,
+42,Bruno Miguel Borges Fernandes,Man Utd,22.0,22.0,2,2,19.0,25.0,
+43,Virgil van Dijk,Liverpool,22.0,22.0,3,3,25.0,4.0,37.0
+44,Aaron Connolly,Brighton,21.0,21.0,3,3,8.0,23.0,32.0
+45,Helder Wander Sousa de Azevedo e Costa,Leeds,21.0,21.0,3,3,21.0,36.0,6.0
+46,Jordan Ayew,Crystal Palace,20.666666666666668,20.666666666666668,3,3,2.0,41.0,19.0
+47,Tammy Abraham,Chelsea,20.666666666666668,31.0,3,2,45.0,17.0,0.0
+48,Cheikhou Kouyate,Crystal Palace,20.333333333333332,20.333333333333332,3,3,42.0,2.0,17.0
+49,Tyrone Mings,Aston Villa,20.0,20.0,2,2,34.0,6.0,
+50,Jimmy Dunne,Burnley,19.0,19.0,2,2,8.0,30.0,
+51,Grady Diangana,West Brom,19.0,19.0,3,3,12.0,36.0,9.0
+52,James Rodriguez,Everton,19.0,19.0,3,3,25.0,9.0,23.0
+53,George Baldock,Sheffield Utd,19.0,19.0,3,3,29.0,2.0,26.0
+54,Andrew Robertson,Liverpool,17.666666666666668,17.666666666666668,3,3,23.0,26.0,4.0
+55,Mateusz Klich,Leeds,17.333333333333332,17.333333333333332,3,3,10.0,19.0,23.0
+56,Davinson Sanchez,Spurs,17.333333333333332,26.0,3,2,52.0,0.0,0.0
+57,Ayoze Perez,Leicester,17.333333333333332,26.0,3,2,0.0,28.0,24.0
+58,John Lundstram,Sheffield Utd,16.666666666666668,16.666666666666668,3,3,31.0,17.0,2.0
+59,Callum Robinson,West Brom,16.666666666666668,16.666666666666668,3,3,35.0,13.0,2.0
+60,Ezri Konsa Ngoyo,Aston Villa,16.5,16.5,2,2,0.0,33.0,
+61,Oliver McBurnie,Sheffield Utd,16.333333333333332,16.333333333333332,3,3,4.0,4.0,41.0
+62,Naby Keita,Liverpool,16.0,16.0,3,3,22.0,2.0,24.0
+63,Mason Greenwood,Man Utd,16.0,16.0,2,2,6.0,26.0,
+64,Timothy Castagne,Leicester,15.666666666666666,15.666666666666666,3,3,4.0,8.0,35.0
+65,Bobby Decordova-Reid,Fulham,15.666666666666666,15.666666666666666,3,3,28.0,17.0,2.0
+66,Leandro Trossard,Brighton,15.666666666666666,15.666666666666666,3,3,23.0,13.0,11.0
+67,Sebastien Haller,West Ham,15.0,15.0,3,3,17.0,0.0,28.0
+68,Riyad Mahrez,Man City,15.0,30.0,2,1,30.0,0.0,
+69,Caglar Soyuncu,Leicester,14.666666666666666,14.666666666666666,3,3,2.0,36.0,6.0
+70,Kyle Walker,Man City,14.5,14.5,2,2,17.0,12.0,
+71,Fernando Luiz Rosa,Man City,14.5,14.5,2,2,25.0,4.0,
+72,Matt Doherty,Spurs,14.333333333333334,14.333333333333334,3,3,8.0,0.0,35.0
+73,Giovani Lo Celso,Spurs,14.333333333333334,21.5,3,2,35.0,8.0,0.0
+74,Tariq Lamptey,Brighton,14.333333333333334,14.333333333333334,3,3,2.0,21.0,20.0
+75,Michael Keane,Everton,14.333333333333334,14.333333333333334,3,3,2.0,41.0,0.0
+76,Scott McTominay,Man Utd,14.0,28.0,2,1,0.0,28.0,
+77,Erik Lamela,Spurs,14.0,21.0,3,2,7.0,35.0,0.0
+78,Ruben Diogo da Silva Neves,Wolves,14.0,14.0,3,3,16.0,26.0,0.0
+79,Andros Townsend,Crystal Palace,14.0,14.0,3,3,0.0,40.0,2.0
+80,Willian Borges Da Silva,Arsenal,14.0,14.0,3,3,0.0,4.0,38.0
+81,Billy Sharp,Sheffield Utd,14.0,21.0,3,2,19.0,0.0,23.0
+82,Jonjo Shelvey,Newcastle,14.0,14.0,3,3,8.0,12.0,22.0
+83,Ivan Ricardo Neves Abreu Cavaleiro,Fulham,13.666666666666666,13.666666666666666,3,3,41.0,0.0,0.0
+84,Jack Harrison,Leeds,13.666666666666666,13.666666666666666,3,3,10.0,12.0,19.0
+85,Romain Saiss,Wolves,13.333333333333334,13.333333333333334,3,3,0.0,2.0,38.0
+86,Fabio Silva,Wolves,13.333333333333334,20.0,3,2,40.0,0.0,0.0
+87,Robin Koch,Leeds,13.0,13.0,3,3,0.0,21.0,18.0
+88,Douglas Luiz Soares de Paulo,Aston Villa,13.0,13.0,2,2,0.0,26.0,
+89,Stuart Dallas,Leeds,12.666666666666666,12.666666666666666,3,3,32.0,4.0,2.0
+90,Oliver Burke,Sheffield Utd,12.666666666666666,19.0,3,2,36.0,2.0,0.0
+91,Ben Davies,Spurs,12.666666666666666,12.666666666666666,3,3,2.0,0.0,36.0
+92,Donny van de Beek,Man Utd,12.5,12.5,2,2,2.0,23.0,
+93,Matheus Pereira,West Brom,12.333333333333334,12.333333333333334,3,3,0.0,11.0,26.0
+94,Abdoulaye Doucoure,Everton,12.333333333333334,12.333333333333334,3,3,33.0,0.0,4.0
+95,Miguel Almiron,Newcastle,12.0,12.0,3,3,14.0,2.0,20.0
+96,Jorge Luiz Frello Filho,Chelsea,12.0,18.0,3,2,0.0,19.0,17.0
+97,Gabriel Magalhaes,Arsenal,11.666666666666666,17.5,3,2,0.0,2.0,33.0
+98,James Justin,Leicester,11.666666666666666,11.666666666666666,3,3,2.0,31.0,2.0
+99,Eberechi Eze,Crystal Palace,11.666666666666666,11.666666666666666,3,3,29.0,2.0,4.0
+100,Youri Tielemans,Leicester,11.666666666666666,11.666666666666666,3,3,17.0,9.0,9.0
+101,James Ward-Prowse,Southampton,11.666666666666666,11.666666666666666,3,3,0.0,31.0,4.0
+102,Phil Foden,Man City,11.5,11.5,2,2,0.0,23.0,
+103,Conor Hourihane,Aston Villa,11.5,11.5,2,2,20.0,3.0,
+104,Kurt Zouma,Chelsea,11.333333333333334,17.0,3,2,0.0,17.0,17.0
+105,Daniel James,Man Utd,11.0,22.0,2,1,0.0,22.0,
+106,Harry Maguire,Man Utd,11.0,11.0,2,2,18.0,4.0,
+107,Kyle Bartley,West Brom,11.0,11.0,3,3,33.0,0.0,0.0
+108,Kai Havertz,Chelsea,10.666666666666666,10.666666666666666,3,3,32.0,0.0,0.0
+109,Neeskens Kebano,Fulham,10.666666666666666,10.666666666666666,3,3,10.0,4.0,18.0
+110,Callum Hudson-Odoi,Chelsea,10.333333333333334,15.5,3,2,31.0,0.0,0.0
+111,Pedro Lomba Neto,Wolves,10.0,10.0,3,3,8.0,18.0,4.0
+112,Bukayo Saka,Arsenal,10.0,30.0,3,1,0.0,30.0,0.0
+113,Sander Berge,Sheffield Utd,10.0,10.0,3,3,4.0,26.0,0.0
+114,Rodrigo Moreno,Leeds,9.666666666666666,9.666666666666666,3,3,25.0,4.0,0.0
+115,Angelo Ogbonna,West Ham,9.666666666666666,9.666666666666666,3,3,4.0,19.0,6.0
+116,Alireza Jahanbakhsh,Brighton,9.333333333333334,9.333333333333334,3,3,10.0,18.0,0.0
+117,Diogo Jota,Liverpool,9.333333333333334,28.0,3,1,28.0,0.0,0.0
+118,Matthew Cash,Aston Villa,9.0,9.0,2,2,2.0,16.0,
+119,Andre-Frank Zambo Anguissa,Fulham,8.666666666666666,8.666666666666666,3,3,18.0,8.0,0.0
+120,Andriy Yarmolenko,West Ham,8.666666666666666,13.0,3,2,0.0,0.0,26.0
+121,Nathan Ake,Man City,8.5,8.5,2,2,17.0,0.0,
+122,Erik Pieters,Burnley,8.5,17.0,2,1,0.0,17.0,
+123,Robbie Brady,Burnley,8.5,17.0,2,1,0.0,17.0,
+124,Jeff Hendrick,Newcastle,8.333333333333334,8.333333333333334,3,3,1.0,1.0,23.0
+125,Joe Bryan,Fulham,8.333333333333334,8.333333333333334,3,3,20.0,5.0,0.0
+126,Moussa Djenepo,Southampton,8.333333333333334,8.333333333333334,3,3,8.0,17.0,0.0
+127,Ian Carlo Poveda-Ocampo,Leeds,8.333333333333334,25.0,3,1,25.0,0.0,0.0
+128,Daniel Ceballos Fernandez,Arsenal,8.0,8.0,3,3,0.0,20.0,4.0
+129,Paul Pogba,Man Utd,8.0,8.0,2,2,0.0,16.0,
+130,Timothy Fosu-Mensah,Man Utd,8.0,16.0,2,1,0.0,16.0,
+131,Lucas Digne,Everton,8.0,8.0,3,3,12.0,12.0,0.0
+132,Pablo Fornals,West Ham,7.666666666666667,7.666666666666667,3,3,5.0,0.0,18.0
+133,Edward Nketiah,Arsenal,7.666666666666667,7.666666666666667,3,3,2.0,21.0,0.0
+134,Nathan Redmond,Southampton,7.666666666666667,23.0,3,1,0.0,0.0,23.0
+135,Steven Alzate,Brighton,7.666666666666667,7.666666666666667,3,3,4.0,2.0,17.0
+136,Andre Filipe Tavares Gomes,Everton,7.333333333333333,7.333333333333333,3,3,0.0,2.0,20.0
+137,Trent Alexander-Arnold,Liverpool,7.333333333333333,7.333333333333333,3,3,11.0,11.0,0.0
+138,Ben Osborn,Sheffield Utd,7.333333333333333,11.0,3,2,22.0,0.0,0.0
+139,Jeffrey Schlupp,Crystal Palace,7.333333333333333,11.0,3,2,0.0,22.0,0.0
+140,Granit Xhaka,Arsenal,7.0,7.0,3,3,0.0,0.0,21.0
+141,Bamidele Alli,Spurs,7.0,21.0,3,1,0.0,0.0,21.0
+142,Declan Rice,West Ham,6.666666666666667,6.666666666666667,3,3,2.0,10.0,8.0
+143,Stuart Armstrong,Southampton,6.666666666666667,10.0,3,2,14.0,6.0,0.0
+144,Mohamed Naser El Sayed Elneny,Arsenal,6.666666666666667,10.0,3,2,2.0,0.0,18.0
+145,Marcos Alonso,Chelsea,6.666666666666667,6.666666666666667,3,3,16.0,2.0,2.0
+146,Kyle Edwards,West Brom,6.666666666666667,10.0,3,2,0.0,0.0,20.0
+147,Dale Stephens,Burnley,6.5,13.0,2,1,13.0,0.0,0.0
+148,Jay Rodriguez,Burnley,6.5,13.0,2,1,0.0,13.0,
+149,Steven Bergwijn,Spurs,6.333333333333333,6.333333333333333,3,3,17.0,0.0,2.0
+150,Ezgjan Alioski,Leeds,6.333333333333333,9.5,3,2,0.0,19.0,0.0
+151,Jake Livermore,West Brom,6.333333333333333,6.333333333333333,3,3,0.0,19.0,0.0
+152,Adama Traore,Wolves,6.333333333333333,6.333333333333333,3,3,0.0,2.0,17.0
+153,Michael Hector,Fulham,6.0,6.0,3,3,0.0,18.0,0.0
+154,Matt Ritchie,Newcastle,6.0,18.0,3,1,18.0,0.0,0.0
+155,Adam Webster,Brighton,6.0,6.0,3,3,17.0,0.0,1.0
+156,Darnell Furlong,West Brom,6.0,6.0,3,3,4.0,2.0,12.0
+157,Jack Stephens,Southampton,5.666666666666667,8.5,3,2,0.0,0.0,17.0
+158,Reece James,Chelsea,5.666666666666667,5.666666666666667,3,3,4.0,2.0,11.0
+159,Seamus Coleman,Everton,5.0,5.0,3,3,2.0,6.0,7.0
+160,Enda Stevens,Sheffield Utd,5.0,5.0,3,3,9.0,0.0,6.0
+161,Kevin Long,Burnley,5.0,5.0,2,2,4.0,6.0,
+162,Jack Robinson,Sheffield Utd,5.0,15.0,3,1,15.0,0.0,0.0
+163,John Fleck,Sheffield Utd,4.666666666666667,7.0,3,2,0.0,0.0,14.0
+164,Nicolas Pepe,Arsenal,4.666666666666667,4.666666666666667,3,3,0.0,8.0,6.0
+165,Charlie Taylor,Burnley,4.5,4.5,2,2,7.0,2.0,
+166,Nemanja Matic,Man Utd,4.5,9.0,2,1,9.0,0.0,
+167,David McGoldrick,Sheffield Utd,4.333333333333333,4.333333333333333,3,3,5.0,0.0,8.0
+168,Cesar Azpilicueta,Chelsea,4.333333333333333,6.5,3,2,11.0,0.0,2.0
+169,Benjamin Mendy,Man City,4.0,4.0,2,2,0.0,8.0,
+170,Chris Basham,Sheffield Utd,4.0,4.0,3,3,6.0,4.0,2.0
+171,Tyler Roberts,Leeds,3.6666666666666665,3.6666666666666665,3,3,0.0,11.0,0.0
+172,Moise Kean,Everton,3.6666666666666665,5.5,3,2,0.0,7.0,4.0
+173,Ross Barkley,Aston Villa,3.5,3.5,2,2,0.0,0.0,7.0
+174,N'Golo Kante,Chelsea,3.3333333333333335,3.3333333333333335,3,3,2.0,4.0,4.0
+175,Pascal Groß,Brighton,3.3333333333333335,5.0,3,2,10.0,0.0,0.0
+176,Isaac Hayden,Newcastle,3.3333333333333335,3.3333333333333335,3,3,0.0,10.0,0.0
+177,Luke Ayling,Leeds,3.3333333333333335,3.3333333333333335,3,3,10.0,0.0,0.0
+178,James McArthur,Crystal Palace,3.3333333333333335,3.3333333333333335,3,3,2.0,2.0,6.0
+179,Lewis Dunk,Brighton,3.0,3.0,3,3,2.0,0.0,7.0
+180,Joao Filipe Iria Santos Moutinho,Wolves,3.0,3.0,3,3,9.0,0.0,0.0
+181,Phil Bardsley,Burnley,3.0,3.0,2,2,0.0,6.0,
+182,Keinan Davis,Aston Villa,3.0,6.0,2,1,0.0,6.0,
+183,James Maddison,Leicester,3.0,3.0,3,3,9.0,0.0,0.0
+184,Hal Robson-Kanu,West Brom,3.0,4.5,3,2,8.0,0.0,1.0
+185,James McCarthy,Crystal Palace,2.6666666666666665,2.6666666666666665,3,3,8.0,0.0,0.0
+186,Allan Marques Loureiro,Everton,2.6666666666666665,2.6666666666666665,3,3,1.0,7.0,0.0
+187,Harrison Reed,Fulham,2.6666666666666665,4.0,3,2,0.0,8.0,0.0
+188,Denis Odoi,Fulham,2.6666666666666665,2.6666666666666665,3,3,0.0,1.0,7.0
+189,Pierre-Emile Højbjerg,Spurs,2.6666666666666665,2.6666666666666665,3,3,8.0,0.0,0.0
+190,Hector Bellerin,Arsenal,2.6666666666666665,2.6666666666666665,3,3,2.0,2.0,4.0
+191,Scott Dann,Crystal Palace,2.6666666666666665,8.0,3,1,0.0,0.0,8.0
+192,Ryan Bertrand,Southampton,2.6666666666666665,2.6666666666666665,3,3,2.0,4.0,2.0
+193,Matt Phillips,West Brom,2.6666666666666665,4.0,3,2,8.0,0.0,0.0
+194,Joelinton Cassio Apolinario de Lira,Newcastle,2.6666666666666665,2.6666666666666665,3,3,0.0,0.0,8.0
+195,Jordan Henderson,Liverpool,2.3333333333333335,3.5,3,2,0.0,0.0,7.0
+196,Yves Bissouma,Brighton,2.3333333333333335,3.5,3,2,0.0,2.0,5.0
+197,Daniel Castelo Podence,Wolves,2.3333333333333335,3.5,3,2,0.0,7.0,0.0
+198,Ainsley Maitland-Niles,Arsenal,2.3333333333333335,3.5,3,2,3.0,0.0,4.0
+199,Aboubakar Kamara,Fulham,2.3333333333333335,2.3333333333333335,3,3,0.0,2.0,5.0
+200,Shane Long,Southampton,2.0,3.0,3,2,0.0,4.0,2.0
+201,Nelson Cabral Semedo,Wolves,2.0,6.0,3,1,6.0,,
+202,John Egan,Sheffield Utd,2.0,3.0,3,2,0.0,0.0,6.0
+203,Olivier Giroud,Chelsea,2.0,6.0,3,1,6.0,0.0,0.0
+204,Liam Delap,Man City,2.0,4.0,2,1,4.0,0.0,
+205,Luke Shaw,Man Utd,2.0,2.0,2,2,2.0,2.0,
+206,Ryan Fredericks,West Ham,2.0,2.0,3,3,0.0,4.0,2.0
+207,Victor Lindelof,Man Utd,2.0,2.0,2,2,0.0,4.0,
+208,Rodrigo Hernandez,Man City,2.0,2.0,2,2,3.0,1.0,
+209,Dwight McNeil,Burnley,2.0,2.0,2,2,4.0,0.0,
+210,Allan Saint-Maximin,Newcastle,1.6666666666666667,2.5,3,2,0.0,0.0,5.0
+211,Arthur Masuaku,West Ham,1.6666666666666667,2.5,3,2,2.0,3.0,0.0
+212,Eric Dier,Spurs,1.3333333333333333,1.3333333333333333,3,3,4.0,0.0,0.0
+213,Jannik Vestergaard,Southampton,1.3333333333333333,2.0,3,2,0.0,0.0,4.0
+214,Alex Iwobi,Everton,1.3333333333333333,2.0,3,2,0.0,4.0,0.0
+215,Sead Kolasinac,Arsenal,1.3333333333333333,4.0,3,1,0.0,4.0,0.0
+216,Javier Manquillo,Newcastle,1.3333333333333333,1.3333333333333333,3,3,2.0,0.0,2.0
+217,Willy Boly,Wolves,1.3333333333333333,1.3333333333333333,3,3,0.0,4.0,0.0
+218,Kenny Tete,Fulham,1.3333333333333333,2.0,3,2,2.0,2.0,0.0
+219,Liam Cooper,Leeds,1.3333333333333333,2.0,3,2,4.0,0.0,0.0
+220,Jamaal Lascelles,Newcastle,1.3333333333333333,1.3333333333333333,3,3,0.0,4.0,0.0
+221,Tanguy Ndombele,Spurs,1.3333333333333333,1.3333333333333333,3,3,4.0,0.0,0.0
+222,Leander Dendoncker,Wolves,1.3333333333333333,2.0,3,2,0.0,0.0,4.0
+223,James Milner,Liverpool,1.3333333333333333,2.0,3,2,0.0,4.0,0.0
+224,Conor Townsend,West Brom,1.3333333333333333,4.0,3,1,4.0,0.0,0.0
+225,Jan Bednarek,Southampton,1.3333333333333333,1.3333333333333333,3,3,4.0,0.0,0.0
+226,Kyle Walker-Peters,Southampton,1.3333333333333333,1.3333333333333333,3,3,0.0,0.0,4.0
+227,Federico Fernandez,Newcastle,1.3333333333333333,1.3333333333333333,3,3,2.0,0.0,2.0
+228,Christian Benteke,Crystal Palace,1.3333333333333333,4.0,3,1,4.0,0.0,0.0
+229,Ethan Ampadu,Sheffield Utd,1.0,1.5,3,2,2.0,1.0,0.0
+230,Nathan Tella,Southampton,1.0,1.5,3,2,0.0,3.0,0.0
+231,Matt Targett,Aston Villa,1.0,1.0,2,2,0.0,2.0,
+232,Tom Cairney,Fulham,1.0,1.5,3,2,3.0,0.0,0.0
+233,Bertrand Traore,Aston Villa,1.0,2.0,2,1,2.0,,
+234,Odion Ighalo,Man Utd,1.0,2.0,2,1,0.0,2.0,
+235,Yerry Mina,Everton,1.0,1.0,3,3,0.0,2.0,1.0
+236,Michy Batshuayi,Crystal Palace,1.0,1.5,3,2,2.0,1.0,0.0
+237,Pablo Hernandez Dominguez,Leeds,0.6666666666666666,2.0,3,1,0.0,0.0,2.0
+238,Kieran Gibbs,West Brom,0.6666666666666666,1.0,3,2,0.0,2.0,0.0
+239,Tyrick Mitchell,Crystal Palace,0.6666666666666666,0.6666666666666666,3,3,2.0,0.0,0.0
+240,Curtis Jones,Liverpool,0.6666666666666666,2.0,3,1,0.0,0.0,2.0
+241,Felipe Anderson Pereira Gomes,West Ham,0.6666666666666666,1.0,3,2,0.0,2.0,0.0
+242,Mamadou Sakho,Crystal Palace,0.6666666666666666,1.0,3,2,2.0,0.0,0.0
+243,Ben White,Brighton,0.6666666666666666,0.6666666666666666,3,3,2.0,0.0,0.0
+244,Ki-Jana Hoever,Wolves,0.6666666666666666,2.0,3,1,2.0,,
+245,Takumi Minamino,Liverpool,0.6666666666666666,1.0,3,2,0.0,2.0,0.0
+246,Andreas Christensen,Chelsea,0.6666666666666666,0.6666666666666666,3,3,0.0,0.0,2.0
+247,Kieran Tierney,Arsenal,0.6666666666666666,1.0,3,2,0.0,0.0,2.0
+248,Marc Albrighton,Leicester,0.6666666666666666,1.0,3,2,0.0,2.0,0.0
+249,Ryan Fraser,Newcastle,0.6666666666666666,2.0,3,1,0.0,2.0,0.0
+250,Josh Onomah,Fulham,0.6666666666666666,1.0,3,2,0.0,2.0,0.0
+251,Toby Alderweireld,Spurs,0.6666666666666666,2.0,3,1,0.0,0.0,2.0
+252,Fabio Henrique Tavares,Liverpool,0.6666666666666666,0.6666666666666666,3,3,0.0,0.0,2.0
+253,Adam Lallana,Brighton,0.6666666666666666,0.6666666666666666,3,3,0.0,0.0,2.0
+254,Ferran Torres,Man City,0.5,0.5,2,2,1.0,0.0,
+255,Kalvin Phillips,Leeds,0.3333333333333333,0.3333333333333333,3,3,0.0,0.0,1.0
+256,Romaine Sawyers,West Brom,0.3333333333333333,0.3333333333333333,3,3,1.0,0.0,0.0
+257,Thiago Alcantara do Nascimento,Liverpool,0.3333333333333333,1.0,3,1,0.0,1.0,
+258,Mateo Kovacic,Chelsea,0.3333333333333333,0.5,3,2,1.0,0.0,0.0
+259,Martin Dubravka,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+260,Simon Moore,Sheffield Utd,0.0,0.0,3,0,0.0,0.0,0.0
+261,Teden Mengi,Man Utd,0.0,0.0,2,0,0.0,0.0,
+262,Jamal Lewis,Newcastle,0.0,0.0,3,3,0.0,0.0,0.0
+263,Matthew Longstaff,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+264,Karl Darlow,Newcastle,0.0,0.0,3,3,0.0,0.0,0.0
+265,Ciaran Clark,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+266,Yoshinori Muto,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+267,Florian Lejeune,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+268,Emil Krafth,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+269,Jacob Murphy,Newcastle,0.0,0.0,3,1,0.0,0.0,0.0
+270,Kelland Watts,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+271,Brandon Williams,Man Utd,0.0,0.0,2,0,0.0,0.0,
+272,Dwight Gayle,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+273,Christian Atsu,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+274,Sean Longstaff,Newcastle,0.0,0.0,3,1,0.0,0.0,0.0
+275,DeAndre Yedlin,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+276,Rolando Aarons,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+277,James Garner,Man Utd,0.0,0.0,2,0,0.0,0.0,
+278,Fabian Schar,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+279,Paul Dummett,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+280,Mark Gillespie,Newcastle,0.0,0.0,3,0,0.0,0.0,0.0
+281,Mesut Ozil,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+282,Oliver Norwood,Sheffield Utd,0.0,0.0,3,2,0.0,0.0,0.0
+283,Wes Foderingham,Sheffield Utd,0.0,0.0,3,0,0.0,0.0,0.0
+284,Manuel Lanzini,West Ham,0.0,0.0,3,0,0.0,0.0,0.0
+285,Aaron Cresswell,West Ham,0.0,0.0,3,3,0.0,0.0,0.0
+286,Jack Wilshere,West Ham,0.0,0.0,3,0,0.0,0.0,0.0
+287,Roberto Jimenez Gago,West Ham,0.0,0.0,3,0,0.0,0.0,0.0
+288,Lukasz Fabianski,West Ham,0.0,0.0,3,3,0.0,0.0,0.0
+289,Darren Randolph,West Ham,0.0,0.0,3,0,0.0,0.0,0.0
+290,David Martin,West Ham,0.0,0.0,3,0,0.0,0.0,0.0
+291,Robert Snodgrass,West Ham,0.0,0.0,3,0,0.0,0.0,0.0
+292,Mark Noble,West Ham,0.0,0.0,3,2,0.0,0.0,0.0
+293,Filip Krovinovic,West Brom,0.0,0.0,3,0,,,
+294,Conor Gallagher,West Brom,0.0,0.0,3,0,0.0,,
+295,Branislav Ivanovic,West Brom,0.0,0.0,3,0,0.0,0.0,
+296,Cedric Kipre,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
+297,Rekeem Harper,West Brom,0.0,0.0,3,1,0.0,0.0,0.0
+298,Dara O'Shea,West Brom,0.0,0.0,3,3,0.0,0.0,0.0
+299,Sam Field,West Brom,0.0,0.0,3,2,0.0,0.0,0.0
+300,Jonathan Leko,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
+301,Fabian Balbuena,West Ham,0.0,0.0,3,1,0.0,0.0,0.0
+302,Jordan Hugill,West Ham,0.0,0.0,3,0,0.0,0.0,0.0
+303,Albian Ajeti,West Ham,0.0,0.0,3,0,0.0,0.0,0.0
+304,Max Kilman,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+305,Vitor Ferreira,Wolves,0.0,0.0,3,2,0.0,0.0,0.0
+306,Fernando Marcal,Wolves,0.0,0.0,3,2,0.0,0.0,0.0
+307,Leonardo Campana,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+308,Bruno Andre Cavaco Jordao,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+309,Morgan Gibbs-White,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+310,Matija Sarkic,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+311,Ruben Goncalo Silva Nascimento Vinagre,Wolves,0.0,0.0,3,2,0.0,0.0,0.0
+312,Oskar Buur,Wolves,0.0,0.0,3,1,0.0,0.0,0.0
+313,Issa Diop,West Ham,0.0,0.0,3,2,0.0,0.0,0.0
+314,Leo Bonatini,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+315,Jonathan Castro Otto,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+316,Conor Coady,Wolves,0.0,0.0,3,3,0.0,0.0,0.0
+317,Ryan Bennett,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+318,Rui Pedro dos Santos Patricio,Wolves,0.0,0.0,3,3,0.0,0.0,0.0
+319,John Ruddy,Wolves,0.0,0.0,3,0,0.0,0.0,0.0
+320,Ben Johnson,West Ham,0.0,0.0,3,1,0.0,0.0,0.0
+321,Oluwasemilogo Adesewo Ibidapo Ajayi,West Brom,0.0,0.0,3,3,0.0,0.0,0.0
+322,Sam Johnstone,West Brom,0.0,0.0,3,3,0.0,0.0,0.0
+323,Kenneth Zohore,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
+324,Oriol Romeu Vidal,Southampton,0.0,0.0,3,3,0.0,0.0,0.0
+325,Michael Obafemi,Southampton,0.0,0.0,3,1,0.0,0.0,0.0
+326,Jake Vokins,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
+327,William Smallbone,Southampton,0.0,0.0,3,2,0.0,0.0,0.0
+328,Yan Valery,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
+329,Josh Sims,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
+330,Sofiane Boufal,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
+331,Angus Gunn,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
+332,Alex McCarthy,Southampton,0.0,0.0,3,3,0.0,0.0,0.0
+333,Fraser Forster,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
+334,Phil Jagielka,Sheffield Utd,0.0,0.0,3,0,0.0,0.0,0.0
+335,Max Lowe,Sheffield Utd,0.0,0.0,3,0,0.0,0.0,0.0
+336,Jayden Bogle,Sheffield Utd,0.0,0.0,3,0,0.0,0.0,0.0
+337,Aaron Ramsdale,Sheffield Utd,0.0,0.0,3,3,0.0,0.0,0.0
+338,Luke Freeman,Sheffield Utd,0.0,0.0,3,0,0.0,0.0,0.0
+339,Lys Mousset,Sheffield Utd,0.0,0.0,3,0,0.0,0.0,0.0
+340,Jack O'Connell,Sheffield Utd,0.0,0.0,3,2,0.0,0.0,0.0
+341,Mohammed Salisu,Southampton,0.0,0.0,3,0,0.0,0.0,0.0
+342,Hugo Lloris,Spurs,0.0,0.0,3,3,0.0,0.0,0.0
+343,Charlie Austin,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
+344,Juan Foyth,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+345,Ahmed El-Sayed Hegazy,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
+346,Kamil Grosicki,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
+347,David Button,West Brom,0.0,0.0,3,0,0.0,0.0,0.0
+348,Gareth Bale,Spurs,0.0,0.0,3,0,0.0,,
+349,Sergio Reguilon,Spurs,0.0,0.0,3,0,0.0,,
+350,Cameron Carter-Vickers,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+351,Joe Hart,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+352,Oliver Skipp,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+353,Danny Rose,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+354,Japhet Tanganga,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+355,Gedson Carvalho Fernandes,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+356,Ryan Sessegnon,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+357,Harry Winks,Spurs,0.0,0.0,3,3,0.0,0.0,0.0
+358,Paulo Gazzaniga,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+359,Serge Aurier,Spurs,0.0,0.0,3,0,0.0,0.0,0.0
+360,Moussa Sissoko,Spurs,0.0,0.0,3,1,0.0,0.0,0.0
+361,Tahith Chong,Man Utd,0.0,0.0,2,0,0.0,0.0,
+362,Elia Caprile,Leeds,0.0,0.0,3,0,0.0,0.0,
+363,Jose Diogo Dalot Teixeira,Man Utd,0.0,0.0,2,0,0.0,0.0,
+364,Christian Walton,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+365,Ruben Loftus-Cheek,Chelsea,0.0,0.0,3,1,0.0,0.0,0.0
+366,Hakim Ziyech,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
+367,Kepa Arrizabalaga,Chelsea,0.0,0.0,3,2,0.0,0.0,0.0
+368,Emerson Palmieri dos Santos,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
+369,Antonio Rudiger,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
+370,Willy Caballero,Chelsea,0.0,0.0,3,1,0.0,0.0,0.0
+371,Mace Goodridge,Burnley,0.0,0.0,2,0,0.0,,
+372,Anthony Driscoll-Glennon,Burnley,0.0,0.0,2,0,0.0,0.0,
+373,Josh Benson,Burnley,0.0,0.0,2,0,0.0,0.0,
+374,Bobby Thomas,Burnley,0.0,0.0,2,0,0.0,0.0,
+375,Bailey Peacock-Farrell,Burnley,0.0,0.0,2,0,0.0,0.0,
+376,Nick Pope,Burnley,0.0,0.0,2,2,0.0,0.0,
+377,Ben Gibson,Burnley,0.0,0.0,2,0,0.0,0.0,
+378,Matthew Lowton,Burnley,0.0,0.0,2,0,0.0,0.0,
+379,Johann Berg Gudmundsson,Burnley,0.0,0.0,2,0,0.0,0.0,
+380,Ashley Westwood,Burnley,0.0,0.0,2,2,0.0,0.0,
+381,Ben Mee,Burnley,0.0,0.0,2,0,0.0,0.0,
+382,Ashley Barnes,Burnley,0.0,0.0,2,0,0.0,0.0,
+383,Jack Cork,Burnley,0.0,0.0,2,0,0.0,0.0,
+384,James Tarkowski,Burnley,0.0,0.0,2,0,0.0,0.0,
+385,Jayson Molumby,Brighton,0.0,0.0,3,0,0.0,,
+386,Christian Pulisic,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
+387,Fikayo Tomori,Chelsea,0.0,0.0,3,1,0.0,0.0,0.0
+388,Billy Gilmour,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
+389,Patrick van Aanholt,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+390,Gylfi Sigurdsson,Everton,0.0,0.0,3,3,0.0,0.0,0.0
+391,Fabian Delph,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+392,Theo Walcott,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+393,Ryan Inniss,Crystal Palace,0.0,0.0,3,0,0.0,0.0,
+394,Sam Woods,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+395,Brandon Pierrick,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+396,Nathan Ferguson,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+397,Jairo Riedewald,Crystal Palace,0.0,0.0,3,1,0.0,0.0,0.0
+398,Max Meyer,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+399,Luka Milivojevic,Crystal Palace,0.0,0.0,3,2,0.0,0.0,0.0
+400,Benjamin Chilwell,Chelsea,0.0,0.0,3,0,0.0,0.0,0.0
+401,Connor Wickham,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+402,Martin Kelly,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+403,Joel Ward,Crystal Palace,0.0,0.0,3,3,0.0,0.0,0.0
+404,James Tomkins,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+405,Vicente Guaita,Crystal Palace,0.0,0.0,3,3,0.0,0.0,0.0
+406,Wayne Hennessey,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+407,Gary Cahill,Crystal Palace,0.0,0.0,3,0,0.0,0.0,0.0
+408,Edouard Mendy,Chelsea,0.0,0.0,3,0,0.0,,
+409,Thiago Thiago,Chelsea,0.0,0.0,3,1,0.0,0.0,0.0
+410,Jason Steele,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+411,Alexis Mac Allister,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+412,Aaron Wan-Bissaka,Man Utd,0.0,0.0,2,1,0.0,0.0,
+413,Bernardo Fernandes da Silva Junior,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+414,Neil Taylor,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+415,Henri Lansbury,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+416,Ahmed El Mohamady,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+417,Tom Heaton,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+418,Emiliano Martinez,Aston Villa,0.0,0.0,2,2,0.0,0.0,
+419,Runar Alex Runarsson,Arsenal,0.0,0.0,3,0,0.0,,
+420,Matt Macey,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+421,William Saliba,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+422,Gabriel Teodoro Martinelli Silva,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+423,Matteo Guendouzi,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+424,Emile Smith Rowe,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+425,Reiss Nelson,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+426,Joseph Willock,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+427,Lucas Torreira,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+428,Rob Holding,Arsenal,0.0,0.0,3,3,0.0,0.0,0.0
+429,Calum Chambers,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+430,Pablo Mari,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+431,Bernd Leno,Arsenal,0.0,0.0,3,3,0.0,0.0,0.0
+432,Shkodran Mustafi,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+433,Cedric Soares,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+434,David Luiz Moreira Marinho,Arsenal,0.0,0.0,3,2,0.0,0.0,0.0
+435,Jed Steer,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+436,Jose Ignacio Peleteiro Romallo,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+437,Ørjan Nyland,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+438,Shane Duffy,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+439,Matthew Clarke,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+440,Jose Izquierdo,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+441,Mathew Ryan,Brighton,0.0,0.0,3,3,0.0,0.0,0.0
+442,Joel Veltman,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+443,Florin Andone,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+444,Martin Montoya,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+445,Dan Burn,Brighton,0.0,0.0,3,1,0.0,0.0,0.0
+446,Aaron Mooy,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+447,Davy Propper,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+448,Glenn Murray,Brighton,0.0,0.0,3,0,0.0,0.0,0.0
+449,Bjorn Engels,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+450,Jacob Ramsey,Aston Villa,0.0,0.0,2,1,0.0,,
+451,Indiana Vassilev,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+452,Mbwana Samatta,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+453,Wesley Moraes,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+454,Frederic Guilbert,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+455,Anwar El Ghazi,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+456,Marvelous Nakamba,Aston Villa,0.0,0.0,2,1,0.0,0.0,
+457,James Bree,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+458,Kortney Hause,Aston Villa,0.0,0.0,2,0,0.0,0.0,
+459,Jonas Lossl,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+460,Cenk Tosun,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+461,Bernard Anicio Caldeira Duarte,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+462,Jordan Pickford,Everton,0.0,0.0,3,3,0.0,0.0,0.0
+463,Ilkay Gundogan,Man City,0.0,0.0,2,0,0.0,0.0,
+464,Nicolas Otamendi,Man City,0.0,0.0,2,0,0.0,0.0,
+465,Sergio Aguero,Man City,0.0,0.0,2,0,0.0,0.0,
+466,Claudio Bravo,Man City,0.0,0.0,2,0,0.0,0.0,
+467,Harvey Elliott,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+468,Neco Williams,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+469,Rhian Brewster,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+470,Joseph Gomez,Liverpool,0.0,0.0,3,2,0.0,0.0,0.0
+471,Harry Wilson,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+472,Divock Origi,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+473,Alisson Ramses Becker,Liverpool,0.0,0.0,3,3,0.0,0.0,0.0
+474,Alex Oxlade-Chamberlain,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+475,Xherdan Shaqiri,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+476,Joel Matip,Liverpool,0.0,0.0,3,1,0.0,0.0,0.0
+477,Adrian San Miguel del Castillo,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+478,Konstantinos Tsimikas,Liverpool,0.0,0.0,3,0,0.0,0.0,0.0
+479,Diego Llorente,Leeds,0.0,0.0,3,0,0.0,,
+480,Mateusz Bogusz,Leeds,0.0,0.0,3,0,0.0,0.0,
+481,Sokratis Papastathopoulos,Arsenal,0.0,0.0,3,0,0.0,0.0,0.0
+482,Oliver Casey,Leeds,0.0,0.0,3,0,0.0,0.0,0.0
+483,Leif Davis,Leeds,0.0,0.0,3,0,0.0,0.0,0.0
+484,John Stones,Man City,0.0,0.0,2,1,0.0,0.0,
+485,Joao Pedro Cavaco Cancelo,Man City,0.0,0.0,2,0,0.0,0.0,
+486,Ederson Santana de Moraes,Man City,0.0,0.0,2,2,0.0,0.0,
+487,David de Gea,Man Utd,0.0,0.0,2,2,0.0,0.0,
+488,Eric Bailly,Man Utd,0.0,0.0,2,1,0.0,0.0,
+489,Axel Tuanzebe,Man Utd,0.0,0.0,2,0,0.0,0.0,
+490,Dean Henderson,Man Utd,0.0,0.0,2,0,0.0,0.0,
+491,Andreas Pereira,Man Utd,0.0,0.0,2,0,0.0,0.0,
+492,Jesse Lingard,Man Utd,0.0,0.0,2,0,0.0,0.0,
+493,Frederico Rodrigues de Paula Santos,Man Utd,0.0,0.0,2,1,0.0,0.0,
+494,Phil Jones,Man Utd,0.0,0.0,2,0,0.0,0.0,
+495,Marcos Rojo,Man Utd,0.0,0.0,2,0,0.0,0.0,
+496,Chris Smalling,Man Utd,0.0,0.0,2,0,0.0,0.0,
+497,Juan Mata,Man Utd,0.0,0.0,2,0,0.0,0.0,
+498,Aymeric Laporte,Man City,0.0,0.0,2,0,0.0,0.0,
+499,Sergio Romero,Man Utd,0.0,0.0,2,0,0.0,0.0,
+500,Ruben Santos Gato Alves Dias,Man City,0.0,0.0,2,0,,,
+501,Cole Palmer,Man City,0.0,0.0,2,0,0.0,,
+502,Zack Steffen,Man City,0.0,0.0,2,0,0.0,0.0,
+503,Adrian Bernabe,Man City,0.0,0.0,2,0,0.0,0.0,
+504,Eric Garcia,Man City,0.0,0.0,2,1,0.0,0.0,
+505,Tommy Doyle,Man City,0.0,0.0,2,0,0.0,0.0,
+506,Oleksandr Zinchenko,Man City,0.0,0.0,2,0,0.0,0.0,
+507,Bernardo Mota Veiga de Carvalho e Silva,Man City,0.0,0.0,2,0,0.0,0.0,
+508,Illan Meslier,Leeds,0.0,0.0,3,3,0.0,0.0,0.0
+509,Jordan Stevens,Leeds,0.0,0.0,3,0,0.0,0.0,0.0
+510,Pascal Struijk,Leeds,0.0,0.0,3,1,0.0,0.0,0.0
+511,Stefan Johansen,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+512,Antonee Robinson,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+513,Zeze Steven Sessegnon,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+514,Jean Michael Seri,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+515,Marek Rodak,Fulham,0.0,0.0,3,1,0.0,0.0,0.0
+516,Alfie Mawson,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+517,Marcus Bettinelli,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+518,Cyrus Christie,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+519,Anthony Knockaert,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+520,Tim Ream,Fulham,0.0,0.0,3,2,0.0,0.0,0.0
+521,Maxime Le Marchand,Fulham,0.0,0.0,3,1,0.0,0.0,0.0
+522,Alphonse Areola,Fulham,0.0,0.0,3,2,0.0,0.0,0.0
+523,Kevin McDonald,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+524,Fabricio Agosto Ramirez,Fulham,0.0,0.0,3,0,0.0,0.0,0.0
+525,Jarrad Branthwaite,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+526,Anthony Gordon,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+527,Joao Virginia,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+528,Mason Holgate,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+529,Tom Davies,Everton,0.0,0.0,3,2,0.0,0.0,0.0
+530,Jean-Philippe Gbamin,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+531,Jonjoe Kenny,Everton,0.0,0.0,3,0,0.0,0.0,0.0
+532,Mario Lemina,Fulham,0.0,0.0,3,1,0.0,0.0,0.0
+533,Wes Morgan,Leicester,0.0,0.0,3,1,0.0,0.0,0.0
+534,Jamie Shackleton,Leeds,0.0,0.0,3,1,0.0,0.0,0.0
+535,Wilfred Ndidi,Leicester,0.0,0.0,3,2,0.0,0.0,0.0
+536,Kamil Miazek,Leeds,0.0,0.0,3,0,0.0,0.0,0.0
+537,Jay-Roy Grot,Leeds,0.0,0.0,3,0,0.0,0.0,0.0
+538,Adam Forshaw,Leeds,0.0,0.0,3,0,0.0,0.0,0.0
+539,Barry Douglas,Leeds,0.0,0.0,3,0,0.0,0.0,0.0
+540,Francisco Casilla Cortes,Leeds,0.0,0.0,3,0,0.0,0.0,0.0
+541,Cengiz Under,Leicester,0.0,0.0,3,0,0.0,,
+542,Nampalys Mendy,Leicester,0.0,0.0,3,3,0.0,0.0,0.0
+543,Luke Thomas,Leicester,0.0,0.0,3,0,0.0,0.0,0.0
+544,Filip Benkovic,Leicester,0.0,0.0,3,0,0.0,0.0,0.0
+545,Hamza Choudhury,Leicester,0.0,0.0,3,0,0.0,0.0,0.0
+546,Kasper Schmeichel,Leicester,0.0,0.0,3,3,0.0,0.0,0.0
+547,Kelechi Iheanacho,Leicester,0.0,0.0,3,1,0.0,0.0,0.0
+548,Demarai Gray,Leicester,0.0,0.0,3,0,0.0,0.0,0.0
+549,Daniel Amartey,Leicester,0.0,0.0,3,1,0.0,0.0,0.0
+550,Ricardo Domingos Barbosa Pereira,Leicester,0.0,0.0,3,0,0.0,0.0,0.0
+551,Danny Ward,Leicester,0.0,0.0,3,0,0.0,0.0,0.0
+552,Matty James,Leicester,0.0,0.0,3,0,0.0,0.0,0.0
+553,Adrien Silva,Leicester,0.0,0.0,3,0,0.0,0.0,0.0
+554,Jonny Evans,Leicester,0.0,0.0,3,1,0.0,0.0,0.0
+555,Christian Fuchs,Leicester,0.0,0.0,3,1,0.0,0.0,0.0
+556,Meritan Shabani,Wolves,0.0,0.0,3,0,0.0,,
