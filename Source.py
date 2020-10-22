@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[15]:
 
 
 from time import time
@@ -255,7 +255,7 @@ class Source:
         self.Player_fixtures = Player_fixtures
         self.Player_opponent_team = Player_opponent_team
         
-        #Save before modifying while riting into files
+        #Save before modifying while writing into files
         self.TT = TeamThreat.copy()
         self.TC = TeamCreativity.copy()
         self.TD = TeamDefence.copy()
@@ -379,28 +379,60 @@ def write_table(df, name, key_col, source, ma_num):
     #Getting right paths for different tables
     if source=='FPL' and name=='TableTeams':
         html_path = Path('index.html')
-        css_path = Path(f'html/fpl/css/TableTeams.css')
-    elif name=='TableTeams':
-        html_path = Path('html/uns/main.html')
-        css_path = Path(f'html/uns/css/TableTeams.css')
-    elif source=='FPL':
-        html_path = Path(f'html/{source.lower()}/{html_name(name)}.html')
-        css_path = Path(f'html/{source.lower()}/css/{html_name(name)}.css')
+        css_path = Path(f'html/FPL/css/TableTeams.css')
+#     elif name=='TableTeams':
+#         html_path = Path('html/Understat/main.html')
+#         css_path = Path(f'html/Understat/css/TableTeams.css')
+#     elif source=='FPL':
+#         html_path = Path(f'html/{source.lower()}/{html_name(name)}.html')
+#         css_path = Path(f'html/{source.lower()}/css/{html_name(name)}.css')
     else:
-        html_path = Path(f'html/uns/{html_name(name)}.html')
-        css_path = Path(f'html/uns/css/{html_name(name)}.css')
+        html_path = Path(f'html/{source}/{html_name(name)}.html')
+        css_path = Path(f'html/{source}/css/{html_name(name)}.css')
+        
+    #Creating h2 header
+    if 'Table' in name:
+        h2_header  = 'Teams Ranking'
+    elif 'Team' in name:
+        h2_header  = f'Teams Ranking Based on {name}'
+    else:
+        h2_header  = f'Players Ranking Based on {name}'
+        
+    #Making css for coloring butons
+    
+    css = ('#' + source + '-button {\n background-color: #82f5cf;\n}\n' +
+           '#' + name + ' {\n background-color: lightgrey;\n}\n' + 
+           css)
         
     #Rewriting html and css
-    with open(html_path, 'r', encoding="utf-8") as file:
+    with open('index.html', 'r', encoding="utf-8") as file:
         old_file = file.read()
-    tag_to_replace = str(BeautifulSoup(old_file, 'html.parser')('table')[0])
-    new_file = old_file.replace(tag_to_replace, html_)
+    tag_to_replace1 = str(BeautifulSoup(old_file, 'html.parser')('table')[0])
+    tag_to_replace2 = str(BeautifulSoup(old_file, 'html.parser')('h2')[0])
+    new_file = old_file.replace(tag_to_replace1, html_)
+    new_file = new_file.replace(tag_to_replace2, f'<h2> {h2_header} </h2>')
+    
+    #Making links right
+        
+    if not(source=='FPL' and name=='TableTeams'):
+        new_file = new_file.replace('html/FPL/', '')
+        new_file = new_file.replace(f'TableTeams', html_name(name))
+        new_file = new_file.replace(f'TableTeams', html_name(name))
+        if name != 'TableTeams':
+            new_file = new_file.replace('form action="index.html"', f'form action="../FPL/{html_name(name)}.html"')
+        else:
+            new_file = new_file.replace('form action="index.html"', f'form action="../../index.html"')
+        new_file = new_file.replace('html/', '../')
+        new_file = new_file.replace('"index.html"', '"../../index.html"')
+        
     with open(html_path, 'w', encoding="utf-8") as file:
         file.write(new_file)
-    with open(Path('html/FPLstyle.css'), 'r', encoding="utf-8") as file:
-        css_template = file.read()
+    #with open(Path('html/FPLstyle.css'), 'r', encoding="utf-8") as file:
+    #    css_template = file.read()
     with open(css_path, 'w', encoding="utf-8") as file:
-        file.write(css_template+css)
+        file.write(css)
+        
+    #print(h2_header)
     
     return df
 
