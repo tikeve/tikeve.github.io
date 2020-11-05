@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
+# In[3]:
 
 
 #Downloadting Data from understat.com(Understat)
@@ -164,8 +164,12 @@ def Exc_dict(Name_Dictionary, name_understat, name_fpl):
     return Name_Dictionary
 
 #Read data from fantasy.premierleague.com(FPL) to compare with
+'''
+    Large_Table is needed only for inputUndersat. To get FPL names when Understat data is already calculated
+    but FPL data is not. So players played are not excluded from the table but have zero data.
+'''
 try:
-    Table_FPL = pd.read_csv('in/Table_FPL.csv') #Main table of FPL
+    Table_FPL = pd.read_csv('in/LTable_FPL.csv') #Main table of FPL
 except:
     Table_FPL = pd.DataFrame()
 Fixtures = pd.read_csv('in/Fixtures.csv') #All fixtures with postponed

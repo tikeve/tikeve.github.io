@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[19]:
+# In[1]:
 
 
 #Downloadting Data from fantasy.premierleague.com(FPL)
@@ -25,7 +25,7 @@ url3 = "https://fantasy.premierleague.com/api/event/6/live/" #Not used
 url4 = "https://fantasy.premierleague.com/api/fixtures" #Fixtures Table
 url5 = 'https://fantasy.premierleague.com/api/element-summary/191/' #Data for fixture 191
 
-#Downloading the Table Whih is Used for Players and Teams Lists only
+#Downloading the Table Which is Used for Players and Teams Lists only
 p1 = constti.long_request(url1)  
 data1 = p1.text
 d1 = json.loads(data1)
@@ -56,8 +56,6 @@ else: lastGW = 0
 if lastr == len(Fixtures):
     lastGW = int(Fixtures.at[lastr,'event'])
 
-
-
 #Creating the Main Table for FPL Source
 Table = pd.DataFrame()
 for i in bigTable['id']:
@@ -67,9 +65,39 @@ for i in bigTable['id']:
     dd = pd.DataFrame(d['history'])
     Table = Table.append(dd, ignore_index=True)
 if 'threat' in Table.columns:
+    Table['name'] = [players[Table.at[i, 'element']] for i in Table.index]
     Table['threat'] = pd.to_numeric(Table['threat'])
     Table['creativity'] = pd.to_numeric(Table['creativity'])
-    Table['team'] = [teamplayers[Table.at[i,'element']] for i in Table.index]
+    #Table['team'] = [teamplayers[Table.at[i,'element']] for i in Table.index]
+    Table['team'] = [Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_h'].values[0] if Table.at[i,'was_home']    else Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_a'].values[0] for i in Table.index]
+    
+#Deleteting double gameweeks for players changeg one PL cloub for another during GW ("Walcott case")
+#And matches from the current GW that are not played yet
+indexes_to_drop = []
+#Deleting 'Walcott case'
+for i in Table.index:#[:-1]:
+    if i!= len(Table) - 1:
+        if (Table['element'][i]==Table['element'][i+1])&(Table['round'][i]==Table['round'][i+1])&        (Table['team'][i]!=Table['team'][i+1]):
+            if Table['minutes'][i] ==  0:
+                indexes_to_drop.append(i)
+            elif Table['minutes'][i+1] ==  0:
+                indexes_to_drop.append(i+1)
+if indexes_to_drop != []:
+    '''
+        Large_Table is needed only for inputUndersat. To get FPL names when Understat data is already calculated
+        but FPL data is not. So players played are not excluded from the table but have zero data.
+    '''
+    Large_Table = Table.drop(indexes_to_drop).reset_index()
+#Deleting not played
+for i in Table.index:
+    if (Fixtures[Fixtures['id'] == Table.at[i,'fixture']]['finished'].values[0] == False)&(not i in indexes_to_drop):
+        indexes_to_drop.append(i)
+if indexes_to_drop != []:
+    Table = Table.drop(indexes_to_drop).reset_index()
+            
+            
+            
+            
 
 #Making Teams Template Table
 Teams = pd.DataFrame()
@@ -85,8 +113,12 @@ Players['Name'] = constti.strip_accents_pdlist(pd.DataFrame(bigTable['full_name'
 Players['web_name'] = constti.strip_accents_pdlist(pd.DataFrame(bigTable['web_name']))
 Players['Team number'] = [bigTable[bigTable['id'] == i]['team'].sum() for i in Players['id']]
 Players['Team'] = [dict(zip(pd.DataFrame(d1['teams'])['id'],pd.DataFrame(d1['teams'])['name']))                   [Players.at[i,'Team number']] for i in Players.index]
-Players['Team games'] = [Teams.at[Players.at[i,'Team number']-1,'Matches'] for i in Players.index]
+#Players['Team games'] = [Teams.at[Players.at[i,'Team number']-1,'Matches'] for i in Players.index]
+
+
+
 if  not Table.empty:
+    Players['Team games'] = [len(Table[(Table['element']==i) ]) for i in Players['id']]
     Players['Played'] = [len(Table[(Table['element']==i)&(Table['minutes']>0)])                         for i in Players['id']]
 
 
@@ -97,42 +129,71 @@ start = time()
 #Calculating Fixtures and Opponents
             
 Team_all = pd.DataFrame()
-Team_fixtures = pd.DataFrame()
+#Team_fixtures = pd.DataFrame()
+Team_played_fixtures = pd.DataFrame()
+Team_upcoming_fixtures = pd.DataFrame()
 Team_opponent_team = pd.DataFrame()
 for j in range(lastGW,0,-1): 
-
+    '''
+        Team_all - contains [number of fixture, home team id, away team id]
+        Team_fixtures - contains [number of fixture]
+        Team_opponent_team - [opponent team id]
+    '''
     Team_all['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&    (Fixtures['event']==j)][['id', 'team_h', 'team_a']].values for i in range(1, team_number+1)]
 
-    Team_fixtures['GW'+str(j)] = [list(pd.DataFrame(Team_all.at[i,'GW'+str(j)])[0]) for i in Team_all.index]
+    #Team_fixtures['GW'+str(j)] = [list(pd.DataFrame(Team_all.at[i,'GW'+str(j)])[0]) for i in Team_all.index]
+    
+    
+    Team_played_fixtures['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&    (Fixtures['event']==j)&Fixtures['finished']][['id']].values for i in range(1, team_number+1)]
 
     Team_opponent_team['GW'+str(j)] = [[pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0]    if pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0] != i+1    else pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][1]    for v in range(len(pd.DataFrame(Team_all.at[i,'GW'+str(j)])))] for i in Team_all.index]
-
+    
+for j in range(lastGW,int(Fixtures['event'].max()+1)): 
+    Team_upcoming_fixtures['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&    (Fixtures['event']==j)&(Fixtures['finished']==False)][['id']].values for i in range(1, team_number+1)]
+               
+'''
+    Player_all - contains [number of fixture, opponent team id]
+    Team_opponent_team - [opponent team id]
+'''
 Player_all = pd.DataFrame()
-Player_fixtures = pd.DataFrame()
+Player_played_fixtures = pd.DataFrame()
+Player_upcoming_fixtures = pd.DataFrame(columns = Team_upcoming_fixtures.columns)
 Player_opponent_team = pd.DataFrame()
+Player_all['id'] = Players['id']
+Player_all['name'] = [players[Player_all.at[i, 'id']] for i in Player_all.index]
 if  not Table.empty:
     for j in range(lastGW,0,-1):
 
         Player_all['GW'+str(j)] = [Table[(Table['element']==i)&        (Table['round']==j)][['fixture', 'opponent_team']].values for i in Players['id']]
 
-        Player_fixtures['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[0]) for i in Player_all.index]
+        Player_played_fixtures['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[0])        for i in Player_all.index]
 
         Player_opponent_team['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[1])        for i in Player_all.index]
-
+for i in Players.index:
+    Player_upcoming_fixtures = Player_upcoming_fixtures.append(Team_upcoming_fixtures.iloc[Players.at[i,'Team number']-1],    ignore_index=True)
+        
+        
+        
+        
 print('\t Fixtures are over.\t It takes ' + str(time() - start) + ' sec')
 
 
 #Writing Tables to csv
 Table.to_csv(Path('in/Table_FPL.csv'), index=False)
+Large_Table.to_csv(Path('in/LTable_FPL.csv'), index=False)
 Fixtures.to_csv(Path('in/Fixtures.csv'), index=False)
 Teams.to_csv(Path('in/Teams.csv'), index=False)
 Players.to_csv(Path('in/Players.csv'), index=False)
 
 
-Team_fixtures.to_json('in/Team_fixtures.txt')
-Team_opponent_team.to_json('in/Team_opponent_team.txt')
-Player_fixtures.to_json('in/Player_fixtures.txt')
-Player_opponent_team.to_json('in/Player_opponent_team.txt')
+#Team_fixtures.to_json(Path('in/Team_fixtures.txt'))
+Team_played_fixtures.to_json(Path('in/Team_played_fixtures.txt'))
+Team_upcoming_fixtures.to_json(Path('in/Team_upcoming_fixtures.txt'))
+Team_opponent_team.to_json(Path('in/Team_opponent_team.txt'))
+#Player_fixtures.to_json(Path('in/Player_fixtures.txt'))
+Player_played_fixtures.to_json(Path('in/Player_played_fixtures.txt'))
+Player_upcoming_fixtures.to_json(Path('in/Player_upcoming_fixtures.txt'))
+Player_opponent_team.to_json(Path('in/Player_opponent_team.txt'))
 
 
 # Team_fixtures.to_csv(Path('in/Team_fixtures.csv'), index=False)
@@ -144,4 +205,10 @@ print('inputFPL is over.\t It takes ' + str(time() - start_module) + ' sec\n')
 
 if __name__ == '__main__':
     display(Table)
+
+
+# In[ ]:
+
+
+
 
