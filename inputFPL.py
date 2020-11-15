@@ -19,7 +19,7 @@ import numpy as np
 from pathlib import Path
 
 #List of useful links
-url1 = "https://fantasy.premierleague.com/api/bootstrap-static/" #Data for line per PLayers with aggregate Data
+url1 = "https://fantasy.premierleague.com/api/bootstrap-static/" #Each line is for the player with aggregate Data
 url2 = "https://fantasy.premierleague.com/api/entry/698498/history/" #Data for FPL manager history
 url3 = "https://fantasy.premierleague.com/api/event/6/live/" #Not used
 url4 = "https://fantasy.premierleague.com/api/fixtures" #Fixtures Table
@@ -126,14 +126,81 @@ print('\t Downloads FPL is over.\t It takes ' + str(time() - start) + ' sec')
 start = time()
 
 
+# #Calculating Fixtures and Opponents
+            
+# Team_all = pd.DataFrame()
+# #Team_fixtures = pd.DataFrame()
+# Team_played_fixtures = pd.DataFrame()
+# Team_upcoming_fixtures = pd.DataFrame()
+# Team_opponent_team = pd.DataFrame()
+# for j in range(lastGW,0,-1): 
+#     '''
+#         Team_all - contains [number of fixture, home team id, away team id]
+#         Team_fixtures - contains [number of fixture]
+#         Team_opponent_team - [opponent team id]
+#     '''
+#     Team_all['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&\
+#     (Fixtures['event']==j)][['id', 'team_h', 'team_a']].values for i in range(1, team_number+1)]
+
+#     #Team_fixtures['GW'+str(j)] = [list(pd.DataFrame(Team_all.at[i,'GW'+str(j)])[0]) for i in Team_all.index]
+    
+    
+#     Team_played_fixtures['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&\
+#     (Fixtures['event']==j)&Fixtures['finished']][['id']]['id'].tolist() for i in range(1, team_number+1)]
+
+#     Team_opponent_team['GW'+str(j)] = [[pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0]\
+#     if pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0] != i+1\
+#     else pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][1]\
+#     for v in range(len(pd.DataFrame(Team_all.at[i,'GW'+str(j)])))] for i in Team_all.index]
+    
+# for j in range(lastGW,int(Fixtures['event'].max()+1)): 
+#     Team_upcoming_fixtures['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&\
+#     (Fixtures['event']==j)&(Fixtures['finished']==False)][['id']]['id'].tolist() for i in range(1, team_number+1)]
+    
+#     #Deleting empty column of lastGW in Team_upcoming_fixtures.(If GW is in progress it's not empty)
+#     if (j==lastGW):
+#         if Team_upcoming_fixtures['GW'+str(lastGW)].tolist()==[[] for _ in Team_upcoming_fixtures.index]:
+#             del Team_upcoming_fixtures['GW'+str(lastGW)]
+               
+# '''
+#     Player_all - contains [number of fixture, opponent team id]
+#     Team_opponent_team - [opponent team id]
+# '''
+# Player_all = pd.DataFrame()
+# Player_played_fixtures = pd.DataFrame()
+# Player_upcoming_fixtures = pd.DataFrame(columns = Team_upcoming_fixtures.columns)
+# Player_opponent_team = pd.DataFrame()
+# Player_all['id'] = Players['id']
+# Player_all['name'] = [players[Player_all.at[i, 'id']] for i in Player_all.index]
+# if  not Table.empty:
+#     for j in range(lastGW,0,-1):
+
+#         Player_all['GW'+str(j)] = [Table[(Table['element']==i)&\
+#         (Table['round']==j)][['fixture', 'opponent_team']].values for i in Players['id']]
+
+#         Player_played_fixtures['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[0])\
+#         for i in Player_all.index]
+
+#         Player_opponent_team['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[1])\
+#         for i in Player_all.index]
+# for i in Players.index:
+#     Player_upcoming_fixtures = Player_upcoming_fixtures.append(Team_upcoming_fixtures.iloc[Players.at[i,'Team number']-1],\
+#     ignore_index=True)
+        
+    
+    
+    
+    
+    
+    
 #Calculating Fixtures and Opponents
             
 Team_all = pd.DataFrame()
 #Team_fixtures = pd.DataFrame()
-Team_played_fixtures = pd.DataFrame()
-Team_upcoming_fixtures = pd.DataFrame()
+# Team_played_fixtures = pd.DataFrame()
+# Team_upcoming_fixtures = pd.DataFrame()
 Team_opponent_team = pd.DataFrame()
-for j in range(lastGW,0,-1): 
+for j in range(int(Fixtures['event'].max()),0,-1): 
     '''
         Team_all - contains [number of fixture, home team id, away team id]
         Team_fixtures - contains [number of fixture]
@@ -144,35 +211,71 @@ for j in range(lastGW,0,-1):
     #Team_fixtures['GW'+str(j)] = [list(pd.DataFrame(Team_all.at[i,'GW'+str(j)])[0]) for i in Team_all.index]
     
     
-    Team_played_fixtures['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&    (Fixtures['event']==j)&Fixtures['finished']][['id']].values for i in range(1, team_number+1)]
+#     Team_played_fixtures['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&\
+#     (Fixtures['event']==j)&Fixtures['finished']][['id']]['id'].tolist() for i in range(1, team_number+1)]
 
     Team_opponent_team['GW'+str(j)] = [[pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0]    if pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0] != i+1    else pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][1]    for v in range(len(pd.DataFrame(Team_all.at[i,'GW'+str(j)])))] for i in Team_all.index]
     
-for j in range(lastGW,int(Fixtures['event'].max()+1)): 
-    Team_upcoming_fixtures['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&    (Fixtures['event']==j)&(Fixtures['finished']==False)][['id']].values for i in range(1, team_number+1)]
+    
+    
+    
+Team_fixtures = Team_all.applymap(lambda x: [x[i][0] for i in range(len(x))])
+
+Team_played_fixtures = Team_fixtures.applymap(lambda x:[i for i in Fixtures[(Fixtures['id'].isin(x))&Fixtures['finished']]['id']])
+
+Team_upcoming_fixtures = Team_fixtures.applymap(lambda x:[i for i in Fixtures[(Fixtures['id'].isin(x))&(Fixtures['finished']==False)]['id']])
+Team_upcoming_fixtures = Team_upcoming_fixtures[Team_upcoming_fixtures.columns[::-1]]
+    
+def del_empty_col(df):
+    for i in df.columns:
+        if df[i].tolist()==[[] for _ in df.index]:
+             del df[i]
+    return df
+del_empty_col(Team_fixtures)
+del_empty_col(Team_played_fixtures)
+del_empty_col(Team_upcoming_fixtures)
+    
+# for j in range(lastGW,int(Fixtures['event'].max()+1)): 
+#     Team_upcoming_fixtures['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&\
+#     (Fixtures['event']==j)&(Fixtures['finished']==False)][['id']]['id'].tolist() for i in range(1, team_number+1)]
+    
+#     #Deleting empty column of lastGW in Team_upcoming_fixtures.(If GW is in progress it's not empty)
+#     if (j==lastGW):
+#         if Team_upcoming_fixtures['GW'+str(lastGW)].tolist()==[[] for _ in Team_upcoming_fixtures.index]:
+#             del Team_upcoming_fixtures['GW'+str(lastGW)]
                
 '''
     Player_all - contains [number of fixture, opponent team id]
     Team_opponent_team - [opponent team id]
 '''
 Player_all = pd.DataFrame()
-Player_played_fixtures = pd.DataFrame()
+#Player_played_fixtures = pd.DataFrame()
 Player_upcoming_fixtures = pd.DataFrame(columns = Team_upcoming_fixtures.columns)
-Player_opponent_team = pd.DataFrame()
-Player_all['id'] = Players['id']
-Player_all['name'] = [players[Player_all.at[i, 'id']] for i in Player_all.index]
+Player_opponent_team = pd.DataFrame(columns = Team_opponent_team.columns)
+#Player_all['id'] = Players['id']
+#Player_all['name'] = [players[Player_all.at[i, 'id']] for i in Player_all.index]
 if  not Table.empty:
     for j in range(lastGW,0,-1):
 
         Player_all['GW'+str(j)] = [Table[(Table['element']==i)&        (Table['round']==j)][['fixture', 'opponent_team']].values for i in Players['id']]
 
-        Player_played_fixtures['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[0])        for i in Player_all.index]
+#         Player_played_fixtures['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[0])\
+#         for i in Player_all.index]
 
-        Player_opponent_team['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[1])        for i in Player_all.index]
+#         Player_opponent_team['GW'+str(j)] = [list(pd.DataFrame(Player_all.at[i,'GW'+str(j)])[1])\
+#         for i in Player_all.index]
+        
 for i in Players.index:
     Player_upcoming_fixtures = Player_upcoming_fixtures.append(Team_upcoming_fixtures.iloc[Players.at[i,'Team number']-1],    ignore_index=True)
-        
-        
+    Player_opponent_team = Player_opponent_team.append(Team_opponent_team.iloc[Players.at[i,'Team number']-1],    ignore_index=True)
+    
+Player_played_fixtures = Player_all.applymap(lambda x: [x[i][0] for i in range(len(x))])
+Pot = Player_all.applymap(lambda x: [x[i][1] for i in range(len(x))])
+for i in Player_opponent_team.index:
+    for j in Player_opponent_team.columns:
+        if j in Player_all.columns:
+            if int(j[2:])!=lastGW:
+                Player_opponent_team.at[i,j] = Pot.at[i,j]
         
         
 print('\t Fixtures are over.\t It takes ' + str(time() - start) + ' sec')
@@ -186,7 +289,7 @@ Teams.to_csv(Path('in/Teams.csv'), index=False)
 Players.to_csv(Path('in/Players.csv'), index=False)
 
 
-#Team_fixtures.to_json(Path('in/Team_fixtures.txt'))
+Team_fixtures.to_json(Path('in/Team_fixtures.txt'))
 Team_played_fixtures.to_json(Path('in/Team_played_fixtures.txt'))
 Team_upcoming_fixtures.to_json(Path('in/Team_upcoming_fixtures.txt'))
 Team_opponent_team.to_json(Path('in/Team_opponent_team.txt'))
