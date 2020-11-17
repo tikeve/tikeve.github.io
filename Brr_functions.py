@@ -35,7 +35,7 @@ def no_lists(t):
         for j in table.columns:
             if type(table.at[i,j])==list:
                 if len(table.at[i,j])==0:
-                    table.at[i,j]=None  #''
+                    table.at[i,j]=np.nan  #''
                 elif len(table.at[i,j])==1:
                     table.at[i,j]=table.at[i,j][0]
                 elif  len(table.at[i,j])==2:
