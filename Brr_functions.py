@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[1]:
 
 
 import pandas as pd
@@ -40,16 +40,22 @@ def no_lists(t):
                     table.at[i,j]=table.at[i,j][0]
                 elif  len(table.at[i,j])==2:
                     if j+'*' not in table.columns:
-                        table.insert(list(table.columns).index(j),j+'*', np.nan)
+                        table.insert(list(table.columns).index(j),j+'*',''*len(table))
                     table.at[i,j+'*'] = table.at[i,j][1]
                     table.at[i,j]=table.at[i,j][0]
                 else:#len(table.at[i,j])==3
                     if j+'*' not in table.columns:
-                        table.insert(list(table.columns).index(j),j+'*', np.nan)
+                        table.insert(list(table.columns).index(j),j+'*',''*len(table))
                     if j+'**' not in table.columns:
-                        table.insert(list(table.columns).index(j)+1,j+'**', np.nan)
+                        table.insert(list(table.columns).index(j)+1,j+'**',''*len(table))
                     table.at[i,j+'**'] = table.at[i,j][2]
                     table.at[i,j+'*'] = table.at[i,j][1]
                     table.at[i,j]=table.at[i,j][0]
     return table
+
+
+# In[ ]:
+
+
+
 
