@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
-#Downloadting Data from fantasy.premierleague.com(FPL)
+#Downloadting Data from fantasy.premierleague.com(FPL)a
 print('Start inputFPL:')
 from time import time
 start_module = time()
@@ -177,8 +171,10 @@ Team_upcoming_fixtures = Team_upcoming_fixtures[Team_upcoming_fixtures.columns[:
 
 #calculating home/away table with 1/0 and NaN
 Team_home = no_lists(Team_all.applymap(lambda x: list(x))).applymap(lambda x: np.nan if type(x)==float else x[1]-1).\
-apply(lambda x: x==list(range(len(Team_home)))).applymap(lambda x: 1 if x else 0)\
+apply(lambda x: x==list(range(len(Team_all)))).applymap(lambda x: 1 if x else 0)\
 +no_lists(Team_fixtures)-no_lists(Team_fixtures)#to add NaN
+
+Team_home = Team_home[Team_home.columns[::-1]]#making right order
     
 #Deleting empty columns
 def del_empty_col(df):
@@ -226,7 +222,8 @@ def Phome(col):
     '''Function for apply to get home/away for players based on home/away of opposed team'''
     return [np.nan if np.isnan(col[i]) else 1 if Team_home.at[col[i]-1, col.name]==0 else 0 for i in range(len(col))]
 Player_home = no_lists(Player_opponent_team).apply(Phome, axis=0)
-no_lists(Player_opponent_team)
+
+Player_home = Player_home[Player_home.columns[::-1]] #making right order
 
 # Player_home = Players.copy()
 # for j in range(lastGW,0,-1):
@@ -248,8 +245,8 @@ Large_Table.to_csv(Path('in/LTable_FPL.csv'), index=False)
 Fixtures.to_csv(Path('in/Fixtures.csv'), index=False)
 Teams.to_csv(Path('in/Teams.csv'), index=False)
 Players.to_csv(Path('in/Players.csv'), index=False)
-Team_home.to_csv(Path(f'{folder}in/Team_home.csv'))
-Player_home.to_csv(Path(f'{folder}in/Player_home.csv'))
+Team_home.to_csv(Path(f'{folder}in/Team_home.csv'), index=False)
+Player_home.to_csv(Path(f'{folder}in/Player_home.csv'), index=False)
 
 Team_fixtures.to_json(Path('in/Team_fixtures.txt'))
 Team_played_fixtures.to_json(Path('in/Team_played_fixtures.txt'))
@@ -270,9 +267,3 @@ print('inputFPL is over.\t It takes ' + str(time() - start_module) + ' sec\n')
 
 if __name__ == '__main__':
     display(Table)
-
-# In[ ]:
-
-
-
-
