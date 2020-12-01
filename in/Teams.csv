@@ -1,13 +1,13 @@
 id,Teams,XXX Target number XXX,Matches
 1,Arsenal,0.0,10
-2,Aston Villa,0.0,8
+2,Aston Villa,0.0,9
 3,Brighton,0.0,10
 4,Burnley,0.0,9
 5,Chelsea,0.0,10
 6,Crystal Palace,0.0,10
 7,Everton,0.0,10
-8,Fulham,0.0,9
-9,Leicester,0.0,9
+8,Fulham,0.0,10
+9,Leicester,0.0,10
 10,Leeds,0.0,10
 11,Liverpool,0.0,10
 12,Man City,0.0,9
@@ -17,5 +17,5 @@ id,Teams,XXX Target number XXX,Matches
 16,Southampton,0.0,10
 17,Spurs,0.0,10
 18,West Brom,0.0,10
-19,West Ham,0.0,9
+19,West Ham,0.0,10
 20,Wolves,0.0,10

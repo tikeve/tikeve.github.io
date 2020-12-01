@@ -32,37 +32,37 @@ id,Name,web_name,Team number,Team,Team games,Played
 527,Matt Macey,Macey,1,Arsenal,10,0
 547,Runar Alex Runarsson,Runarsson,1,Arsenal,8,0
 567,Thomas Partey,Partey,1,Arsenal,6,4
-12,Emiliano Martinez,Martinez,2,Aston Villa,8,8
-28,Tom Heaton,Heaton,2,Aston Villa,8,0
-29,Ahmed El Mohamady,El Mohamady,2,Aston Villa,8,2
-30,Henri Lansbury,Lansbury,2,Aston Villa,8,0
-31,Neil Taylor,Taylor,2,Aston Villa,8,0
-32,Jed Steer,Steer,2,Aston Villa,8,0
-33,Conor Hourihane,Hourihane,2,Aston Villa,8,3
-34,Jose Ignacio Peleteiro Romallo,Jota,2,Aston Villa,8,0
-35,Ørjan Nyland,Nyland,2,Aston Villa,8,0
-36,Bjorn Engels,Engels,2,Aston Villa,8,0
-37,Jack Grealish,Grealish,2,Aston Villa,8,8
-38,John McGinn,McGinn,2,Aston Villa,8,8
-39,Kortney Hause,Hause,2,Aston Villa,8,0
-40,Mahmoud Ahmed Ibrahim Hassan,Trezeguet,2,Aston Villa,8,8
-41,Tyrone Mings,Mings,2,Aston Villa,8,8
-42,Matt Targett,Targett,2,Aston Villa,8,8
-43,James Bree,Bree,2,Aston Villa,8,0
-44,Marvelous Nakamba,Nakamba,2,Aston Villa,8,2
-45,Anwar El Ghazi,El Ghazi,2,Aston Villa,8,2
-46,Ezri Konsa Ngoyo,Konsa,2,Aston Villa,8,8
-47,Frederic Guilbert,Guilbert,2,Aston Villa,8,0
-48,Wesley Moraes,Wesley,2,Aston Villa,8,0
-49,Mbwana Samatta,Samatta,2,Aston Villa,8,0
-50,Keinan Davis,Davis,2,Aston Villa,8,1
-51,Indiana Vassilev,Vassilev,2,Aston Villa,8,0
-52,Douglas Luiz Soares de Paulo,Douglas Luiz,2,Aston Villa,8,8
-106,Ross Barkley,Barkley,2,Aston Villa,9,8
-496,Matthew Cash,Cash,2,Aston Villa,8,8
-514,Ollie Watkins,Watkins,2,Aston Villa,8,8
-540,Bertrand Traore,Traore,2,Aston Villa,7,6
-554,Jacob Ramsey,Ramsey,2,Aston Villa,7,1
+12,Emiliano Martinez,Martinez,2,Aston Villa,9,9
+28,Tom Heaton,Heaton,2,Aston Villa,9,0
+29,Ahmed El Mohamady,El Mohamady,2,Aston Villa,9,3
+30,Henri Lansbury,Lansbury,2,Aston Villa,9,0
+31,Neil Taylor,Taylor,2,Aston Villa,9,0
+32,Jed Steer,Steer,2,Aston Villa,9,0
+33,Conor Hourihane,Hourihane,2,Aston Villa,9,4
+34,Jose Ignacio Peleteiro Romallo,Jota,2,Aston Villa,9,0
+35,Ørjan Nyland,Nyland,2,Aston Villa,9,0
+36,Bjorn Engels,Engels,2,Aston Villa,9,0
+37,Jack Grealish,Grealish,2,Aston Villa,9,9
+38,John McGinn,McGinn,2,Aston Villa,9,9
+39,Kortney Hause,Hause,2,Aston Villa,9,0
+40,Mahmoud Ahmed Ibrahim Hassan,Trezeguet,2,Aston Villa,9,9
+41,Tyrone Mings,Mings,2,Aston Villa,9,9
+42,Matt Targett,Targett,2,Aston Villa,9,9
+43,James Bree,Bree,2,Aston Villa,9,0
+44,Marvelous Nakamba,Nakamba,2,Aston Villa,9,2
+45,Anwar El Ghazi,El Ghazi,2,Aston Villa,9,3
+46,Ezri Konsa Ngoyo,Konsa,2,Aston Villa,9,9
+47,Frederic Guilbert,Guilbert,2,Aston Villa,9,0
+48,Wesley Moraes,Wesley,2,Aston Villa,9,0
+49,Mbwana Samatta,Samatta,2,Aston Villa,9,0
+50,Keinan Davis,Davis,2,Aston Villa,9,1
+51,Indiana Vassilev,Vassilev,2,Aston Villa,9,0
+52,Douglas Luiz Soares de Paulo,Douglas Luiz,2,Aston Villa,9,9
+106,Ross Barkley,Barkley,2,Aston Villa,10,8
+496,Matthew Cash,Cash,2,Aston Villa,9,9
+514,Ollie Watkins,Watkins,2,Aston Villa,9,9
+540,Bertrand Traore,Traore,2,Aston Villa,8,7
+554,Jacob Ramsey,Ramsey,2,Aston Villa,8,1
 53,Glenn Murray,Murray,3,Brighton,10,0
 54,Adam Lallana,Lallana,3,Brighton,10,10
 57,Pascal Groß,Groß,3,Brighton,10,9
@@ -210,69 +210,69 @@ id,Name,web_name,Team number,Team,Team games,Played
 566,Ben Godfrey,Godfrey,7,Everton,6,4
 573,Robin Olsen,Olsen,7,Everton,6,1
 596,Ellis Simms,Simms,7,Everton,4,0
-115,Ruben Loftus-Cheek,Loftus-Cheek,8,Fulham,9,5
-171,Fabricio Agosto Ramirez,Fabri,8,Fulham,9,0
-172,Kevin McDonald,McDonald,8,Fulham,9,0
-173,Maxime Le Marchand,Le Marchand,8,Fulham,9,2
-174,Stefan Johansen,Johansen,8,Fulham,9,0
-175,Tom Cairney,Cairney,8,Fulham,9,8
-176,Tim Ream,Ream,8,Fulham,9,5
-177,Anthony Knockaert,Knockaert,8,Fulham,9,0
-178,Michael Hector,Hector,8,Fulham,9,3
-179,Cyrus Christie,Christie,8,Fulham,9,0
-180,Neeskens Kebano,Kebano,8,Fulham,9,4
-181,Bobby Decordova-Reid,Decordova-Reid,8,Fulham,9,8
-182,Joe Bryan,Bryan,8,Fulham,9,5
-183,Marcus Bettinelli,Bettinelli,8,Fulham,9,0
-184,Aleksandar Mitrovic,Mitrovic,8,Fulham,9,9
-185,Alfie Mawson,Mawson,8,Fulham,9,0
-186,Marek Rodak,Rodak,8,Fulham,9,1
-187,Ivan Ricardo Neves Abreu Cavaleiro,Cavaleiro,8,Fulham,9,8
-188,Josh Onomah,Onomah,8,Fulham,9,2
-189,Jean Michael Seri,Seri,8,Fulham,9,0
-190,Aboubakar Kamara,Kamara,8,Fulham,9,5
-191,Andre-Frank Zambo Anguissa,Anguissa,8,Fulham,9,9
-192,Zeze Steven Sessegnon,Sessegnon,8,Fulham,9,0
-373,Harrison Reed,Reed,8,Fulham,9,6
-484,Antonee Robinson,Robinson,8,Fulham,9,6
-493,Mario Lemina,Lemina,8,Fulham,9,5
-516,Alphonse Areola,Areola,8,Fulham,9,8
-517,Kenny Tete,Tete,8,Fulham,9,2
-525,Denis Odoi,Odoi,8,Fulham,9,3
-557,Ademola Lookman,Lookman,8,Fulham,6,6
-562,Ola Aina,Aina,8,Fulham,6,6
-571,Joachim Andersen,Andersen,8,Fulham,5,3
-572,Tosin Adarabioyo,Adarabioyo,8,Fulham,5,5
-585,Terence Kongolo,Kongolo,8,Fulham,4,0
-216,Wes Morgan,Morgan,9,Leicester,9,3
-217,Kasper Schmeichel,Schmeichel,9,Leicester,9,9
-218,Christian Fuchs,Fuchs,9,Leicester,9,5
-219,Jonny Evans,Evans,9,Leicester,9,6
-220,Adrien Silva,Silva,9,Leicester,9,0
-221,Marc Albrighton,Albrighton,9,Leicester,9,6
-222,Matty James,James,9,Leicester,9,0
-223,Danny Ward,Ward,9,Leicester,9,0
-224,Jamie Vardy,Vardy,9,Leicester,9,8
-225,Dennis Praet,Praet,9,Leicester,9,8
-226,Ricardo Domingos Barbosa Pereira,Pereira,9,Leicester,9,0
-227,Daniel Amartey,Amartey,9,Leicester,9,2
-228,Youri Tielemans,Tielemans,9,Leicester,9,9
-229,Ayoze Perez,Perez,9,Leicester,9,4
-230,Demarai Gray,Gray,9,Leicester,9,0
-231,James Maddison,Maddison,9,Leicester,9,8
-233,Kelechi Iheanacho,Iheanacho,9,Leicester,9,3
-234,Hamza Choudhury,Choudhury,9,Leicester,9,2
-235,Harvey Barnes,Barnes,9,Leicester,9,9
-236,Wilfred Ndidi,Ndidi,9,Leicester,9,2
-237,Filip Benkovic,Benkovic,9,Leicester,9,0
-238,Caglar Soyuncu,Soyuncu,9,Leicester,9,4
-239,James Justin,Justin,9,Leicester,9,9
-240,Luke Thomas,Thomas,9,Leicester,9,2
-498,Timothy Castagne,Castagne,9,Leicester,9,6
-518,Nampalys Mendy,Mendy,9,Leicester,9,9
-541,Cengiz Under,Under,9,Leicester,7,4
-561,Wesley Fofana,Fofana,9,Leicester,6,5
-579,Islam Slimani,Slimani,9,Leicester,5,1
+115,Ruben Loftus-Cheek,Loftus-Cheek,8,Fulham,10,6
+171,Fabricio Agosto Ramirez,Fabri,8,Fulham,10,0
+172,Kevin McDonald,McDonald,8,Fulham,10,0
+173,Maxime Le Marchand,Le Marchand,8,Fulham,10,2
+174,Stefan Johansen,Johansen,8,Fulham,10,0
+175,Tom Cairney,Cairney,8,Fulham,10,8
+176,Tim Ream,Ream,8,Fulham,10,5
+177,Anthony Knockaert,Knockaert,8,Fulham,10,0
+178,Michael Hector,Hector,8,Fulham,10,3
+179,Cyrus Christie,Christie,8,Fulham,10,0
+180,Neeskens Kebano,Kebano,8,Fulham,10,4
+181,Bobby Decordova-Reid,Decordova-Reid,8,Fulham,10,9
+182,Joe Bryan,Bryan,8,Fulham,10,6
+183,Marcus Bettinelli,Bettinelli,8,Fulham,10,0
+184,Aleksandar Mitrovic,Mitrovic,8,Fulham,10,10
+185,Alfie Mawson,Mawson,8,Fulham,10,0
+186,Marek Rodak,Rodak,8,Fulham,10,1
+187,Ivan Ricardo Neves Abreu Cavaleiro,Cavaleiro,8,Fulham,10,9
+188,Josh Onomah,Onomah,8,Fulham,10,2
+189,Jean Michael Seri,Seri,8,Fulham,10,0
+190,Aboubakar Kamara,Kamara,8,Fulham,10,5
+191,Andre-Frank Zambo Anguissa,Anguissa,8,Fulham,10,10
+192,Zeze Steven Sessegnon,Sessegnon,8,Fulham,10,0
+373,Harrison Reed,Reed,8,Fulham,10,7
+484,Antonee Robinson,Robinson,8,Fulham,10,7
+493,Mario Lemina,Lemina,8,Fulham,10,6
+516,Alphonse Areola,Areola,8,Fulham,10,9
+517,Kenny Tete,Tete,8,Fulham,10,2
+525,Denis Odoi,Odoi,8,Fulham,10,3
+557,Ademola Lookman,Lookman,8,Fulham,7,7
+562,Ola Aina,Aina,8,Fulham,7,7
+571,Joachim Andersen,Andersen,8,Fulham,6,4
+572,Tosin Adarabioyo,Adarabioyo,8,Fulham,6,6
+585,Terence Kongolo,Kongolo,8,Fulham,5,0
+216,Wes Morgan,Morgan,9,Leicester,10,3
+217,Kasper Schmeichel,Schmeichel,9,Leicester,10,10
+218,Christian Fuchs,Fuchs,9,Leicester,10,6
+219,Jonny Evans,Evans,9,Leicester,10,7
+220,Adrien Silva,Silva,9,Leicester,10,0
+221,Marc Albrighton,Albrighton,9,Leicester,10,6
+222,Matty James,James,9,Leicester,10,0
+223,Danny Ward,Ward,9,Leicester,10,0
+224,Jamie Vardy,Vardy,9,Leicester,10,9
+225,Dennis Praet,Praet,9,Leicester,10,9
+226,Ricardo Domingos Barbosa Pereira,Pereira,9,Leicester,10,0
+227,Daniel Amartey,Amartey,9,Leicester,10,2
+228,Youri Tielemans,Tielemans,9,Leicester,10,10
+229,Ayoze Perez,Perez,9,Leicester,10,4
+230,Demarai Gray,Gray,9,Leicester,10,0
+231,James Maddison,Maddison,9,Leicester,10,9
+233,Kelechi Iheanacho,Iheanacho,9,Leicester,10,4
+234,Hamza Choudhury,Choudhury,9,Leicester,10,2
+235,Harvey Barnes,Barnes,9,Leicester,10,10
+236,Wilfred Ndidi,Ndidi,9,Leicester,10,2
+237,Filip Benkovic,Benkovic,9,Leicester,10,0
+238,Caglar Soyuncu,Soyuncu,9,Leicester,10,4
+239,James Justin,Justin,9,Leicester,10,10
+240,Luke Thomas,Thomas,9,Leicester,10,3
+498,Timothy Castagne,Castagne,9,Leicester,10,6
+518,Nampalys Mendy,Mendy,9,Leicester,10,10
+541,Cengiz Under,Under,9,Leicester,8,5
+561,Wesley Fofana,Fofana,9,Leicester,7,6
+579,Islam Slimani,Slimani,9,Leicester,6,1
 193,Pablo Hernandez Dominguez,Hernandez,10,Leeds,10,4
 194,Francisco Casilla Cortes,Casilla,10,Leeds,10,0
 195,Liam Cooper,Cooper,10,Leeds,10,7
@@ -544,34 +544,34 @@ id,Name,web_name,Team number,Team,Team games,Played
 555,Filip Krovinovic,Krovinovic,18,West Brom,7,7
 582,Karlan Grant,Grant,18,West Brom,6,6
 600,Lee Peltier,Peltier,18,West Brom,3,0
-427,Mark Noble,Noble,19,West Ham,9,4
-428,Robert Snodgrass,Snodgrass,19,West Ham,9,1
-429,David Martin,Martin,19,West Ham,9,0
-430,Darren Randolph,Randolph,19,West Ham,9,0
-431,Lukasz Fabianski,Fabianski,19,West Ham,9,9
-432,Angelo Ogbonna,Ogbonna,19,West Ham,9,9
-433,Roberto Jimenez Gago,Roberto,19,West Ham,9,0
-434,Jack Wilshere,Wilshere,19,West Ham,9,0
-435,Aaron Cresswell,Cresswell,19,West Ham,9,9
-436,Andriy Yarmolenko,Yarmolenko,19,West Ham,9,5
-437,Michail Antonio,Antonio,19,West Ham,9,6
-438,Ryan Fredericks,Fredericks,19,West Ham,9,3
-439,Manuel Lanzini,Lanzini,19,West Ham,9,4
-440,Felipe Anderson Pereira Gomes,Felipe Anderson,19,West Ham,9,2
-441,Sebastien Haller,Haller,19,West Ham,9,8
-442,Arthur Masuaku,Masuaku,19,West Ham,9,8
-443,Fabian Balbuena,Balbuena,19,West Ham,9,7
-444,Jordan Hugill,Hugill,19,West Ham,9,0
-445,Jarrod Bowen,Bowen,19,West Ham,9,9
-447,Albian Ajeti,Ajeti,19,West Ham,9,0
-448,Declan Rice,Rice,19,West Ham,9,9
-449,Tomas Soucek,Soucek,19,West Ham,9,9
-450,Pablo Fornals,Fornals,19,West Ham,9,9
-451,Issa Diop,Diop,19,West Ham,9,3
-452,Ben Johnson,Johnson,19,West Ham,9,1
-558,Vladimir Coufal,Coufal,19,West Ham,6,6
-576,Craig Dawson,Dawson,19,West Ham,5,0
-587,Said Benrahma,Benrahma,19,West Ham,4,2
+427,Mark Noble,Noble,19,West Ham,10,5
+428,Robert Snodgrass,Snodgrass,19,West Ham,10,1
+429,David Martin,Martin,19,West Ham,10,0
+430,Darren Randolph,Randolph,19,West Ham,10,0
+431,Lukasz Fabianski,Fabianski,19,West Ham,10,10
+432,Angelo Ogbonna,Ogbonna,19,West Ham,10,10
+433,Roberto Jimenez Gago,Roberto,19,West Ham,10,0
+434,Jack Wilshere,Wilshere,19,West Ham,10,0
+435,Aaron Cresswell,Cresswell,19,West Ham,10,10
+436,Andriy Yarmolenko,Yarmolenko,19,West Ham,10,5
+437,Michail Antonio,Antonio,19,West Ham,10,7
+438,Ryan Fredericks,Fredericks,19,West Ham,10,3
+439,Manuel Lanzini,Lanzini,19,West Ham,10,4
+440,Felipe Anderson Pereira Gomes,Felipe Anderson,19,West Ham,10,2
+441,Sebastien Haller,Haller,19,West Ham,10,9
+442,Arthur Masuaku,Masuaku,19,West Ham,10,9
+443,Fabian Balbuena,Balbuena,19,West Ham,10,8
+444,Jordan Hugill,Hugill,19,West Ham,10,0
+445,Jarrod Bowen,Bowen,19,West Ham,10,10
+447,Albian Ajeti,Ajeti,19,West Ham,10,0
+448,Declan Rice,Rice,19,West Ham,10,10
+449,Tomas Soucek,Soucek,19,West Ham,10,10
+450,Pablo Fornals,Fornals,19,West Ham,10,10
+451,Issa Diop,Diop,19,West Ham,10,3
+452,Ben Johnson,Johnson,19,West Ham,10,1
+558,Vladimir Coufal,Coufal,19,West Ham,7,7
+576,Craig Dawson,Dawson,19,West Ham,6,0
+587,Said Benrahma,Benrahma,19,West Ham,5,3
 453,John Ruddy,Ruddy,20,Wolves,10,0
 454,Joao Filipe Iria Santos Moutinho,Moutinho,20,Wolves,10,9
 455,Rui Pedro dos Santos Patricio,Patricio,20,Wolves,10,10
