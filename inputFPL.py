@@ -220,7 +220,7 @@ for i in Player_opponent_team.index:
 
 def Phome(col):
     '''Function for apply to get home/away for players based on home/away of opposed team'''
-    return [np.nan if np.isnan(col[i]) else 1 if Team_home.at[col[i]-1, col.name]==0 else 0 for i in range(len(col))]
+    return [np.nan if np.isnan(col[i]) else 1 if Team_home.at[int(col[i])-1, col.name]==0 else 0 for i in range(len(col))]
 Player_home = no_lists(Player_opponent_team).apply(Phome, axis=0)
 
 Player_home = Player_home[Player_home.columns[::-1]] #making right order
