@@ -1,0 +1,1012 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Some calculations</title>
+	<link href="html/FPLstyle.css" rel="stylesheet" />
+    <link href="html/FPL/css/TableTeams.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<div class="history">
+            <form action="html/2019_2020/index.html">
+                <input type="submit" class="history_button" value="2019 / 2020"/>
+            </form>
+        </div>
+		<div id="pic">
+			<a href="index.html" id="octopus_link">
+				<img src="html/logo/monstro-brown.png" alt=" FPL" id="h_octopus">
+			</a>
+		</div>
+		<div class="table_header">
+			<a href="index.html">
+				<!--<h4>Main Page</h4>-->
+				<img src="html/home.ico" alt="Main Page" id="glyph_home">
+			</a>
+			<br />
+			<h1> FPL in Numbers</h1>
+			<br />
+			<form action="index.html">
+				<input type="submit" class="source_button" id="FPL-button" value="FPL" />
+			</form>
+			<form action="html/Understat/TableTeams.html">
+				<input type="submit" class="source_button" id="Understat-button" value="Understat" />
+			</form>
+		</div>
+
+
+	</header>
+	<nav>
+		<div>
+			<form action="html/FPL/Team_xG.html">
+				<input type="submit" class="table_button" id="Team_xG" value="Team xG" />
+			</form>
+			<form action="html/FPL/Team_xA.html">
+				<input type="submit" class="table_button" id="Team_xA" value="Team xA" />
+			</form>
+			<form action="html/FPL/Team_Opponent_xG.html">
+				<input type="submit" class="table_button" id="Team_Opponent_xG" value="Team Defence" />
+			</form>
+			<form action="html/FPL/Team_xG_Ad.html">
+				<input type="submit" class="table_button" id="Team_xG_Ad" value="Team xG Ad" />
+			</form>
+			<form action="html/FPL/Team_xA_Ad.html">
+				<input type="submit" class="table_button" id="Team_xA_Ad" value="Team xA Ad" />
+			</form>
+			<form action="html/FPL/Team_Opponent_xG_Ad.html">
+				<input type="submit" class="table_button" id="Team_Opponent_xG_Ad" value="Team Defence Ad" />
+			</form>
+		</div>
+		<div>
+			<form action="html/FPL/Player_xG.html">
+				<input type="submit" class="table_button" id="Player_xG" value="Player xG" />
+			</form>
+			<form action="html/FPL/Player_xA.html">
+				<input type="submit" class="table_button" id="Player_xA" value="Player xA" />
+			</form>
+			<form action="html/FPL/Player_xG_Ad.html">
+				<input type="submit" class="table_button" id="Player_xG_Ad" value="Player xG Ad" />
+			</form>
+			<form action="html/FPL/Player_xA_Ad.html">
+				<input type="submit" class="table_button" id="Player_xA_Ad" value="Player xA Ad" />
+			</form>
+		</div>
+	</nav>
+
+
+
+	<main>
+
+		<div id="main-table">
+			<h2 id="DataTitle"> Teams Ranking </h2>
+
+			<table class="DataTable" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6"> <thead> <tr> <th class="blank level0"></th> <th class="col_heading level0 col0">Team</th> <th class="col_heading level0 col1">xG adjusted</th> <th class="col_heading level0 col2">xG</th> <th class="col_heading level0 col3">xA adjusted</th> <th class="col_heading level0 col4">xA</th> <th class="col_heading level0 col5">Opponent xG adjusted</th> <th class="col_heading level0 col6">Opponent xG</th> </tr></thead> <tbody> <tr> <th class="row_heading level0 row0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row0">1</th> <td class="data row0 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row0_col0">Liverpool</td> <td class="data row0 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row0_col1">245.5</td> <td class="data row0 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row0_col2">235.5</td> <td class="data row0 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row0_col3">183.8</td> <td class="data row0 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row0_col4">172.8</td> <td class="data row0 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row0_col5">115.6</td> <td class="data row0 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row0_col6">122.5</td> </tr> <tr> <th class="row_heading level0 row1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row1">2</th> <td class="data row1 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row1_col0">Aston Villa</td> <td class="data row1 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row1_col1">229.5</td> <td class="data row1 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row1_col2">218.8</td> <td class="data row1 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row1_col3">185.8</td> <td class="data row1 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row1_col4">179.5</td> <td class="data row1 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row1_col5">144.9</td> <td class="data row1 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row1_col6">153.0</td> </tr> <tr> <th class="row_heading level0 row2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row2">3</th> <td class="data row2 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row2_col0">Man City</td> <td class="data row2 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row2_col1">199.0</td> <td class="data row2 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row2_col2">204.2</td> <td class="data row2 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row2_col3">185.8</td> <td class="data row2 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row2_col4">189.9</td> <td class="data row2 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row2_col5">104.4</td> <td class="data row2 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row2_col6">104.6</td> </tr> <tr> <th class="row_heading level0 row3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row3">4</th> <td class="data row3 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row3_col0">Leeds</td> <td class="data row3 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row3_col1">197.1</td> <td class="data row3 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row3_col2">188.6</td> <td class="data row3 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row3_col3">173.2</td> <td class="data row3 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row3_col4">172.2</td> <td class="data row3 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row3_col5">167.5</td> <td class="data row3 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row3_col6">180.0</td> </tr> <tr> <th class="row_heading level0 row4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row4">5</th> <td class="data row4 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row4_col0">Man Utd</td> <td class="data row4 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row4_col1">176.2</td> <td class="data row4 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row4_col2">180.6</td> <td class="data row4 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row4_col3">167.7</td> <td class="data row4 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row4_col4">168.3</td> <td class="data row4 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row4_col5">144.5</td> <td class="data row4 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row4_col6">134.8</td> </tr> <tr> <th class="row_heading level0 row5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row5">6</th> <td class="data row5 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row5_col0">Spurs</td> <td class="data row5 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row5_col1">174.0</td> <td class="data row5 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row5_col2">176.3</td> <td class="data row5 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row5_col3">136.7</td> <td class="data row5 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row5_col4">136.1</td> <td class="data row5 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row5_col5">157.0</td> <td class="data row5 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row5_col6">149.7</td> </tr> <tr> <th class="row_heading level0 row6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row6">7</th> <td class="data row6 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row6_col0">Chelsea</td> <td class="data row6 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row6_col1">171.0</td> <td class="data row6 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row6_col2">180.3</td> <td class="data row6 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row6_col3">158.4</td> <td class="data row6 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row6_col4">168.0</td> <td class="data row6 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row6_col5">112.5</td> <td class="data row6 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row6_col6">107.1</td> </tr> <tr> <th class="row_heading level0 row7" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row7">8</th> <td class="data row7 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row7_col0">Everton</td> <td class="data row7 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row7_col1">164.5</td> <td class="data row7 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row7_col2">167.6</td> <td class="data row7 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row7_col3">143.3</td> <td class="data row7 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row7_col4">142.8</td> <td class="data row7 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row7_col5">173.1</td> <td class="data row7 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row7_col6">173.4</td> </tr> <tr> <th class="row_heading level0 row8" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row8">9</th> <td class="data row8 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row8_col0">Brighton</td> <td class="data row8 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row8_col1">159.4</td> <td class="data row8 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row8_col2">158.8</td> <td class="data row8 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row8_col3">141.6</td> <td class="data row8 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row8_col4">139.0</td> <td class="data row8 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row8_col5">95.4</td> <td class="data row8 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row8_col6">101.2</td> </tr> <tr> <th class="row_heading level0 row9" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row9">10</th> <td class="data row9 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row9_col0">West Ham</td> <td class="data row9 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row9_col1">154.2</td> <td class="data row9 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row9_col2">158.7</td> <td class="data row9 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row9_col3">128.7</td> <td class="data row9 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row9_col4">132.2</td> <td class="data row9 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row9_col5">146.7</td> <td class="data row9 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row9_col6">143.7</td> </tr> <tr> <th class="row_heading level0 row10" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row10">11</th> <td class="data row10 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row10_col0">Leicester</td> <td class="data row10 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row10_col1">150.4</td> <td class="data row10 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row10_col2">153.6</td> <td class="data row10 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row10_col3">106.3</td> <td class="data row10 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row10_col4">106.9</td> <td class="data row10 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row10_col5">156.1</td> <td class="data row10 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row10_col6">159.7</td> </tr> <tr> <th class="row_heading level0 row11" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row11">12</th> <td class="data row11 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row11_col0">Southampton</td> <td class="data row11 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row11_col1">137.3</td> <td class="data row11 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row11_col2">136.4</td> <td class="data row11 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row11_col3">115.0</td> <td class="data row11 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row11_col4">117.0</td> <td class="data row11 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row11_col5">157.2</td> <td class="data row11 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row11_col6">159.1</td> </tr> <tr> <th class="row_heading level0 row12" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row12">13</th> <td class="data row12 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row12_col0">Arsenal</td> <td class="data row12 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row12_col1">134.6</td> <td class="data row12 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row12_col2">129.6</td> <td class="data row12 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row12_col3">118.5</td> <td class="data row12 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row12_col4">113.0</td> <td class="data row12 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row12_col5">136.2</td> <td class="data row12 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row12_col6">158.9</td> </tr> <tr> <th class="row_heading level0 row13" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row13">14</th> <td class="data row13 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row13_col0">Wolves</td> <td class="data row13 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row13_col1">134.4</td> <td class="data row13 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row13_col2">138.7</td> <td class="data row13 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row13_col3">138.4</td> <td class="data row13 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row13_col4">141.0</td> <td class="data row13 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row13_col5">149.7</td> <td class="data row13 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row13_col6">141.6</td> </tr> <tr> <th class="row_heading level0 row14" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row14">15</th> <td class="data row14 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row14_col0">Crystal Palace</td> <td class="data row14 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row14_col1">134.4</td> <td class="data row14 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row14_col2">139.9</td> <td class="data row14 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row14_col3">107.3</td> <td class="data row14 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row14_col4">110.9</td> <td class="data row14 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row14_col5">174.2</td> <td class="data row14 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row14_col6">163.4</td> </tr> <tr> <th class="row_heading level0 row15" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row15">16</th> <td class="data row15 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row15_col0">Fulham</td> <td class="data row15 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row15_col1">134.0</td> <td class="data row15 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row15_col2">142.9</td> <td class="data row15 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row15_col3">146.9</td> <td class="data row15 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row15_col4">155.1</td> <td class="data row15 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row15_col5">194.4</td> <td class="data row15 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row15_col6">184.6</td> </tr> <tr> <th class="row_heading level0 row16" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row16">17</th> <td class="data row16 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row16_col0">Sheffield Utd</td> <td class="data row16 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row16_col1">125.9</td> <td class="data row16 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row16_col2">124.0</td> <td class="data row16 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row16_col3">125.7</td> <td class="data row16 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row16_col4">122.2</td> <td class="data row16 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row16_col5">183.4</td> <td class="data row16 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row16_col6">195.6</td> </tr> <tr> <th class="row_heading level0 row17" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row17">18</th> <td class="data row17 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row17_col0">Newcastle</td> <td class="data row17 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row17_col1">109.4</td> <td class="data row17 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row17_col2">103.5</td> <td class="data row17 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row17_col3">108.2</td> <td class="data row17 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row17_col4">98.8</td> <td class="data row17 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row17_col5">202.2</td> <td class="data row17 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row17_col6">202.5</td> </tr> <tr> <th class="row_heading level0 row18" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row18">19</th> <td class="data row18 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row18_col0">West Brom</td> <td class="data row18 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row18_col1">108.1</td> <td class="data row18 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row18_col2">106.5</td> <td class="data row18 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row18_col3">109.2</td> <td class="data row18 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row18_col4">105.9</td> <td class="data row18 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row18_col5">217.2</td> <td class="data row18 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row18_col6">211.5</td> </tr> <tr> <th class="row_heading level0 row19" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6level0_row19">20</th> <td class="data row19 col0" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row19_col0">Burnley</td> <td class="data row19 col1" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row19_col1">107.1</td> <td class="data row19 col2" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row19_col2">106.4</td> <td class="data row19 col3" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row19_col3">110.2</td> <td class="data row19 col4" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row19_col4">102.7</td> <td class="data row19 col5" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row19_col5">201.8</td> <td class="data row19 col6" id="T_2d8b7c7a_3592_11eb_b2a9_ea93694559d6row19_col6">191.4</td> </tr></tbody> </table>
+
+				
+			<br />
+			<br />
+
+		</div>
+
+        <div id="blog">
+            <h2 id="blog header">Some ideas</h2>
+			<div class="posts" id="post1">
+
+				<p style='margin:0in;font-size:15px;font-family:"Calibri",sans-serif;'><span style="color:#404040;font-style:italic;">Home/Away vs lockdown</span></p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'><span style="font-size:24px;line-height:107%;">&nbsp;</span></p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>Home advantage was a large part of FPL for years. Since spring everything has changed. At least in minds of many FPL managers it became insignificant after Bundesliga results where visiting teams achieved fantastic results. &ldquo;No home fans so probably there&rsquo;s no difference&rdquo; that was the logic. In captain choice I stopped paying attention to it myself. That might be wrong so I decided to check.</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>Let&rsquo;s start with simple goals scored</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'>Goals</p>
+				<div align="center" style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>
+					<table style="border: none;background:white;border-collapse:collapse;">
+						<thead>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;"><br></td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>19-20 1st part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>19-20 2nd part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>20-21</span></strong></p>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Home</span></strong></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>434</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>142</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>139</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Away</span></strong></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>350</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>108</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>151</span></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;text-align:justify;'>It seems like 2nd part of the last season was the logical continuation of the 1st but this year everything has changed. Guests became even better. But let&rsquo;s look at the xG stats from 2 sources: FPL and Understat.com (I don&rsquo;t have data from others like OPTA. &lsquo;Threat&rsquo; from FPL was counted as an xG substitute). Numbers are average xG * 100.</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'>H/A difference for xG</p>
+				<div align="center" style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>
+					<table style="border: none;background:white;border-collapse:collapse;">
+						<thead>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;"><br></td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>FPL 19-20 1st part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Understat 19-20 1st part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>FPL 19-20 2nd part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Understat 19-20 2nd part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>FPL 20-21</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Understat 20-21</span></strong></p>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Home</span></strong></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>184</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>160</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>155</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>139</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>159</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>142</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Away</span></strong></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>154</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>135</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>148</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>127</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>154</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>139</span></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>This table shows quite a different picture. Home/Away gap narrowed after lockdown (from 0.3 &ndash; 0.25 to 0.03 &ndash; 0.12) and remains almost the same this season as in 19-20 post lockdown. Difference in goals scored in the 2nd part of 19-20 and 20-21 could be just random fluctuations. Last season home teams were more lucky and away teams are luckier this season. In general we can conclude that home teams should score about 1/4 - 1/3 goal more with fans and 1/8 goal at best case without.</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>9 GWs in the post lockdown 19-20 and 10 GWs this season is not a big sample so the strength difference of home and away teams could lead to significant impact on goals and xG numbers. Linear regression which predicts xG based on team strength, Home/Away and opponent average xG conceded can help us. Despite it has the same small sample problem which leads to big variation at least it takes into account who plays against who.</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'>&nbsp;Regression coefficients</p>
+				<div align="center" style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>
+					<table style="border: none;background:white;border-collapse:collapse;">
+						<thead>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;"><br></td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>FPL 19-20 1st part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Understat 19-20 1st part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>FPL 19-20 2nd part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Understat 19-20 2nd part</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>FPL 20-21</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Understat 20-21</span></strong></p>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Team xG</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0.559907</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0.545947</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0.696984</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0.613936</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0.449641</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0.231973</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Home/Away</span></strong></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>27.5674</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>20.4295</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-10.7882</span></p>
+								</td>
+								<td style="background:#C4C4C4;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-7.4864</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>4.11424</span></p>
+								</td>
+								<td style="background:#09BB9F;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>3.15344</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;height:1.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Opponent defense</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;height:1.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1.07622</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;height:1.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1.15494</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;height:1.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1.19235</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;height:1.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0.883422</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;height:1.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1.10653</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;height:1.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1.20773</span></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>To predict xG you had to add 0.2-0.27 to home team at the beginning of 19-20 for the rest parts the effect is unclear. The gap between 1st part 19-20 and others still holds. H/A made some negative impact on xG of the 2nd part and tiny positive for 20-21 on contrary to goals scored stats. &quot;Team xG&quot; was an average xG for last the 5 GWs. &quot;Opponent defense&quot; was average xG conceded for the whole part considered that&apos;s probably &nbsp; the reason why it&apos;s coefficient is larger.</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>There is no direct usage of that data in the FPL game. Probably it just explains how the game changed and became more unpredictable than before. To be of any use I&rsquo;ll just post top 10 home over away players for 19-20 season and vice versa&nbsp;<span style='font-size:14px;line-height:107%;font-family:"Roboto",serif;color:black;background:whitesmoke;'>sorted by&nbsp;</span>home xG - away xG per 90 min (player should have both home and away xG &gt;200 ( or 2) to get to the list).</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'>Top Home</p>
+				<div align="center" style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>
+					<table style="border: none;background:white;border-collapse:collapse;">
+						<thead>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;"><br></td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Name</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>xG</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>H per 90</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>A per 90</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>H-A per 90</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>H absolute</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>A absolute</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>H-A absolute</span></strong></p>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Riyad Mahrez</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1094.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>63.546326</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>38.984925</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>24.561401</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>663.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>431.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>232.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Jay Rodriguez</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>827.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>47.824675</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>28.051948</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>19.772727</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>491.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>336.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>155.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>2</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Oliver McBurnie</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>830.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>44.372822</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>24.827586</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>19.545236</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>566.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>264.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>302.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>3</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Gerard Deulofeu</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>896.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>46.786389</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>29.971126</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>16.815263</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>550.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>346.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>204.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>4</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Bernardo Mota Veiga de Carvalho e Silva</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>927.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>49.751553</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>33.526066</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>16.225486</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>534.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>393.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>141.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>5</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Tammy Abraham</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1301.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>62.300420</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>46.076555</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>16.223865</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>659.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>642.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>17.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>6</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Anthony Martial</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1297.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>52.180095</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>37.284768</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>14.895327</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>734.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>563.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>171.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>7</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>David Silva</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>937.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>52.028725</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>37.298444</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>14.730281</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>644.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>293.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>351.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>8</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Harry Wilson</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>667.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>43.990025</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>29.640719</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>14.349306</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>392.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>275.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>117.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>9</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Todd Cantwell</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>656.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>31.447721</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>17.472527</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>13.975194</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>391.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>265.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>126.0</span></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;text-align:center;'>Top Away</p>
+				<div align="center" style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>
+					<table style="border: none;background:white;border-collapse:collapse;">
+						<thead>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;"><br></td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Name</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>xG</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>H per 90</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>A per 90</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>H-A per 90</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>H absolute</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>A absolute</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>H-A absolute</span></strong></p>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>0</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Ayoze Perez</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>779.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>24.151150</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>44.294931</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-20.143781</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>245.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>534.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-289.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Gabriel Fernando de Jesus</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1620.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>63.292683</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>80.773694</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-17.481011</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>692.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>928.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-236.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>2</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Michail Antonio</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1094.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>46.091954</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>63.384146</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-17.292192</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>401.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>693.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-292.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>3</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Che Adams</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>524.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>36.424682</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>49.797794</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-13.373112</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>223.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>301.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-78.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>4</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Lucas Rodrigues Moura da Silva</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>751.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>23.770634</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>37.112546</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-13.341912</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>304.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>447.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-143.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>5</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Wesley Moraes</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>632.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>25.758267</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>37.889503</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-12.131236</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>251.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>381.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-130.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>6</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Jamie Vardy</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1455.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>37.820352</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>49.125000</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-11.304648</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>669.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>786.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-117.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>7</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Raheem Sterling</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1829.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>56.036334</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>67.187500</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-11.151166</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>754.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>1075.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-321.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>8</span></strong></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Kelechi Iheanacho</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>603.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>53.475336</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>60.000000</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-6.524664</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>265.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>338.0</span></p>
+								</td>
+								<td style="background:whitesmoke;padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-73.0</span></p>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><strong><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>9</span></strong></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>Matt Doherty</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>681.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>18.941176</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>24.739663</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-5.798487</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>322.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>359.0</span></p>
+								</td>
+								<td style="padding:6.0pt 6.0pt 6.0pt 6.0pt;">
+									<p style='margin-top:12.0pt;margin-right:0in;margin-bottom:0in;margin-left:0in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;text-align:right;'><span style='font-size:12px;font-family:"Helvetica",sans-serif;color:black;'>-37.0</span></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+				<p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;'>&nbsp;</p>
+
+			</div>
+        </div>
+	</main>
+
+	<footer>
+
+		<span id="copyright">
+			&copy;FPL in Numbers 2020.
+		</span>
+
+		<span id="middle_f">
+			<a href="index.html">
+				<img src="html/logo/monstro-brown.png" alt="logo" id="little_octopus">
+			</a>
+		</span>
+
+		<span id="contact">
+			fplinnumbers@gmail.com
+		</span>
+
+	</footer>
+</body>
+
+</html>

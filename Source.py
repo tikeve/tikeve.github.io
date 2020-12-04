@@ -11,6 +11,12 @@ import os
 
 class Source:
     def __init__(self, source, ma_num=0, year=''):
+        '''
+            Initialization function
+            source = FPL or Understat
+            ma_num = numbers in Moving Average. If 0 then no MA and calculations are faster
+            year = '' then current, otherwize year of history "2019-2020" for example
+        '''
         self.source = source
         print(f'Start Creating {self.source} Tables:')
         start_module = time()
@@ -19,9 +25,11 @@ class Source:
         
 #1. Reading nessesry data from files.
         
+        #finding folder with data for year entered
         if year=='': folder = ''
         else: folder = f'history/{year}/'
-        #print(f'folder = {folder}')
+        
+        #Catching empty data at the start of the season. Avoiding mistake with reading empty file
         try:
             Table = pd.read_csv(Path(f'{folder}in/Table_'+source+'.csv')) # Main data from source containing rows for each player
         except:
@@ -51,7 +59,8 @@ class Source:
             Player_opponent_team = pd.DataFrame(json.loads(file.read()))
             Player_opponent_team.index = pd.to_numeric(Player_opponent_team.index)
             Player_opponent_team = Player_opponent_team.sort_index()
-
+        
+        #file names differ for the present and history
         if year=='':
             with open(Path(f'{folder}in/Team_played_fixtures.txt'), 'r') as file:
                 Team_played_fixtures = pd.DataFrame(json.loads(file.read()))
@@ -80,44 +89,6 @@ class Source:
                 Player_played_fixtures = Player_played_fixtures.sort_index()
             Team_upcoming_fixtures = pd.DataFrame()
             Player_upcoming_fixtures = pd.DataFrame()
-
-        
-        
-        
-#         #in a game with columns 'element', 'round', 'fixture', 'threat', 'creativity', 'team', opponent_team'
-#         Fixtures = pd.read_csv(Path('in/Fixtures.csv')) # Table of rows for each fixture
-#         Teams = pd.read_csv(Path('in/Teams.csv')) # Table of rows as teams with columns 'id', 'Teams',
-#         #'TARGET COL', 'Matches'
-#         Players = pd.read_csv(Path('in/Players.csv')) # Table of rows as players with columns 'id', 'Name',
-#         #'Team', Team games', 'Played'
-#         del Players['web_name'] #This column is needed only for inputUnderstat.py
-        
-#         #Reading Fxtures and Opponents for Teams and Players
-#         with open(Path('in/Team_played_fixtures.txt'), 'r') as file:
-#             Team_played_fixtures = pd.DataFrame(json.loads(file.read()))
-#             Team_played_fixtures.index = pd.to_numeric(Team_played_fixtures.index)
-#             Team_played_fixtures = Team_played_fixtures.sort_index()
-#         with open(Path('in/Team_opponent_team.txt'), 'r') as file:
-#             Team_opponent_team = pd.DataFrame(json.loads(file.read()))
-#             Team_opponent_team.index = pd.to_numeric(Team_opponent_team.index)
-#             Team_opponent_team = Team_opponent_team.sort_index()
-#         with open(Path('in/Player_played_fixtures.txt'), 'r') as file:
-#             Player_played_fixtures = pd.DataFrame(json.loads(file.read()))
-#             Player_played_fixtures.index = pd.to_numeric(Player_played_fixtures.index)
-#             Player_played_fixtures = Player_played_fixtures.sort_index()
-#         with open(Path('in/Player_opponent_team.txt'), 'r') as file:
-#             Player_opponent_team = pd.DataFrame(json.loads(file.read()))
-#             Player_opponent_team.index = pd.to_numeric(Player_opponent_team.index)
-#             Player_opponent_team = Player_opponent_team.sort_index()
-            
-#         with open(Path('in/Team_upcoming_fixtures.txt'), 'r') as file:
-#             Team_upcoming_fixtures = pd.DataFrame(json.loads(file.read()))
-#             Team_upcoming_fixtures.index = pd.to_numeric(Team_upcoming_fixtures.index)
-#             Team_upcoming_fixtures = Team_upcoming_fixtures.sort_index()
-#         with open(Path('in/Player_upcoming_fixtures.txt'), 'r') as file:
-#             Player_upcoming_fixtures = pd.DataFrame(json.loads(file.read()))
-#             Player_upcoming_fixtures.index = pd.to_numeric(Player_upcoming_fixtures.index)
-#             Player_upcoming_fixtures = Player_upcoming_fixtures.sort_index()
         
         print('\t 1. Reading files from ' + source +' is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
@@ -279,8 +250,6 @@ class Source:
         #(2) Players Creativity
 
         Player_xA = Players.copy()
-        #Player_xA['xA per fixture'] = np.zeros(len(Players))
-        #Player_xA['xA per game'] = np.zeros(len(Players))
         Player_xA.insert(Player_xA.columns.get_loc('Team games'), 'xA per fixture',\
         [0.0 for i in Player_xA.itertuples()])
         Player_xA.insert(Player_xA.columns.get_loc('Team games'), 'xA per game',\
@@ -314,13 +283,17 @@ class Source:
         Player_xA_Ad = adjustment(Player_xA, class_data)    
         print('\t\t 4.4. Player_xA_Ad is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
-# 4.99 Creating future tables and opponent tables
+# 5. Creating future tables and opponent tables
+
+        #(1) Calculating futures
+        print('\t 5. Creating future tables and opponent tables.')
 
         Team_oppxG_coeff = no_lists(Team_opponent_team)
         Team_oppdefence_coeff = no_lists(Team_opponent_team)
         Player_oppxG_coeff = no_lists(Player_opponent_team)
         Player_oppdefence_coeff = no_lists(Player_opponent_team)
-
+        
+        #Columns with np.nan automatically become float that's why int() is needed
         Team_oppxG_coeff = Team_oppxG_coeff.applymap(lambda x: Team_xG_Ad.at[int(x)-1,'xG av adj'] \
         if not np.isnan(x) else np.nan)/threatAllowedAv
 
@@ -337,6 +310,7 @@ class Source:
         Team_xOxG = Team_oppxG_coeff.mul(Team_Opponent_xG_Ad['Opponent xG av adj'], axis=0)
         Player_xxG = Player_oppdefence_coeff.mul(Player_xG_Ad['xG per game adj'], axis=0)
         
+        #Writing pure numbers(lists of numbers) tables to mid folder for stats calculations
         Team_oppxG_coeff.to_json(Path(f'{folder}mid/{self.source}/Team_oppxG_coeff.txt'))
         Team_oppdefence_coeff.to_json(Path(f'{folder}mid/{self.source}/Team_oppdefence_coeff.txt'))
         Player_oppxG_coeff.to_json(Path(f'{folder}mid/{self.source}/Player_oppxG_coeff.txt'))
@@ -344,7 +318,13 @@ class Source:
         Team_xxG.to_json(Path(f'{folder}mid/{self.source}/Team_xxG.txt'))
         Team_xOxG.to_json(Path(f'{folder}mid/{self.source}/Team_xOxG.txt'))
         Player_xxG.to_json(Path(f'{folder}mid/{self.source}/Player_xxG.txt'))
-
+        
+        print('\t\t 5.1. Calculating futures.\t It takes ' + str(time() - start) + ' sec')
+        start = time()
+        
+        #(2) Visualizing futures
+        
+        #Adding some words for tables to be readable (lists still)
         Display_Team_xxG = Team_xxG.copy()
         Display_Team_xxG['sum'] = Display_Team_xxG.sum(axis=1)
         Display_Team_xxG['Teams'] =  Teams['Teams']
@@ -372,10 +352,10 @@ class Source:
             del Display_Team_xOxG[f'GW{i}']
         Display_Team_xOxG
         
-        print('\t 4.99. Creating future tables and opponent tables is over.\t It takes ' + str(time() - start) + ' sec')
+        print('\t\t 5.2. Visualizing futures.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
-# 5. Writing tables to files (and variables to class.variables)
+# 6. Writing tables to files (and variables to class.variables)
         
         # Useful variables for debugging
         self.Table = Table
@@ -427,14 +407,17 @@ class Source:
         self.Player_xA_Ad =\
             write_table(Player_xA_Ad, 'Player_xA_Ad', 'xA per fixture adj', self.source, self.ma_num, folder)
         
-        print('\t 5. Writing to files is over.\t It takes ' + str(time() - start) + ' sec')
+        print('\t 6. Writing to files is over.\t It takes ' + str(time() - start) + ' sec')
         print(f'{self.source} is created./t It takes {time() - start_module} sec')
         start = time()
 
-# 6. Tests for each element of the class
+# 7. Tests for each element of the class
     
-    # Checks if all names in the source can be found in fantasy.premierleague.com (FPL)
     def test2FPL(self, folder=''):
+        '''
+            Checks if all names in the source can be found in fantasy.premierleague.com (FPL)
+            Subfunction of test()
+        '''
         FPL = pd.read_csv(f'{folder}in/Table_FPL.csv')
         Table_Source = pd.read_csv(f'{folder}in/Table_'+self.source+'.csv')
         Mistakes = pd.DataFrame()
@@ -458,6 +441,10 @@ class Source:
         return Mistakes, No_Names
         
     def test(self, year=''):
+        '''
+            Tests that all tables are correct (no duplicated columns or rows)
+            Uses test2FPL() to compare names
+        '''
         if year=='': folder = ''
         else: folder = f'history/{year}/'
         if self.Table.empty:
@@ -490,10 +477,14 @@ def html_table_name(table_name):
     return table_name.replace('Team_', 'Teams Ranking Based on Team ').replace('Player_', 'Players Ranking Based on Player ')\
     .replace('Ad', 'Adjusted').replace('_', ' ').replace('TableTeams', 'Teams Ranking')
 
-# Writing final tables to files and returning table itself and MA variant also
-# df - Table to make final table out of it, name - the name of the table, key_col - column to sort,
-# source - Understat or FPL, ma_num - number for MA(currently unused just calculated)
+
+
 def write_table(df, name, key_col, source, ma_num, folder):
+    '''
+        Writing final tables to files and returning table itself and MA variant also
+        df - Table to make final table out of it, name - the name of the table, key_col - column to sort,
+        source - Understat or FPL, ma_num - number for MA(currently unused just calculated)
+    '''
     
     #print(f'folder = {folder}')
     df.to_json(Path(f'{folder}mid/{source}/{name}.txt')) #writing table to "mid" folder for advanced calculations
@@ -538,7 +529,9 @@ def write_table(df, name, key_col, source, ma_num, folder):
     if folder == '':
         dfString = table2string(df)
         
-        html_table = dfString.style.apply(color_table, axis=None).render().replace('\n', '')#.format(digit_dict)
+        dfStringStyler = dfString.style.apply(color_table, axis=None)#.render().replace('\n', '')#.format(digit_dict)
+        dfStringStyler.set_table_attributes('class="DataTable"')
+        html_table = dfStringStyler.render().replace('\n', '')
         BS_table = BeautifulSoup(html_table, 'html.parser')
         css = str(BS_table('style')[0])
         html_ = str(BS_table('table')[0])
@@ -560,10 +553,10 @@ def write_table(df, name, key_col, source, ma_num, folder):
         #Rewriting html and css
         with open(f'{folder}index.html', 'r', encoding="utf-8") as file:
             old_file = file.read()
-        tag_to_replace1 = str(BeautifulSoup(old_file, 'html.parser')('table')[0])
-        tag_to_replace2 = str(BeautifulSoup(old_file, 'html.parser')('h2')[0])
+        tag_to_replace1 = str(BeautifulSoup(old_file, 'html.parser')('table', attrs={"class":"DataTable"})[0])
+        tag_to_replace2 = str(BeautifulSoup(old_file, 'html.parser')('h2', attrs={"id":"DataTitle"})[0])
         new_file = old_file.replace(tag_to_replace1, html_)
-        new_file = new_file.replace(tag_to_replace2, f'<h2> {html_table_name(name)} </h2>')
+        new_file = new_file.replace(tag_to_replace2, f'<h2 id="DataTitle"> {html_table_name(name)} </h2>')
 
         #Making links right
 
@@ -586,9 +579,10 @@ def write_table(df, name, key_col, source, ma_num, folder):
     
     return df
 
-
-#Makes colored tables
 def color_table(df):
+    '''
+        Makes colored tables
+    '''
     def table_type(df):
         if df.columns[2]=='xG': return 'TableTeams'
         elif 'Opponent' in df.columns[1]: return 'Defence'
@@ -616,8 +610,11 @@ def color_table(df):
         else: color = '#15607a'
         return f'Background-color: {color}'
     
-    #function for style.apply by rows where x is a table type
     def color_table_row(row, x):
+        '''
+            function for style.apply by rows where x is a table type
+            Subfunction of color_table_row
+        '''
         if x=='Team':
             return [color_Team_xG(i) if not(row.name in ['Matches', 'Teams']) else 'Background-color: white' for i in row]
         elif x=='Player':
@@ -635,9 +632,12 @@ def color_table(df):
 # Returns the table with d mean average for table Out_T
 # If less than d matches played returns zero. If no match played in gameweeek previous gameweek taken.
 def MA(Out_T, d):
-    
-    # Filling the column with averages. Subfunction for MA
-    #Adds d - averages for j-th GW_column (not GWj but j-th in order) of table T
+    '''
+        Returns the table with d mean average for table Out_T.
+        If less than d matches played returns zero. If no match played in gameweeek previous gameweek taken.
+        Filling the column with averages. Subfunction for MA.
+        Adds d - averages for j-th GW_column (not GWj but j-th in order) of table T.
+    '''
     def d_av(T, j, GW_columns, d):
         T.insert(T.columns.get_loc(GW_columns[-1]), f'{GW_columns[j]} {str(d)} - average', [0.0 for i in T.itertuples()])
         for i in T.index:
@@ -701,6 +701,11 @@ def MA(Out_T, d):
 
 
 def adjustment(df, class_data):
+    '''
+        Creating adjusted tables from unadjusted
+        df - table to transform
+        class_data - list of needed data from source class
+    '''
     [Teams, Players, Team_played_fixtures, Player_played_fixtures, Team_opponent_team, Player_opponent_team,\
      Team_xG, Team_Opponent_xG, threatAllowedAv, lastGW]\
     = class_data

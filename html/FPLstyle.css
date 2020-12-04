@@ -16,15 +16,15 @@ header, nav, main {
     width: 98%;
     margin: 0 1% 0 1%;
 }
-h2 {
+h2.non-blog{
     /*line-height: 1.2em;
     display: inline;*/
     text-align: center;
     margin-top: 1em;
-    text-shadow: 0px 1px 1px green;
+    /*text-shadow: 0px 1px 1px green;*/
 }
 
-h1 {
+h1.non-blog {
     line-height: 0.2em;
     /*font-size: 12px;*/
     padding-bottom: 0.3px;
@@ -88,7 +88,7 @@ form input:hover {
     /*position: relative;*/
     margin-right: 4px;
 }
-form {
+form.header-form {
     display: inline;
     margin-bottom: 0.2em;
     line-height: 1.5em;
@@ -98,7 +98,8 @@ form {
 /*Everything form the MAIN*/
 main {
 }
-table {
+/*table {*/
+.DataTable {
     overflow: auto;
     height: 450px;
     width: 100%;
@@ -106,20 +107,20 @@ table {
     margin-left: auto;
     margin-right: auto;
 }
-th {
+table.DataTable th {
     width: 7em;
 }
 	
-aside {
+/*aside {
     position: relative;
     float: left;
-    border-right: 1px solid black;/*#9F1C1C;*/
-    width: 25%;
+    border-right: 1px solid black;*//*#9F1C1C;*/
+    /*width: 25%;
     overflow: auto;
-    height: 940px;
+    height: 940px;*/
     /*height: 100%;*/
     /*padding-bottom: 15%;*/
-}
+/*}*/
 #forum {
     position: absolute;
     top: 50%;
@@ -160,6 +161,16 @@ textarea {
     background-color: blue;
     align-self: center;
     justify-self: center;
+}
+
+#blog {
+    border: 3px grey solid;
+}
+
+.posts {
+    border: 3px yellow solid;
+    margin: 5px;
+    padding: 17px 10% 10px 10%;
 }
 
 /*Everything form thead FOOTER*/
