@@ -132,10 +132,6 @@ table.DataTable th {
     margin-right: 3%;
     border: solid black 1px;
 }
-textarea {
-    width: 97%;
-    margin-right: 3%;
-}
 
 #main-table {
     width: 100%;
