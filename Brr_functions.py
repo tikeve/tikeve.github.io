@@ -28,30 +28,13 @@ def is_finished(n):
         a = Fixtures[Fixtures['id']==n]['finished']
         return a.bool()
 
+#Deleting empty columns
+def del_empty_col(df):
+    for i in df.columns:
+        if (df[i].tolist()==[[] for _ in df.index])|        ([np.isnan(df[i].tolist()[j]) for j in range(len(df))]==[True for _ in df.index]):
+             del df[i]
+    return df
 #removes lists from table adding new column instead
-# def no_lists(t):
-#     table = t.copy()
-#     for i in table.index:
-#         for j in table.columns:
-#             if type(table.at[i,j])==list:
-#                 if len(table.at[i,j])==0:
-#                     table.at[i,j]=np.nan  #''
-#                 elif len(table.at[i,j])==1:
-#                     table.at[i,j]=table.at[i,j][0]
-#                 elif  len(table.at[i,j])==2:
-#                     if j+'*' not in table.columns:
-#                         table.insert(list(table.columns).index(j),j+'*',np.nan)
-#                     table.at[i,j+'*'] = table.at[i,j][1]
-#                     table.at[i,j]=table.at[i,j][0]
-#                 else:#len(table.at[i,j])==3
-#                     if j+'*' not in table.columns:
-#                         table.insert(list(table.columns).index(j),j+'*',np.nan)
-#                     if j+'**' not in table.columns:
-#                         table.insert(list(table.columns).index(j)+1,j+'**',np.nan)
-#                     table.at[i,j+'**'] = table.at[i,j][2]
-#                     table.at[i,j+'*'] = table.at[i,j][1]
-#                     table.at[i,j]=table.at[i,j][0]
-#     return table
 def no_lists(t, empty=np.nan):
     table = t.copy()
     for i in table.index:
