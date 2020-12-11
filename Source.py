@@ -564,8 +564,9 @@ def write_table(df, name, key_col, source, ma_num, folder):
             new_file = new_file.replace('html/FPL/', '')
             new_file = new_file.replace('"out/FPL/TableTeams.csv"', f'"../../out/{source}/{name}.csv"')#Change download button
             new_file = new_file.replace(f'TableTeams', name)
-            if name != 'TableTeams':
-                new_file = new_file.replace('form action="index.html"', f'form action="../FPL/{name}.html"')
+            if name != 'TableTeams': #changes links for buttons FPL and Understat
+                new_file = new_file.replace('class="header-form" action="index.html"',\
+                f'class="header-form" action="../FPL/{name}.html"')
             else:
                 new_file = new_file.replace('form action="index.html"', f'form action="../../index.html"')
             new_file = new_file.replace('html/', '../')
