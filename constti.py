@@ -5,6 +5,7 @@
 
 
 import unicodedata
+import numpy as np
 
 # 1. Tries to download page 6 times instead of 1
 def long_request(url):
@@ -59,16 +60,34 @@ def change_column_name(Table, col_name, new_col_name):
     return temp_Table
 
 # 7. Finds differences between the tables
+
 def differences(A, B):
-    df = (A == B)
-    #df = Compare.copy()
-    for i in df.index:
-        if df.loc[i].sum() == len(df.columns):
-            df = df.drop(i)
-    for j in df.columns:
-        if df[j].sum() == len(df):
-            del df[j]
-    return df
+    '''
+        Finds differences between the tables
+        Change None to np.nan previously
+    '''
+    same = 1
+    if list(A.index) != list(B.index):
+        print(f'Indexes are not equal: {(set(A.index)-set(B.index))|(set(B.index)-set(A.index))}')
+        same = 0
+    if list(A.columns) != list(B.columns):
+        print(f'Columns are not equal: {(set(A.columns)-set(B.columns))|(set(B.columns)-set(A.columns))}')
+        same = 0
+    if same == 0:
+        return A
+    else:
+        #df = (A == B)
+        A = A.fillna(value=np.nan)
+        B = B.fillna(value=np.nan)
+        df = A.apply(lambda x: [x[i] == B[x.name][i]         if (type(x[i]) not in (float, np.float64))|(type(B[x.name][i]) not in (float, np.float64))        else True if (np.isnan(x[i]))&(np.isnan(B[x.name][i]))        else x[i] == B[x.name][i] for i in range(len(A))])
+        #df = Compare.copy()
+        for i in df.index:
+            if df.loc[i].sum() == len(df.columns):
+                df = df.drop(i)
+        for j in df.columns:
+            if df[j].sum() == len(df):
+                del df[j]
+        return df
 
 if __name__=="__main__":
     print('Hello')
