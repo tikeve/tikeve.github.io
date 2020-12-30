@@ -6,10 +6,10 @@
 
 import unicodedata
 import numpy as np
+import requests
 
 # 1. Tries to download page 6 times instead of 1
 def long_request(url):
-    import requests
     for j in range(6):
         try:
             p = requests.get(url)

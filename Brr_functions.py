@@ -1,41 +1,91 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[88]:
 
 
 import pandas as pd
 import numpy as np
-#NaNs to zeros
+
 def toint(a):
+    '''
+        NaNs to zeros
+    '''
     if np.isnan(a):
         return 0
     else: return int(a)
 
-#If no matches played not to devide by zero
+
 def noZ(a):
+    '''
+        If no matches played not to devide by zero
+    '''
     b = a.copy()
     for i in range(len(b)):
         if b[i] == 0:
             b[i]=1
     return b
 
-#Kills unfinished matches
 def is_finished(n):
+    '''
+        Fills unfinished matches
+    '''
     if n=='':
         return False
     else:
         a = Fixtures[Fixtures['id']==n]['finished']
         return a.bool()
 
-#Deleting empty columns
 def del_empty_col(df):
+    '''
+        Deleting empty columns
+    '''
     for i in df.columns:
         if (df[i].tolist()==[[] for _ in df.index])|        ([np.isnan(df[i].tolist()[j]) for j in range(len(df))]==[True for _ in df.index]):
              del df[i]
     return df
-#removes lists from table adding new column instead
+
+
 def no_lists(t, empty=np.nan):
+    '''
+        removes lists from table adding new column instead
+    '''
+    def get_gw_num(col_name):
+        '''
+            returns num for standart column name 'GW11**' -> 11
+        '''
+        try:
+            return int(col_name.replace('GW','').replace('*',''))
+        except:
+            return -1
+    
+    def GW_insert(table, col_name):
+        '''
+            insert columns after if column order is increasing or before if decreasing
+        '''
+        #if col_name starts with 'GW' and next or previous column name with number larger or less then insert after
+        if list(table.columns).index(col_name)<len(table.columns)-1:
+            c1 = (get_gw_num(col_name) < get_gw_num(table.columns[list(table.columns).index(col_name)+1]))
+            c2 = (get_gw_num(col_name) > 0)
+            c3 = (get_gw_num(table.columns[list(table.columns).index(col_name)+1]) > 0)
+            cond1 = c1&c2&c3
+        else: cond1 = False
+            
+        if list(table.columns).index(col_name) > 0:
+            c1 = (get_gw_num(col_name) > get_gw_num(table.columns[list(table.columns).index(col_name)-1]))
+            c2 = (get_gw_num(col_name) > 0)
+            c3 = (get_gw_num(table.columns[list(table.columns).index(col_name)-1]) > 0)
+            cond2 = c1&c2&c3
+        else: cond2 = False
+            
+        if (col_name[:2] == 'GW')&(cond1|cond2):
+            table.insert(list(table.columns).index(col_name)+1,col_name+'*',None)
+            return table
+        else:
+            table.insert(list(table.columns).index(col_name),col_name+'*',None)
+            return table
+        
+        
     table = t.copy()
     for i in table.index:
         for j in table.columns:
@@ -46,23 +96,24 @@ def no_lists(t, empty=np.nan):
                     table.at[i,j]=table.at[i,j][0]
                 elif  len(table.at[i,j])==2:
                     if j+'*' not in table.columns:
-                        table.insert(list(table.columns).index(j),j+'*',None)
+                        #table.insert(list(table.columns).index(j),j+'*',None)
+                        table = GW_insert(table, j)
                         table[j+'*'] = [None for _ in range(len(table))]
                     table.at[i,j+'*'] = table.at[i,j][1]
                     table.at[i,j]=table.at[i,j][0]
                 else:#len(table.at[i,j])==3
                     if j+'*' not in table.columns:
-                        table.insert(list(table.columns).index(j),j+'*',None)
+                        table = GW_insert(table, j)
                     if j+'**' not in table.columns:
-                        table.insert(list(table.columns).index(j)+1,j+'**',None)
+                        table = GW_insert(table, j+'*')
+#                     if j+'*' not in table.columns:
+#                         table.insert(list(table.columns).index(j),j+'*',None)
+#                     if j+'**' not in table.columns:
+#                         table.insert(list(table.columns).index(j)-1,j+'**',None)
                     table.at[i,j+'**'] = table.at[i,j][2]
                     table.at[i,j+'*'] = table.at[i,j][1]
                     table.at[i,j]=table.at[i,j][0]
-    return table.applymap(lambda x: np.nan if x == '' else    x if type(x) in (int, np.int64,  float, np.float64, list, np.ndarray, str) else np.nan)
-
-
-# In[ ]:
-
-
-
+    return table.fillna(np.nan).replace('', np.nan)
+#     return table.applymap(lambda x: np.nan if x == '' else\
+#     x if type(x) in (int, np.int64,  float, np.float64, list, np.ndarray, str) else np.nan)
 
