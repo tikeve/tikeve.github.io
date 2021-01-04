@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[88]:
-
-
 import pandas as pd
 import numpy as np
 
@@ -41,7 +35,8 @@ def del_empty_col(df):
         Deleting empty columns
     '''
     for i in df.columns:
-        if (df[i].tolist()==[[] for _ in df.index])|        ([np.isnan(df[i].tolist()[j]) for j in range(len(df))]==[True for _ in df.index]):
+        if (df[i].tolist()==[[] for _ in df.index])|\
+        ([np.isnan(df[i].tolist()[j]) for j in range(len(df))]==[True for _ in df.index]):
              del df[i]
     return df
 
@@ -113,7 +108,4 @@ def no_lists(t, empty=np.nan):
                     table.at[i,j+'**'] = table.at[i,j][2]
                     table.at[i,j+'*'] = table.at[i,j][1]
                     table.at[i,j]=table.at[i,j][0]
-    return table.fillna(np.nan).replace('', np.nan)
-#     return table.applymap(lambda x: np.nan if x == '' else\
-#     x if type(x) in (int, np.int64,  float, np.float64, list, np.ndarray, str) else np.nan)
-
+    return table.fillna(np.nan)
