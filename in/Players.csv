@@ -308,37 +308,37 @@ id,Name,web_name,Team number,Team,Team games,Played
 599,Jack Jenkins,Jenkins,10,Leeds,10,0
 619,Niall Huggins,Huggins,10,Leeds,1,0
 620,Charlie Cresswell,Cresswell,10,Leeds,1,0
-241,James Milner,Milner,11,Liverpool,16,9
-242,Konstantinos Tsimikas,Tsimikas,11,Liverpool,16,0
-243,Georginio Wijnaldum,Wijnaldum,11,Liverpool,16,16
-244,Jordan Henderson,Henderson,11,Liverpool,16,13
-245,Adrian San Miguel del Castillo,Adrian,11,Liverpool,16,2
-246,Joel Matip,Matip,11,Liverpool,16,8
-247,Xherdan Shaqiri,Shaqiri,11,Liverpool,16,3
-248,Alex Oxlade-Chamberlain,Chamberlain,11,Liverpool,16,2
-249,Roberto Firmino,Firmino,11,Liverpool,16,16
-250,Virgil van Dijk,van Dijk,11,Liverpool,16,5
-251,Sadio Mane,Mane,11,Liverpool,16,15
-252,Alisson Ramses Becker,Alisson,11,Liverpool,16,13
-253,Fabio Henrique Tavares,Fabinho,11,Liverpool,16,14
-254,Mohamed Salah,Salah,11,Liverpool,16,15
-255,Andrew Robertson,Robertson,11,Liverpool,16,16
-256,Divock Origi,Origi,11,Liverpool,16,3
-257,Harry Wilson,Harry Wilson,11,Liverpool,16,0
-258,Takumi Minamino,Minamino,11,Liverpool,16,8
-259,Trent Alexander-Arnold,Alexander-Arnold,11,Liverpool,16,14
-260,Joseph Gomez,Gomez,11,Liverpool,16,7
-261,Naby Keita,Keita,11,Liverpool,16,7
-263,Curtis Jones,Jones,11,Liverpool,16,11
-264,Neco Williams,Neco Williams,11,Liverpool,16,4
-265,Harvey Elliott,Elliott,11,Liverpool,16,0
-468,Diogo Jota,Jota,11,Liverpool,16,9
-531,Thiago Alcantara do Nascimento,Thiago,11,Liverpool,15,3
-560,Caoimhin Kelleher,Kelleher,11,Liverpool,13,1
-589,Nathaniel Phillips,Phillips,11,Liverpool,11,3
-594,Rhys Williams,Rhys Williams,11,Liverpool,10,2
-601,Leighton Clarkson,Clarkson,11,Liverpool,8,0
-607,Jake Cain,Cain,11,Liverpool,5,0
+241,James Milner,Milner,11,Liverpool,17,10
+242,Konstantinos Tsimikas,Tsimikas,11,Liverpool,17,0
+243,Georginio Wijnaldum,Wijnaldum,11,Liverpool,17,17
+244,Jordan Henderson,Henderson,11,Liverpool,17,14
+245,Adrian San Miguel del Castillo,Adrian,11,Liverpool,17,2
+246,Joel Matip,Matip,11,Liverpool,17,8
+247,Xherdan Shaqiri,Shaqiri,11,Liverpool,17,4
+248,Alex Oxlade-Chamberlain,Chamberlain,11,Liverpool,17,3
+249,Roberto Firmino,Firmino,11,Liverpool,17,17
+250,Virgil van Dijk,van Dijk,11,Liverpool,17,5
+251,Sadio Mane,Mane,11,Liverpool,17,16
+252,Alisson Ramses Becker,Alisson,11,Liverpool,17,14
+253,Fabio Henrique Tavares,Fabinho,11,Liverpool,17,15
+254,Mohamed Salah,Salah,11,Liverpool,17,16
+255,Andrew Robertson,Robertson,11,Liverpool,17,17
+256,Divock Origi,Origi,11,Liverpool,17,3
+257,Harry Wilson,Harry Wilson,11,Liverpool,17,0
+258,Takumi Minamino,Minamino,11,Liverpool,17,8
+259,Trent Alexander-Arnold,Alexander-Arnold,11,Liverpool,17,15
+260,Joseph Gomez,Gomez,11,Liverpool,17,7
+261,Naby Keita,Keita,11,Liverpool,17,7
+263,Curtis Jones,Jones,11,Liverpool,17,11
+264,Neco Williams,Neco Williams,11,Liverpool,17,4
+265,Harvey Elliott,Elliott,11,Liverpool,17,0
+468,Diogo Jota,Jota,11,Liverpool,17,9
+531,Thiago Alcantara do Nascimento,Thiago,11,Liverpool,16,4
+560,Caoimhin Kelleher,Kelleher,11,Liverpool,14,1
+589,Nathaniel Phillips,Phillips,11,Liverpool,12,3
+594,Rhys Williams,Rhys Williams,11,Liverpool,11,2
+601,Leighton Clarkson,Clarkson,11,Liverpool,9,0
+607,Jake Cain,Cain,11,Liverpool,6,0
 266,Fernando Luiz Rosa,Fernandinho,12,Man City,15,8
 267,Claudio Bravo,Bravo,12,Man City,15,0
 268,Sergio Aguero,Aguero,12,Man City,15,5
@@ -469,34 +469,36 @@ id,Name,web_name,Team number,Team,Team games,Played
 580,Michael Verrips,Verrips,15,Sheffield Utd,13,0
 603,Kean Bryan,Bryan,15,Sheffield Utd,8,2
 618,Antwoine Hackford,Hackford,15,Sheffield Utd,1,1
-148,Theo Walcott,Walcott,16,Southampton,16,12
-361,Shane Long,Long,16,Southampton,16,10
-362,Ryan Bertrand,Bertrand,16,Southampton,16,15
-363,Alex McCarthy,McCarthy,16,Southampton,16,16
-364,Oriol Romeu Vidal,Oriol Romeu,16,Southampton,16,15
-365,Nathan Redmond,Redmond,16,Southampton,16,9
-366,Danny Ings,Ings,16,Southampton,16,12
-367,Jack Stephens,Stephens,16,Southampton,16,6
-368,Stuart Armstrong,Armstrong,16,Southampton,16,13
-369,Jannik Vestergaard,Vestergaard,16,Southampton,16,13
-370,James Ward-Prowse,Ward-Prowse,16,Southampton,16,16
-371,Angus Gunn,Gunn,16,Southampton,16,0
-372,Sofiane Boufal,Boufal,16,Southampton,16,0
-374,Josh Sims,Sims,16,Southampton,16,0
-375,Kyle Walker-Peters,Walker-Peters,16,Southampton,16,16
-376,Jan Bednarek,Bednarek,16,Southampton,16,16
-377,Che Adams,Adams,16,Southampton,16,16
-378,Yan Valery,Valery,16,Southampton,16,0
-379,William Smallbone,Smallbone,16,Southampton,16,2
-380,Jake Vokins,Vokins,16,Southampton,16,0
-381,Michael Obafemi,Obafemi,16,Southampton,16,1
-382,Moussa Djenepo,Djenepo,16,Southampton,16,12
-479,Mohammed Salisu,Salisu,16,Southampton,16,0
-523,Fraser Forster,Forster,16,Southampton,16,0
-524,Nathan Tella,Tella,16,Southampton,16,4
-565,Ibrahima Diallo,Diallo,16,Southampton,12,7
-590,Daniel N'Lundulu,N'Lundulu,16,Southampton,11,5
-598,Kayne Ramsay,Ramsay,16,Southampton,9,0
+148,Theo Walcott,Walcott,16,Southampton,17,13
+361,Shane Long,Long,16,Southampton,17,10
+362,Ryan Bertrand,Bertrand,16,Southampton,17,16
+363,Alex McCarthy,McCarthy,16,Southampton,17,16
+364,Oriol Romeu Vidal,Oriol Romeu,16,Southampton,17,15
+365,Nathan Redmond,Redmond,16,Southampton,17,9
+366,Danny Ings,Ings,16,Southampton,17,13
+367,Jack Stephens,Stephens,16,Southampton,17,7
+368,Stuart Armstrong,Armstrong,16,Southampton,17,14
+369,Jannik Vestergaard,Vestergaard,16,Southampton,17,13
+370,James Ward-Prowse,Ward-Prowse,16,Southampton,17,17
+371,Angus Gunn,Gunn,16,Southampton,17,0
+372,Sofiane Boufal,Boufal,16,Southampton,17,0
+374,Josh Sims,Sims,16,Southampton,17,0
+375,Kyle Walker-Peters,Walker-Peters,16,Southampton,17,17
+376,Jan Bednarek,Bednarek,16,Southampton,17,17
+377,Che Adams,Adams,16,Southampton,17,16
+378,Yan Valery,Valery,16,Southampton,17,1
+379,William Smallbone,Smallbone,16,Southampton,17,2
+380,Jake Vokins,Vokins,16,Southampton,17,0
+381,Michael Obafemi,Obafemi,16,Southampton,17,1
+382,Moussa Djenepo,Djenepo,16,Southampton,17,13
+479,Mohammed Salisu,Salisu,16,Southampton,17,0
+523,Fraser Forster,Forster,16,Southampton,17,1
+524,Nathan Tella,Tella,16,Southampton,17,5
+565,Ibrahima Diallo,Diallo,16,Southampton,13,8
+590,Daniel N'Lundulu,N'Lundulu,16,Southampton,12,6
+598,Kayne Ramsay,Ramsay,16,Southampton,10,0
+624,Kgaogelo Chauke,Chauke,16,Southampton,1,0
+625,Harry Lewis,Lewis,16,Southampton,1,0
 383,Hugo Lloris,Lloris,17,Spurs,16,16
 384,Danny Rose,Rose,17,Spurs,16,0
 385,Moussa Sissoko,Sissoko,17,Spurs,16,14

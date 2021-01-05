@@ -108,4 +108,4 @@ def no_lists(t, empty=np.nan):
                     table.at[i,j+'**'] = table.at[i,j][2]
                     table.at[i,j+'*'] = table.at[i,j][1]
                     table.at[i,j]=table.at[i,j][0]
-    return table.fillna(np.nan)
+    return table.fillna(np.nan).applymap(lambda x: x if type(x) != str else np.nan if x=='' else x) 
