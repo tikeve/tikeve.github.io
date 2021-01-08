@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[11]:
 
 
 import unicodedata
@@ -88,6 +88,14 @@ def differences(A, B):
             if df[j].sum() == len(df):
                 del df[j]
         return df
+    
+# 8. isnan without mistake for non numpy objects
+
+def myisnan(x):
+    try:
+        return np.isnan(x)
+    except:
+        return False
 
 if __name__=="__main__":
     print('Hello')

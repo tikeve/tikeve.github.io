@@ -5,8 +5,8 @@ start_module = time()
 start = start_module
 
 from constti import strip_accents_pdlist, long_request, differences
-from Brr_functions import no_lists, del_empty_col
-import Brr_functions
+from Brr_functions import to_lists, no_lists, del_empty_col
+#import Brr_functions
 from bs4 import BeautifulSoup
 import pandas as pd
 import json
@@ -15,15 +15,14 @@ from pathlib import Path
 import ast
 import requests
 import sys
+import runpy
 
-
-#sys.argv = ['abc.py','arg1', 'arg2']
+#sys.argv = ['abc.py','full', 'arg2']
 print(f'System var is - {sys.argv[1]}')
 # Reading what type of downloading should be done
 if sys.argv[1] == 'full':
     data_collection_type = 'full'
 else: data_collection_type = 'nothing'
-
 
 #For history
 year = ''
@@ -43,6 +42,12 @@ data1 = p1.text
 d1 = json.loads(data1)
 bigTable = pd.DataFrame(d1['elements'])
 bigTable['full_name'] = bigTable['first_name'] + ' ' + bigTable['second_name']
+bigTable[['ep_next', 'ep_this', 'form', 'points_per_game', 'selected_by_percent',
+       'value_form', 'value_season', 'influence', 'creativity', 'threat', 'ict_index']] =\
+bigTable[['ep_next', 'ep_this', 'form', 'points_per_game', 'selected_by_percent',
+       'value_form', 'value_season', 'influence', 'creativity', 'threat', 'ict_index']].apply(pd.to_numeric)
+bigTable = bigTable.applymap(lambda x: np.nan if x=='' else x)
+
 
 #Creating the Lists of Teams, Players and the Dictionary of Correspondence
 teams = dict(zip(pd.DataFrame(d1['teams'])['id'],pd.DataFrame(d1['teams'])['name']))
@@ -78,6 +83,62 @@ if do_smth:
         lastGW = int(Fixtures.at[lastr,'event'])
     Fixtures = Fixtures[Fixtures.columns.sort_values()] #Give strict(alphabetical) order
 
+    
+    
+    #Checking if anything has changed since previous download
+    '''
+        If nothing has changed - nothing
+        If only players/team data - medium
+        If fixtures has changed - full
+    '''
+    if data_collection_type == 'nothing':
+        bigTable_old = pd.read_csv('in/bootstrap.csv')
+        Fixtures_old = pd.read_csv('in/Fixtures.csv')
+        
+        #Copy from file making lists - lists (not str)
+        Fixtures_old = Fixtures_old.apply(lambda x: [ast.literal_eval(x[i]) for i in range(len(x))] \
+        if x.name=='stats' else x)
+        
+        Large_Table_old = pd.read_csv('in/LTable_FPL.csv')
+        F_diff = differences(Fixtures_old[['event','id']], Fixtures[['event','id']])
+        L_diff = differences(bigTable[['team']], bigTable_old[['team']])
+        if (len(L_diff) > 0)|(len(F_diff) > 0) > 0:
+            data_collection_type = 'full'
+            print(f'\t\tdata_collection_type = {data_collection_type}\n')
+            if len(F_diff) > 0:
+                print(f'Fixtures has changed:')
+                display(F_diff)
+            if len(L_diff) > 0:
+                print(f'Players teams list has changed:')
+                display(L_diff)
+        else:
+            F_diff_full = differences(Fixtures_old, Fixtures)
+            L_diff_full = differences(bigTable[['team', 'creativity', 'threat', 'minutes', 'points_per_game']],\
+            bigTable_old[['team', 'creativity', 'threat', 'minutes', 'points_per_game']])
+            
+            if (len(L_diff_full) > 0)|(len(F_diff_full) > 0):
+                data_collection_type = 'medium'
+                print(f'\t\tdata_collection_type = {data_collection_type}\n')
+                if len(F_diff_full) > 0:
+                    print('Medium Fixtures data has changed:')
+                    display(F_diff_full)
+                if len(L_diff_full) > 0:
+                    print('Medium Players data has changed:')
+                    display(L_diff_full)
+
+        print(f'\tChecking equalities is over.\t It takes {str(time() - start)} sec\n')
+        print(f'\tdata_collection_type = {data_collection_type}\n')
+        start = time()
+
+        
+        
+        
+        
+        
+# If data_collection_type == 'nothing', nothing should be really done till the end of the file
+if data_collection_type != 'nothing':
+    
+    
     #Creating the Main Table for FPL Source
     Table = pd.DataFrame()
     for i in bigTable['id']:
@@ -86,6 +147,7 @@ if do_smth:
         d = json.loads(p.text)
         dd = pd.DataFrame(d['history'])
         Table = Table.append(dd, ignore_index=True)
+        
     #Checking that Table is not empty (start of the season)
     if 'threat' in Table.columns:
         Table['name'] = [players[Table.at[i, 'element']] for i in Table.index]
@@ -96,7 +158,7 @@ if do_smth:
         #Table['team'] = [teamplayers[Table.at[i,'element']] for i in Table.index]
         Table['team'] = [Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_h'].values[0] if Table.at[i,'was_home']\
         else Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_a'].values[0] for i in Table.index]
-    Table = Table[Table.columns.sort_values()] #Give strict(alphabetical) order    
+    Table = Table[Table.columns.sort_values()] #Give strict(alphabetical) order
 
     #Deleteting double gameweeks for players changeg one PL cloub for another during GW ("Walcott case")
     #And matches from the current GW that are not played yet
@@ -117,32 +179,19 @@ if do_smth:
         '''
         Large_Table = Table.drop(indexes_to_drop).reset_index()
     
-    print(f'\tDownloading FPL tables is over.\t It takes {str(time() - start_module)} sec\n')
+    print(f'\tDownloading FPL tables is over.\t It takes {str(time() - start)} sec\n')
     start = time()
     
     
-    #data_collection_type = 'nothing'
-    Fixtures_old = pd.read_csv('in/Fixtures.csv')
-    Fixtures_old = Fixtures_old.apply(lambda x: [ast.literal_eval(x[i]) for i in range(len(x))] if x.name=='stats' else x)
-    #print(differences(Fixtures_old.fillna(value=np.nan), Fixtures.fillna(value=np.nan)))
-    Large_Table_old = pd.read_csv('in/LTable_FPL.csv')
-    if (data_collection_type == 'full')|(len(differences(Fixtures_old, Fixtures)) > 0): data_collection_type = 'full'
-    elif len(differences(Large_Table_old, Large_Table)) > 0: data_collection_type = 'medium'
-
-    #print(data_collection_type)
     
-print(f'\tChecking equalities is over.\t It takes {str(time() - start)} sec\n')
-print(f'\tdata_collection_type = {data_collection_type}\n')
-start = time()
-      
-if data_collection_type != 'nothing':
-    #Deleting not played
+    
+    
+    # Creating (Little_)Table. Deleting not played
     for i in Table.index:
         if (Fixtures[Fixtures['id'] == Table.at[i,'fixture']]['finished'].values[0] == False)&(not i in indexes_to_drop):
             indexes_to_drop.append(i)
     if indexes_to_drop != []:
         Table = Table.drop(indexes_to_drop).reset_index()        
-
 
     #Making Teams Template Table
     Teams = pd.DataFrame()
@@ -163,7 +212,6 @@ if data_collection_type != 'nothing':
     #Players['Team games'] = [Teams.at[Players.at[i,'Team number']-1,'Matches'] for i in Players.index]
 
 
-
     if  not Table.empty:
         Players['Team games'] = [len(Table[(Table['element']==i) ]) for i in Players['id']]
         Players['Played'] = [len(Table[(Table['element']==i)&(Table['minutes']>0)]) \
@@ -174,71 +222,74 @@ if data_collection_type != 'nothing':
     #start = time()
 
     #Calculating Fixtures and Opponents
+    if data_collection_type == 'full':
+        runpy.run_module('Optional', run_name='smth')
+#     '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+#     Team_all = pd.DataFrame()
+#     Team_opponent_team = pd.DataFrame()
+#     for j in range(int(Fixtures['event'].max()),0,-1): 
+#         '''
+#             Team_all - contains [number of fixture, home team id, away team id]
+#             Team_fixtures - contains [number of fixture]
+#             Team_played_fixtures - contains [number of future fixture], future or empty GW deleted
+#             Team_upcoming_fixtures - contains [number of played fixture], played or empty GW deleted
+#             Team_opponent_team - [opponent team id]
+#         '''
 
-    '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+#         Team_all['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&(Fixtures['event']==j)]\
+#         [['id', 'team_h', 'team_a']].values for i in range(1, team_number+1)]
+
+#         Team_opponent_team['GW'+str(j)] = [[pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0]\
+#         if pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0] != i+1\
+#         else pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][1]\
+#         for v in range(len(pd.DataFrame(Team_all.at[i,'GW'+str(j)])))] for i in Team_all.index]   
+
+#     Team_fixtures = Team_all.applymap(lambda x: [x[i][0] for i in range(len(x))])
     
-    Team_all = pd.DataFrame()
-    Team_opponent_team = pd.DataFrame()
-    for j in range(int(Fixtures['event'].max()),0,-1): 
-        '''
-            Team_all - contains [number of fixture, home team id, away team id]
-            Team_fixtures - contains [number of fixture]
-            Team_played_fixtures - contains [number of future fixture], future or empty GW deleted
-            Team_upcoming_fixtures - contains [number of played fixture], played or empty GW deleted
-            Team_opponent_team - [opponent team id]
-        '''
+#     #calculating home/away table with 1/0 and NaN
+#     Team_home = no_lists(Team_all.applymap(lambda x: list(x))).applymap(lambda x: np.nan if type(x)==float else x[1]-1).\
+#     apply(lambda x: x==list(range(len(Team_all)))).applymap(lambda x: 1 if x else 0)\
+#     +no_lists(Team_fixtures)-no_lists(Team_fixtures)#to add NaN
 
-        Team_all['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&(Fixtures['event']==j)]\
-        [['id', 'team_h', 'team_a']].values for i in range(1, team_number+1)]
+#     Team_home = Team_home[Team_home.columns[::-1]]#making right order
+    '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    
+    Team_fixtures = pd.read_csv(Path('in/Team_fixtures.csv'))
+    Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
+    if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
+    Team_upcoming_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
+    if Fixtures[Fixtures['id']==x]['finished'].iloc[0]==False else np.nan)
+    Team_opponent_team = pd.read_csv(Path('in/Team_opponent_team.csv'))
+    Team_home = pd.read_csv(Path('in/Team_home.csv'))
 
-        Team_opponent_team['GW'+str(j)] = [[pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0]\
-        if pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0] != i+1\
-        else pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][1]\
-        for v in range(len(pd.DataFrame(Team_all.at[i,'GW'+str(j)])))] for i in Team_all.index]
-    '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'   
+    
+    'XXXXXXXXXXXXXXXXXXXXXXXX'
+    Team_opponent_team = to_lists(Team_opponent_team[Team_opponent_team.columns[::-1]])
+    Team_upcoming_fixtures = to_lists(Team_upcoming_fixtures[Team_upcoming_fixtures.columns[::-1]])
+    'XXXXXXXXXXXXXXXXXXXXXXXXX'
+    
+    
+#     Team_played_fixtures = Team_fixtures.applymap(lambda x:[i for i in \
+#     Fixtures[(Fixtures['id'].isin(x))&Fixtures['finished']]['id']])
+
+#     Team_upcoming_fixtures = Team_fixtures.applymap(lambda x:[i for i in \
+#     Fixtures[(Fixtures['id'].isin(x))&(Fixtures['finished']==False)]['id']])
+#     Team_upcoming_fixtures = Team_upcoming_fixtures[Team_upcoming_fixtures.columns[::-1]]
 
 
-
-    Team_fixtures = Team_all.applymap(lambda x: [x[i][0] for i in range(len(x))])
-
-    Team_played_fixtures = Team_fixtures.applymap(lambda x:[i for i in \
-    Fixtures[(Fixtures['id'].isin(x))&Fixtures['finished']]['id']])
-
-    Team_upcoming_fixtures = Team_fixtures.applymap(lambda x:[i for i in \
-    Fixtures[(Fixtures['id'].isin(x))&(Fixtures['finished']==False)]['id']])
-    Team_upcoming_fixtures = Team_upcoming_fixtures[Team_upcoming_fixtures.columns[::-1]]
-
-    '<!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-    #calculating home/away table with 1/0 and NaN
-    Team_home = no_lists(Team_all.applymap(lambda x: list(x))).applymap(lambda x: np.nan if type(x)==float else x[1]-1).\
-    apply(lambda x: x==list(range(len(Team_all)))).applymap(lambda x: 1 if x else 0)\
-    +no_lists(Team_fixtures)-no_lists(Team_fixtures)#to add NaN
-
-    Team_home = Team_home[Team_home.columns[::-1]]#making right order
-    '>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-
-    #Deleting empty columns
-    # def del_empty_col(df):
-    #     for i in df.columns:
-    #         if df[i].tolist()==[[] for _ in df.index]:
-    #              del df[i]
-    #     return df
     del_empty_col(Team_fixtures) #Deleting empty columns e.g. GW30 - GW38 2019-2020
     del_empty_col(Team_played_fixtures)
     del_empty_col(Team_upcoming_fixtures)
 
     '''
-        Player_all - contains [number of fixture, opponent team id]
+        Player_all - contains [number of fixture, opponent team id] for played fixtures
         PLayer_played_fixtures - contains [number of fixture played], future or empty GW deleted
         PLayer_upcoming_fixtures - contains [number of upcoming fixture], played or empty GW deleted
         Team_opponent_team - [opponent team id]
     '''
     Player_all = pd.DataFrame()
-    #Player_played_fixtures = pd.DataFrame()
     Player_upcoming_fixtures = pd.DataFrame(columns = Team_upcoming_fixtures.columns)
     Player_opponent_team = pd.DataFrame(columns = Team_opponent_team.columns)
-    #Player_all['id'] = Players['id']
-    #Player_all['name'] = [players[Player_all.at[i, 'id']] for i in Player_all.index]
     if  not Table.empty:
         for j in range(lastGW,0,-1):
 
@@ -261,50 +312,40 @@ if data_collection_type != 'nothing':
 
     def Phome(col):
         '''Function for apply to get home/away for players based on home/away of opposed team'''
-        return [np.nan if np.isnan(col[i]) else 1 if Team_home.at[int(col[i])-1, col.name]==0 else 0 for i in range(len(col))]
+        return [np.nan if np.isnan(col[i]) else 1 if Team_home.at[int(col[i])-1, col.name]==0 \
+        else 0 for i in range(len(col))]
     Player_home = no_lists(Player_opponent_team).apply(Phome, axis=0)
 
     Player_home = Player_home[Player_home.columns[::-1]] #making right order
 
-    # Player_home = Players.copy()
-    # for j in range(lastGW,0,-1):
-    #     Player_home['GW'+str(j)] = [[] for _ in range(len(Players))]
-    #     for i in range(len(Players)):
-    #         for k in range(len(Player_played_fixtures.at[i, 'GW'+str(j)])):
-    #             Player_home.at[i,'GW'+str(j)].append(Table[(Table['fixture']==\
-    #                 Player_played_fixtures.at[i, 'GW'+str(j)][k])&(Table['element']==\
-    #                 Player_home.at[i,'id'])]['was_home'].sum())
-    # Player_home = no_lists(Player_home[Player_home.columns[7:]])
-
-
-    #print('\t Fixtures are over.\t It takes ' + str(time() - start) + ' sec')
-
+    'XXXXXXXXXXXXXXXXXXXXX'
+    Team_upcoming_fixtures = no_lists(Team_upcoming_fixtures[Team_upcoming_fixtures.columns[::-1]])
+    'XXXXXXXXXXXXX'
 
     #Writing Tables to csv
+    bigTable.to_csv(Path('in/bootstrap.csv'), index=False)
     Table.to_csv(Path('in/Table_FPL.csv'), index=False)
     Large_Table.to_csv(Path('in/LTable_FPL.csv'), index=False)
     Fixtures.to_csv(Path('in/Fixtures.csv'), index=False)
     Teams.to_csv(Path('in/Teams.csv'), index=False)
     Players.to_csv(Path('in/Players.csv'), index=False)
+    Team_played_fixtures.to_csv(Path('in/Team_played_fixtures.csv'), index=False)
+    Team_upcoming_fixtures.to_csv(Path('in/Team_upcoming_fixtures.csv'), index=False)
     Team_home.to_csv(Path(f'{folder}in/Team_home.csv'), index=False)
     Player_home.to_csv(Path(f'{folder}in/Player_home.csv'), index=False)
 
-    Team_fixtures.to_json(Path('in/Team_fixtures.txt'))
-    Team_played_fixtures.to_json(Path('in/Team_played_fixtures.txt'))
-    Team_upcoming_fixtures.to_json(Path('in/Team_upcoming_fixtures.txt'))
-    Team_opponent_team.to_json(Path('in/Team_opponent_team.txt'))
+#     Team_fixtures.to_json(Path('in/Team_fixtures.txt'))
+#     Team_played_fixtures.to_json(Path('in/Team_played_fixtures.txt'))
+#     Team_upcoming_fixtures.to_json(Path('in/Team_upcoming_fixtures.txt'))
+#     Team_opponent_team.to_json(Path('in/Team_opponent_team.txt'))
     #Player_fixtures.to_json(Path('in/Player_fixtures.txt'))
     Player_played_fixtures.to_json(Path('in/Player_played_fixtures.txt'))
     Player_upcoming_fixtures.to_json(Path('in/Player_upcoming_fixtures.txt'))
     Player_opponent_team.to_json(Path('in/Player_opponent_team.txt'))
 
-
-    # Team_fixtures.to_csv(Path('in/Team_fixtures.csv'), index=False)
-    # Team_opponent_team.to_csv(Path('in/Team_opponent_team.csv'), index=False)
-    # Player_fixtures.to_csv(Path('in/Player_fixtures.csv'), index=False)
-    # Player_opponent_team.to_csv(Path('in/Player_opponent_team.csv'), index=False)
-print(f'\tCreating tables is over.\t It takes {str(time() - start)} sec\n')
-print('inputFPL is over.\t It takes ' + str(time() - start_module) + ' sec\n')
+    
+    print(f'\tCreating tables is over.\t It takes {str(time() - start)} sec\n')
+    print('inputFPL is over.\t It takes ' + str(time() - start_module) + ' sec\n')
 
 if __name__ == '__main__':
-    display(Table)
+    display('End')

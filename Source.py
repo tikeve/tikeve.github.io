@@ -1,6 +1,6 @@
 from time import time
 import constti
-from Brr_functions import toint, noZ, no_lists
+from Brr_functions import toint, noZ, no_lists, to_lists
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
@@ -49,6 +49,17 @@ class Source:
         Players = pd.read_csv(Path(f'{folder}in/Players.csv')) # Table of rows as players with columns 'id', 'Name',
         #'Team', Team games', 'Played'
         del Players['web_name'] #This column is needed only for inputUnderstat.py
+        
+        
+        Team_played_fixtures = pd.read_csv(Path(f'{folder}in/Team_played_fixtures.csv'))
+        Team_played_fixtures = to_lists(Team_played_fixtures)
+        Team_played_fixtures = Team_played_fixtures[Team_played_fixtures.columns[::-1]]
+        
+        Team_upcoming_fixtures = pd.read_csv(Path(f'{folder}in/Team_upcoming_fixtures.csv'))
+#         Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))
+#         Team_opponent_team = to_lists(Team_opponent_team)
+#         Team_opponent_team = Team_opponent_team[Team_opponent_team.columns[::-1]]
+        
 
         #Reading Fxtures and Opponents for Teams and Players
         with open(Path(f'{folder}in/Team_opponent_team.txt'), 'r') as file:
@@ -62,18 +73,18 @@ class Source:
         
         #file names differ for the present and history
         if year=='':
-            with open(Path(f'{folder}in/Team_played_fixtures.txt'), 'r') as file:
-                Team_played_fixtures = pd.DataFrame(json.loads(file.read()))
-                Team_played_fixtures.index = pd.to_numeric(Team_played_fixtures.index)
-                Team_played_fixtures = Team_played_fixtures.sort_index()
+#             with open(Path(f'{folder}in/Team_played_fixtures.txt'), 'r') as file:
+#                 Team_played_fixtures = pd.DataFrame(json.loads(file.read()))
+#                 Team_played_fixtures.index = pd.to_numeric(Team_played_fixtures.index)
+#                 Team_played_fixtures = Team_played_fixtures.sort_index()
             with open(Path(f'{folder}in/Player_played_fixtures.txt'), 'r') as file:
                 Player_played_fixtures = pd.DataFrame(json.loads(file.read()))
                 Player_played_fixtures.index = pd.to_numeric(Player_played_fixtures.index)
                 Player_played_fixtures = Player_played_fixtures.sort_index()
-            with open(Path(f'{folder}in/Team_upcoming_fixtures.txt'), 'r') as file:
-                Team_upcoming_fixtures = pd.DataFrame(json.loads(file.read()))
-                Team_upcoming_fixtures.index = pd.to_numeric(Team_upcoming_fixtures.index)
-                Team_upcoming_fixtures = Team_upcoming_fixtures.sort_index()
+#             with open(Path(f'{folder}in/Team_upcoming_fixtures.txt'), 'r') as file:
+#                 Team_upcoming_fixtures = pd.DataFrame(json.loads(file.read()))
+#                 Team_upcoming_fixtures.index = pd.to_numeric(Team_upcoming_fixtures.index)
+#                 Team_upcoming_fixtures = Team_upcoming_fixtures.sort_index()
             with open(Path(f'{folder}in/Player_upcoming_fixtures.txt'), 'r') as file:
                 Player_upcoming_fixtures = pd.DataFrame(json.loads(file.read()))
                 Player_upcoming_fixtures.index = pd.to_numeric(Player_upcoming_fixtures.index)
@@ -134,7 +145,6 @@ class Source:
         Team_xG['xG av'] = [Table[Table['team']==i]['threat'].sum() for i in range(1,team_number+1)] \
             /noZ(Teams['Matches'])
         Team_xG.sort_values('xG av', ascending = False, inplace = True)
-
         print('\t\t 3.1. Team_xG is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
@@ -734,6 +744,7 @@ def adjustment(df, class_data):
         
         the_fixtures = Player_played_fixtures
         the_opponent_team = Player_opponent_team
+        
     if 'Opponent' in key_par:#key_par[-7:] == 'allowed':
         Weighting_table = Team_xG
         col = 'xG av'
@@ -746,7 +757,7 @@ def adjustment(df, class_data):
         for i in range(len(df)):
              for k in range(len(the_fixtures.at[i, 'GW'+str(j)])):
                 dfAd.at[i,f'GW{j}'].append(df.at[i,f'GW{j}'][k]\
-                *threatAllowedAv/ Weighting_table.at[the_opponent_team.at[i,f'GW{j}'][k]-1, col])
+                *threatAllowedAv/ Weighting_table.at[int(the_opponent_team.at[i,f'GW{j}'][k])-1, col])
 
                 dfAd.at[i,f'{key_par} {av} adj'] += dfAd.at[i,f'GW{j}'][k]
 

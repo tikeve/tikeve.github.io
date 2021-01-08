@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import constti
 
 def toint(a):
     '''
@@ -40,40 +41,39 @@ def del_empty_col(df):
              del df[i]
     return df
 
-
-def no_lists(t, empty=np.nan):
+def get_gw_num(col_name):
+    '''
+        returns num for standart column name 'GW11**' -> 11
+        Used by no_lists, to-lists
+    '''
+    try:
+        return int(col_name.replace('GW','').replace('*',''))
+    except:
+        return -1
+    
+def table_increasing(table):
+    colN = [get_gw_num(table.columns[i]) for i in range(len(table.columns))]
+    colNN = []
+    for i in range(len(colN)):
+        if colN[i]>-1:
+            colNN.append(colN[i])
+    colNNN = np.array(colNN[1:]) - np.array(colNN[:-1])
+    for i in range(len(colNNN)):
+        if colNNN[i]<0:
+            return False
+    return True
+    
+def no_lists(t):
     '''
         removes lists from table adding new column instead
     '''
-    def get_gw_num(col_name):
-        '''
-            returns num for standart column name 'GW11**' -> 11
-        '''
-        try:
-            return int(col_name.replace('GW','').replace('*',''))
-        except:
-            return -1
     
     def GW_insert(table, col_name):
         '''
             insert columns after if column order is increasing or before if decreasing
         '''
-        #if col_name starts with 'GW' and next or previous column name with number larger or less then insert after
-        if list(table.columns).index(col_name)<len(table.columns)-1:
-            c1 = (get_gw_num(col_name) < get_gw_num(table.columns[list(table.columns).index(col_name)+1]))
-            c2 = (get_gw_num(col_name) > 0)
-            c3 = (get_gw_num(table.columns[list(table.columns).index(col_name)+1]) > 0)
-            cond1 = c1&c2&c3
-        else: cond1 = False
             
-        if list(table.columns).index(col_name) > 0:
-            c1 = (get_gw_num(col_name) > get_gw_num(table.columns[list(table.columns).index(col_name)-1]))
-            c2 = (get_gw_num(col_name) > 0)
-            c3 = (get_gw_num(table.columns[list(table.columns).index(col_name)-1]) > 0)
-            cond2 = c1&c2&c3
-        else: cond2 = False
-            
-        if (col_name[:2] == 'GW')&(cond1|cond2):
+        if (col_name[:2] == 'GW')&table_increasing(table):
             table.insert(list(table.columns).index(col_name)+1,col_name+'*',None)
             return table
         else:
@@ -108,4 +108,23 @@ def no_lists(t, empty=np.nan):
                     table.at[i,j+'**'] = table.at[i,j][2]
                     table.at[i,j+'*'] = table.at[i,j][1]
                     table.at[i,j]=table.at[i,j][0]
-    return table.fillna(np.nan).applymap(lambda x: x if type(x) != str else np.nan if x=='' else x) 
+    return table.fillna(np.nan).applymap(lambda x: x if type(x) != str else np.nan if x=='' else x) #.replace('', np.nan)
+#     return table.applymap(lambda x: np.nan if x == '' else\
+#     x if type(x) in (int, np.int64,  float, np.float64, list, np.ndarray, str) else np.nan)
+
+def to_lists(table):
+    '''
+        Adds lists (opposite to no_lists)
+    '''
+    if table_increasing(table):
+        df  = table.copy()
+        df = df.applymap(lambda x: [] if constti.myisnan(x) else [x])
+        for i in range(len(df.columns)-1,0,-1):
+            if df.columns[i].replace('*', '') == df.columns[i-1].replace('*', ''):
+                for j in range(len(df)):
+                    df.iat[j, i-1] = df.iat[j, i-1] + df.iat[j, i]
+                del df[df.columns[i]]
+    else:
+        A  = to_lists(table[table.columns[::-1]])
+        return A[A.columns[::-1]]
+    return df
