@@ -84,7 +84,7 @@ def no_lists(t):
     table = t.copy()
     for i in table.index:
         for j in table.columns:
-            if type(table.at[i,j])==list:
+            if type(table.at[i,j]) in {list, np.ndarray}:
                 if len(table.at[i,j])==0:
                     table.at[i,j]=None  #''
                 elif len(table.at[i,j])==1:
@@ -108,9 +108,7 @@ def no_lists(t):
                     table.at[i,j+'**'] = table.at[i,j][2]
                     table.at[i,j+'*'] = table.at[i,j][1]
                     table.at[i,j]=table.at[i,j][0]
-    return table.fillna(np.nan).applymap(lambda x: x if type(x) != str else np.nan if x=='' else x) #.replace('', np.nan)
-#     return table.applymap(lambda x: np.nan if x == '' else\
-#     x if type(x) in (int, np.int64,  float, np.float64, list, np.ndarray, str) else np.nan)
+    return table.fillna(np.nan).applymap(lambda x: x if type(x) != str else np.nan if x=='' else x)
 
 def to_lists(table):
     '''
