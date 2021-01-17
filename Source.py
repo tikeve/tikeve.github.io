@@ -1,3 +1,4 @@
+
 from time import time
 import constti
 from Brr_functions import toint, noZ, no_lists, to_lists
@@ -56,16 +57,16 @@ class Source:
         Team_played_fixtures = Team_played_fixtures[Team_played_fixtures.columns[::-1]]
         
         Team_upcoming_fixtures = pd.read_csv(Path(f'{folder}in/Team_upcoming_fixtures.csv'))
-#         Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))
-#         Team_opponent_team = to_lists(Team_opponent_team)
-#         Team_opponent_team = Team_opponent_team[Team_opponent_team.columns[::-1]]
+        Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))
+        Team_opponent_team = to_lists(Team_opponent_team)
+        Team_opponent_team = Team_opponent_team[Team_opponent_team.columns[::-1]]
         
 
         #Reading Fxtures and Opponents for Teams and Players
-        with open(Path(f'{folder}in/Team_opponent_team.txt'), 'r') as file:
-            Team_opponent_team = pd.DataFrame(json.loads(file.read()))
-            Team_opponent_team.index = pd.to_numeric(Team_opponent_team.index)
-            Team_opponent_team = Team_opponent_team.sort_index()
+#         with open(Path(f'{folder}in/Team_opponent_team.txt'), 'r') as file:
+#             Team_opponent_team = pd.DataFrame(json.loads(file.read()))
+#             Team_opponent_team.index = pd.to_numeric(Team_opponent_team.index)
+#             Team_opponent_team = Team_opponent_team.sort_index()
         with open(Path(f'{folder}in/Player_opponent_team.txt'), 'r') as file:
             Player_opponent_team = pd.DataFrame(json.loads(file.read()))
             Player_opponent_team.index = pd.to_numeric(Player_opponent_team.index)
@@ -761,6 +762,7 @@ def adjustment(df, class_data):
 
                 dfAd.at[i,f'{key_par} {av} adj'] += dfAd.at[i,f'GW{j}'][k]
 
+    
     if len(df) == len(Teams): dfAd[f'{key_par} av adj'] = dfAd[f'{key_par} av adj']/noZ(dfAd['Matches'])
     else:
         dfAd[f'{key_par} per fixture adj'] = dfAd[f'{key_par} per game adj']/noZ(dfAd['Team games'])

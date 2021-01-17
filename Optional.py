@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from Brr_functions import no_lists, del_empty_col
+from Brr_functions import no_lists,to_lists, del_empty_col
+import constti
 
 # DATA input
 year = ''
@@ -10,8 +11,8 @@ else: folder = f'history/{year}/'
 
 Fixtures = pd.read_csv(Path(f'{folder}in/Fixtures.csv'))
 Teams = pd.read_csv(Path(f'{folder}in/Teams.csv'))
-Table = pd.read_csv(Path('in/Table_FPL.csv'))
-
+Table = pd.read_csv(Path(f'{folder}in/Table_FPL.csv'))
+Players = pd.read_csv(Path(f'{folder}in/Players.csv'))
 
 
 # Team_all, 
@@ -68,31 +69,63 @@ no_lists(Team_fixtures)
 
 del_empty_col(Team_scored)
 
+#Same as in "medium"
+Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
+if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
+Team_upcoming_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
+if Fixtures[Fixtures['id']==x]['finished'].iloc[0]==False else np.nan)
 
-# Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-# if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
-# Team_played_fixtures
-# Team_upcoming_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-# if Fixtures[Fixtures['id']==x]['finished'].iloc[0]==False else np.nan)
+
+
+
+
+
+
+
+Player_all = pd.DataFrame()
+Player_fixtures = pd.DataFrame(columns = Team_fixtures.columns)
+Player_upcoming_fixtures = pd.DataFrame(columns = Team_upcoming_fixtures.columns)
+Player_opponent_team = pd.DataFrame(columns = Team_opponent_team.columns)
+if  not Table.empty:
+    lastGW = Table['round'].max()
+    for j in range(lastGW,0,-1):
+
+        Player_all['GW'+str(j)] = [Table[(Table['element']==i)&\
+        (Table['round']==j)][['fixture', 'opponent_team']].values for i in Players['id']]
+Player_all = no_lists(Player_all[Player_all.columns[::-1]])
+
+for i in Players.index:
+    Player_fixtures = Player_fixtures.append(Team_fixtures.iloc[Players.at[i,'Team number']-1],\
+    ignore_index=True)
+    Player_upcoming_fixtures = Player_upcoming_fixtures.append(Team_upcoming_fixtures.iloc[Players.at[i,'Team number']-1],\
+    ignore_index=True)
+    Player_opponent_team = Player_opponent_team.append(Team_opponent_team.iloc[Players.at[i,'Team number']-1],\
+    ignore_index=True)
+
+Player_played_fixtures = Player_all.applymap(lambda x: x[0] if type(x) in {list, np.ndarray} else np.nan)
+Pot = Player_all.applymap(lambda x: x[1] if type(x) in {list, np.ndarray} else np.nan) #Opponents played against (Player Opponent Team)
+for i in Player_opponent_team.index:
+    for j in Player_opponent_team.columns:
+        if j in Player_all.columns:
+            if int(j[2:])!=lastGW:
+                Player_opponent_team.at[i,j] = Pot.at[i,j]
+                Player_fixtures.at[i,j] = Player_played_fixtures.at[i,j]
+
+def Phome(col):
+    '''Function for apply to get home/away for players based on home/away of opposed team'''
+    return [np.nan if np.isnan(col[i]) else 1 if Team_home.at[int(col[i])-1, col.name]==0 else 0 for i in range(len(col))]
+Player_home = Player_opponent_team.apply(Phome, axis=0)
+
 
 
 
 #Writing
 Team_fixtures.to_csv(Path('in/Team_fixtures.csv'), index=False)
 Team_opponent_team.to_csv(Path('in/Team_opponent_team.csv'), index=False)
-# Team_played_fixtures.to_csv(Path('in/Team_played_fixtures.csv'), index=False)
-# Team_upcoming_fixtures.to_csv(Path('in/Team_upcoming_fixtures.csv'), index=False)
+Team_played_fixtures.to_csv(Path('in/Team_played_fixtures.csv'), index=False)
+Team_upcoming_fixtures.to_csv(Path('in/Team_upcoming_fixtures.csv'), index=False)
 Team_home.to_csv(Path('mid/Team_home.csv'), index=False)
 Team_scored.to_csv(Path('mid/Team_scored.csv'), index=False)
 
 
 Team_scores.to_json(Path('mid/Team_scores.txt'))
-
-'End'
-# Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-# if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
-# Team_played_fixtures
-# Team_upcoming_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-# if Fixtures[Fixtures['id']==x]['finished'].iloc[0]==False else np.nan)
-
-# Team_played_fixtures

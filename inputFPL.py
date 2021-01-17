@@ -6,7 +6,6 @@ start = start_module
 
 from constti import strip_accents_pdlist, long_request, differences
 from Brr_functions import to_lists, no_lists, del_empty_col
-#import Brr_functions
 from bs4 import BeautifulSoup
 import pandas as pd
 import json
@@ -22,6 +21,8 @@ print(f'System var is - {sys.argv[1]}')
 # Reading what type of downloading should be done
 if sys.argv[1] == 'full':
     data_collection_type = 'full'
+elif sys.argv[1] == 'medium':
+    data_collection_type = 'medium'
 else: data_collection_type = 'nothing'
 
 #For history
@@ -62,6 +63,7 @@ d4 = json.loads(p4.text)
 #In case data are updating or some other bug
 try:
     Fixtures = pd.DataFrame(d4)
+    Fixtures = Fixtures[Fixtures.columns.sort_values()] #Give strict(alphabetical) order
     do_smth = True
 except: 
     print("Data are probably updating or some other bug")
@@ -69,19 +71,18 @@ except:
     do_smth = False
 
 if do_smth:
-    #Calculating Last Gameweek which has already started
-    firstr = len(Fixtures)+1
-    lastr = 0
-    for i in range(len(Fixtures)):
-        if Fixtures.at[i,'finished']==True:
-            firstr = min(firstr, i)
-            lastr = i
-    if firstr < len(Fixtures)+1:
-        lastGW = int(Fixtures.at[lastr,'event'])
-    else: lastGW = 0
-    if lastr == len(Fixtures):
-        lastGW = int(Fixtures.at[lastr,'event'])
-    Fixtures = Fixtures[Fixtures.columns.sort_values()] #Give strict(alphabetical) order
+#     #Calculating Last Gameweek which has already started
+#     firstr = len(Fixtures)+1
+#     lastr = 0
+#     for i in range(len(Fixtures)):
+#         if Fixtures.at[i,'finished']==True:
+#             firstr = min(firstr, i)
+#             lastr = i
+#     if firstr < len(Fixtures)+1:
+#         lastGW = int(Fixtures.at[lastr,'event'])
+#     else: lastGW = 0
+#     if lastr == len(Fixtures):
+#         lastGW = int(Fixtures.at[lastr,'event'])
 
     
     
@@ -159,6 +160,7 @@ if data_collection_type != 'nothing':
         Table['team'] = [Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_h'].values[0] if Table.at[i,'was_home']\
         else Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_a'].values[0] for i in Table.index]
     Table = Table[Table.columns.sort_values()] #Give strict(alphabetical) order
+    lastGW = Table['round'].max()
 
     #Deleteting double gameweeks for players changeg one PL cloub for another during GW ("Walcott case")
     #And matches from the current GW that are not played yet
@@ -222,6 +224,10 @@ if data_collection_type != 'nothing':
     #start = time()
 
     #Calculating Fixtures and Opponents
+    Fixtures.to_csv(Path('in/Fixtures.csv'), index=False)
+    Table.to_csv(Path('in/Table_FPL.csv'), index=False)
+    Teams.to_csv(Path('in/Teams.csv'), index=False)
+    Players.to_csv(Path('in/Players.csv'), index=False)
     if data_collection_type == 'full':
         runpy.run_module('Optional', run_name='smth')
 #     '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
@@ -253,17 +259,22 @@ if data_collection_type != 'nothing':
 
 #     Team_home = Team_home[Team_home.columns[::-1]]#making right order
     '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
-    
-    Team_fixtures = pd.read_csv(Path('in/Team_fixtures.csv'))
-    Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-    if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
-    Team_upcoming_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-    if Fixtures[Fixtures['id']==x]['finished'].iloc[0]==False else np.nan)
+    if data_collection_type == 'medium':
+        Team_fixtures = pd.read_csv(Path('in/Team_fixtures.csv'))
+        Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
+        if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
+        Team_upcoming_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
+        if Fixtures[Fixtures['id']==x]['finished'].iloc[0]==False else np.nan)
+        
+        Team_played_fixtures.to_csv(Path('in/Team_played_fixtures.csv'), index=False)
+        Team_upcoming_fixtures.to_csv(Path('in/Team_upcoming_fixtures.csv'), index=False)
+        
+        
     Team_opponent_team = pd.read_csv(Path('in/Team_opponent_team.csv'))
     Team_home = pd.read_csv(Path('in/Team_home.csv'))
-
     
     'XXXXXXXXXXXXXXXXXXXXXXXX'
+    Team_upcoming_fixtures = pd.read_csv(Path('in/Team_upcoming_fixtures.csv'))
     Team_opponent_team = to_lists(Team_opponent_team[Team_opponent_team.columns[::-1]])
     Team_upcoming_fixtures = to_lists(Team_upcoming_fixtures[Team_upcoming_fixtures.columns[::-1]])
     'XXXXXXXXXXXXXXXXXXXXXXXXX'
@@ -277,9 +288,9 @@ if data_collection_type != 'nothing':
 #     Team_upcoming_fixtures = Team_upcoming_fixtures[Team_upcoming_fixtures.columns[::-1]]
 
 
-    del_empty_col(Team_fixtures) #Deleting empty columns e.g. GW30 - GW38 2019-2020
-    del_empty_col(Team_played_fixtures)
-    del_empty_col(Team_upcoming_fixtures)
+    #del_empty_col(Team_fixtures) #Deleting empty columns e.g. GW30 - GW38 2019-2020
+    #del_empty_col(Team_played_fixtures) #Deleting empty columns e.g. GW30 - GW38 2019-2020
+    #del_empty_col(Team_upcoming_fixtures) #Deleting empty columns e.g. GW30 - GW38 2019-2020
 
     '''
         Player_all - contains [number of fixture, opponent team id] for played fixtures
@@ -324,13 +335,15 @@ if data_collection_type != 'nothing':
 
     #Writing Tables to csv
     bigTable.to_csv(Path('in/bootstrap.csv'), index=False)
-    Table.to_csv(Path('in/Table_FPL.csv'), index=False)
+#     Table.to_csv(Path('in/Table_FPL.csv'), index=False)
     Large_Table.to_csv(Path('in/LTable_FPL.csv'), index=False)
-    Fixtures.to_csv(Path('in/Fixtures.csv'), index=False)
-    Teams.to_csv(Path('in/Teams.csv'), index=False)
-    Players.to_csv(Path('in/Players.csv'), index=False)
-    Team_played_fixtures.to_csv(Path('in/Team_played_fixtures.csv'), index=False)
+#     Fixtures.to_csv(Path('in/Fixtures.csv'), index=False)
+#     Teams.to_csv(Path('in/Teams.csv'), index=False)
+#     Players.to_csv(Path('in/Players.csv'), index=False)
+#    Team_played_fixtures.to_csv(Path('in/Team_played_fixtures.csv'), index=False)
+    'XXXXXXXXXXXXXXXXXXXXXXXX'
     Team_upcoming_fixtures.to_csv(Path('in/Team_upcoming_fixtures.csv'), index=False)
+    'XXXXXXXXXXXXXXXXXXXXXXXX'
     Team_home.to_csv(Path(f'{folder}in/Team_home.csv'), index=False)
     Player_home.to_csv(Path(f'{folder}in/Player_home.csv'), index=False)
 
