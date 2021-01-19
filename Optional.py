@@ -1,7 +1,30 @@
+''' Rarely needed calculations (Optional)
+
+    Calculate tables if Fixtures changes(sys.argv[1] == 'full')
+    
+    Sources:    '{folder}in/Fixtures.csv'
+                '{folder}in/Teams.csv'
+                f'{folder}in/Table_FPL.csv'
+                f'{folder}in/Players.csv'
+                
+    Writes:    'in/Team_fixtures.csv'
+                'in/Team_opponent_team.csv'
+                'in/Team_played_fixtures.csv'
+                'in/Team_upcoming_fixtures.csv'
+                'mid/Team_home.csv'
+                'mid/Team_scored.csv'
+                'mid/Team_scores.txt'
+                
+
+    
+'''
+
+
+
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from Brr_functions import no_lists,to_lists, del_empty_col
+from Brr_functions import no_lists,to_lists, del_empty_col, no_last_GW
 import constti
 
 # DATA input
@@ -94,23 +117,22 @@ if  not Table.empty:
         (Table['round']==j)][['fixture', 'opponent_team']].values for i in Players['id']]
 Player_all = no_lists(Player_all[Player_all.columns[::-1]])
 
-for i in Players.index:
-    Player_fixtures = Player_fixtures.append(Team_fixtures.iloc[Players.at[i,'Team number']-1],\
-    ignore_index=True)
-    Player_upcoming_fixtures = Player_upcoming_fixtures.append(Team_upcoming_fixtures.iloc[Players.at[i,'Team number']-1],\
-    ignore_index=True)
-    Player_opponent_team = Player_opponent_team.append(Team_opponent_team.iloc[Players.at[i,'Team number']-1],\
-    ignore_index=True)
 
+x = pd.DataFrame(np.nan, index=Player_all.index, columns=Team_fixtures.columns)
 Player_played_fixtures = Player_all.applymap(lambda x: x[0] if type(x) in {list, np.ndarray} else np.nan)
-Pot = Player_all.applymap(lambda x: x[1] if type(x) in {list, np.ndarray} else np.nan) #Opponents played against (Player Opponent Team)
-for i in Player_opponent_team.index:
-    for j in Player_opponent_team.columns:
-        if j in Player_all.columns:
-            if int(j[2:])!=lastGW:
-                Player_opponent_team.at[i,j] = Pot.at[i,j]
-                Player_fixtures.at[i,j] = Player_played_fixtures.at[i,j]
+Player_upcoming_fixtures = x.apply(lambda y: Team_upcoming_fixtures.iloc[Players.at[y.name,'Team number']-1], axis=1)
+Player_fixtures = x.apply(lambda x: Team_fixtures.iloc[Players.at[x.name,'Team number']-1], axis=1)
+Player_fixtures[Player_played_fixtures.columns] = Player_played_fixtures
+# Player_fixtures = Player_fixturesX.merge(Player_played_fixtures)
+Player_fixtures[f'GW{lastGW}'] = [Player_upcoming_fixtures[f'GW{lastGW}'][i] \
+if np.isnan(Player_played_fixtures[f'GW{lastGW}'][i]) else Player_played_fixtures[f'GW{lastGW}'][i] \
+for i in range(len(Players))]
 
+Player_opponent_team = x.apply(lambda x: Team_opponent_team.iloc[Players.at[x.name,'Team number']-1], axis=1)
+#Opponents played against
+Pot = no_last_GW(Player_all.applymap(lambda x: x[1] if type(x) in {list, np.ndarray} else np.nan))
+Player_opponent_team[Pot.columns]  = Pot[Pot.columns]
+#Player_opponent_teamX = Pot.merge(Player_opponent_teamX)
 def Phome(col):
     '''Function for apply to get home/away for players based on home/away of opposed team'''
     return [np.nan if np.isnan(col[i]) else 1 if Team_home.at[int(col[i])-1, col.name]==0 else 0 for i in range(len(col))]
@@ -126,6 +148,12 @@ Team_played_fixtures.to_csv(Path('in/Team_played_fixtures.csv'), index=False)
 Team_upcoming_fixtures.to_csv(Path('in/Team_upcoming_fixtures.csv'), index=False)
 Team_home.to_csv(Path('mid/Team_home.csv'), index=False)
 Team_scored.to_csv(Path('mid/Team_scored.csv'), index=False)
+
+Player_fixtures.to_csv(Path('in/Player_fixtures.csv'), index=False)
+Player_opponent_team.to_csv(Path('in/Player_opponent_team.csv'), index=False)
+Player_played_fixtures.to_csv(Path('in/Player_played_fixtures.csv'), index=False)
+Player_upcoming_fixtures.to_csv(Path('in/Player_upcoming_fixtures.csv'), index=False)
+Player_home.to_csv(Path('mid/Player_home.csv'), index=False)
 
 
 Team_scores.to_json(Path('mid/Team_scores.txt'))

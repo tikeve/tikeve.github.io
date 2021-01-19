@@ -1,3 +1,36 @@
+''' FPL Download
+    
+    Downloads data from https://fantasy.premierleague.com/ and calculates basic pandas tables.
+    Depending on sys.argv[1] 'full', 'medium' or anything else does full download (Optional module,
+    medium download or nothing.
+    
+    Uses module: Optional
+
+    Sources:    FPL API
+                'in/bootstrap.csv'
+                'in/Fixtures.csv'
+                'in/LTable_FPL.csv'
+                'in/Team_fixtures.csv'
+                'in/Team_opponent_team.csv'
+                'in/Team_home.csv'
+                'in/Team_upcoming_fixtures.csv'
+                
+    Writes:     'in/Fixtures.csv'
+                'in/Table_FPL.csv'
+                'in/Teams.csv'
+                'in/Players.csv'
+                'in/Team_played_fixtures.csv'
+                'in/Team_upcoming_fixtures.csv'
+                'in/bootstrap.csv'
+                'in/LTable_FPL.csv'
+                'in/Team_home.csv'
+                'in/Player_home.csv'
+                'in/Player_played_fixtures.txt'
+                'in/Player_upcoming_fixtures.txt'
+                'in/Player_opponent_team.txt'
+
+'''
+
 #Downloadting Data from fantasy.premierleague.com(FPL)a
 print('Start inputFPL:')
 from time import time
@@ -16,7 +49,7 @@ import requests
 import sys
 import runpy
 
-#sys.argv = ['abc.py','full', 'arg2']
+sys.argv = ['abc.py','medium', 'arg2']
 print(f'System var is - {sys.argv[1]}')
 # Reading what type of downloading should be done
 if sys.argv[1] == 'full':
@@ -342,7 +375,7 @@ if data_collection_type != 'nothing':
 #     Players.to_csv(Path('in/Players.csv'), index=False)
 #    Team_played_fixtures.to_csv(Path('in/Team_played_fixtures.csv'), index=False)
     'XXXXXXXXXXXXXXXXXXXXXXXX'
-    Team_upcoming_fixtures.to_csv(Path('in/Team_upcoming_fixtures.csv'), index=False)
+#    Team_upcoming_fixtures.to_csv(Path('in/Team_upcoming_fixtures.csv'), index=False)
     'XXXXXXXXXXXXXXXXXXXXXXXX'
     Team_home.to_csv(Path(f'{folder}in/Team_home.csv'), index=False)
     Player_home.to_csv(Path(f'{folder}in/Player_home.csv'), index=False)

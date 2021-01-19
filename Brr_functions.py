@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[37]:
+
+
+''' Functions especially for Brr project
+'''
+
 import pandas as pd
 import numpy as np
 import constti
@@ -36,8 +45,7 @@ def del_empty_col(df):
         Deleting empty columns
     '''
     for i in df.columns:
-        if (df[i].tolist()==[[] for _ in df.index])|\
-        ([np.isnan(df[i].tolist()[j]) for j in range(len(df))]==[True for _ in df.index]):
+        if (df[i].tolist()==[[] for _ in df.index])|        ([np.isnan(df[i].tolist()[j]) for j in range(len(df))]==[True for _ in df.index]):
              del df[i]
     return df
 
@@ -126,3 +134,8 @@ def to_lists(table):
         A  = to_lists(table[table.columns[::-1]])
         return A[A.columns[::-1]]
     return df
+
+def no_last_GW(df):
+    column_numbers = np.asarray(list(map(get_gw_num, df.columns)))
+    return df[df.columns[column_numbers != max(column_numbers)]]
+

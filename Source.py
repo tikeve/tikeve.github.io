@@ -1,3 +1,41 @@
+''' Fantasy Tables from Different Sources
+
+    Creates class Source which makes tables and htmls from 2 sources: FPL and Understat. Depending on source
+    getting data from inputFPL.py or inputUnderstat.py
+    
+    Sources:    f'{folder}in/Table_'+source+'.csv'
+                f'{folder}in/Fixtures.csv'
+                f'{folder}in/Teams.csv'
+                f'{folder}in/Players.csv'
+                f'{folder}in/Team_played_fixtures.csv'
+                f'{folder}in/Team_upcoming_fixtures.csv'
+                f'{folder}in/Team_opponent_team.csv'
+                'in/Player_opponent_team.txt'
+                'in/Player_played_fixtures.txt'
+                'in/Player_upcoming_fixtures.txt'
+                'in/Team_fixtures.txt'
+                'in/Player_fixtures.txt'
+                
+                'index.html'
+                f'html/{source}/{name}.html'
+                f'html/{source}/css/{name}.css'
+                name in {Team_xG, Team_xA, Team_Opponent_xG, Team_xG_Ad, Team_xA_Ad, Team_Opponent_xG_Ad,
+                Player_xG, PLayer_xA, Player_xG_Ad, Player_xA_Ad}
+    
+    Write:      f'out/' + source + '/' + name + '.csv')
+                f'{folder}mid/{self.source}/Team_oppxG_coeff.txt'
+                f'{folder}mid/{self.source}/Team_oppdefence_coeff.txt'
+                f'{folder}mid/{self.source}/Player_oppxG_coeff.txt'
+                f'{folder}mid/{self.source}/Player_oppdefence_coeff.txt'
+                f'{folder}mid/{self.source}/Team_xxG.txt'
+                f'{folder}mid/{self.source}/Team_xOxG.txt'
+                f'{folder}mid/{self.source}/Player_xxG.txt'
+                f'{folder}mid/{source}/{name}.txt'
+
+'''
+
+
+
 
 from time import time
 import constti

@@ -1,7 +1,17 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
+''' Understat Download
+    
+    Downloads data from https://understat.com/ and calculates basic pandas tables.
+    
+    Sources:    Understat (no API)
+                'in/LTable_FPL.csv'
+                'in/Fixtures.csv'
+                'in/Teams.csv'
+                'in/Players.csv'
+                
+    Writes:     'in/Table_Understat.csv'
+                'in/Name_Dictionary.csv'
+                
+'''
 
 
 #Downloadting Data from understat.com(Understat)
@@ -57,7 +67,9 @@ def same_player(name_un, name_fpl, web_name_fpl, type_comp, repeat=1):
     if type_comp == 5: # Some ' ' space has been missed and after del of one space all words of Understat name are in Full FPL
         fpl_name = name_fpl.lower().split()
         for m in range(1,len(fpl_name)):
-            if set(name_un.lower().split()) <=            set([fpl_name[k-1]+fpl_name[k] if k==m else ('' if k==m-1 else fpl_name[k])                 for k in range(0,len(fpl_name))]):
+            if set(name_un.lower().split()) <=\
+            set([fpl_name[k-1]+fpl_name[k] if k==m else ('' if k==m-1 else fpl_name[k])\
+                 for k in range(0,len(fpl_name))]):
                     same = 1
     if (same == 0)&(repeat==1): # If '-' in Understat is ' ' in FPL
         return same_player(name_un.replace('-', ' '), name_fpl, web_name_fpl, type_comp, 0)
@@ -89,23 +101,37 @@ def add_match_to_dict(game_number, Dictionary):
     
     match_players['team_h_name'] = [teams_dict[tempList[1]['team_h']] for i in range(len(match_players))]
     match_players['team_a_name'] = [teams_dict[tempList[1]['team_a']] for i in range(len(match_players))]
-    match_players['team_name'] = [match_players.at[i,'team_a_name'] if match_players.at[i,'h_a'] == 'a'                                            else match_players.at[i,'team_h_name'] for i in match_players.index]
-    match_players['opponent_team_name'] = [match_players.at[i,'team_h_name'] if match_players.at[i,'h_a'] == 'a'                                            else match_players.at[i,'team_a_name'] for i in match_players.index]
-    match_players['team_h'] = [dict(zip(Teams['Teams'], Teams['id']))[match_players.at[i,'team_h_name']]                                for i in match_players.index]
-    match_players['team_a'] = [dict(zip(Teams['Teams'], Teams['id']))[match_players.at[i,'team_a_name']]                                for i in match_players.index]
-    match_players['team'] = [dict(zip(Teams['Teams'], Teams['id']))[match_players.at[i,'team_name']]                            for i in match_players.index]
-    match_players['opponent_team']=[dict(zip(Teams['Teams'], Teams['id']))[match_players.at[i,'opponent_team_name']]                       for i in match_players.index]
-    match_players['fixture'] = [Fixtures[(Fixtures['team_a']==match_players['team_a'].mean())&                                     (Fixtures['team_h']==match_players['team_h'].mean())]['id'].sum()                                     for _ in match_players.index]
-    match_players['round'] = [int(Fixtures[Fixtures['id']==match_players['fixture'].mean()]['event'].sum())                               for _ in match_players.index]
+    match_players['team_name'] = [match_players.at[i,'team_a_name'] if match_players.at[i,'h_a'] == 'a' \
+                                           else match_players.at[i,'team_h_name'] for i in match_players.index]
+    match_players['opponent_team_name'] = [match_players.at[i,'team_h_name'] if match_players.at[i,'h_a'] == 'a' \
+                                           else match_players.at[i,'team_a_name'] for i in match_players.index]
+    match_players['team_h'] = [dict(zip(Teams['Teams'], Teams['id']))[match_players.at[i,'team_h_name']] \
+                               for i in match_players.index]
+    match_players['team_a'] = [dict(zip(Teams['Teams'], Teams['id']))[match_players.at[i,'team_a_name']] \
+                               for i in match_players.index]
+    match_players['team'] = [dict(zip(Teams['Teams'], Teams['id']))[match_players.at[i,'team_name']] \
+                           for i in match_players.index]
+    match_players['opponent_team']=[dict(zip(Teams['Teams'], Teams['id']))[match_players.at[i,'opponent_team_name']]\
+                       for i in match_players.index]
+    match_players['fixture'] = [Fixtures[(Fixtures['team_a']==match_players['team_a'].mean())&\
+                                     (Fixtures['team_h']==match_players['team_h'].mean())]['id'].sum() \
+                                    for _ in match_players.index]
+    match_players['round'] = [int(Fixtures[Fixtures['id']==match_players['fixture'].mean()]['event'].sum()) \
+                              for _ in match_players.index]
     match_players['player'] = constti.strip_accents_pdlist(pd.DataFrame(match_players['player']))
     
     
-    FPL_names = constti.strip_accents_pdlist(pd.DataFrame([dict(zip(Players['id'], Players['Name']))                  [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element']]                    for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index], columns = ['player']))
+    FPL_names = constti.strip_accents_pdlist(pd.DataFrame([dict(zip(Players['id'], Players['Name']))\
+                  [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element']] \
+                   for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index], columns = ['player']))
     #print(FPL_names)
     #print(match_players['fixture'].mean())
-    FPL_names['web_name'] = constti.strip_accents_pdlist(pd.DataFrame([dict(zip(Players['id'], Players['web_name']))                  [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element']]                    for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index]))
+    FPL_names['web_name'] = constti.strip_accents_pdlist(pd.DataFrame([dict(zip(Players['id'], Players['web_name']))\
+                  [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element']] \
+                   for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index]))
     #print('!')
-    FPL_names['id'] = [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element']                    for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index]
+    FPL_names['id'] = [Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].at[i,'element'] \
+                   for i in Table_FPL[Table_FPL['fixture']==match_players['fixture'].mean()].index]
     
     
     match_players['in_FPL'] = [0 for i in match_players.index]
@@ -145,9 +171,12 @@ def add_match_to_dict(game_number, Dictionary):
                             Dictionary.at[u,'web_name_fpl'] = web_name_fpl  
             else:
 
-                Dictionary = Dictionary.append(pd.DataFrame(                    [[name_un, name_fpl, id_fpl, web_name_fpl]],                    columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
+                Dictionary = Dictionary.append(pd.DataFrame(\
+                    [[name_un, name_fpl, id_fpl, web_name_fpl]],\
+                    columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
         else:
-            match_players.at[i, 'player'] = dict(zip(Dictionary['name_un'], Dictionary['name_fpl']))                [match_players.at[i, 'player']]
+            match_players.at[i, 'player'] = dict(zip(Dictionary['name_un'], Dictionary['name_fpl']))\
+                [match_players.at[i, 'player']]
             match_players.at[i,'in_FPL'] = 1
 
     #print(FPL_names)                    
@@ -230,7 +259,8 @@ for i in Name_Dictionary.index:
         Name_Dictionary.at[i,'name_fpl'] = Name_Dictionary.at[i,'name_un']
         Name_Dictionary.at[i,'id_fpl'] = 1000000 + j
         
-Table_Understat['element'] = [dict(zip(Name_Dictionary['name_fpl'], Name_Dictionary['id_fpl']))                              [Table_Understat.at[i, 'player']] for i in Table_Understat.index]
+Table_Understat['element'] = [dict(zip(Name_Dictionary['name_fpl'], Name_Dictionary['id_fpl']))\
+                              [Table_Understat.at[i, 'player']] for i in Table_Understat.index]
 Table_Understat = constti.change_column_name(Table_Understat, 'xG', 'threat')
 Table_Understat['threat']  = [100*float(Table_Understat['threat'][i]) for i in range(len(Table_Understat))]
 Table_Understat = constti.change_column_name(Table_Understat, 'xA', 'creativity')
@@ -246,10 +276,3 @@ print(f'inputUnderstat is over.\t It takes {time() - start_module} sec\n')
 
 if __name__ == '__main__':
     display(Table_Understat)
-
-
-# In[ ]:
-
-
-
-

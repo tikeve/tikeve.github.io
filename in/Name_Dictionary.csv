@@ -2,19 +2,19 @@ name_un,name_fpl,id_fpl,web_name_fpl
 Franck Zambo,Andre-Frank Zambo Anguissa,191.0,Anguissa
 Bobby Reid,Bobby Decordova-Reid,181.0,Decordova-Reid
 Bernd Leno,Bernd Leno,8,Leno
-Gabriel,Gabriel Magalhaes,494,Gabriel
 Rob Holding,Rob Holding,16,Holding
 Kieran Tierney,Kieran Tierney,17,Tierney
+Gabriel,Gabriel Magalhaes,494,Gabriel
 Hector Bellerin,Hector Bellerin,11,Bellerin
 Ainsley Maitland-Niles,Ainsley Maitland-Niles,15,Maitland-Niles
-Mohamed Elneny,Mohamed Naser El Sayed Elneny,526,Elneny
 Granit Xhaka,Granit Xhaka,9,Xhaka
+Mohamed Elneny,Mohamed Naser El Sayed Elneny,526,Elneny
 Willian,Willian Borges Da Silva,478,Willian
 Alexandre Lacazette,Alexandre Lacazette,6,Lacazette
 Pierre-Emerick Aubameyang,Pierre-Emerick Aubameyang,4,Aubameyang
-Eddie Nketiah,Edward Nketiah,22,Nketiah
 Nicolas Pepe,Nicolas Pepe,18,Pepe
 Dani Ceballos,Daniel Ceballos Fernandez,501,Ceballos
+Eddie Nketiah,Edward Nketiah,22,Nketiah
 Marek Rodak,Marek Rodak,186,Rodak
 Denis Odoi,Denis Odoi,525,Odoi
 Tim Ream,Tim Ream,176,Ream
@@ -33,18 +33,18 @@ Jan Bednarek,Jan Bednarek,376,Bednarek
 Jack Stephens,Jack Stephens,367,Stephens
 Ryan Bertrand,Ryan Bertrand,362,Bertrand
 William Smallbone,William Smallbone,379,Smallbone
-James Ward-Prowse,James Ward-Prowse,370,Ward-Prowse
 Oriol Romeu,Oriol Romeu Vidal,364,Oriol Romeu
+James Ward-Prowse,James Ward-Prowse,370,Ward-Prowse
 Nathan Redmond,Nathan Redmond,365,Redmond
-Che Adams,Che Adams,377,Adams
 Danny Ings,Danny Ings,366,Ings
-Moussa Djenepo,Moussa Djenepo,382,Djenepo
+Che Adams,Che Adams,377,Adams
 Jannik Vestergaard,Jannik Vestergaard,369,Vestergaard
 Shane Long,Shane Long,361,Long
+Moussa Djenepo,Moussa Djenepo,382,Djenepo
 Vicente Guaita,Vicente Guaita,128,Guaita
 Joel Ward,Joel Ward,134,Ward
-Cheikhou Kouyate,Cheikhou Kouyate,133,Kouyate
 Scott Dann,Scott Dann,486,Dann
+Cheikhou Kouyate,Cheikhou Kouyate,133,Kouyate
 Tyrick Mitchell,Tyrick Mitchell,146,Mitchell
 Andros Townsend,Andros Townsend,137,Townsend
 James McCarthy,James McCarthy,131,McCarthy
@@ -52,8 +52,8 @@ James McArthur,James McArthur,130,McArthur
 Jeffrey Schlupp,Jeffrey Schlupp,142,Schlupp
 Jordan Ayew,Jordan Ayew,140,Ayew
 Wilfried Zaha,Wilfried Zaha,141,Zaha
-Eberechi Eze,Eberechi Eze,489,Eze
 Luka Milivojevic,Luka Milivojevic,138,Milivojevic
+Eberechi Eze,Eberechi Eze,489,Eze
 Illan Meslier,Illan Meslier,213,Meslier
 Luke Ayling,Luke Ayling,197,Ayling
 Robin Koch,Robin Koch,491,Koch
@@ -65,9 +65,9 @@ Mateusz Klich,Mateusz Klich,198,Klich
 Pablo Hernandez,Pablo Hernandez Dominguez,193,Hernandez
 Jack Harrison,Jack Harrison,203,Harrison
 Patrick Bamford,Patrick Bamford,202,Bamford
-Jamie Shackleton,Jamie Shackleton,210,Shackleton
 Tyler Roberts,Tyler Roberts,206,Roberts
 Rodrigo,Rodrigo Moreno,492,Rodrigo
+Jamie Shackleton,Jamie Shackleton,210,Shackleton
 Alisson,Alisson Ramses Becker,252,Alisson
 Trent Alexander-Arnold,Trent Alexander-Arnold,259,Alexander-Arnold
 Joseph Gomez,Joseph Gomez,260,Gomez
@@ -98,11 +98,11 @@ Joelinton,Joelinton Cassio Apolinario de Lira,340,Joelinton
 Miguel Almiron,Miguel Almiron,339,Almiron
 Lukasz Fabianski,Lukasz Fabianski,431,Fabianski
 Ryan Fredericks,Ryan Fredericks,438,Fredericks
-Issa Diop,Issa Diop,451,Diop
 Angelo Ogbonna,Angelo Ogbonna,432,Ogbonna
+Issa Diop,Issa Diop,451,Diop
 Aaron Cresswell,Aaron Cresswell,435,Cresswell
-Tomas Soucek,Tomas Soucek,449,Soucek
 Declan Rice,Declan Rice,448,Rice
+Tomas Soucek,Tomas Soucek,449,Soucek
 Jarrod Bowen,Jarrod Bowen,445,Bowen
 Mark Noble,Mark Noble,427,Noble
 Pablo Fornals,Pablo Fornals,450,Fornals
@@ -125,9 +125,9 @@ James Maddison,James Maddison,231,Maddison
 Marc Albrighton,Marc Albrighton,221,Albrighton
 Sam Johnstone,Sam Johnstone,417,Johnstone
 Darnell Furlong,Darnell Furlong,422,Furlong
+Kyle Bartley,Kyle Bartley,412,Bartley
 Semi Ajayi,Oluwasemilogo Adesewo Ibidapo Ajayi,419,Ajayi
 Dara O'Shea,Dara O'Shea,425,O'Shea
-Kyle Bartley,Kyle Bartley,412,Bartley
 Kieran Gibbs,Kieran Gibbs,407,Gibbs
 Matheus Pereira,Matheus Pereira,481,Pereira
 Romaine Sawyers,Romaine Sawyers,413,Sawyers
@@ -139,18 +139,18 @@ Hal Robson-Kanu,Hal Robson-Kanu,408,Robson-Kanu
 Rekeem Harper,Rekeem Harper,426,Harper
 Jordan Pickford,Jordan Pickford,157,Pickford
 Seamus Coleman,Seamus Coleman,152,Coleman
-Michael Keane,Michael Keane,156,Keane
 Yerry Mina,Yerry Mina,162,Mina
+Michael Keane,Michael Keane,156,Keane
 Lucas Digne,Lucas Digne,155,Digne
-Abdoulaye Doucoure,Abdoulaye Doucoure,512,Doucoure
 Andre Gomes,Andre Filipe Tavares Gomes,158,Andre Gomes
 Allan,Allan Marques Loureiro,502,Allan
+Abdoulaye Doucoure,Abdoulaye Doucoure,512,Doucoure
 James Rodriguez,James Rodriguez,508,Rodriguez
 Dominic Calvert-Lewin,Dominic Calvert-Lewin,164,Calvert-Lewin
 Richarlison,Richarlison de Andrade,166,Richarlison
-Moise Kean,Moise Kean,169,Kean
 Tom Davies,Tom Davies,163,Davies
 Gylfi Sigurdsson,Gylfi Sigurdsson,150,Sigurdsson
+Moise Kean,Moise Kean,169,Kean
 Hugo Lloris,Hugo Lloris,383,Lloris
 Matt Doherty,Matt Doherty,457,Doherty
 Eric Dier,Eric Dier,391,Dier
@@ -162,64 +162,64 @@ Lucas Moura,Lucas Rodrigues Moura da Silva,392,Lucas Moura
 Dele Alli,Bamidele Alli,394,Alli
 Son Heung-Min,Heung-Min Son,390,Son
 Harry Kane,Harry Kane,388,Kane
-Tanguy NDombele Alvaro,Tanguy Ndombele,405,Ndombele
 Moussa Sissoko,Moussa Sissoko,385,Sissoko
 Steven Bergwijn,Steven Bergwijn,400,Bergwijn
+Tanguy NDombele Alvaro,Tanguy Ndombele,405,Ndombele
 Rui Patricio,Rui Pedro dos Santos Patricio,455,Patricio
-Willy Boly,Willy Boly,458,Boly
 Romain Saiss,Romain Saiss,461,Saiss
 Conor Coady,Conor Coady,459,Coady
+Willy Boly,Willy Boly,458,Boly
 Adama Traore,Adama Traore,465,Traore
 Fernando Marcal,Fernando Marcal,505,Marcal
-Joao Moutinho,Joao Filipe Iria Santos Moutinho,454,Moutinho
 Leander Dendoncker,Leander Dendoncker,464,Dendoncker
+Joao Moutinho,Joao Filipe Iria Santos Moutinho,454,Moutinho
 Raul Jimenez,Raul Jimenez,460,Jimenez
 Daniel Podence,Daniel Castelo Podence,469,Podence
 Pedro Neto,Pedro Lomba Neto,474,Neto
-Vitinha,Vitor Ferreira,515,Vitinha
 Oskar Buur,Oskar Buur,467,Buur
 Ruben Neves,Ruben Diogo da Silva Neves,466,Neves
+Vitinha,Vitor Ferreira,515,Vitinha
 Aaron Ramsdale,Aaron Ramsdale,483,Ramsdale
 Jack O'Connell,Jack O'Connell,354,O'Connell
 John Egan,John Egan,353,Egan
 Chris Basham,Chris Basham,345,Basham
 George Baldock,George Baldock,351,Baldock
 Enda Stevens,Enda Stevens,347,Stevens
-Oliver Norwood,Oliver Norwood,349,Norwood
 John Lundstram,John Lundstram,355,Lundstram
 John Fleck,John Fleck,346,Fleck
+Oliver Norwood,Oliver Norwood,349,Norwood
 Billy Sharp,Billy Sharp,343,Sharp
 Oliver McBurnie,Oliver McBurnie,357,McBurnie
-David McGoldrick,David McGoldrick,344,McGoldrick
 Sander Berge,Sander Berge,360,Berge
+David McGoldrick,David McGoldrick,344,McGoldrick
 Kepa,Kepa Arrizabalaga,112,Arrizabalaga
 Reece James,Reece James,123,James
-Kurt Zouma,Kurt Zouma,110,Zouma
 Andreas Christensen,Andreas Christensen,116,Christensen
+Kurt Zouma,Kurt Zouma,110,Zouma
 Marcos Alonso,Marcos Alonso,104,Alonso
-Jorginho,Jorge Luiz Frello Filho,105,Jorginho
 N'Golo Kante,N'Golo Kante,113,Kante
+Jorginho,Jorge Luiz Frello Filho,105,Jorginho
 Kai Havertz,Kai Havertz,500,Havertz
 Mason Mount,Mason Mount,120,Mount
-Timo Werner,Timo Werner,117,Werner
 Ruben Loftus-Cheek,Ruben Loftus-Cheek,115,Loftus-Cheek
-Ross Barkley,Ross Barkley,106,Barkley
+Timo Werner,Timo Werner,117,Werner
 Callum Hudson-Odoi,Callum Hudson-Odoi,122,Hudson-Odoi
 Cesar Azpilicueta,Cesar Azpilicueta,102,Azpilicueta
+Ross Barkley,Ross Barkley,106,Barkley
 Mat Ryan,Mathew Ryan,70,Ryan
 Ben White,Ben White,74,White
 Lewis Dunk,Lewis Dunk,62,Dunk
 Adam Webster,Adam Webster,66,Webster
 Tariq Lamptey,Tariq Lamptey,77,Lamptey
 Solly March,Solomon March,65,March
-Adam Lallana,Adam Lallana,54,Lallana
 Steven Alzate,Steven Alzate,79,Alzate
 Yves Bissouma,Yves Bissouma,76,Bissouma
+Adam Lallana,Adam Lallana,54,Lallana
 Leandro Trossard,Leandro Trossard,69,Trossard
 Neal Maupay,Neal Maupay,68,Maupay
-Pascal Groß,Pascal Groß,57,Groß
 Alireza Jahanbakhsh,Alireza Jahanbakhsh,71,Jahanbakhsh
 Aaron Connolly,Aaron Connolly,78,Connolly
+Pascal Groß,Pascal Groß,57,Groß
 Matt Phillips,Matt Phillips,411,Phillips
 Sam Field,Sam Field,423,Field
 Alex Iwobi,Alex Iwobi,159,Iwobi
@@ -232,11 +232,11 @@ Mamadou Sakho,Mamadou Sakho,127,Sakho
 Michy Batshuayi,Michy Batshuayi,108,Batshuayi
 David de Gea,David de Gea,291,de Gea
 Timothy Fosu-Mensah,Timothy Fosu-Mensah,312,Fosu-Mensah
-Victor Lindelof,Victor Lindelof,308,Lindelof
 Harry Maguire,Harry Maguire,298,Maguire
+Victor Lindelof,Victor Lindelof,308,Lindelof
 Luke Shaw,Luke Shaw,300,Shaw
-Paul Pogba,Paul Pogba,296,Pogba
 Scott McTominay,Scott McTominay,309,McTominay
+Paul Pogba,Paul Pogba,296,Pogba
 Daniel James,Daniel James,311,James
 Bruno Fernandes,Bruno Miguel Borges Fernandes,302,Fernandes
 Marcus Rashford,Marcus Rashford,306,Rashford
@@ -280,12 +280,12 @@ Ben Osborn,Ben Osborn,356,Osborn
 Ethan Ampadu,Ethan Ampadu,509,Ampadu
 Emiliano Martinez,Emiliano Martinez,12,Martinez
 Matthew Cash,Matthew Cash,496,Cash
-Ezri Konsa Ngoyo,Ezri Konsa Ngoyo,46,Konsa
 Tyrone Mings,Tyrone Mings,41,Mings
+Ezri Konsa Ngoyo,Ezri Konsa Ngoyo,46,Konsa
 Matt Targett,Matt Targett,42,Targett
-Douglas Luiz,Douglas Luiz Soares de Paulo,52,Douglas Luiz
 Conor Hourihane,Conor Hourihane,33,Hourihane
 John McGinn,John McGinn,38,McGinn
+Douglas Luiz,Douglas Luiz Soares de Paulo,52,Douglas Luiz
 Trezeguet,Mahmoud Ahmed Ibrahim Hassan,40,Trezeguet
 Ollie Watkins,Ollie Watkins,514,Watkins
 Jack Grealish,Jack Grealish,37,Grealish
@@ -306,10 +306,10 @@ Ruben Vinagre,Ruben Goncalo Silva Nascimento Vinagre,471,Vinagre
 Fabio Silva,Fabio Silva,504,Fabio Silva
 Aaron Wan-Bissaka,Aaron Wan-Bissaka,313,Wan-Bissaka
 Nemanja Matic,Nemanja Matic,295,Matic
-Fred,Frederico Rodrigues de Paula Santos,299,Fred
 Eric Bailly,Eric Bailly,310,Bailly
-Jairo Riedewald,Jairo Riedewald,144,Riedewald
+Fred,Frederico Rodrigues de Paula Santos,299,Fred
 Christian Benteke,Christian Benteke,132,Benteke
+Jairo Riedewald,Jairo Riedewald,144,Riedewald
 Willy Caballero,Willy Caballero,101,Caballero
 Thiago Silva,Thiago Thiago,490,Thiago Silva
 Olivier Giroud,Olivier Giroud,103,Giroud
@@ -322,8 +322,8 @@ Matt Ritchie,Matt Ritchie,322,Ritchie
 Jacob Murphy,Jacob Murphy,497,Murphy
 Jonny Evans,Jonny Evans,219,Evans
 Daniel Amartey,Daniel Amartey,227,Amartey
-Kelechi Iheanacho,Kelechi Iheanacho,233,Iheanacho
 Christian Fuchs,Christian Fuchs,218,Fuchs
+Kelechi Iheanacho,Kelechi Iheanacho,233,Iheanacho
 Eric Garcia,Eric Garcia,288,Garcia
 Riyad Mahrez,Riyad Mahrez,275,Mahrez
 Liam Delap,Liam Delap,539,Delap
@@ -331,17 +331,17 @@ Nelson Semedo,Nelson Cabral Semedo,546,Semedo
 Ki-Jana Hoever,Ki-Jana Hoever,545,Hoever
 Fabian Balbuena,Fabian Balbuena,443,Balbuena
 Ben Johnson,Ben Johnson,452,Johnson
+Jacob Ramsey,Jacob Ramsey,554,Ramsey
 Bertrand Traore,Bertrand Traore,540,Traore
 Marvelous Nakamba,Marvelous Nakamba,44,Nakamba
-Jacob Ramsey,Jacob Ramsey,554,Ramsey
 Maxime Le Marchand,Maxime Le Marchand,173,Le Marchand
 Diogo Jota,Diogo Jota,468,Jota
 Edouard Mendy,Edouard Mendy,548,Mendy
 Ben Chilwell,Benjamin Chilwell,232,Chilwell
 Christian Pulisic,Christian Pulisic,119,Pulisic
 Joel Veltman,Joel Veltman,67,Veltman
-Theo Walcott,Theo Walcott,148,Walcott
 Fabian Delph,Fabian Delph,149,Delph
+Theo Walcott,Theo Walcott,148,Walcott
 Aymeric Laporte,Aymeric Laporte,280,Laporte
 Ruben Dias,Ruben Santos Gato Alves Dias,556,Dias
 Bernardo Silva,Bernardo Mota Veiga de Carvalho e Silva,281,Bernardo Silva
@@ -352,8 +352,8 @@ Johann Berg Gudmundsson,Johann Berg Gudmundsson,90,Gudmundsson
 Emil Krafth,Emil Krafth,333,Krafth
 Fabian Schar,Fabian Schar,334,Schar
 Vladimir Coufal,Vladimir Coufal,558,Coufal
-Cengiz Under,Cengiz Under,541,Under
 Hamza Choudhury,Hamza Choudhury,234,Choudhury
+Cengiz Under,Cengiz Under,541,Under
 Filip Krovinovic,Filip Krovinovic,555,Krovinovic
 Ola Aina,Ola Aina,562,Aina
 Antonee Robinson,Antonee Robinson,484,Robinson
@@ -381,8 +381,8 @@ Manuel Lanzini,Manuel Lanzini,439,Lanzini
 Gareth Bale,Gareth Bale,543,Bale
 Wesley Fofana,Wesley Fofana,561,Fofana
 Islam Slimani,Islam Slimani,579,Slimani
-Branislav Ivanovic,Branislav Ivanovic,530,Ivanovic
 Ahmed Hegazy,Ahmed El-Sayed Hegazy,414,Hegazi
+Branislav Ivanovic,Branislav Ivanovic,530,Ivanovic
 Conor Gallagher,Conor Gallagher,544,Gallagher
 Karlan Grant,Karlan Grant,582,Grant
 Raphinha,Raphael Dias Belloli,570,Raphinha
@@ -405,8 +405,8 @@ Jonjoe Kenny,Jonjoe Kenny,160,Kenny
 Niels Nkounkou,Niels Nkounkou,559,Nkounkou
 Cenk Tosun,Cenk Tosun,153,Tosun
 Robert Sanchez,Robert Sanchez,597,Sanchez
-Bernardo,Bernardo Fernandes da Silva Junior,75,Bernardo
 Danny Welbeck,Danny Welbeck,588,Welbeck
+Bernardo,Bernardo Fernandes da Silva Junior,75,Bernardo
 Joachim Andersen,Joachim Andersen,571,Andersen
 Luke Thomas,Luke Thomas,240,Thomas
 Ben Mee,Ben Mee,88,Mee
@@ -422,14 +422,14 @@ Jayson Molumby,Jayson Molumby,550,Molumby
 Alex Telles,Alex Nicolao Telles,568,Telles
 Joe Willock,Joseph Willock,20,Willock
 Reiss Nelson,Reiss Nelson,21,Nelson
-Neco Williams,Neco Williams,264,Neco Williams
 Divock Origi,Divock Origi,256,Origi
+Neco Williams,Neco Williams,264,Neco Williams
 Bailey Peacock-Farrell,Bailey Peacock-Farrell,99,Peacock-Farrell
 Josh Benson,Josh Benson,535,Benson
 Kean Bryan,Kean Bryan,603,Bryan
 Lys Mousset,Lys Mousset,359,Mousset
-Dean Henderson,Dean Henderson,305,Henderson
 Brandon Williams,Brandon Williams,318,Williams
+Dean Henderson,Dean Henderson,305,Henderson
 Diego Llorente,Diego Llorente,549,Llorente
 Caoimhin Kelleher,Caoimhin Kelleher,560,Kelleher
 Kamil Grosicki,Kamil Grosicki,410,Grosicki
@@ -465,3 +465,4 @@ Percy Tau,Percy Tau,627,Tau
 Reda Khadra,Reda Khadra,630,Khadra
 David Button,David Button,56,Button
 Kiko Casilla,Francisco Casilla Cortes,194,Casilla
+Elliot Anderson,Elliot Anderson,602,Anderson
