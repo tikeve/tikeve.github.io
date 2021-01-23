@@ -13,8 +13,8 @@
                 'in/Player_opponent_team.txt'
                 'in/Player_played_fixtures.txt'
                 'in/Player_upcoming_fixtures.txt'
-                'in/Team_fixtures.txt'
-                'in/Player_fixtures.txt'
+                f'{folder}_fixtures.txt'
+                f'{folder}_fixtures.txt'
                 
                 'index.html'
                 f'html/{source}/{name}.html'
@@ -101,33 +101,26 @@ class Source:
         
 
         #Reading Fxtures and Opponents for Teams and Players
-#         with open(Path(f'{folder}in/Team_opponent_team.txt'), 'r') as file:
-#             Team_opponent_team = pd.DataFrame(json.loads(file.read()))
-#             Team_opponent_team.index = pd.to_numeric(Team_opponent_team.index)
-#             Team_opponent_team = Team_opponent_team.sort_index()
-        with open(Path(f'{folder}in/Player_opponent_team.txt'), 'r') as file:
-            Player_opponent_team = pd.DataFrame(json.loads(file.read()))
-            Player_opponent_team.index = pd.to_numeric(Player_opponent_team.index)
-            Player_opponent_team = Player_opponent_team.sort_index()
+        
+        Team_played_fixtures = pd.read_csv(Path(f'{folder}in/Team_played_fixtures.csv'))
+        Team_played_fixtures = to_lists(Team_played_fixtures)
+        Team_played_fixtures = Team_played_fixtures[Team_played_fixtures.columns[::-1]]
+        
+        Team_upcoming_fixtures = pd.read_csv(Path(f'{folder}in/Team_upcoming_fixtures.csv'))
+        Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))
+        Team_opponent_team = to_lists(Team_opponent_team)
+        Team_opponent_team = Team_opponent_team[Team_opponent_team.columns[::-1]]
+        
+        Player_opponent_team = pd.read_csv(Path(f'{folder}in/Player_opponent_team.csv'))
+        Player_opponent_team = to_lists(Player_opponent_team[Player_opponent_team.columns[::-1]])
         
         #file names differ for the present and history
         if year=='':
-#             with open(Path(f'{folder}in/Team_played_fixtures.txt'), 'r') as file:
-#                 Team_played_fixtures = pd.DataFrame(json.loads(file.read()))
-#                 Team_played_fixtures.index = pd.to_numeric(Team_played_fixtures.index)
-#                 Team_played_fixtures = Team_played_fixtures.sort_index()
-            with open(Path(f'{folder}in/Player_played_fixtures.txt'), 'r') as file:
-                Player_played_fixtures = pd.DataFrame(json.loads(file.read()))
-                Player_played_fixtures.index = pd.to_numeric(Player_played_fixtures.index)
-                Player_played_fixtures = Player_played_fixtures.sort_index()
-#             with open(Path(f'{folder}in/Team_upcoming_fixtures.txt'), 'r') as file:
-#                 Team_upcoming_fixtures = pd.DataFrame(json.loads(file.read()))
-#                 Team_upcoming_fixtures.index = pd.to_numeric(Team_upcoming_fixtures.index)
-#                 Team_upcoming_fixtures = Team_upcoming_fixtures.sort_index()
-            with open(Path(f'{folder}in/Player_upcoming_fixtures.txt'), 'r') as file:
-                Player_upcoming_fixtures = pd.DataFrame(json.loads(file.read()))
-                Player_upcoming_fixtures.index = pd.to_numeric(Player_upcoming_fixtures.index)
-                Player_upcoming_fixtures = Player_upcoming_fixtures.sort_index()
+
+            Player_played_fixtures = pd.read_csv(Path(f'{folder}in/Player_played_fixtures.csv'))
+            Player_played_fixtures = to_lists(Player_played_fixtures[Player_played_fixtures.columns[::-1]])
+            Player_upcoming_fixtures = pd.read_csv(Path(f'{folder}in/Player_upcoming_fixtures.csv'))
+            Player_upcoming_fixtures = to_lists(Player_upcoming_fixtures[Player_upcoming_fixtures.columns[::-1]])
         else:
             with open(Path(f'{folder}in/Team_fixtures.txt'), 'r') as file:
                 Team_played_fixtures = pd.DataFrame(json.loads(file.read()))
@@ -149,17 +142,7 @@ class Source:
         team_number = len(Teams)
 
         #Calculating lastGW - last gameweek with at least one game played
-        firstr = len(Fixtures)+1
-        lastr = 0
-        for i in range(len(Fixtures)):
-            if Fixtures.at[i,'finished']==True:
-                firstr = min(firstr, i)
-                lastr = i
-        if firstr < len(Fixtures)+1:
-            lastGW = int(Fixtures.at[lastr,'event'])
-        else: lastGW = 0
-        if lastr == len(Fixtures):
-            lastGW = int(Fixtures.at[lastr,'event'])
+        lastGW  = Table['round'].max()
 
         print('\t 2. Constants and Functions are over.\t It takes ' + str(time() - start) + ' sec')
         start = time()

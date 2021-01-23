@@ -52,7 +52,7 @@ def del_empty_col(df):
 def get_gw_num(col_name):
     '''
         returns num for standart column name 'GW11**' -> 11
-        Used by no_lists, to-lists
+        Used by no_lists, to_lists
     '''
     try:
         return int(col_name.replace('GW','').replace('*',''))
@@ -90,8 +90,8 @@ def no_lists(t):
         
         
     table = t.copy()
-    for i in table.index:
-        for j in table.columns:
+    for i in t.index:
+        for j in t.columns:
             if type(table.at[i,j]) in {list, np.ndarray}:
                 if len(table.at[i,j])==0:
                     table.at[i,j]=None  #''

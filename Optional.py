@@ -13,6 +13,13 @@
                 'in/Team_upcoming_fixtures.csv'
                 'mid/Team_home.csv'
                 'mid/Team_scored.csv'
+
+                'in/Player_fixtures.csv'
+                'in/Player_opponent_team.csv'
+                'in/Player_played_fixtures.csv'
+                'in/Player_upcoming_fixtures.csv'
+                'mid/Player_home.csv'
+                
                 'mid/Team_scores.txt'
                 
 
@@ -24,7 +31,7 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from Brr_functions import no_lists,to_lists, del_empty_col, no_last_GW
+from Brr_functions import no_lists, to_lists, del_empty_col, no_last_GW
 import constti
 
 # DATA input
@@ -123,7 +130,8 @@ Player_played_fixtures = Player_all.applymap(lambda x: x[0] if type(x) in {list,
 Player_upcoming_fixtures = x.apply(lambda y: Team_upcoming_fixtures.iloc[Players.at[y.name,'Team number']-1], axis=1)
 Player_fixtures = x.apply(lambda x: Team_fixtures.iloc[Players.at[x.name,'Team number']-1], axis=1)
 Player_fixtures[Player_played_fixtures.columns] = Player_played_fixtures
-# Player_fixtures = Player_fixturesX.merge(Player_played_fixtures)
+Player_played_fixtures = Player_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
+if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan) #adding empty columns for foture matches
 Player_fixtures[f'GW{lastGW}'] = [Player_upcoming_fixtures[f'GW{lastGW}'][i] \
 if np.isnan(Player_played_fixtures[f'GW{lastGW}'][i]) else Player_played_fixtures[f'GW{lastGW}'][i] \
 for i in range(len(Players))]
@@ -157,3 +165,5 @@ Player_home.to_csv(Path('mid/Player_home.csv'), index=False)
 
 
 Team_scores.to_json(Path('mid/Team_scores.txt'))
+
+'End'
