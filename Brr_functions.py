@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[37]:
+# In[1]:
 
 
 ''' Functions especially for Brr project
@@ -40,14 +40,19 @@ def is_finished(n):
         a = Fixtures[Fixtures['id']==n]['finished']
         return a.bool()
 
-def del_empty_col(df):
+def del_empty_col(table):
     '''
         Deleting empty columns
     '''
+    df = table.copy()
+    df = df.applymap(lambda x: np.nan if x==[] else x)
     for i in df.columns:
-        if (df[i].tolist()==[[] for _ in df.index])|        ([np.isnan(df[i].tolist()[j]) for j in range(len(df))]==[True for _ in df.index]):
-             del df[i]
-    return df
+        try:
+            if [np.isnan(df[i].tolist()[j]) for j in range(len(df))]==[True for _ in df.index]:
+                 del table[i]
+        except:
+            pass
+    return table
 
 def get_gw_num(col_name):
     '''
@@ -138,4 +143,10 @@ def to_lists(table):
 def no_last_GW(df):
     column_numbers = np.asarray(list(map(get_gw_num, df.columns)))
     return df[df.columns[column_numbers != max(column_numbers)]]
+
+
+# In[ ]:
+
+
+
 
