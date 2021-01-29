@@ -129,7 +129,7 @@ def to_lists(table):
     '''
     if table_increasing(table):
         df  = table.copy()
-        df = df.applymap(lambda x: [] if constti.myisnan(x) else [x])
+        df = df.apply(lambda x:[[] if constti.myisnan(x[i]) else [x[i]] for i in range(len(x))] if x.name[:2]=='GW' else x)
         for i in range(len(df.columns)-1,0,-1):
             if df.columns[i].replace('*', '') == df.columns[i-1].replace('*', ''):
                 for j in range(len(df)):

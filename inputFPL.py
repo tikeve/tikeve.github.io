@@ -44,14 +44,9 @@ import requests
 import sys
 import runpy
 
-#sys.argv = ['abc.py','medium', 'arg2']
-print(f'System var is - {sys.argv[1]}')
-# Reading what type of downloading should be done
-if sys.argv[1] == 'full':
-    data_collection_type = 'full'
-elif sys.argv[1] == 'medium':
-    data_collection_type = 'medium'
-else: data_collection_type = 'nothing'
+#sys.argv = ['abc.py','full', 'arg2']
+
+
 
 #For history
 year = ''
@@ -95,17 +90,17 @@ try:
     do_smth = True
 except: 
     print("Data are probably updating or some other bug")
-    data_collection_type = 'nothing'
+    sys.argv[1] = 'nothing'
     do_smth = False
 
 if do_smth:
-    #Checking if anything has changed since previous download
-    '''
+    ''' Checking if anything has changed since previous download
+    
         If nothing has changed - nothing
         If only players/team data - medium
         If fixtures has changed - full
     '''
-    if data_collection_type == 'nothing':
+    if sys.argv[1] != 'full':
         bigTable_old = pd.read_csv('in/bootstrap.csv')
         Fixtures_old = pd.read_csv('in/Fixtures.csv')
         
@@ -117,7 +112,7 @@ if do_smth:
         F_diff = differences(Fixtures_old[['event','id']], Fixtures[['event','id']])
         L_diff = differences(bigTable[['team']], bigTable_old[['team']])
         if (len(L_diff) > 0)|(len(F_diff) > 0) > 0:
-            data_collection_type = 'full'
+            sys.argv[1] = 'full'
             if len(F_diff) > 0:
                 print(f'Fixtures has changed:')
                 display(F_diff)
@@ -130,25 +125,26 @@ if do_smth:
             bigTable_old[['team', 'creativity', 'threat', 'minutes', 'points_per_game']])
             
             if (len(L_diff_full) > 0)|(len(F_diff_full) > 0):
-                data_collection_type = 'medium'
+                sys.argv[1] = 'medium'
                 if len(F_diff_full) > 0:
                     print('Medium Fixtures data has changed:')
                     display(F_diff_full)
                 if len(L_diff_full) > 0:
                     print('Medium Players data has changed:')
                     display(L_diff_full)
+    if not (sys.argv[1] in {'medium', 'full'}):
+        sys.argv[1] = 'nothing'
 
         print(f'\tChecking equalities is over.\t It takes {str(time() - start)} sec\n')
-        print(f'\tdata_collection_type = {data_collection_type}\n')
         start = time()
 
-print(f'\t\tdata_collection_type = {data_collection_type}\n')
+print(f'\t\tData Collection Type = {sys.argv[1]}\n')
         
         
         
         
-# If data_collection_type == 'nothing', nothing should be really done till the end of the file
-if data_collection_type != 'nothing':
+# If sys.argv[1] == 'nothing', nothing should be really done till the end of the file
+if sys.argv[1] != 'nothing':
     
     
     #Creating the Main Table for FPL Source
@@ -236,10 +232,10 @@ if data_collection_type != 'nothing':
     Teams.to_csv(Path('in/Teams.csv'), index=False)
     Players.to_csv(Path('in/Players.csv'), index=False)
     
-    if data_collection_type == 'full':
+    if sys.argv[1] == 'full':
         runpy.run_module('Optional', run_name='smth')
 
-    if data_collection_type == 'medium':
+    if sys.argv[1] == 'medium':
         Team_fixtures = pd.read_csv(Path('in/Team_fixtures.csv'))
         Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
         if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
