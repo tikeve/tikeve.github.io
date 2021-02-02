@@ -33,6 +33,7 @@ id,Name,web_name,Team number,Team,Team games,Played
 527,Matt Macey,Macey,1,Arsenal,20,0
 547,Runar Alex Runarsson,Runarsson,1,Arsenal,18,0
 567,Thomas Partey,Partey,1,Arsenal,16,8
+645,Martin Ødegaard,Ødegaard,1,Arsenal,0,0
 12,Emiliano Martinez,Martinez,2,Aston Villa,18,18
 28,Tom Heaton,Heaton,2,Aston Villa,18,0
 29,Ahmed El Mohamady,El Mohamady,2,Aston Villa,18,5
@@ -316,37 +317,37 @@ id,Name,web_name,Team number,Team,Team games,Played
 599,Jack Jenkins,Jenkins,10,Leeds,12,0
 619,Niall Huggins,Huggins,10,Leeds,3,0
 620,Charlie Cresswell,Cresswell,10,Leeds,3,0
-241,James Milner,Milner,11,Liverpool,19,11
-242,Konstantinos Tsimikas,Tsimikas,11,Liverpool,19,0
-243,Georginio Wijnaldum,Wijnaldum,11,Liverpool,19,19
-244,Jordan Henderson,Henderson,11,Liverpool,19,15
-245,Adrian San Miguel del Castillo,Adrian,11,Liverpool,19,2
-246,Joel Matip,Matip,11,Liverpool,19,9
-247,Xherdan Shaqiri,Shaqiri,11,Liverpool,19,6
-248,Alex Oxlade-Chamberlain,Chamberlain,11,Liverpool,19,4
-249,Roberto Firmino,Firmino,11,Liverpool,19,19
-250,Virgil van Dijk,van Dijk,11,Liverpool,19,5
-251,Sadio Mane,Mane,11,Liverpool,19,18
-252,Alisson Ramses Becker,Alisson,11,Liverpool,19,16
-253,Fabio Henrique Tavares,Fabinho,11,Liverpool,19,17
-254,Mohamed Salah,Salah,11,Liverpool,19,18
-255,Andrew Robertson,Robertson,11,Liverpool,19,19
-256,Divock Origi,Origi,11,Liverpool,19,5
-257,Harry Wilson,Harry Wilson,11,Liverpool,19,0
-258,Takumi Minamino,Minamino,11,Liverpool,19,9
-259,Trent Alexander-Arnold,Alexander-Arnold,11,Liverpool,19,17
-260,Joseph Gomez,Gomez,11,Liverpool,19,7
-261,Naby Keita,Keita,11,Liverpool,19,7
-263,Curtis Jones,Jones,11,Liverpool,19,12
-264,Neco Williams,Neco Williams,11,Liverpool,19,4
-265,Harvey Elliott,Elliott,11,Liverpool,19,0
-468,Diogo Jota,Jota,11,Liverpool,19,9
-531,Thiago Alcantara do Nascimento,Thiago,11,Liverpool,18,6
-560,Caoimhin Kelleher,Kelleher,11,Liverpool,16,1
-589,Nathaniel Phillips,Phillips,11,Liverpool,14,3
-594,Rhys Williams,Rhys Williams,11,Liverpool,13,2
-601,Leighton Clarkson,Clarkson,11,Liverpool,11,0
-607,Jake Cain,Cain,11,Liverpool,8,0
+241,James Milner,Milner,11,Liverpool,20,12
+242,Konstantinos Tsimikas,Tsimikas,11,Liverpool,20,0
+243,Georginio Wijnaldum,Wijnaldum,11,Liverpool,20,20
+244,Jordan Henderson,Henderson,11,Liverpool,20,16
+245,Adrian San Miguel del Castillo,Adrian,11,Liverpool,20,2
+246,Joel Matip,Matip,11,Liverpool,20,10
+247,Xherdan Shaqiri,Shaqiri,11,Liverpool,20,6
+248,Alex Oxlade-Chamberlain,Chamberlain,11,Liverpool,20,4
+249,Roberto Firmino,Firmino,11,Liverpool,20,20
+250,Virgil van Dijk,van Dijk,11,Liverpool,20,5
+251,Sadio Mane,Mane,11,Liverpool,20,19
+252,Alisson Ramses Becker,Alisson,11,Liverpool,20,17
+253,Fabio Henrique Tavares,Fabinho,11,Liverpool,20,17
+254,Mohamed Salah,Salah,11,Liverpool,20,19
+255,Andrew Robertson,Robertson,11,Liverpool,20,20
+256,Divock Origi,Origi,11,Liverpool,20,6
+257,Harry Wilson,Harry Wilson,11,Liverpool,20,0
+258,Takumi Minamino,Minamino,11,Liverpool,20,9
+259,Trent Alexander-Arnold,Alexander-Arnold,11,Liverpool,20,18
+260,Joseph Gomez,Gomez,11,Liverpool,20,7
+261,Naby Keita,Keita,11,Liverpool,20,7
+263,Curtis Jones,Jones,11,Liverpool,20,13
+264,Neco Williams,Neco Williams,11,Liverpool,20,4
+265,Harvey Elliott,Elliott,11,Liverpool,20,0
+468,Diogo Jota,Jota,11,Liverpool,20,9
+531,Thiago Alcantara do Nascimento,Thiago,11,Liverpool,19,7
+560,Caoimhin Kelleher,Kelleher,11,Liverpool,17,1
+589,Nathaniel Phillips,Phillips,11,Liverpool,15,4
+594,Rhys Williams,Rhys Williams,11,Liverpool,14,2
+601,Leighton Clarkson,Clarkson,11,Liverpool,12,0
+607,Jake Cain,Cain,11,Liverpool,9,0
 266,Fernando Luiz Rosa,Fernandinho,12,Man City,19,9
 267,Claudio Bravo,Bravo,12,Man City,19,0
 268,Sergio Aguero,Aguero,12,Man City,19,5
@@ -512,37 +513,37 @@ id,Name,web_name,Team number,Team,Team games,Played
 635,Allan Tchaptchet,Tchaptchet,16,Southampton,2,0
 636,Caleb Watts,Watts,16,Southampton,2,1
 643,Alexandre Jankewitz,Jankewitz,16,Southampton,1,0
-383,Hugo Lloris,Lloris,17,Spurs,18,18
-384,Danny Rose,Rose,17,Spurs,18,0
-385,Moussa Sissoko,Sissoko,17,Spurs,18,15
-386,Toby Alderweireld,Alderweireld,17,Spurs,18,11
-387,Erik Lamela,Lamela,17,Spurs,18,7
-388,Harry Kane,Kane,17,Spurs,18,18
-389,Serge Aurier,Aurier,17,Spurs,18,10
-390,Heung-Min Son,Son,17,Spurs,18,18
-391,Eric Dier,Dier,17,Spurs,18,17
-392,Lucas Rodrigues Moura da Silva,Lucas Moura,17,Spurs,18,14
-393,Paulo Gazzaniga,Gazzaniga,17,Spurs,18,0
-394,Bamidele Alli,Alli,17,Spurs,18,4
-395,Ben Davies,Davies,17,Spurs,18,13
-396,Pierre-Emile Højbjerg,Højbjerg,17,Spurs,18,18
-397,Harry Winks,Winks,17,Spurs,18,8
-398,Davinson Sanchez,Sanchez,17,Spurs,18,7
-399,Ryan Sessegnon,Sessegnon,17,Spurs,18,0
-400,Steven Bergwijn,Bergwijn,17,Spurs,18,12
-401,Gedson Carvalho Fernandes,Fernandes,17,Spurs,18,0
-402,Japhet Tanganga,Tanganga,17,Spurs,18,0
-403,Giovani Lo Celso,Lo Celso,17,Spurs,18,11
-404,Oliver Skipp,Skipp,17,Spurs,18,0
-405,Tanguy Ndombele,Ndombele,17,Spurs,18,16
-406,Juan Foyth,Foyth,17,Spurs,18,0
-457,Matt Doherty,Doherty,17,Spurs,18,8
-482,Joe Hart,Hart,17,Spurs,18,0
-521,Cameron Carter-Vickers,Carter-Vickers,17,Spurs,18,0
-542,Sergio Reguilon,Reguilon,17,Spurs,16,13
-543,Gareth Bale,Bale,17,Spurs,16,4
-564,Carlos Vinicius Alves Morais,Carlos Vinicius,17,Spurs,14,4
-584,Joe Rodon,Rodon,17,Spurs,13,5
+383,Hugo Lloris,Lloris,17,Spurs,19,19
+384,Danny Rose,Rose,17,Spurs,19,0
+385,Moussa Sissoko,Sissoko,17,Spurs,19,15
+386,Toby Alderweireld,Alderweireld,17,Spurs,19,11
+387,Erik Lamela,Lamela,17,Spurs,19,8
+388,Harry Kane,Kane,17,Spurs,19,19
+389,Serge Aurier,Aurier,17,Spurs,19,11
+390,Heung-Min Son,Son,17,Spurs,19,19
+391,Eric Dier,Dier,17,Spurs,19,18
+392,Lucas Rodrigues Moura da Silva,Lucas Moura,17,Spurs,19,14
+393,Paulo Gazzaniga,Gazzaniga,17,Spurs,19,0
+394,Bamidele Alli,Alli,17,Spurs,19,4
+395,Ben Davies,Davies,17,Spurs,19,14
+396,Pierre-Emile Højbjerg,Højbjerg,17,Spurs,19,19
+397,Harry Winks,Winks,17,Spurs,19,9
+398,Davinson Sanchez,Sanchez,17,Spurs,19,7
+399,Ryan Sessegnon,Sessegnon,17,Spurs,19,0
+400,Steven Bergwijn,Bergwijn,17,Spurs,19,13
+401,Gedson Carvalho Fernandes,Fernandes,17,Spurs,19,0
+402,Japhet Tanganga,Tanganga,17,Spurs,19,0
+403,Giovani Lo Celso,Lo Celso,17,Spurs,19,11
+404,Oliver Skipp,Skipp,17,Spurs,19,0
+405,Tanguy Ndombele,Ndombele,17,Spurs,19,17
+406,Juan Foyth,Foyth,17,Spurs,19,0
+457,Matt Doherty,Doherty,17,Spurs,19,9
+482,Joe Hart,Hart,17,Spurs,19,0
+521,Cameron Carter-Vickers,Carter-Vickers,17,Spurs,19,0
+542,Sergio Reguilon,Reguilon,17,Spurs,17,13
+543,Gareth Bale,Bale,17,Spurs,17,5
+564,Carlos Vinicius Alves Morais,Carlos Vinicius,17,Spurs,15,4
+584,Joe Rodon,Rodon,17,Spurs,14,6
 56,David Button,Button,18,West Brom,20,1
 358,Callum Robinson,Callum Robinson,18,West Brom,20,19
 407,Kieran Gibbs,Gibbs,18,West Brom,20,9

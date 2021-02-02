@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[6]:
+
+
 ''' Rarely needed calculations (Optional)
 
     Calculate tables if Fixtures changes(sys.argv[1] == 'full')
@@ -57,13 +63,9 @@ for j in range(int(Fixtures['event'].max()),0,-1):
         Team_opponent_team - [opponent team id]
     '''
 
-    Team_all['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&(Fixtures['event']==j)]\
-    [['id', 'team_h', 'team_a']].values for i in range(1, len(Teams)+1)]
+    Team_all['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&(Fixtures['event']==j)]    [['id', 'team_h', 'team_a']].values for i in range(1, len(Teams)+1)]
 
-    Team_opponent_team['GW'+str(j)] = [[pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0]\
-    if pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0] != i+1\
-    else pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][1]\
-    for v in range(len(pd.DataFrame(Team_all.at[i,'GW'+str(j)])))] for i in Team_all.index]
+    Team_opponent_team['GW'+str(j)] = [[pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0]    if pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][0] != i+1    else pd.DataFrame(Team_all.at[i,'GW'+str(j)]).loc[:,1:2].values[v][1]    for v in range(len(pd.DataFrame(Team_all.at[i,'GW'+str(j)])))] for i in Team_all.index]
     
 
 Team_opponent_team = no_lists(Team_opponent_team[Team_opponent_team.columns[::-1]])
@@ -72,9 +74,7 @@ Team_fixtures = Team_all.applymap(lambda x: [x[i][0] for i in range(len(x))])
 Team_fixtures = no_lists(Team_fixtures[Team_fixtures.columns[::-1]])
     
 #calculating home/away table with 1/0 and NaN
-Team_home = no_lists(Team_all.applymap(lambda x: list(x))).applymap(lambda x: np.nan if type(x)==float else x[1]-1).\
-apply(lambda x: x==list(range(len(Team_all)))).applymap(lambda x: 1 if x else 0)\
-+no_lists(Team_fixtures)-no_lists(Team_fixtures)#to add NaN
+Team_home = no_lists(Team_all.applymap(lambda x: list(x))).applymap(lambda x: np.nan if type(x)==float else x[1]-1).apply(lambda x: x==list(range(len(Team_all)))).applymap(lambda x: 1 if x else 0)+no_lists(Team_fixtures)-no_lists(Team_fixtures)#to add NaN
 
 Team_home = Team_home[Team_home.columns[::-1]]#making right order
 
@@ -82,16 +82,12 @@ Team_home = Team_home[Team_home.columns[::-1]]#making right order
 
 Team_scores = pd.DataFrame()
 for j in range(int(Fixtures['event'].max()),0,-1): 
-    Team_scores['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&(Fixtures['event']==j)]\
-    [['team_h_score','team_a_score']].values for i in range(1, len(Teams)+1)]
+    Team_scores['GW'+str(j)] = [Fixtures[((Fixtures['team_a']==i)|(Fixtures['team_h']==i))&(Fixtures['event']==j)]    [['team_h_score','team_a_score']].values for i in range(1, len(Teams)+1)]
 Team_scores = Team_scores[Team_scores.columns[::-1]]
 
 #TSS = Team_scores
 
-Team_scored = (no_lists(Team_scores.applymap(lambda x: list(x)))\
-.applymap(lambda x:np.nan if type(x)==float else x[0])*Team_home) +\
-(no_lists(Team_scores.applymap(lambda x: list(x)))\
-.applymap(lambda x:np.nan if type(x)==float else x[1])*(1-Team_home))
+Team_scored = (no_lists(Team_scores.applymap(lambda x: list(x))).applymap(lambda x:np.nan if type(x)==float else x[0])*Team_home) +(no_lists(Team_scores.applymap(lambda x: list(x))).applymap(lambda x:np.nan if type(x)==float else x[1])*(1-Team_home))
     
 del_empty_col(Team_fixtures)
 
@@ -100,10 +96,8 @@ no_lists(Team_fixtures)
 del_empty_col(Team_scored)
 
 #Same as in "medium"
-Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
-Team_upcoming_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-if Fixtures[Fixtures['id']==x]['finished'].iloc[0]==False else np.nan)
+Team_played_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan)
+Team_upcoming_fixtures = Team_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x if Fixtures[Fixtures['id']==x]['finished'].iloc[0]==False else np.nan)
 
 
 
@@ -120,21 +114,18 @@ if  not Table.empty:
     lastGW = Table['round'].max()
     for j in range(lastGW,0,-1):
 
-        Player_all['GW'+str(j)] = [Table[(Table['element']==i)&\
-        (Table['round']==j)][['fixture', 'opponent_team']].values for i in Players['id']]
+        Player_all['GW'+str(j)] = [Table[(Table['element']==i)&        (Table['round']==j)][['fixture', 'opponent_team', 'minutes']].values for i in Players['id']]
 Player_all = no_lists(Player_all[Player_all.columns[::-1]])
 
 
 x = pd.DataFrame(np.nan, index=Player_all.index, columns=Team_fixtures.columns)
 Player_played_fixtures = Player_all.applymap(lambda x: x[0] if type(x) in {list, np.ndarray} else np.nan)
+Player_minutes = Player_all.applymap(lambda x: x[2] if type(x) in {list, np.ndarray} else np.nan)
 Player_upcoming_fixtures = x.apply(lambda y: Team_upcoming_fixtures.iloc[Players.at[y.name,'Team number']-1], axis=1)
 Player_fixtures = x.apply(lambda x: Team_fixtures.iloc[Players.at[x.name,'Team number']-1], axis=1)
 Player_fixtures[Player_played_fixtures.columns] = Player_played_fixtures
-Player_played_fixtures = Player_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan) #adding empty columns for foture matches
-Player_fixtures[f'GW{lastGW}'] = [Player_upcoming_fixtures[f'GW{lastGW}'][i] \
-if np.isnan(Player_played_fixtures[f'GW{lastGW}'][i]) else Player_played_fixtures[f'GW{lastGW}'][i] \
-for i in range(len(Players))]
+Player_played_fixtures = Player_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan) #adding empty columns for foture matches
+Player_fixtures[f'GW{lastGW}'] = [Player_upcoming_fixtures[f'GW{lastGW}'][i] if np.isnan(Player_played_fixtures[f'GW{lastGW}'][i]) else Player_played_fixtures[f'GW{lastGW}'][i] for i in range(len(Players))]
 
 Player_opponent_team = x.apply(lambda x: Team_opponent_team.iloc[Players.at[x.name,'Team number']-1], axis=1)
 #Opponents played against
@@ -161,9 +152,11 @@ Player_fixtures.to_csv(Path('in/Player_fixtures.csv'), index=False)
 Player_opponent_team.to_csv(Path('in/Player_opponent_team.csv'), index=False)
 Player_played_fixtures.to_csv(Path('in/Player_played_fixtures.csv'), index=False)
 Player_upcoming_fixtures.to_csv(Path('in/Player_upcoming_fixtures.csv'), index=False)
+Player_minutes.to_csv(Path('mid/Player_minutes.csv'), index=False)
 Player_home.to_csv(Path('mid/Player_home.csv'), index=False)
 
 
 Team_scores.to_json(Path('mid/Team_scores.txt'))
 
 'End'
+
