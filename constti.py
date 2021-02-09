@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[11]:
-
+''' My Useful Functions
+'''
 
 import unicodedata
 import numpy as np
@@ -76,11 +73,26 @@ def differences(A, B):
     if same == 0:
         return A
     else:
-        #df = (A == B)
         A = A.fillna(value=np.nan)
         B = B.fillna(value=np.nan)
-        df = A.apply(lambda x: [x[i] == B[x.name][i]         if (type(x[i]) not in (float, np.float64))|(type(B[x.name][i]) not in (float, np.float64))        else True if (np.isnan(x[i]))&(np.isnan(B[x.name][i]))        else x[i] == B[x.name][i] for i in range(len(A))])
-        #df = Compare.copy()
+        def eqNeq(col):
+            res = col.copy()
+            for i in A.index:
+                a = type(col[i]) not in (float, np.float64)
+                b = type(B[col.name][i]) not in (float, np.float64)
+                if a|b: res[i] = bool(col[i] == B[col.name][i])
+                else:
+                    c = np.isnan(col[i])
+                    d = np.isnan(B[col.name][i])
+                    if c&d: res[i] = True
+                    else: res[i] = bool(col[i] == B[col.name][i])
+            return res
+        df = A.apply(eqNeq)
+#         df = A.apply(lambda x: [x[i] == B[x.name][i] \
+#         if (type(x[i]) not in (float, np.float64))|(type(B[x.name][i]) not in (float, np.float64))\
+#         else True if (np.isnan(x[i]))&(np.isnan(B[x.name][i]))\
+#         else x[i] == B[x.name][i] for i in A.index])
+
         for i in df.index:
             if df.loc[i].sum() == len(df.columns):
                 df = df.drop(i)
@@ -101,4 +113,3 @@ if __name__=="__main__":
     print('Hello')
     p = long_request('http://google.com')
     print(p.text)
-

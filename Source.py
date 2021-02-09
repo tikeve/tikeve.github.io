@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 ''' Fantasy Tables from Different Sources
 
     Creates class Source which makes tables and htmls from 2 sources: FPL and Understat. Depending on source
@@ -85,7 +91,7 @@ class Source:
         
         #Catching empty data at the start of the season. Avoiding mistake with reading empty file
         try:
-            Table = pd.read_csv(Path(f'{folder}in/Table_'+source+'.csv')) # Main data from source containing rows for each player
+            Table = pd.read_csv(Path(f'{folder}in/Table_'+source+'.csv')) # Main data. Row for player's played fixture
         except:
             print('!!!!!!!!')
             Table = pd.DataFrame()
@@ -103,40 +109,19 @@ class Source:
         Players = pd.read_csv(Path(f'{folder}in/Players.csv')) # Table of rows as players with columns 'id', 'Name',
         #'Team', Team games', 'Played'
         del Players['web_name'] #This column is needed only for inputUnderstat.py
-        
-        
-        Team_played_fixtures = pd.read_csv(Path(f'{folder}in/Team_played_fixtures.csv'))
-        Team_played_fixtures = to_lists(Team_played_fixtures)
-        Team_played_fixtures = Team_played_fixtures[Team_played_fixtures.columns[::-1]]
-        
-        Team_upcoming_fixtures = pd.read_csv(Path(f'{folder}in/Team_upcoming_fixtures.csv'))
-        Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))
-        Team_opponent_team = to_lists(Team_opponent_team)
-        Team_opponent_team = Team_opponent_team[Team_opponent_team.columns[::-1]]
-        
 
         #Reading Fxtures and Opponents for Teams and Players
         
-        Team_played_fixtures = pd.read_csv(Path(f'{folder}in/Team_played_fixtures.csv'))
-        Team_played_fixtures = to_lists(Team_played_fixtures)
-        Team_played_fixtures = Team_played_fixtures[Team_played_fixtures.columns[::-1]]
-        
+        Team_played_fixtures = pd.read_csv(Path(f'{folder}in/Team_played_fixtures.csv'))       
         Team_upcoming_fixtures = pd.read_csv(Path(f'{folder}in/Team_upcoming_fixtures.csv'))
-        Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))
-        Team_opponent_team = to_lists(Team_opponent_team)
-        Team_opponent_team = Team_opponent_team[Team_opponent_team.columns[::-1]]
-        
+        Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))      
         Player_opponent_team = pd.read_csv(Path(f'{folder}in/Player_opponent_team.csv'))
-        Player_opponent_team = to_lists(Player_opponent_team[Player_opponent_team.columns[::-1]])
         
         #file names differ for the present and history
         if year=='':
 
             Player_played_fixtures = pd.read_csv(Path(f'{folder}in/Player_played_fixtures.csv'))
-            #print(Player_played_fixtures.columns)
-            Player_played_fixtures = to_lists(Player_played_fixtures[Player_played_fixtures.columns[::-1]])
             Player_upcoming_fixtures = pd.read_csv(Path(f'{folder}in/Player_upcoming_fixtures.csv'))
-            Player_upcoming_fixtures = to_lists(Player_upcoming_fixtures[Player_upcoming_fixtures.columns[::-1]])
         else:
             with open(Path(f'{folder}in/Team_fixtures.txt'), 'r') as file:
                 Team_played_fixtures = pd.DataFrame(json.loads(file.read()))
@@ -166,50 +151,12 @@ class Source:
 # 3. Calculating team tables
 
         print('\t 3. Calculating team tables')
-
-        #(1). Creating  a table with average threat and GW threats for teams
-
-#         Team_xG = Teams.copy()
-#         Team_xG.columns = ['id', 'Teams', 'xG av', 'Matches']
-
-#         for j in range(lastGW,0,-1):
-#             Team_xG['GW'+str(j)] = [[] for _ in range(team_number)]
-#             for i in range(team_number):
-#                 for k in range(len(Team_played_fixtures.at[i, 'GW'+str(j)])):
-#                     Team_xG.at[i,'GW'+str(j)].append(Table[(Table['fixture']==\
-#                                         Team_played_fixtures.at[i, 'GW'+str(j)][k])&(Table['team']==i+1)]['threat'].sum())
-
-
-#         Team_xG['xG av'] = [Table[Table['team']==i]['threat'].sum() for i in range(1,team_number+1)] \
-#             /noZ(Teams['Matches'])
-#         #Team_xG.sort_values('xG av', ascending = False, inplace = True)
-        
-#         def xAxG(entity, field):
-#             if field == 'threat': av = 'xG'
-#             elif field = 'creativity': av = 'xA'
-#             if entity == 'team':
-#                 entity = 'team'
-#                 X = Teams.copy()
-#                 X.columns = ['id', 'Teams', f'{av} av', 'Matches']
-#                 df = Team_played_fixtures
-#             elif entity == 'player':
-#                 entity = 'element'
-#                 X = Players.copy()
-#                 X.columns = ['id', 'Name', 'Team', f'{av} per fixture', f'{av} per game','Team games', 'Played']
-#                 df = Player_played_fixtures
-#             elif entity == 'opponent':
-#                 entity = 'opponent_team'
-#                 X = Teams.copy()
-#                 X.columns = ['id', 'Teams', 'Opponent xG av', 'Matches']
-#                 df = Team_played_fixtures
-                
-#             Team_xG = no_lists(df[df.columns[::-1]]).apply(app_xAxG, args=(X['id'],entity,field))
-            
-#             X['xG av'] = NTeam_xG.mean(axis=1)
-            
+    
         def xAxG(col, id, entity, field):
             '''
                 Function for apply to *_played_fixtures to make tables
+                entity: team, opponent or player
+                field: name of the field in Table
             '''
             new_col = []
             if entity == 'player':
@@ -228,125 +175,70 @@ class Source:
                     else:
                         new_col.append(x.sum())
             return new_col
-        
-        #NTeam_xG = no_lists(Team_played_fixtures[Team_played_fixtures.columns[::-1]]).apply(xAxG, args=(Teams['id'],'team','threat'))
 
-        X = Teams.copy()
-        X.columns = ['id', 'Teams', 'xG av', 'Matches']
-        TxG = no_lists(Team_played_fixtures[Team_played_fixtures.columns[::-1]]).apply(xAxG, args=(Teams['id'],'team','threat'))
-        X['xG av'] = TxG.mean(axis=1)
+        #(1). Creating  a table with average threat and GW threats for teams
         
-        Team_xG = to_lists(TxG[TxG.columns[::-1]])
-        X[Team_xG.columns] = Team_xG.copy()
-        Team_xG = X.copy()
-        #Team_xG.sort_values('xG av', ascending = False, inplace = True)
-        del_empty_col(Team_xG)
-        self.Team_xG = Team_xG
-        
-        #Team_xG = NTeam_xG.copy()
+        TxG = Team_played_fixtures.apply(xAxG, args=(Teams['id'],'team','threat'))
         
         print('\t\t 3.1. Team_xG is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
+        
         #(2). Creating  a table with average creativity and GW creativities for teams
-
-#         Team_xA = Teams.copy()
-#         Team_xA.columns = ['id', 'Teams', 'xA av', 'Matches']
-
-#         for j in range(lastGW,0,-1):
-#             Team_xA['GW'+str(j)] = [[] for _ in range(team_number)]
-#             for i in range(team_number):
-#                 for k in range(len(Team_played_fixtures.at[i, 'GW'+str(j)])):
-#                     Team_xA.at[i,'GW'+str(j)].append(Table[(Table['fixture']==\
-#                                     Team_played_fixtures.at[i, 'GW'+str(j)][k])&(Table['team']==i+1)]['creativity'].sum())
-
-
-#         Team_xA['xA av'] = [Table[Table['team']==i]['creativity'].sum() for i in range(1,team_number+1)] \
-#             /noZ(Teams['Matches'])
         
-        
-        X = Teams.copy()
-        X.columns = ['id', 'Teams', 'xA av', 'Matches']
-        TxA = no_lists(Team_played_fixtures[Team_played_fixtures.columns[::-1]]).apply(xAxG, args=(X['id'],'team','creativity'))
-        X['xA av'] = TxA.mean(axis=1)
-        
-        Team_xA = to_lists(TxA[TxA.columns[::-1]])
-        X[Team_xA.columns] = Team_xA.copy()
-        Team_xA = X.copy()
-        #NTeam_xG.sort_values('xG av', ascending = False, inplace = True)
-        del_empty_col(Team_xA)
-        self.Team_xA = Team_xA
-        
-        #Team_xA = NTeam_xA.copy()
+        TxA = Team_played_fixtures.apply(xAxG, args=(Teams['id'],'team','creativity'))
         
         print('\t\t 3.2. Team_xA is over.\t It takes ' + str(time() - start)+ ' sec')
         start = time()
         
+        
         #(3). Creating  a table with average threat allowed by teams and GW threat allowed
-
-#         Team_Opponent_xG = Teams.copy()
-#         Team_Opponent_xG.columns = ['id', 'Teams', 'Opponent xG av', 'Matches']
-
-#         for j in range(lastGW,0,-1):
-#             Team_Opponent_xG['GW'+str(j)] = [[] for _ in range(team_number)]
-#             for i in range(team_number):
-#                 for k in range(len(Team_played_fixtures.at[i, 'GW'+str(j)])):
-#                     Team_Opponent_xG.at[i,'GW'+str(j)].append(Table[(Table['fixture']== \
-#                         Team_played_fixtures.at[i, 'GW'+str(j)][k])&(Table['opponent_team']==i+1)]['threat'].sum())
-
-
-#         Team_Opponent_xG['Opponent xG av'] = [Table[Table['opponent_team']==i]['threat'].sum()
-#                         for i in range(1,team_number+1)]/noZ(Teams['Matches'])
         
-        
-        X = Teams.copy()
-        X.columns = ['id', 'Teams', 'Opponent xG av', 'Matches']
-        TOxG = no_lists(Team_played_fixtures[Team_played_fixtures.columns[::-1]]).apply(xAxG, args=(X['id'],'opponent','threat'))
-        X['Opponent xG av'] = TOxG.mean(axis=1)
-        
-        Team_Opponent_xG = to_lists(TOxG[TOxG.columns[::-1]])
-        X[Team_Opponent_xG.columns] = Team_Opponent_xG.copy()
-        Team_Opponent_xG = X.copy()
-        #Team_xG.sort_values('xG av', ascending = False, inplace = True)
-        del_empty_col(Team_Opponent_xG)
-        self.Team_Opponent_xG = Team_Opponent_xG
-        
-        #Team_Opponent_xG = NTeam_Opponent_xG.copy()
-        
-        Tot = Team_opponent_team
-        Tot = no_lists(Tot[Tot.columns[::-1]])
-        Team_Attack_weight = Tot.applymap(lambda x: np.nan if np.isnan(x) else \
-        Team_Opponent_xG.at[int(x)-1, 'Opponent xG av'])
-        Team_Defence_weight = Tot.applymap(lambda x: np.nan if np.isnan(x) else Team_xG.at[int(x)-1, 'xG av'])
-        threatAllowedAv = Team_Opponent_xG['Opponent xG av'].mean()
-        Player_Attack_weight = 'Define to be defined for "class_data"'
-        Player_Defence_weight = 'Define to be defined for "class_data"'
+        TOxG = Team_played_fixtures.apply(xAxG, args=(Teams['id'],'opponent','threat'))
         
         print('\t\t 3.3. Team_Opponent_xG is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
-        class_data = [Teams, Players, Team_played_fixtures, Player_played_fixtures, Team_opponent_team,\
-        Player_opponent_team, Team_xG, Team_Opponent_xG, threatAllowedAv, lastGW,\
-        Team_Attack_weight, Team_Defence_weight, Player_Attack_weight, Player_Defence_weight]
+        
+        #(3.99). Creating coeffitients for team tables adjustment
+        
+        threatAllowedAv = TOxG.mean(axis=1).mean() #Team_Opponent_xG['Opponent xG av'].mean()
+        TOxG_av = TOxG.mean(axis=1)
+        TxG_av = TxG.mean(axis=1)
+        #Team Attack weight unadjusted
+        TAwu = Team_opponent_team.applymap(lambda x: np.nan if np.isnan(x) else TOxG_av[int(x)-1])/threatAllowedAv
+        #Team Defence weight unadjusted
+        TDwu = Team_opponent_team.applymap(lambda x: np.nan if np.isnan(x) else TxG_av[int(x)-1])/threatAllowedAv
+        #Player Attack weight unadjusted
+        PAwu = 'Define to be defined for "class_args"'
+        #Player Defence weight unadjusted
+        PDwu = 'Define to be defined for "class_args"'
+        
+        class_args = [Teams, Players, TAwu, TDwu, PAwu]
+        class_args += [self.source, self.ma_num, folder]
+        
+        print('\t\t 3.3.99 Creating coeffitients is over.\t It takes ' + str(time() - start)+ ' sec')
+        start = time()
 
+        
         #(4). Creating  a table with average adjusted threat and GW threats adj for teams
 
-        TxGA, Team_xG_Ad = adjustment('Team_xG', TxG, class_data)
-        Team_xG_Ad = to_lists(Team_xG_Ad)
+        TxGA, Team_xG_Ad = adjustment('Team_xG', TxG, class_args)
+
         print('\t\t 3.4. Team_xG_Ad is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
         #(5). Creating  a table with average adjusted creativity and GW creativities adj for teams
         
-        TxAA, Team_xA_Ad = adjustment('Team_xA', TxA, class_data)
-        Team_xA_Ad = to_lists(Team_xA_Ad)
+        TxAA, Team_xA_Ad = adjustment('Team_xA', TxA, class_args)
+
         print('\t\t 3.5. Team_xA_Ad is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
         #(6). Creating  a table with average threat allowed adjusted by teams and GW threat allowed adjusted
 
-        TOxGA, Team_Opponent_xG_Ad = adjustment('Team_Opponent_xG', TOxG, class_data)
-        Team_Opponent_xG_Ad = to_lists(Team_Opponent_xG_Ad)
+        TOxGA, Team_Opponent_xG_Ad = adjustment('Team_Opponent_xG', TOxG, class_args)
+
         print('\t\t 3.6. Team_Opponent_xG_Ad is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
 
@@ -357,183 +249,92 @@ class Source:
         TableTeams['id'] = Teams['id']
         TableTeams['Team'] = Teams['Teams']
 
-        TableTeams['xG adjusted'] = Team_xG_Ad['xG av adj']
-        TableTeams['xG'] = Team_xG['xG av']
-        TableTeams['xA adjusted'] = Team_xA_Ad['xA av adj']
-        TableTeams['xA'] = Team_xA['xA av']
-        TableTeams['Opponent xG adjusted'] = Team_Opponent_xG_Ad['Opponent xG av adj']
-        TableTeams['Opponent xG'] = Team_Opponent_xG['Opponent xG av']
+        TableTeams['xG adjusted'] = TxGA.mean(axis=1)#Team_xG_Ad['xG av adj']
+        TableTeams['xG'] = TxG.mean(axis=1)#Team_xG['xG av']
+        TableTeams['xA adjusted'] = TxAA.mean(axis=1)#Team_xA_Ad['xA av adj']
+        TableTeams['xA'] = TxA.mean(axis=1)#Team_xA['xA av']
+        TableTeams['Opponent xG adjusted'] = TOxGA.mean(axis=1)#Team_Opponent_xG_Ad['Opponent xG av adj']
+        TableTeams['Opponent xG'] = TOxG.mean(axis=1)#Team_Opponent_xG['Opponent xG av']
         
         print('\t\t 3.7. TableTeams is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
 
+        
 # 4. Calculating pLayer tables
         
         print('\t 4. Calculating player tables')
 
         #(1) Players Threat
-
-#         Player_xG = Players.copy()
-#         #Player_xG['xG per fixture'] = np.zeros(len(Players))
-#         #Player_xG['xG per game'] = np.zeros(len(Players))
-#         Player_xG.insert(Player_xG.columns.get_loc('Team games'), 'xG per fixture',\
-#         [0.0 for i in Player_xG.itertuples()])
-#         Player_xG.insert(Player_xG.columns.get_loc('Team games'), 'xG per game',\
-#         [0.0 for i in Player_xG.itertuples()])
-
-#         for j in range(lastGW,0,-1):
-#             Player_xG['GW'+str(j)] = [[] for _ in range(len(Players))]
-#             for i in range(len(Players)):
-#                 for k in range(len(Player_played_fixtures.at[i, 'GW'+str(j)])):
-#                     Player_xG.at[i,'GW'+str(j)].append(Table[(Table['fixture']==\
-#                         Player_played_fixtures.at[i, 'GW'+str(j)][k])&(Table['element']==\
-#                         Player_xG.at[i,'id'])]['threat'].sum())
-#                     Player_xG.at[i,'xG per game'] = Player_xG.at[i,'xG per game'] +\
-#                         Player_xG.at[i,'GW'+str(j)][k]
-
-
-#         Player_xG['xG per fixture'] = Player_xG['xG per game']/noZ(Players['Team games'])
-#         Player_xG['xG per game'] = Player_xG['xG per game']/noZ(Players['Played'])
         
-        
-        X = Players.copy()
-        PxG = no_lists(Player_played_fixtures[Player_played_fixtures.columns[::-1]]).apply(xAxG, args=(X['id'],'player','threat'))
-        X.insert(Players.columns.get_loc('Team games'), 'xG per fixture', PxG.mean(axis=1))
-        X.insert(Players.columns.get_loc('Team games')+1, 'xG per game',\
-        X['xG per fixture']*Players['Team games']/noZ(Players['Played']))
-        
-        
-        Player_xG = to_lists(PxG[PxG.columns[::-1]])
-        X[Player_xG.columns] = Player_xG.copy()
-        Player_xG = X.copy()
-        #Team_xG.sort_values('xG av', ascending = False, inplace = True)
-        del_empty_col(Player_xG)
-#         self.Player_xG = Player_xG
-        
-#         display(NPlayer_xG)
-#         Player_xG = NPlayer_xG
-        
-#         display(NPlayer_xG)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        PxG = Player_played_fixtures.apply(xAxG, args=(Players['id'],'player','threat'))
         
         print('\t\t 4.1. Player_xG is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
+        
         #(2) Players Creativity
-
-#         Player_xA = Players.copy()
-#         Player_xA.insert(Player_xA.columns.get_loc('Team games'), 'xA per fixture',\
-#         [0.0 for i in Player_xA.itertuples()])
-#         Player_xA.insert(Player_xA.columns.get_loc('Team games'), 'xA per game',\
-#         [0.0 for i in Player_xA.itertuples()])
-
-#         for j in range(lastGW,0,-1):
-#             Player_xA['GW'+str(j)] = [[] for _ in range(len(Players))]
-#             for i in range(len(Players)):
-#                 for k in range(len(Player_played_fixtures.at[i, 'GW'+str(j)])):
-#                     Player_xA.at[i,'GW'+str(j)].append(Table[(Table['fixture']==\
-#                                                 Player_played_fixtures.at[i, 'GW'+str(j)][k])&\
-#                                                 (Table['element']==Player_xA.at[i,'id'])]['creativity'].sum())
-#                     Player_xA.at[i,'xA per game'] = Player_xA.at[i,'xA per game'] +\
-#                         Player_xA.at[i,'GW'+str(j)][k]
-
-
-#         Player_xA['xA per fixture'] = Player_xA['xA per game']/noZ(Players['Team games'])
-#         Player_xA['xA per game'] = Player_xA['xA per game']/noZ(Players['Played'])
         
-        X = Players.copy()
-        PxA = no_lists(Player_played_fixtures[Player_played_fixtures.columns[::-1]]).apply(xAxG, args=(X['id'],'player','creativity'))
-        X.insert(Players.columns.get_loc('Team games'), 'xA per fixture', PxA.mean(axis=1))
-        X.insert(Players.columns.get_loc('Team games')+1, 'xA per game',\
-        X['xA per fixture']*Players['Team games']/noZ(Players['Played']))
-        
-        
-        Player_xA = to_lists(PxA[PxA.columns[::-1]])
-        X[Player_xA.columns] = Player_xA.copy()
-        Player_xA = X.copy()
-        #Team_xG.sort_values('xG av', ascending = False, inplace = True)
-        del_empty_col(Player_xA)
-#         self.Player_xA = Player_xA
-        
-#         Player_xA = NPlayer_xA
-        Pot = Player_opponent_team
-        Pot = no_lists(Pot[Pot.columns[::-1]])
-
-        Player_Attack_weight=Pot.applymap(lambda x: np.nan if np.isnan(x) else \
-        Team_Opponent_xG.at[int(x)-1, 'Opponent xG av'])
-        Player_Defence_weight = Pot.applymap(lambda x: np.nan if np.isnan(x) else Team_xG.at[int(x)-1, 'xG av'])
-        
-        class_data = [Teams, Players, Team_played_fixtures, Player_played_fixtures, Team_opponent_team,\
-        Player_opponent_team, Team_xG, Team_Opponent_xG, threatAllowedAv, lastGW,\
-        Team_Attack_weight, Team_Defence_weight, Player_Attack_weight, Player_Defence_weight]
+        PxA = Player_played_fixtures.apply(xAxG, args=(Players['id'],'player','creativity'))
         
         print('\t\t 4.2. Player_xA is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
         
+        
+        #(2.99) Creating coeffitients for player tables adjustment
+
+        PAwu=Player_opponent_team.applymap(lambda x: np.nan if np.isnan(x) else TOxG_av[int(x)-1])/threatAllowedAv
+        PDwu = Player_opponent_team.applymap(lambda x:np.nan if np.isnan(x) else TxG_av[int(x)-1])/threatAllowedAv
+
+        class_args = [Teams, Players, TAwu, TDwu, PAwu]
+        class_args += [self.source, self.ma_num, folder]
+        
+        print('\t\t 4.2.99 Creating coeffitients is over.\t It takes ' + str(time() - start) + ' sec')
+        start = time()
+        
+        
         #(3) Players Threat Adjusted
         
-        PxGA, Player_xG_Ad = adjustment('Player_xG', PxG, class_data)
-        Player_xG_Ad = to_lists(Player_xG_Ad)
+        PxGA, Player_xG_Ad = adjustment('Player_xG', PxG, class_args)
+
         print('\t\t 4.3. Player_xG_Ad is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
 
+        
         #(4) PLayers Creativity Adjusted
         
-        PxAA, Player_xA_Ad = adjustment('Player_xA', PxA, class_data)
-        Player_xA_Ad = to_lists(Player_xA_Ad)
+        PxAA, Player_xA_Ad = adjustment('Player_xA', PxA, class_args)
+
         print('\t\t 4.4. Player_xA_Ad is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
+        
+        
 # 5. Creating future tables and opponent tables
 
         #(1) Calculating futures
         print('\t 5. Creating future tables and opponent tables.')
-
-        Team_oppxG_coeff = no_lists(Team_opponent_team)
-        Team_oppdefence_coeff = no_lists(Team_opponent_team)
-        Player_oppxG_coeff = no_lists(Player_opponent_team)
-        Player_oppdefence_coeff = no_lists(Player_opponent_team)
         
         #Columns with np.nan automatically become float that's why int() is needed
-        Team_oppxG_coeff = Team_oppxG_coeff.applymap(lambda x: Team_xG_Ad.at[int(x)-1,'xG av adj'] \
-        if not np.isnan(x) else np.nan)/threatAllowedAv
+        Team_Defence_weight = Team_opponent_team.applymap(lambda x: Team_xG_Ad.at[int(x)-1,'xG av adj']         if not np.isnan(x) else np.nan)/threatAllowedAv
 
-        Team_oppdefence_coeff = Team_oppdefence_coeff.applymap(lambda x: \
-        Team_Opponent_xG_Ad.at[int(x)-1,'Opponent xG av adj'] if not np.isnan(x) else np.nan)/threatAllowedAv
+        Team_Attack_weight = Team_opponent_team.applymap(lambda x:         Team_Opponent_xG_Ad.at[int(x)-1,'Opponent xG av adj'] if not np.isnan(x) else np.nan)/threatAllowedAv
 
-        Player_oppxG_coeff = Player_oppxG_coeff.applymap(lambda x: Team_xG_Ad.at[int(x)-1,'xG av adj'] \
-        if not np.isnan(x) else np.nan)/threatAllowedAv
+        Player_Defence_weight = Player_opponent_team.applymap(lambda x: Team_xG_Ad.at[int(x)-1,'xG av adj']         if not np.isnan(x) else np.nan)/threatAllowedAv
 
-        Player_oppdefence_coeff = Player_oppdefence_coeff.applymap(lambda x: \
-        Team_Opponent_xG_Ad.at[int(x)-1,'Opponent xG av adj'] if not np.isnan(x) else np.nan)/threatAllowedAv
+        Player_Attack_weight = Player_opponent_team.applymap(lambda x:         Team_Opponent_xG_Ad.at[int(x)-1,'Opponent xG av adj'] if not np.isnan(x) else np.nan)/threatAllowedAv
 
-        Team_xxG = Team_oppdefence_coeff.mul(Team_xG_Ad['xG av adj'], axis=0)
-        Team_xOxG = Team_oppxG_coeff.mul(Team_Opponent_xG_Ad['Opponent xG av adj'], axis=0)
-        Player_xxG = Player_oppdefence_coeff.mul(Player_xG_Ad['xG per game adj'], axis=0)
+        Team_xxG = Team_Attack_weight.mul(Team_xG_Ad['xG av adj'], axis=0)
+        Team_xOxG = Team_Defence_weight.mul(Team_Opponent_xG_Ad['Opponent xG av adj'], axis=0)
+        Player_xxG = Player_Attack_weight.mul(Player_xG_Ad['xG per game adj'], axis=0)
         
         #Writing pure numbers(lists of numbers) tables to mid folder for stats calculations
-        Team_oppxG_coeff.to_json(Path(f'{folder}mid/{self.source}/Team_oppxG_coeff.txt'))
-        Team_oppdefence_coeff.to_json(Path(f'{folder}mid/{self.source}/Team_oppdefence_coeff.txt'))
-        Player_oppxG_coeff.to_json(Path(f'{folder}mid/{self.source}/Player_oppxG_coeff.txt'))
-        Player_oppdefence_coeff.to_json(Path(f'{folder}mid/{self.source}/Player_oppdefence_coeff.txt'))
-        Team_xxG.to_json(Path(f'{folder}mid/{self.source}/Team_xxG.txt'))
-        Team_xOxG.to_json(Path(f'{folder}mid/{self.source}/Team_xOxG.txt'))
-        Player_xxG.to_json(Path(f'{folder}mid/{self.source}/Player_xxG.txt'))
+#         Team_oppxG_coeff.to_json(Path(f'{folder}mid/{self.source}/Team_oppxG_coeff.txt'))
+#         Team_oppdefence_coeff.to_json(Path(f'{folder}mid/{self.source}/Team_oppdefence_coeff.txt'))
+#         Player_oppxG_coeff.to_json(Path(f'{folder}mid/{self.source}/Player_oppxG_coeff.txt'))
+#         Player_oppdefence_coeff.to_json(Path(f'{folder}mid/{self.source}/Player_oppdefence_coeff.txt'))
+#         Team_xxG.to_json(Path(f'{folder}mid/{self.source}/Team_xxG.txt'))
+#         Team_xOxG.to_json(Path(f'{folder}mid/{self.source}/Team_xOxG.txt'))
+#         Player_xxG.to_json(Path(f'{folder}mid/{self.source}/Player_xxG.txt'))
+
         
         print('\t\t 5.1. Calculating futures.\t It takes ' + str(time() - start) + ' sec')
         start = time()
@@ -580,6 +381,7 @@ class Source:
         self.Players = Players
         self.lastGW = lastGW
         
+        self.class_args = class_args
         self.threatAllowedAv = threatAllowedAv
         self.Team_played_fixtures = Team_played_fixtures
         self.Team_opponent_team = Team_opponent_team
@@ -587,17 +389,17 @@ class Source:
         self.Player_opponent_team = Player_opponent_team
         
         #Save before modifying while writing into files
-        self.Team_xG = Team_xG.copy()
-        self.Team_xA = Team_xA.copy()
-        self.Team_Opponent_xG = Team_Opponent_xG.copy()
-        self.Team_xG_Ad = Team_xG_Ad.copy()
-        self.Team_xA_Ad = Team_xA_Ad.copy()
-        self.Team_Opponent_xG_Ad = Team_Opponent_xG_Ad.copy()
-        self.TableTeams = TableTeams.copy() 
-        self.Player_xG = Player_xG.copy()
-        self.Player_xA = Player_xA.copy()
-        self.Player_xG_Ad = Player_xG_Ad.copy()
-        self.Player_xA_Ad = Player_xA_Ad.copy()
+#         self.Team_xG = Team_xG.copy()
+#         self.Team_xA = Team_xA.copy()
+#         self.Team_Opponent_xG = Team_Opponent_xG.copy()
+#         self.Team_xG_Ad = Team_xG_Ad.copy()
+#         self.Team_xA_Ad = Team_xA_Ad.copy()
+#         self.Team_Opponent_xG_Ad = Team_Opponent_xG_Ad.copy()
+#         self.TableTeams = TableTeams.copy() 
+#         self.Player_xG = Player_xG.copy()
+#         self.Player_xA = Player_xA.copy()
+#         self.Player_xG_Ad = Player_xG_Ad.copy()
+#         self.Player_xA_Ad = Player_xA_Ad.copy()
         
         self.TxG = TxG.copy()
         self.TxA = TxA.copy()
@@ -624,31 +426,25 @@ class Source:
         Team_Attack_weight.to_csv(Path(f'mid/{source}/Team_Attack_weight.csv'), index=False)
         Team_Defence_weight.to_csv(Path(f'mid/{source}/Team_Defence_weight.csv'), index=False)
         Player_Attack_weight.to_csv(Path(f'mid/{source}/Player_Attack_weight.csv'), index=False)
-        Player_Defence_weight.to_csv(Path(f'mid/{source}/Team_Player_weight.csv'), index=False)
+        Player_Defence_weight.to_csv(Path(f'mid/{source}/Player_Defence_weight.csv'), index=False)
         
-#         self.Team_xG =\
-        write_table(Team_xG, 'Team_xG', 'xG av', self.source, self.ma_num, folder)
-#         self.Team_xA =\ 
-        (write_table(Team_xA, 'Team_xA', 'xA av', self.source, self.ma_num, folder))
-#         self.Team_Opponent_xG =\
-        write_table(Team_Opponent_xG, 'Team_Opponent_xG', 'Opponent xG av', self.source, self.ma_num, folder)
-#         self.Team_xG_Ad =\
-        write_table(Team_xG_Ad, 'Team_xG_Ad', 'xG av adj', self.source, self.ma_num, folder)
-#         self.Team_xA_Ad =\
-        write_table(Team_xA_Ad, 'Team_xA_Ad', 'xA av adj', self.source, self.ma_num, folder)
-#         self.Team_Opponent_xG_Ad =\
-        write_table(Team_Opponent_xG_Ad, 'Team_Opponent_xG_Ad', 'Opponent xG av adj', self.source, self.ma_num, folder)
-#         self.TableTeams =\
-        write_table(TableTeams, 'TableTeams', 'xG adjusted', self.source, self.ma_num, folder)
+        Team_xxG.to_csv(Path(f'{folder}mid/{self.source}/Team_xxG.csv'), index=False)
+        Team_xOxG.to_csv(Path(f'{folder}mid/{self.source}/Team_xOxG.csv'), index=False)
+        Player_xxG.to_csv(Path(f'{folder}mid/{self.source}/Player_xxG.csv'), index=False)
         
-#         self.Player_xG =\
-        write_table(Player_xG, 'Player_xG', 'xG per fixture', self.source, self.ma_num, folder)
-#         self.Player_xA =\
-        write_table(Player_xA, 'Player_xA', 'xA per fixture', self.source, self.ma_num, folder)
-#         self.Player_xG_Ad =\
-        write_table(Player_xG_Ad, 'Player_xG_Ad', 'xG per fixture adj', self.source, self.ma_num, folder)
-#         self.Player_xA_Ad =\
-        write_table(Player_xA_Ad, 'Player_xA_Ad', 'xA per fixture adj', self.source, self.ma_num, folder)
+
+        self.Team_xG = write_table(TxG, 'Team_xG', 'xG av', class_args)
+        self.Team_xA = write_table(TxA, 'Team_xA', 'xA av', class_args)
+        self.Team_Opponent_xG = write_table(TOxG, 'Team_Opponent_xG', 'Opponent xG av', class_args)
+        self.Team_xG_Ad = write_table(TxGA, 'Team_xG_Ad', 'xG av adj', class_args)
+        self.Team_xA_Ad = write_table(TxAA, 'Team_xA_Ad', 'xA av adj', class_args)
+        self.Team_Opponent_xG_Ad = write_table(TOxGA, 'Team_Opponent_xG_Ad', 'Opponent xG av adj', class_args)
+        self.TableTeams = write_table(TableTeams, 'TableTeams', 'xG adjusted', class_args)
+        
+        self.Player_xG = write_table(PxG, 'Player_xG', 'xG per fixture', class_args)
+        self.Player_xA = write_table(PxA, 'Player_xA', 'xA per fixture', class_args)
+        self.Player_xG_Ad = write_table(PxGA, 'Player_xG_Ad', 'xG per fixture adj', class_args)
+        self.Player_xA_Ad = write_table(PxAA, 'Player_xA_Ad', 'xA per fixture adj', class_args)
         
         print('\t 6. Writing to files is over.\t It takes ' + str(time() - start) + ' sec')
         print(f'{self.source} is created./t It takes {time() - start_module} sec')
@@ -669,16 +465,12 @@ class Source:
             return Mistakes, No_Names
         for i in Table_Source.index:
             if Table_Source.at[i,'element'] < 1000000:
-                FPLmin = FPL[(FPL['element'] == Table_Source.at[i,'element'])&\
-                            (FPL['fixture'] == Table_Source.at[i,'fixture'])]['minutes'].sum()
+                FPLmin = FPL[(FPL['element'] == Table_Source.at[i,'element'])&                            (FPL['fixture'] == Table_Source.at[i,'fixture'])]['minutes'].sum()
                 if abs(Table_Source.at[i,'minutes'] - FPLmin) > 10:
-                    Mistakes = Mistakes.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'element'],\
-                        Table_Source.at[i,'fixture'], Table_Source.at[i,'minutes'], FPLmin]], columns = ['player',\
-                        'element', 'fixture', 'minutes', 'FPL_minutes']), ignore_index=True)
+                    Mistakes = Mistakes.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'element'],                        Table_Source.at[i,'fixture'], Table_Source.at[i,'minutes'], FPLmin]], columns = ['player',                        'element', 'fixture', 'minutes', 'FPL_minutes']), ignore_index=True)
             else:
-                No_Names = No_Names.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'team_name'], Table_Source.at[i,'fixture']]],\
-                                                         columns = ['player', 'team_name', 'fixture']), ignore_index=True)
-                #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                No_Names = No_Names.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'team_name'],                Table_Source.at[i,'fixture']]], columns = ['player', 'team_name', 'fixture']), ignore_index=True)
+                
         display(Mistakes)
         display(No_Names)
         return Mistakes, No_Names
@@ -717,20 +509,19 @@ def html_table_name(table_name):
     '''
     Converts the name of the table into the name of the Tale in html file
     '''
-    return table_name.replace('Team_', 'Teams Ranking Based on Team ').replace('Player_', 'Players Ranking Based on Player ')\
-    .replace('Ad', 'Adjusted').replace('_', ' ').replace('TableTeams', 'Teams Ranking')
+    x = table_name.replace('Team_', 'Teams Ranking Based on Team ')
+    x = x.replace('Player_', 'Players Ranking Based on Player ')
+    x = x.replace('Ad', 'Adjusted').replace('_', ' ').replace('TableTeams', 'Teams Ranking')
+    return x
 
 
-
-def write_table(df, name, key_col, source, ma_num, folder):
+def write_table(df, name, key_col, class_args):
     '''
         Writing final tables to files and returning table itself and MA variant also
         df - Table to make final table out of it, name - the name of the table, key_col - column to sort,
         source - Understat or FPL, ma_num - number for MA(currently unused just calculated)
     '''
-    
-    #print(f'folder = {folder}')
-    df.to_json(Path(f'{folder}mid/{source}/{name}.txt')) #writing table to "mid" folder for advanced calculations
+
     def table2string(table):
         '''
         Converts table to view suitable for html. All number columns are actually strings with 1 digit after .
@@ -741,6 +532,24 @@ def write_table(df, name, key_col, source, ma_num, folder):
                 df[j] = [str(int(df.at[i,j]*10)/10) if not np.isnan(df.at[i,j]) else '' for i in df.index]
 
         return df
+    
+    df = df.copy() # not to change initial df
+    Teams, Players = class_args[:2]
+    source, ma_num, folder = class_args[5:]
+    
+    if name != 'TableTeams':
+        if 'Team' in name:
+            X = Teams.copy()
+            X.columns = ['id', 'Teams', key_col, 'Matches']
+            X[key_col] = df.mean(axis=1)
+        else:
+            X = Players.copy()
+            X.insert(Players.columns.get_loc('Team games'), key_col, df.mean(axis=1))
+            X.insert(Players.columns.get_loc('Team games')+1, key_col.replace('fixture','game'),            X[key_col]*Players['Team games']/noZ(Players['Played']))
+        Y = df[df.columns[::-1]]
+        X[Y.columns] = Y.copy()
+        df = X.copy()
+        del_empty_col(df)
     
     #Removes redundant columns
     del df['id']
@@ -755,7 +564,7 @@ def write_table(df, name, key_col, source, ma_num, folder):
     
     # Removes lists in celss which are needed for double gameweeks
     df.index = np.arange(1, len(df) + 1)
-    df = no_lists(df)
+#     df = no_lists(df)
     
     # If moving average number is 0 no calculation needed. Use it to fasten the debug!
     if ma_num == 0:
@@ -805,11 +614,10 @@ def write_table(df, name, key_col, source, ma_num, folder):
 
         if not(source=='FPL' and name=='TableTeams'):
             new_file = new_file.replace('html/FPL/', '')
-            new_file = new_file.replace('"out/FPL/TableTeams.csv"', f'"../../out/{source}/{name}.csv"')#Change download button
+            new_file = new_file.replace('"out/FPL/TableTeams.csv"', f'"../../out/{source}/{name}.csv"')#Download button
             new_file = new_file.replace(f'TableTeams', name)
             if name != 'TableTeams': #changes links for buttons FPL and Understat
-                new_file = new_file.replace('class="header-form" action="index.html"',\
-                f'class="header-form" action="../FPL/{name}.html"')
+                new_file = new_file.replace('class="header-form" action="index.html"',                f'class="header-form" action="../FPL/{name}.html"')
             else:
                 new_file = new_file.replace('form action="index.html"', f'form action="../../index.html"')
             new_file = new_file.replace('html/', '../')
@@ -862,13 +670,11 @@ def color_table(df):
         if x=='Team':
             return [color_Team_xG(i) if not(row.name in ['Matches', 'Teams']) else 'Background-color: white' for i in row]
         elif x=='Player':
-            return [color_Player_xG(i) if not (row.name  in ['Team games', 'Played', 'Name', 'Team'])\
-                    else 'Background-color: white' for i in row]
+            return [color_Player_xG(i) if not (row.name  in ['Team games', 'Played', 'Name', 'Team'])                    else 'Background-color: white' for i in row]
         elif x=='Defence':
             return [color_Defence(i) if not(row.name in ['Matches', 'Teams']) else 'Background-color: white' for i in row]
         elif x=='TableTeams':
-            return [color_Team_xG(i) if row.name in ['xG adjusted', 'xG', 'xA', 'xA adjusted']\
-                   else 'Background-color: white' if row.name in ['Team'] else color_Defence(i) for i in row]
+            return [color_Team_xG(i) if row.name in ['xG adjusted', 'xG', 'xA', 'xA adjusted']                   else 'Background-color: white' if row.name in ['Team'] else color_Defence(i) for i in row]
         
     return df.apply(color_table_row, x=table_type(df), axis=0)
 
@@ -923,105 +729,15 @@ def MA(Out_T, d):
     return T
     
     
-######################################For Debugging
-# lastGW = 43
-# team_number = 20
-# Fixtures = Understat.Fixtures
-# Table = Understat.Table
-# Players = Understat.Players
-# Teams = Understat.Teams
-# threatAllowedAv = Understat.threatAllowedAv
-# Team_Opponent_xG = Understat.TD
-# Team_played_fixtures = Understat.Team_played_fixtures
-# Team_opponent_team = Understat.Team_opponent_team
-# Player_opponent_team = Understat.Player_opponent_team
-# Player_played_fixtures = Understat.Player_played_fixtures
-# TeamThreat = Understat.TT
-# Player_xA = Understat.PC
-
-
-
-
-
-
-# def adjustment(df, class_data):
-#     '''
-#         Creating adjusted tables from unadjusted
-#         df - table to transform
-#         class_data - list of needed data from source class
-#     '''
-#     [Teams, Players, Team_played_fixtures, Player_played_fixtures, Team_opponent_team, Player_opponent_team,\
-#      Team_xG, Team_Opponent_xG, threatAllowedAv, lastGW]\
-#     = class_data
-#     if len(df)==len(Teams):
-#         dfAd = Teams.copy()
-#         for i in df.columns:
-#             if ' av' in i:
-#                 key_par = i[:-3]
-#         av  = 'av'
-#         dfAd.columns = ['id', 'Teams', f'{key_par} av adj', 'Matches']
-#         the_fixtures = Team_played_fixtures
-#         the_opponent_team = Team_opponent_team
-#     else:
-#         dfAd = Players.copy()
-#         for i in df.columns:
-#             if 'per fixture' in i:
-#                 key_par = i[:-12]
-#         av = 'per game'
-        
-#         dfAd.insert(dfAd.columns.get_loc('Team games'), f'{key_par} per fixture adj',\
-#         [0.0 for i in dfAd.itertuples()])
-#         dfAd.insert(dfAd.columns.get_loc('Team games'), f'{key_par} per game adj',\
-#         [0.0 for i in dfAd.itertuples()])
-        
-        
-#         the_fixtures = Player_played_fixtures
-#         the_opponent_team = Player_opponent_team
-        
-#     if 'Opponent' in key_par:#key_par[-7:] == 'allowed':
-#         Weighting_table = Team_xG
-#         col = 'xG av'
-#     else:
-#         Weighting_table = Team_Opponent_xG
-#         col = 'Opponent xG av'
-        
-# #     if (key_par == 'xG')&(len(df) == len(Players)):
-# #         display(df)
-        
-#     for j in range(lastGW,0,-1):
-#         dfAd[f'GW{j}'] = [[] for _ in range(len(df))]
-#         for i in range(len(df)):
-#              for k in range(len(the_fixtures.at[i, 'GW'+str(j)])):
-# #                if (key_par == 'xG')&(len(df) == len(Players)):
-# #                     print(i,j,k)
-# #                     print(threatAllowedAv)
-# #                     print(df.at[i,f'GW{j}'][k])
-# #                     print(the_opponent_team.at[i,f'GW{j}'][k])
-# #                     print(Weighting_table.at[int(the_opponent_team.at[i,f'GW{j}'][k])-1, col])
-#                 dfAd.at[i,f'GW{j}'].append(df.at[i,f'GW{j}'][k]\
-#                 *threatAllowedAv/ Weighting_table.at[int(the_opponent_team.at[i,f'GW{j}'][k])-1, col])
-
-#                 dfAd.at[i,f'{key_par} {av} adj'] += dfAd.at[i,f'GW{j}'][k]
-
-    
-#     if len(df) == len(Teams): dfAd[f'{key_par} av adj'] = dfAd[f'{key_par} av adj']/noZ(dfAd['Matches'])
-#     else:
-#         dfAd[f'{key_par} per fixture adj'] = dfAd[f'{key_par} per game adj']/noZ(dfAd['Team games'])
-#         dfAd[f'{key_par} per game adj'] = dfAd[f'{key_par} per game adj']/noZ(dfAd['Played'])
-    
-    
 #     return dfAd
-def adjustment(name, df, class_data):
+def adjustment(name, df, class_args):
     '''
         Creating adjusted tables from unadjusted
         name - table name before transformation
         df - table to transform
-        class_data - list of needed data from source class
+        class_args - list of needed data from source class
     '''
-    [Teams, Players, Team_played_fixtures, Player_played_fixtures, Team_opponent_team, Player_opponent_team,\
-    Team_xG, Team_Opponent_xG, threatAllowedAv, lastGW,\
-    Team_Attack_weight, Team_Defence_weight, Player_Attack_weight, Player_Defence_weight]\
-    = class_data
+    [Teams, Players, Team_Attack_weight_unadj, Team_Defence_weight_unadj, Player_Attack_weight_unadj] = class_args[:5]
     
     Name = name.split('_')
     
@@ -1030,14 +746,15 @@ def adjustment(name, df, class_data):
         dfAdjusted = Teams.copy()
         dfAdjusted.columns = ['id', 'Teams', f'{key_par} av adj', 'Matches']
         if key_par in {'xG', 'xA'}:
-            weight = Team_Attack_weight
+            weight = Team_Attack_weight_unadj
         else:
-            weight = Team_Defence_weight
+            weight = Team_Defence_weight_unadj
     else:
         dfAdjusted = Players.copy()
-        weight = Player_Attack_weight
+        weight = Player_Attack_weight_unadj
         
-    dfAd = df*threatAllowedAv/weight
+    dfAd = df/weight #Main formula
+    
     X = dfAd[dfAd.columns[::-1]]
     dfAdjusted[X.columns] = X
     del_empty_col(dfAdjusted)
@@ -1045,10 +762,8 @@ def adjustment(name, df, class_data):
     if Name[0] == 'Team':
         dfAdjusted[f'{key_par} av adj'] = dfAd.mean(axis=1)
     else:
-        dfAdjusted.insert(Players.columns.get_loc('Team games'), f'{key_par} per fixture adj', \
-        dfAd.sum(axis=1)/noZ(Players['Team games']))
-        dfAdjusted.insert(Players.columns.get_loc('Team games')+1, f'{key_par} per game adj',\
-        dfAdjusted[f'{key_par} per fixture adj']*Players['Team games']/noZ(Players['Played']))
+        dfAdjusted.insert(Players.columns.get_loc('Team games'), f'{key_par} per fixture adj',         dfAd.sum(axis=1)/noZ(Players['Team games']))
+        dfAdjusted.insert(Players.columns.get_loc('Team games')+1, f'{key_par} per game adj',        dfAdjusted[f'{key_par} per fixture adj']*Players['Team games']/noZ(Players['Played']))
     
     
     return dfAd, dfAdjusted
@@ -1062,3 +777,10 @@ if __name__ == '__main__':
     #display(MA(Understat.TeamThreatAd, 8))
     print('End')
     pass
+
+
+# In[ ]:
+
+
+
+
