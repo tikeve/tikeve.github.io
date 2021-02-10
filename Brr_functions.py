@@ -30,12 +30,14 @@ def noZ(a):
             b[i]=1
     return b
 
-def is_finished(n):
+def is_finished(n, Fixtures):
     '''
         Fills unfinished matches
     '''
     if n=='':
         return False
+    elif np.isnan(n):
+        return np.nan
     else:
         a = Fixtures[Fixtures['id']==n]['finished']
         return a.bool()
