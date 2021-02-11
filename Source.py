@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 ''' Fantasy Tables from Different Sources
 
     Creates class Source which makes tables and htmls from 2 sources: FPL and Understat. Depending on source
@@ -16,11 +10,11 @@
                 f'{folder}in/Team_played_fixtures.csv'
                 f'{folder}in/Team_upcoming_fixtures.csv'
                 f'{folder}in/Team_opponent_team.csv'
-                'in/Player_opponent_team.txt'
-                'in/Player_played_fixtures.txt'
-                'in/Player_upcoming_fixtures.txt'
-                f'{folder}_fixtures.txt'
-                f'{folder}_fixtures.txt'
+                'in/Player_opponent_team.csv'
+                'in/Player_played_fixtures.csv'
+                'in/Player_upcoming_fixtures.csv'
+                f'{folder}Team_fixtures.txt'
+                f'{folder}Player_fixtures.txt'
                 
                 'index.html'
                 f'html/{source}/{name}.html'
@@ -28,15 +22,11 @@
                 name in {Team_xG, Team_xA, Team_Opponent_xG, Team_xG_Ad, Team_xA_Ad, Team_Opponent_xG_Ad,
                 Player_xG, PLayer_xA, Player_xG_Ad, Player_xA_Ad}
     
-    Write:      f'out/' + source + '/' + name + '.csv')
-                f'{folder}mid/{self.source}/Team_oppxG_coeff.txt'
-                f'{folder}mid/{self.source}/Team_oppdefence_coeff.txt'
-                f'{folder}mid/{self.source}/Player_oppxG_coeff.txt'
-                f'{folder}mid/{self.source}/Player_oppdefence_coeff.txt'
-                f'{folder}mid/{self.source}/Team_xxG.txt'
-                f'{folder}mid/{self.source}/Team_xOxG.txt'
-                f'{folder}mid/{self.source}/Player_xxG.txt'
-                f'{folder}mid/{source}/{name}.txt'
+    Write:      f'{folder}out/{source}/{name}.csv'
+
+                f'{folder}mid/{self.source}/Team_xxG.csv'
+                f'{folder}mid/{self.source}/Team_xOxG.csv'
+                f'{folder}mid/{self.source}/Player_xxG.csv'
                 
                 'mid/{source}/TxG.csv'
                 'mid/{source}/TxA.csv'
@@ -51,7 +41,11 @@
                 f'mid/{source}/Team_Attack_weight.csv'
                 f'mid/{source}/Team_Defence_weight.csv'
                 f'mid/{source}/Player_Attack_weight.csv'
-                f'mid/{source}/Team_Player_weight.csv'
+                f'mid/{source}/Player_Defence_weight.csv'
+                
+                'index.html'
+                f'html/{source}/{name}.html'
+                f'html/{source}/css/{name}.css'
 
 '''
 
@@ -60,7 +54,7 @@
 
 from time import time
 import constti
-from Brr_functions import toint, noZ, no_lists, to_lists, del_empty_col
+from Brr_functions import toint, noZ, no_lists, to_lists, del_empty_col, is_finished, get_gw_num
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
@@ -114,8 +108,11 @@ class Source:
         
         Team_played_fixtures = pd.read_csv(Path(f'{folder}in/Team_played_fixtures.csv'))       
         Team_upcoming_fixtures = pd.read_csv(Path(f'{folder}in/Team_upcoming_fixtures.csv'))
-        Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))      
+        Team_opponent_team = pd.read_csv(Path(f'{folder}in/Team_opponent_team.csv'))
         Player_opponent_team = pd.read_csv(Path(f'{folder}in/Player_opponent_team.csv'))
+        #To make code shorter
+        Tot = Team_opponent_team
+        Pot = Player_opponent_team
         
         #file names differ for the present and history
         if year=='':
@@ -206,9 +203,9 @@ class Source:
         TOxG_av = TOxG.mean(axis=1)
         TxG_av = TxG.mean(axis=1)
         #Team Attack weight unadjusted
-        TAwu = Team_opponent_team.applymap(lambda x: np.nan if np.isnan(x) else TOxG_av[int(x)-1])/threatAllowedAv
+        TAwu = Tot.applymap(lambda x: np.nan if np.isnan(x) else TOxG_av[int(x)-1])/threatAllowedAv
         #Team Defence weight unadjusted
-        TDwu = Team_opponent_team.applymap(lambda x: np.nan if np.isnan(x) else TxG_av[int(x)-1])/threatAllowedAv
+        TDwu = Tot.applymap(lambda x: np.nan if np.isnan(x) else TxG_av[int(x)-1])/threatAllowedAv
         #Player Attack weight unadjusted
         PAwu = 'Define to be defined for "class_args"'
         #Player Defence weight unadjusted
@@ -248,13 +245,16 @@ class Source:
         TableTeams = pd.DataFrame()
         TableTeams['id'] = Teams['id']
         TableTeams['Team'] = Teams['Teams']
-
-        TableTeams['xG adjusted'] = TxGA.mean(axis=1)#Team_xG_Ad['xG av adj']
-        TableTeams['xG'] = TxG.mean(axis=1)#Team_xG['xG av']
+        
+        TOxGA_av = TOxGA.mean(axis=1)
+        TxGA_av = TxGA.mean(axis=1)
+        
+        TableTeams['xG adjusted'] = TxGA_av#Team_xG_Ad['xG av adj']
+        TableTeams['xG'] = TxG_av#TxG.mean(axis=1)#Team_xG['xG av']
         TableTeams['xA adjusted'] = TxAA.mean(axis=1)#Team_xA_Ad['xA av adj']
         TableTeams['xA'] = TxA.mean(axis=1)#Team_xA['xA av']
-        TableTeams['Opponent xG adjusted'] = TOxGA.mean(axis=1)#Team_Opponent_xG_Ad['Opponent xG av adj']
-        TableTeams['Opponent xG'] = TOxG.mean(axis=1)#Team_Opponent_xG['Opponent xG av']
+        TableTeams['Opponent xG adjusted'] = TOxGA_av#Team_Opponent_xG_Ad['Opponent xG av adj']
+        TableTeams['Opponent xG'] = TOxG_av#Team_Opponent_xG['Opponent xG av']
         
         print('\t\t 3.7. TableTeams is over.\t It takes ' + str(time() - start) + ' sec')
         start = time()
@@ -314,17 +314,24 @@ class Source:
         print('\t 5. Creating future tables and opponent tables.')
         
         #Columns with np.nan automatically become float that's why int() is needed
-        Team_Defence_weight = Team_opponent_team.applymap(lambda x: Team_xG_Ad.at[int(x)-1,'xG av adj']         if not np.isnan(x) else np.nan)/threatAllowedAv
+        Team_Defence_weight = Tot.applymap(lambda x: TxGA_av[int(x)-1] if not np.isnan(x) else np.nan)/threatAllowedAv
+        Team_Attack_weight = Tot.applymap(lambda x: TOxGA_av[int(x) - 1] if not np.isnan(x) else np.nan)/threatAllowedAv
+        Player_Defence_weight = Pot.applymap(lambda x: TxGA_av[int(x)-1] if not np.isnan(x) else np.nan)/threatAllowedAv
+        Player_Attack_weight = Pot.applymap(lambda x: TOxGA_av[int(x) - 1] if not np.isnan(x) else np.nan)/threatAllowedAv
 
-        Team_Attack_weight = Team_opponent_team.applymap(lambda x:         Team_Opponent_xG_Ad.at[int(x)-1,'Opponent xG av adj'] if not np.isnan(x) else np.nan)/threatAllowedAv
-
-        Player_Defence_weight = Player_opponent_team.applymap(lambda x: Team_xG_Ad.at[int(x)-1,'xG av adj']         if not np.isnan(x) else np.nan)/threatAllowedAv
-
-        Player_Attack_weight = Player_opponent_team.applymap(lambda x:         Team_Opponent_xG_Ad.at[int(x)-1,'Opponent xG av adj'] if not np.isnan(x) else np.nan)/threatAllowedAv
-
-        Team_xxG = Team_Attack_weight.mul(Team_xG_Ad['xG av adj'], axis=0)
-        Team_xOxG = Team_Defence_weight.mul(Team_Opponent_xG_Ad['Opponent xG av adj'], axis=0)
-        Player_xxG = Player_Attack_weight.mul(Player_xG_Ad['xG per game adj'], axis=0)
+        TxxG = Team_Attack_weight.mul(Team_xG_Ad['xG av adj'], axis=0)
+        TxxG = Team_upcoming_fixtures.applymap(lambda x: np.nan if np.isnan(x) else 1)*TxxG
+        TxxA = Team_Attack_weight.mul(Team_xA_Ad['xA av adj'], axis=0)
+        TxxA = Team_upcoming_fixtures.applymap(lambda x: np.nan if np.isnan(x) else 1)*TxxA
+        TxOxG = Team_Defence_weight.mul(Team_Opponent_xG_Ad['Opponent xG av adj'], axis=0)
+        TxOxG =  Team_upcoming_fixtures.applymap(lambda x: np.nan if np.isnan(x) else 1)*TxOxG
+        PxxG = Player_Attack_weight.mul(Player_xG_Ad['xG per game adj'], axis=0)
+        PxxG =  Player_upcoming_fixtures.applymap(lambda x: np.nan if np.isnan(x) else 1)*PxxG
+        PxxA = Player_Attack_weight.mul(Player_xA_Ad['xA per game adj'], axis=0)
+        PxxA =  Player_upcoming_fixtures.applymap(lambda x: np.nan if np.isnan(x) else 1)*PxxA
+        
+        class_args = [Teams, Players, TAwu, TDwu, PAwu]
+        class_args += [self.source, self.ma_num, folder]
         
         #Writing pure numbers(lists of numbers) tables to mid folder for stats calculations
 #         Team_oppxG_coeff.to_json(Path(f'{folder}mid/{self.source}/Team_oppxG_coeff.txt'))
@@ -342,32 +349,34 @@ class Source:
         #(2) Visualizing futures
         
         #Adding some words for tables to be readable (lists still)
-        Display_Team_xxG = Team_xxG.copy()
-        Display_Team_xxG['sum'] = Display_Team_xxG.sum(axis=1)
-        Display_Team_xxG['Teams'] =  Teams['Teams']
-        Display_Team_xxG = Display_Team_xxG[Display_Team_xxG.columns[::-1]].sort_values('sum', ascending=False)
-        del Display_Team_xxG['sum']
-        for i in range(1,lastGW+1):
-            del Display_Team_xxG[f'GW{i}']
-        Display_Team_xxG
+        Team_xxG = del_empty_col(TxxG.copy())
+        Team_xxG['sum'] = Team_xxG.sum(axis=1)
+        Team_xxG.insert(0, 'Teams', Teams['Teams'])
+        Team_xxG = Team_xxG.sort_values('sum', ascending=False)
+        del Team_xxG['sum']
+#         for i in range(1,lastGW+1):
+#             del Team_xxG[f'GW{i}']
+        #Team_xxG
 
-        Display_Player_xxG = Player_xxG.copy()
-        Display_Player_xxG['sum'] = Display_Player_xxG.sum(axis=1)
-        Display_Player_xxG['name'] =  Players['Name']
-        Display_Player_xxG = Display_Player_xxG[Display_Player_xxG.columns[::-1]].sort_values('sum', ascending=False)
-        del Display_Player_xxG['sum']
-        for i in range(1,lastGW+1):
-            del Display_Player_xxG[f'GW{i}']
-        Display_Player_xxG
+        Player_xxG = del_empty_col(PxxG.copy())
+        Player_xxG['sum'] = Player_xxG.sum(axis=1)
+        Player_xxG.insert(0, 'Name', Players['Name'])
+#         Player_xxG['name'] =  Players['Name']
+        Player_xxG = Player_xxG.sort_values('sum', ascending=False)
+        del Player_xxG['sum']
+#         for i in range(1,lastGW+1):
+#             del Player_xxG[f'GW{i}']
+#         Player_xxG
 
-        Display_Team_xOxG = Team_xOxG.copy()
-        Display_Team_xOxG['sum'] = Display_Team_xOxG.sum(axis=1)
-        Display_Team_xOxG['Teams'] = Teams['Teams']
-        Display_Team_xOxG = Display_Team_xOxG[Display_Team_xOxG.columns[::-1]].sort_values('sum', ascending=True)
-        del Display_Team_xOxG['sum']
-        for i in range(1,lastGW+1):
-            del Display_Team_xOxG[f'GW{i}']
-        Display_Team_xOxG
+        Team_xOxG = del_empty_col(TxOxG.copy())
+        Team_xOxG['sum'] = Team_xOxG.sum(axis=1)
+        Team_xOxG.insert(0, 'Teams', Teams['Teams'])
+#         Team_xOxG['Teams'] = Teams['Teams']
+        Team_xOxG = Team_xOxG.sort_values('sum', ascending=True)
+        del Team_xOxG['sum']
+#         for i in range(1,lastGW+1):
+#             del Team_xOxG[f'GW{i}']
+#         Team_xOxG
         
         print('\t\t 5.2. Visualizing futures.\t It takes ' + str(time() - start) + ' sec')
         start = time()
@@ -384,8 +393,10 @@ class Source:
         self.class_args = class_args
         self.threatAllowedAv = threatAllowedAv
         self.Team_played_fixtures = Team_played_fixtures
+        self.Team_upcoming_fixtures = Team_upcoming_fixtures
         self.Team_opponent_team = Team_opponent_team
         self.Player_played_fixtures = Player_played_fixtures
+        self.Player_upcoming_fixtures = Player_upcoming_fixtures
         self.Player_opponent_team = Player_opponent_team
         
         #Save before modifying while writing into files
@@ -412,39 +423,48 @@ class Source:
         self.PxGA = PxGA.copy()
         self.PxAA = PxAA.copy()
         
-        TxG.to_csv(Path(f'mid/{source}/TxG.csv'), index=False)
-        TxA.to_csv(Path(f'mid/{source}/TxA.csv'), index=False)
-        TOxG.to_csv(Path(f'mid/{source}/TOxG.csv'), index=False)
-        TxGA.to_csv(Path(f'mid/{source}/TxGA.csv'), index=False)
-        TxAA.to_csv(Path(f'mid/{source}/TxAA.csv'), index=False)
-        TOxGA.to_csv(Path(f'mid/{source}/TOxGA.csv'), index=False)
-        PxG.to_csv(Path(f'mid/{source}/PxG.csv'), index=False)
-        PxA.to_csv(Path(f'mid/{source}/PxA.csv'), index=False)
-        PxGA.to_csv(Path(f'mid/{source}/PxGA.csv'), index=False)
-        PxAA.to_csv(Path(f'mid/{source}/PxAA.csv'), index=False)
+        self.TxxG = TxxG
+        self.TxxA = TxxA
+        self.TxOxG = TxOxG
+        self.PxxG = PxxG
+        self.PxxA = PxxA
+        self.Team_xxG = Team_xxG
+        self.Team_xOxG = Team_xOxG
+        self.Player_xxG = Player_xxG
         
-        Team_Attack_weight.to_csv(Path(f'mid/{source}/Team_Attack_weight.csv'), index=False)
-        Team_Defence_weight.to_csv(Path(f'mid/{source}/Team_Defence_weight.csv'), index=False)
-        Player_Attack_weight.to_csv(Path(f'mid/{source}/Player_Attack_weight.csv'), index=False)
-        Player_Defence_weight.to_csv(Path(f'mid/{source}/Player_Defence_weight.csv'), index=False)
+        TxG.to_csv(Path(f'{folder}mid/{source}/TxG.csv'), index=False)
+        TxA.to_csv(Path(f'{folder}mid/{source}/TxA.csv'), index=False)
+        TOxG.to_csv(Path(f'{folder}mid/{source}/TOxG.csv'), index=False)
+        TxGA.to_csv(Path(f'{folder}mid/{source}/TxGA.csv'), index=False)
+        TxAA.to_csv(Path(f'{folder}mid/{source}/TxAA.csv'), index=False)
+        TOxGA.to_csv(Path(f'{folder}mid/{source}/TOxGA.csv'), index=False)
+        PxG.to_csv(Path(f'{folder}mid/{source}/PxG.csv'), index=False)
+        PxA.to_csv(Path(f'{folder}mid/{source}/PxA.csv'), index=False)
+        PxGA.to_csv(Path(f'{folder}mid/{source}/PxGA.csv'), index=False)
+        PxAA.to_csv(Path(f'{folder}mid/{source}/PxAA.csv'), index=False)
+        
+        Team_Attack_weight.to_csv(Path(f'{folder}mid/{source}/Team_Attack_weight.csv'), index=False)
+        Team_Defence_weight.to_csv(Path(f'{folder}mid/{source}/Team_Defence_weight.csv'), index=False)
+        Player_Attack_weight.to_csv(Path(f'{folder}mid/{source}/Player_Attack_weight.csv'), index=False)
+        Player_Defence_weight.to_csv(Path(f'{folder}mid/{source}/Player_Defence_weight.csv'), index=False)
         
         Team_xxG.to_csv(Path(f'{folder}mid/{self.source}/Team_xxG.csv'), index=False)
         Team_xOxG.to_csv(Path(f'{folder}mid/{self.source}/Team_xOxG.csv'), index=False)
         Player_xxG.to_csv(Path(f'{folder}mid/{self.source}/Player_xxG.csv'), index=False)
         
 
-        self.Team_xG = write_table(TxG, 'Team_xG', 'xG av', class_args)
-        self.Team_xA = write_table(TxA, 'Team_xA', 'xA av', class_args)
-        self.Team_Opponent_xG = write_table(TOxG, 'Team_Opponent_xG', 'Opponent xG av', class_args)
-        self.Team_xG_Ad = write_table(TxGA, 'Team_xG_Ad', 'xG av adj', class_args)
-        self.Team_xA_Ad = write_table(TxAA, 'Team_xA_Ad', 'xA av adj', class_args)
-        self.Team_Opponent_xG_Ad = write_table(TOxGA, 'Team_Opponent_xG_Ad', 'Opponent xG av adj', class_args)
-        self.TableTeams = write_table(TableTeams, 'TableTeams', 'xG adjusted', class_args)
+        self.Team_xG = write_table(TxG, 'Team_xG', 'xG av', TxxG, class_args)
+        self.Team_xA = write_table(TxA, 'Team_xA', 'xA av', TxxA, class_args)
+        self.Team_Opponent_xG = write_table(TOxG, 'Team_Opponent_xG', 'Opponent xG av', TxOxG, class_args)
+        self.Team_xG_Ad = write_table(TxGA, 'Team_xG_Ad', 'xG av adj', TxxG, class_args)
+        self.Team_xA_Ad = write_table(TxAA, 'Team_xA_Ad', 'xA av adj', TxxA, class_args)
+        self.Team_Opponent_xG_Ad = write_table(TOxGA, 'Team_Opponent_xG_Ad', 'Opponent xG av adj', TxOxG, class_args)
+        self.TableTeams = write_table(TableTeams, 'TableTeams', 'xG adjusted', 'NOTHING', class_args)
         
-        self.Player_xG = write_table(PxG, 'Player_xG', 'xG per fixture', class_args)
-        self.Player_xA = write_table(PxA, 'Player_xA', 'xA per fixture', class_args)
-        self.Player_xG_Ad = write_table(PxGA, 'Player_xG_Ad', 'xG per fixture adj', class_args)
-        self.Player_xA_Ad = write_table(PxAA, 'Player_xA_Ad', 'xA per fixture adj', class_args)
+        self.Player_xG = write_table(PxG, 'Player_xG', 'xG per fixture', PxxG, class_args)
+        self.Player_xA = write_table(PxA, 'Player_xA', 'xA per fixture', PxxA, class_args)
+        self.Player_xG_Ad = write_table(PxGA, 'Player_xG_Ad', 'xG per fixture adj', PxxG, class_args)
+        self.Player_xA_Ad = write_table(PxAA, 'Player_xA_Ad', 'xA per fixture adj', PxxA, class_args)
         
         print('\t 6. Writing to files is over.\t It takes ' + str(time() - start) + ' sec')
         print(f'{self.source} is created./t It takes {time() - start_module} sec')
@@ -463,13 +483,22 @@ class Source:
         No_Names = pd.DataFrame()
         if self.source == 'FPL':
             return Mistakes, No_Names
+        
+        col_m = ['player', 'element', 'fixture', 'minutes', 'FPL_minutes']
+        col_n = ['player', 'team_name', 'fixture']
         for i in Table_Source.index:
             if Table_Source.at[i,'element'] < 1000000:
-                FPLmin = FPL[(FPL['element'] == Table_Source.at[i,'element'])&                            (FPL['fixture'] == Table_Source.at[i,'fixture'])]['minutes'].sum()
+                
+                C = (FPL['element'] == Table_Source.at[i,'element'])&(FPL['fixture'] == Table_Source.at[i,'fixture'])
+                FPLmin = FPL[C]['minutes'].sum()
+                
                 if abs(Table_Source.at[i,'minutes'] - FPLmin) > 10:
-                    Mistakes = Mistakes.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'element'],                        Table_Source.at[i,'fixture'], Table_Source.at[i,'minutes'], FPLmin]], columns = ['player',                        'element', 'fixture', 'minutes', 'FPL_minutes']), ignore_index=True)
+                    a = [Table_Source.at[i,'player'], Table_Source.at[i,'element']]
+                    a += [Table_Source.at[i,'fixture'], Table_Source.at[i,'minutes'], FPLmin]
+                    Mistakes = Mistakes.append(pd.DataFrame( [a], columns = col_m), ignore_index=True)
             else:
-                No_Names = No_Names.append(pd.DataFrame([[Table_Source.at[i,'player'], Table_Source.at[i,'team_name'],                Table_Source.at[i,'fixture']]], columns = ['player', 'team_name', 'fixture']), ignore_index=True)
+                T = [[Table_Source.at[i,'player'], Table_Source.at[i,'team_name'], Table_Source.at[i,'fixture']]]
+                No_Names = No_Names.append(pd.DataFrame( T, columns = col_n), ignore_index=True)
                 
         display(Mistakes)
         display(No_Names)
@@ -515,13 +544,28 @@ def html_table_name(table_name):
     return x
 
 
-def write_table(df, name, key_col, class_args):
+def write_table(df, name, key_col, xdf, class_args):
     '''
         Writing final tables to files and returning table itself and MA variant also
         df - Table to make final table out of it, name - the name of the table, key_col - column to sort,
         source - Understat or FPL, ma_num - number for MA(currently unused just calculated)
     '''
+    def GW_forecast (df, xdf):
+    #     a = df.copy()
+        lastGW = get_gw_num(del_empty_col(df.copy()).columns[-1])
+        Table = pd.DataFrame()
+        for i in df.columns:
+            Table[i] = [df.at[j,i] if np.isnan(xdf.at[j,i]) else xdf.at[j,i] for j in df.index]
 
+        column_numbers = np.asarray(list(map(get_gw_num, Table.columns)))
+        if max(column_numbers)>lastGW:
+            n = lastGW + 1
+        else:
+            n = lastGW
+        for i in Table.columns:
+            if get_gw_num(i) > n:
+                del Table[i]
+        return Table 
     def table2string(table):
         '''
         Converts table to view suitable for html. All number columns are actually strings with 1 digit after .
@@ -538,33 +582,47 @@ def write_table(df, name, key_col, class_args):
     source, ma_num, folder = class_args[5:]
     
     if name != 'TableTeams':
+        # 1- finished, 0 - unfinished, np.nan - doesn't exist
+        F_UF = pd.DataFrame()
+        for i in df.columns:
+            F_UF[i]=[np.nan if np.isnan(xdf.at[j,i])&np.isnan(df.at[j,i]) else 1 for j in df.index]
+            F_UF[i] = [np.nan if np.isnan(F_UF.at[j,i]) else 1 if np.isnan(xdf.at[j,i]) else 0 for j in df.index]
+            
         if 'Team' in name:
             X = Teams.copy()
             X.columns = ['id', 'Teams', key_col, 'Matches']
             X[key_col] = df.mean(axis=1)
         else:
             X = Players.copy()
-            X.insert(Players.columns.get_loc('Team games'), key_col, df.mean(axis=1))
-            X.insert(Players.columns.get_loc('Team games')+1, key_col.replace('fixture','game'),            X[key_col]*Players['Team games']/noZ(Players['Played']))
+            n = Players.columns.get_loc('Team games')
+            X.insert( n, key_col, df.mean(axis=1))
+            X.insert(n + 1, key_col.replace('fixture','game'),X[key_col]*Players['Team games']/noZ(Players['Played']))
+            
+        df = GW_forecast(df, xdf)
+        
         Y = df[df.columns[::-1]]
         X[Y.columns] = Y.copy()
         df = X.copy()
         del_empty_col(df)
+    else:
+        F_UF = df # Doen't matter. Just some dataFrame. Not really used
     
     #Removes redundant columns
     del df['id']
     if 'Team number' in df.columns:
         del df['Team number']
     
+    F_UF[key_col] = df.copy()[key_col]
     # Sort decreasing for attack an increasing for defence
     if 'Opponent' in name:
         df.sort_values(key_col, ascending = True, inplace = True)
+        F_UF.sort_values(key_col, ascending = True, inplace = True)
     else:
         df.sort_values(key_col, ascending = False, inplace = True)
+        F_UF.sort_values(key_col, ascending = False, inplace = True)
     
-    # Removes lists in celss which are needed for double gameweeks
     df.index = np.arange(1, len(df) + 1)
-#     df = no_lists(df)
+    F_UF.index = np.arange(1, len(df) + 1)
     
     # If moving average number is 0 no calculation needed. Use it to fasten the debug!
     if ma_num == 0:
@@ -573,7 +631,7 @@ def write_table(df, name, key_col, class_args):
         df_ma = MA(df, ma_num)
     
     #Writes result to file
-    df.to_csv(Path(f'{folder}out/' + source + '/' + name + '.csv'))
+    df.to_csv(Path(f'{folder}out/{source}/{name}.csv'))
     
     
     # Add table created as table of stringe to existing html file replacing table tag with a new one
@@ -581,7 +639,16 @@ def write_table(df, name, key_col, class_args):
     if folder == '':
         dfString = table2string(df)
         
-        dfStringStyler = dfString.style.apply(color_table, axis=None)#.render().replace('\n', '')#.format(digit_dict)
+        
+        
+        
+        
+        
+#         for i in dfString.columns:
+#             dfString[i]=[[dfString.at[j,i],1] if np.isnan(xdf.at[j,i]) else [dfString.at[j,i],0] for j in dfString.index]
+        
+#         display(dfString)
+        dfStringStyler = dfString.style.apply(color_table, axis=None, F_UF=F_UF)
         dfStringStyler.set_table_attributes('class="DataTable"')
         html_table = dfStringStyler.render().replace('\n', '')
         BS_table = BeautifulSoup(html_table, 'html.parser')
@@ -617,7 +684,9 @@ def write_table(df, name, key_col, class_args):
             new_file = new_file.replace('"out/FPL/TableTeams.csv"', f'"../../out/{source}/{name}.csv"')#Download button
             new_file = new_file.replace(f'TableTeams', name)
             if name != 'TableTeams': #changes links for buttons FPL and Understat
-                new_file = new_file.replace('class="header-form" action="index.html"',                f'class="header-form" action="../FPL/{name}.html"')
+                str1 = 'class="header-form" action="index.html"'
+                str2 = f'class="header-form" action="../FPL/{name}.html"'
+                new_file = new_file.replace(str1, str2)
             else:
                 new_file = new_file.replace('form action="index.html"', f'form action="../../index.html"')
             new_file = new_file.replace('html/', '../')
@@ -631,15 +700,19 @@ def write_table(df, name, key_col, class_args):
     
     return df
 
-def color_table(df):
+def color_table(df, F_UF):
     '''
         Makes colored tables
     '''
     def table_type(df):
+        '''
+            Detecting the type of the table (TableTeams, Defence, Team, Player)
+        '''
         if df.columns[2]=='xG': return 'TableTeams'
         elif 'Opponent' in df.columns[1]: return 'Defence'
         elif df.columns[0]=='Teams': return 'Team'
         else: return 'Player'
+        
     def color_Team_xG(val):
         if val=='': color = 'white'
         elif float(val)>200: color = '#09bb9f'
@@ -662,21 +735,267 @@ def color_table(df):
         else: color = '#15607a'
         return f'Background-color: {color}'
     
-    def color_table_row(row, x):
+    def color_xTeam_xG(val):
+        if val=='': color = 'white'
+        elif float(val)>200: color = '#09bb9f'
+        elif float(val)>140: color = '#82f5cf'
+        elif float(val)>120: color = '#c4c4c4'
+        else: color = '#15607a'
+        return f'background: repeating-linear-gradient( 45deg, {color}, {color} 10px, white 10px, white 20px);'
+    def color_xPlayer_xG(val):
+        if val=='': color = 'white'
+        elif float(val)>50: color = '#09bb9f'
+        elif float(val)>25: color = '#82f5cf'
+        elif float(val)>10: color = '#c4c4c4'
+        else: color = '#15607a'
+        return f'background: repeating-linear-gradient( 45deg, {color}, {color} 10px, white 10px, white 20px);'
+    def color_xDefence(val):
+        if val=='': color = 'white'
+        elif float(val)<120: color = '#09bb9f'
+        elif float(val)<150: color = '#82f5cf'
+        elif float(val)<180: color = '#c4c4c4'
+        else: color = '#15607a'
+        return f'background: repeating-linear-gradient( 45deg, {color}, {color} 10px, white 10px, white 20px);'
+    
+    def color_table_row(row, x, F_UF):
         '''
             function for style.apply by rows where x is a table type
             Subfunction of color_table_row
         '''
-        if x=='Team':
-            return [color_Team_xG(i) if not(row.name in ['Matches', 'Teams']) else 'Background-color: white' for i in row]
-        elif x=='Player':
-            return [color_Player_xG(i) if not (row.name  in ['Team games', 'Played', 'Name', 'Team'])                    else 'Background-color: white' for i in row]
-        elif x=='Defence':
-            return [color_Defence(i) if not(row.name in ['Matches', 'Teams']) else 'Background-color: white' for i in row]
-        elif x=='TableTeams':
-            return [color_Team_xG(i) if row.name in ['xG adjusted', 'xG', 'xA', 'xA adjusted']                   else 'Background-color: white' if row.name in ['Team'] else color_Defence(i) for i in row]
+        str1 = 'Background-color: white'
+        tw = (row.name in ['Matches', 'Teams'])
+        pw = (row.name  in ['Team games', 'Played', 'Name', 'Team'])
+        ttw = (row.name in ['xG adjusted', 'xG', 'xA', 'xA adjusted'])
         
-    return df.apply(color_table_row, x=table_type(df), axis=0)
+        if x=='Team':
+            res = []
+            for i in row.index:
+                if tw: res.append(str1)
+                elif F_UF.at[i, row.name]==1: res.append(color_Team_xG(row[i]))
+                else: res.append(color_xTeam_xG(row[i]))
+            return res
+                
+#             return [str1 if tw else \
+#             color_Team_xG(row[i]) if F_UF.at[i, row.name]==1 else color_xTeam_xG(row[i]) for i in row.index]
+        elif x=='Player':
+            res = []
+            for i in row.index:
+                if pw: res.append(str1)
+                elif not (row.name in F_UF.columns): res.append(color_Player_xG(row[i]))
+                elif F_UF.at[i, row.name]==1: res.append(color_Player_xG(row[i]))
+                else: res.append(color_xPlayer_xG(row[i]))
+            return res
+        
+#             return [str1 if pw else color_Player_xG(row[i]) if not (row.name in F_UF.columns) else\
+#             color_Player_xG(row[i]) if F_UF.at[i, row.name]==1 else color_xPlayer_xG(row[i]) for i in row.index]
+        elif x=='Defence':
+            res = []
+            for i in row.index:
+                if tw: res.append(str1)
+                elif F_UF.at[i, row.name]==1: res.append(color_Defence(row[i]))
+                else: res.append(color_xDefence(row[i]))
+            return res
+#             return [str1 if tw else \
+#             color_Defence(row[i]) if F_UF.at[i, row.name]==1 else color_xDefence(row[i]) for i in row.index]
+        elif x=='TableTeams':
+            return [color_Team_xG(i) if ttw else str1 if row.name in ['Team'] else color_Defence(i) for i in row]
+        
+    return df.apply(color_table_row, args=(table_type(df), F_UF), axis=0)
+# def write_table(df, name, key_col, xdf, class_args):
+#     '''
+#         Writing final tables to files and returning table itself and MA variant also
+#         df - Table to make final table out of it, name - the name of the table, key_col - column to sort,
+#         source - Understat or FPL, ma_num - number for MA(currently unused just calculated)
+#     '''
+#     def GW_forecast (df, xdf):
+#     #     a = df.copy()
+#         lastGW = get_gw_num(del_empty_col(df.copy()).columns[-1])
+#         Table = pd.DataFrame()
+#         for i in df.columns:
+#             Table[i] = [df.at[j,i] if np.isnan(xdf.at[j,i]) else xdf.at[j,i] for j in df.index]
+
+#         column_numbers = np.asarray(list(map(get_gw_num, Table.columns)))
+#         if max(column_numbers)>lastGW:
+#             n = lastGW + 1
+#         else:
+#             n = lastGW
+#         for i in Table.columns:
+#             if get_gw_num(i) > n:
+#                 del Table[i]
+#         return Table 
+#     def table2string(table):
+#         '''
+#         Converts table to view suitable for html. All number columns are actually strings with 1 digit after .
+#         '''
+#         df = table.copy()
+#         for j in df.columns:
+#             if ('GW' in j)|(' av' in j)|('xG' in j)|('xA' in j):
+#                 df[j] = [str(int(df.at[i,j]*10)/10) if not np.isnan(df.at[i,j]) else '' for i in df.index]
+
+#         return df
+    
+#     df = df.copy() # not to change initial df
+#     Teams, Players = class_args[:2]
+#     source, ma_num, folder = class_args[5:]
+    
+#     if name != 'TableTeams':
+#         if 'Team' in name:
+#             X = Teams.copy()
+#             X.columns = ['id', 'Teams', key_col, 'Matches']
+#             X[key_col] = df.mean(axis=1)
+#         else:
+#             X = Players.copy()
+#             n = Players.columns.get_loc('Team games')
+#             X.insert( n, key_col, df.mean(axis=1))
+#             X.insert(n + 1, key_col.replace('fixture','game'),X[key_col]*Players['Team games']/noZ(Players['Played']))
+            
+#         df = GW_forecast(df, xdf)
+        
+#         Y = df[df.columns[::-1]]
+#         X[Y.columns] = Y.copy()
+#         df = X.copy()
+#         del_empty_col(df)
+    
+#     #Removes redundant columns
+#     del df['id']
+#     if 'Team number' in df.columns:
+#         del df['Team number']
+    
+#     # Sort decreasing for attack an increasing for defence
+#     if 'Opponent' in name:
+#         df.sort_values(key_col, ascending = True, inplace = True)
+#     else:
+#         df.sort_values(key_col, ascending = False, inplace = True)
+    
+#     df.index = np.arange(1, len(df) + 1)
+    
+#     # If moving average number is 0 no calculation needed. Use it to fasten the debug!
+#     if ma_num == 0:
+#         df_ma = df
+#     else:
+#         df_ma = MA(df, ma_num)
+    
+#     #Writes result to file
+#     df.to_csv(Path(f'{folder}out/{source}/{name}.csv'))
+    
+    
+#     # Add table created as table of stringe to existing html file replacing table tag with a new one
+#     #Also adding a new css
+#     if folder == '':
+#         dfString = table2string(df)
+        
+        
+        
+        
+        
+        
+# #         for i in dfString.columns:
+# #             dfString[i]=[[dfString.at[j,i],1] if np.isnan(xdf.at[j,i]) else [dfString.at[j,i],0] for j in dfString.index]
+        
+        
+#         dfStringStyler = dfString.style.apply(color_table, axis=None)
+#         dfStringStyler.set_table_attributes('class="DataTable"')
+#         html_table = dfStringStyler.render().replace('\n', '')
+#         BS_table = BeautifulSoup(html_table, 'html.parser')
+#         css = str(BS_table('style')[0])
+#         html_ = str(BS_table('table')[0])
+
+#         #Getting right paths for different tables
+#         if source=='FPL' and name=='TableTeams':
+#             html_path = Path(f'{folder}index.html')
+#             css_path = Path(f'{folder}html/FPL/css/TableTeams.css')
+#         else:
+#             html_path = Path(f'{folder}html/{source}/{name}.html')
+#             css_path = Path(f'{folder}html/{source}/css/{name}.css')
+
+#         #Making css for coloring butons
+
+#         css = ('#' + source + '-button {\n background-color: #82f5cf;\n}\n' +
+#                '#' + name + ' {\n background-color: lightgrey;\n}\n' + 
+#                css)
+
+#         #Rewriting html and css
+#         with open(f'{folder}index.html', 'r', encoding="utf-8") as file:
+#             old_file = file.read()
+#         tag_to_replace1 = str(BeautifulSoup(old_file, 'html.parser')('table', attrs={"class":"DataTable"})[0])
+#         tag_to_replace2 = str(BeautifulSoup(old_file, 'html.parser')('h2', attrs={"id":"DataTitle"})[0])
+#         new_file = old_file.replace(tag_to_replace1, html_)
+#         new_file = new_file.replace(tag_to_replace2, f'<h2 id="DataTitle"> {html_table_name(name)} </h2>')
+
+#         #Making links right
+
+#         if not(source=='FPL' and name=='TableTeams'):
+#             new_file = new_file.replace('html/FPL/', '')
+#             new_file = new_file.replace('"out/FPL/TableTeams.csv"', f'"../../out/{source}/{name}.csv"')#Download button
+#             new_file = new_file.replace(f'TableTeams', name)
+#             if name != 'TableTeams': #changes links for buttons FPL and Understat
+#                 str1 = 'class="header-form" action="index.html"'
+#                 str2 = f'class="header-form" action="../FPL/{name}.html"'
+#                 new_file = new_file.replace(str1, str2)
+#             else:
+#                 new_file = new_file.replace('form action="index.html"', f'form action="../../index.html"')
+#             new_file = new_file.replace('html/', '../')
+#             new_file = new_file.replace('"index.html"', '"../../index.html"')
+
+#         #Creating .html and special files for the Table
+#         with open(html_path, 'w', encoding="utf-8") as file:
+#             file.write(new_file)
+#         with open(css_path, 'w', encoding="utf-8") as file:
+#             file.write(css)
+    
+#     return df
+
+# def color_table(df):
+#     '''
+#         Makes colored tables
+#     '''
+#     def table_type(df):
+#         if df.columns[2]=='xG': return 'TableTeams'
+#         elif 'Opponent' in df.columns[1]: return 'Defence'
+#         elif df.columns[0]=='Teams': return 'Team'
+#         else: return 'Player'
+#     def color_Team_xG(val):
+#         if val=='': color = 'white'
+#         elif float(val)>200: color = '#09bb9f'
+#         elif float(val)>140: color = '#82f5cf'
+#         elif float(val)>120: color = '#c4c4c4'
+#         else: color = '#15607a'
+#         return f'Background-color: {color}'
+#     def color_Player_xG(val):
+#         if val=='': color = 'white'
+#         elif float(val)>50: color = '#09bb9f'
+#         elif float(val)>25: color = '#82f5cf'
+#         elif float(val)>10: color = '#c4c4c4'
+#         else: color = '#15607a'
+#         return f'Background-color: {color}'
+#     def color_Defence(val):
+#         if val=='': color = 'white'
+#         elif float(val)<120: color = '#09bb9f'
+#         elif float(val)<150: color = '#82f5cf'
+#         elif float(val)<180: color = '#c4c4c4'
+#         else: color = '#15607a'
+#         return f'Background-color: {color}'
+    
+#     def color_table_row(row, x):
+#         '''
+#             function for style.apply by rows where x is a table type
+#             Subfunction of color_table_row
+#         '''
+#         str1 = 'Background-color: white'
+#         tw = (row.name in ['Matches', 'Teams'])
+#         pw = (row.name  in ['Team games', 'Played', 'Name', 'Team'])
+#         ttw = (row.name in ['xG adjusted', 'xG', 'xA', 'xA adjusted'])
+        
+#         if x=='Team':
+#             return [color_Team_xG(i) if not tw else str1 for i in row]
+#         elif x=='Player':
+#             return [color_Player_xG(i) if not pw else str1 for i in row]
+#         elif x=='Defence':
+#             return [color_Defence(i) if not tw else str1 for i in row]
+#         elif x=='TableTeams':
+#             return [color_Team_xG(i) if ttw else str1 if row.name in ['Team'] else color_Defence(i) for i in row]
+        
+#     return df.apply(color_table_row, x=table_type(df), axis=0)
 
 
 # Returns the table with d mean average for table Out_T
@@ -762,8 +1081,10 @@ def adjustment(name, df, class_args):
     if Name[0] == 'Team':
         dfAdjusted[f'{key_par} av adj'] = dfAd.mean(axis=1)
     else:
-        dfAdjusted.insert(Players.columns.get_loc('Team games'), f'{key_par} per fixture adj',         dfAd.sum(axis=1)/noZ(Players['Team games']))
-        dfAdjusted.insert(Players.columns.get_loc('Team games')+1, f'{key_par} per game adj',        dfAdjusted[f'{key_par} per fixture adj']*Players['Team games']/noZ(Players['Played']))
+        n = Players.columns.get_loc('Team games')
+        dfAdjusted.insert(n, f'{key_par} per fixture adj', dfAd.sum(axis=1)/noZ(Players['Team games']))
+        a = dfAdjusted[f'{key_par} per fixture adj']
+        dfAdjusted.insert(n+1, f'{key_par} per game adj', a*Players['Team games']/noZ(Players['Played']))
     
     
     return dfAd, dfAdjusted
@@ -777,10 +1098,3 @@ if __name__ == '__main__':
     #display(MA(Understat.TeamThreatAd, 8))
     print('End')
     pass
-
-
-# In[ ]:
-
-
-
-
