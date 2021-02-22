@@ -44,7 +44,7 @@ import requests
 import sys
 import runpy
 
-#sys.argv = ['abc.py','full', 'arg2']
+#sys.argv = ['abc.py','full', 'arg2']    #Used only for debugging. Should be commented in module
 
 
 
@@ -58,7 +58,7 @@ url1 = "https://fantasy.premierleague.com/api/bootstrap-static/" #Each line is f
 url2 = "https://fantasy.premierleague.com/api/entry/698498/history/" #Data for FPL manager history
 url3 = "https://fantasy.premierleague.com/api/event/6/live/" #Not used
 url4 = "https://fantasy.premierleague.com/api/fixtures" #Fixtures Table
-url5 = 'https://fantasy.premierleague.com/api/element-summary/191/' #Data for fixture 191
+url5 = 'https://fantasy.premierleague.com/api/element-summary/191/' #Data for thr player with 'id' 191
 
 #Downloading the Table Which is Used for Players and Teams Lists only
 p1 = long_request(url1)  
@@ -77,6 +77,8 @@ bigTable = bigTable.applymap(lambda x: np.nan if x=='' else x)
 teams = dict(zip(pd.DataFrame(d1['teams'])['id'],pd.DataFrame(d1['teams'])['name']))
 players = dict(zip(bigTable['id'],bigTable['full_name']))
 teamplayers = dict(zip(bigTable['id'],bigTable['team']))
+pos_dict = {1: 'G', 2: 'D', 3: 'M', 4: 'F'}
+positions = dict(zip(bigTable['id'],[pos_dict[bigTable.at[i,'element_type']] for i in bigTable.index]))
 team_number = len(teams)
 
 #Downloading the Fixtures Table
@@ -166,6 +168,7 @@ if sys.argv[1] != 'nothing':
         #Table['team'] = [teamplayers[Table.at[i,'element']] for i in Table.index]
         Table['team'] = [Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_h'].values[0] if Table.at[i,'was_home']\
         else Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_a'].values[0] for i in Table.index]
+        Table['position'] = [positions[Table.at[i,'element']] for i in Table.index]
     Table = Table[Table.columns.sort_values()] #Give strict(alphabetical) order
     lastGW = Table['round'].max()
 
@@ -227,10 +230,10 @@ if sys.argv[1] != 'nothing':
 
 
     #Calculating Fixtures and Opponents
-    Fixtures.to_csv(Path('in/Fixtures.csv'), index=False)
-    Table.to_csv(Path('in/Table_FPL.csv'), index=False)
-    Teams.to_csv(Path('in/Teams.csv'), index=False)
-    Players.to_csv(Path('in/Players.csv'), index=False)
+    Fixtures.to_csv(Path(f'{folder}in/Fixtures.csv'), index=False)
+    Table.to_csv(Path(f'{folder}in/Table_FPL.csv'), index=False)
+    Teams.to_csv(Path(f'{folder}in/Teams.csv'), index=False)
+    Players.to_csv(Path(f'{folder}in/Players.csv'), index=False)
     
     if sys.argv[1] == 'full':
         runpy.run_module('Optional', run_name='smth')
