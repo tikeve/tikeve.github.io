@@ -1,37 +1,37 @@
 id,Name,web_name,Team number,Team,Team games,Played
-1,Mesut Ozil,Ozil,1,Arsenal,25,0
-2,Sokratis Papastathopoulos,Sokratis,1,Arsenal,25,0
-3,David Luiz Moreira Marinho,David Luiz,1,Arsenal,25,15
-4,Pierre-Emerick Aubameyang,Aubameyang,1,Arsenal,25,21
-5,Cedric Soares,Cedric,1,Arsenal,25,7
-6,Alexandre Lacazette,Lacazette,1,Arsenal,25,21
-7,Shkodran Mustafi,Mustafi,1,Arsenal,25,3
-8,Bernd Leno,Leno,1,Arsenal,25,24
-9,Granit Xhaka,Xhaka,1,Arsenal,25,21
-10,Pablo Mari,Mari,1,Arsenal,25,4
-11,Hector Bellerin,Bellerin,1,Arsenal,25,22
-13,Calum Chambers,Chambers,1,Arsenal,25,0
-14,Sead Kolasinac,Kolasinac,1,Arsenal,25,1
-16,Rob Holding,Holding,1,Arsenal,25,22
-17,Kieran Tierney,Tierney,1,Arsenal,25,18
-18,Nicolas Pepe,Pepe,1,Arsenal,25,17
-19,Lucas Torreira,Torreira,1,Arsenal,25,0
-21,Reiss Nelson,Nelson,1,Arsenal,25,2
-22,Edward Nketiah,Nketiah,1,Arsenal,25,14
-23,Emile Smith Rowe,Smith Rowe,1,Arsenal,25,11
-24,Bukayo Saka,Saka,1,Arsenal,25,22
-25,Matteo Guendouzi,Guendouzi,1,Arsenal,25,0
-26,Gabriel Teodoro Martinelli Silva,Martinelli,1,Arsenal,25,5
-27,William Saliba,Saliba,1,Arsenal,25,0
-70,Mathew Ryan,Ryan,1,Arsenal,25,12
-478,Willian Borges Da Silva,Willian,1,Arsenal,25,18
-494,Gabriel Magalhaes,Gabriel,1,Arsenal,25,15
-501,Daniel Ceballos Fernandez,Ceballos,1,Arsenal,25,18
-526,Mohamed Naser El Sayed Elneny,Elneny,1,Arsenal,25,14
-527,Matt Macey,Macey,1,Arsenal,25,0
-547,Runar Alex Runarsson,Runarsson,1,Arsenal,23,1
-567,Thomas Partey,Partey,1,Arsenal,21,11
-645,Martin Ødegaard,Ødegaard,1,Arsenal,5,4
+1,Mesut Ozil,Ozil,1,Arsenal,26,0
+2,Sokratis Papastathopoulos,Sokratis,1,Arsenal,26,0
+3,David Luiz Moreira Marinho,David Luiz,1,Arsenal,26,16
+4,Pierre-Emerick Aubameyang,Aubameyang,1,Arsenal,26,22
+5,Cedric Soares,Cedric,1,Arsenal,26,8
+6,Alexandre Lacazette,Lacazette,1,Arsenal,26,22
+7,Shkodran Mustafi,Mustafi,1,Arsenal,26,3
+8,Bernd Leno,Leno,1,Arsenal,26,25
+9,Granit Xhaka,Xhaka,1,Arsenal,26,22
+10,Pablo Mari,Mari,1,Arsenal,26,5
+11,Hector Bellerin,Bellerin,1,Arsenal,26,22
+13,Calum Chambers,Chambers,1,Arsenal,26,0
+14,Sead Kolasinac,Kolasinac,1,Arsenal,26,1
+16,Rob Holding,Holding,1,Arsenal,26,22
+17,Kieran Tierney,Tierney,1,Arsenal,26,19
+18,Nicolas Pepe,Pepe,1,Arsenal,26,18
+19,Lucas Torreira,Torreira,1,Arsenal,26,0
+21,Reiss Nelson,Nelson,1,Arsenal,26,2
+22,Edward Nketiah,Nketiah,1,Arsenal,26,14
+23,Emile Smith Rowe,Smith Rowe,1,Arsenal,26,12
+24,Bukayo Saka,Saka,1,Arsenal,26,22
+25,Matteo Guendouzi,Guendouzi,1,Arsenal,26,0
+26,Gabriel Teodoro Martinelli Silva,Martinelli,1,Arsenal,26,5
+27,William Saliba,Saliba,1,Arsenal,26,0
+70,Mathew Ryan,Ryan,1,Arsenal,26,12
+478,Willian Borges Da Silva,Willian,1,Arsenal,26,19
+494,Gabriel Magalhaes,Gabriel,1,Arsenal,26,15
+501,Daniel Ceballos Fernandez,Ceballos,1,Arsenal,26,18
+526,Mohamed Naser El Sayed Elneny,Elneny,1,Arsenal,26,15
+527,Matt Macey,Macey,1,Arsenal,26,0
+547,Runar Alex Runarsson,Runarsson,1,Arsenal,24,1
+567,Thomas Partey,Partey,1,Arsenal,22,12
+645,Martin Ødegaard,Ødegaard,1,Arsenal,6,5
 12,Emiliano Martinez,Martinez,2,Aston Villa,24,24
 28,Tom Heaton,Heaton,2,Aston Villa,24,0
 29,Ahmed El Mohamady,El Mohamady,2,Aston Villa,24,8
@@ -106,194 +106,199 @@ id,Name,web_name,Team number,Team,Team games,Played
 662,Thomas McGill,McGill,3,Brighton,5,0
 663,Michal Karbownik,Karbownik,3,Brighton,5,0
 664,Moises Caicedo,Caicedo,3,Brighton,4,0
-55,Dale Stephens,Stephens,4,Burnley,26,6
-81,James Tarkowski,Tarkowski,4,Burnley,25,23
-82,Phil Bardsley,Bardsley,4,Burnley,25,4
-83,Erik Pieters,Pieters,4,Burnley,25,16
-84,Jack Cork,Cork,4,Burnley,25,7
-85,Kevin Long,Long,4,Burnley,25,8
-86,Jay Rodriguez,Rodriguez,4,Burnley,25,20
-87,Ashley Barnes,Barnes,4,Burnley,25,18
-88,Ben Mee,Mee,4,Burnley,25,18
-89,Ashley Westwood,Westwood,4,Burnley,25,25
-90,Johann Berg Gudmundsson,Gudmundsson,4,Burnley,25,13
-91,Chris Wood,Wood,4,Burnley,25,20
-92,Matthew Lowton,Lowton,4,Burnley,25,21
-93,Matej Vydra,Vydra,4,Burnley,25,15
-94,Ben Gibson,Gibson,4,Burnley,25,0
-95,Robbie Brady,Brady,4,Burnley,25,17
-96,Nick Pope,Pope,4,Burnley,25,24
-97,Charlie Taylor,Taylor,4,Burnley,25,18
-98,Josh Brownhill,Brownhill,4,Burnley,25,20
-99,Bailey Peacock-Farrell,Peacock-Farrell,4,Burnley,25,1
-100,Dwight McNeil,McNeil,4,Burnley,25,23
-519,Jimmy Dunne,Dunne,4,Burnley,25,2
-520,Bobby Thomas,Thomas,4,Burnley,25,0
-535,Josh Benson,Benson,4,Burnley,25,6
-536,Anthony Driscoll-Glennon,Driscoll-Glennon,4,Burnley,25,0
-551,Mace Goodridge,Goodridge,4,Burnley,24,0
-583,Will Norris,Norris,4,Burnley,22,0
-591,Max Thompson,Thompson,4,Burnley,20,0
-592,Lewis Richardson,Richardson,4,Burnley,20,0
-612,Anthony Mancini,Mancini,4,Burnley,12,0
-613,Joel Mumbongo,Mumbongo,4,Burnley,12,3
-658,Richard Nartey,Nartey,4,Burnley,5,0
-101,Willy Caballero,Caballero,5,Chelsea,25,1
-102,Cesar Azpilicueta,Azpilicueta,5,Chelsea,25,15
-103,Olivier Giroud,Giroud,5,Chelsea,25,13
-104,Marcos Alonso,Alonso,5,Chelsea,25,8
-105,Jorge Luiz Frello Filho,Jorginho,5,Chelsea,25,17
-107,Mateo Kovacic,Kovacic,5,Chelsea,25,20
-109,Antonio Rudiger,Rudiger,5,Chelsea,25,10
-110,Kurt Zouma,Zouma,5,Chelsea,25,16
-111,Emerson Palmieri dos Santos,Emerson,5,Chelsea,25,2
-112,Kepa Arrizabalaga,Arrizabalaga,5,Chelsea,25,4
-113,N'Golo Kante,Kante,5,Chelsea,25,21
-114,Hakim Ziyech,Ziyech,5,Chelsea,25,12
-116,Andreas Christensen,Christensen,5,Chelsea,25,8
-117,Timo Werner,Werner,5,Chelsea,25,24
-118,Tammy Abraham,Abraham,5,Chelsea,25,20
-119,Christian Pulisic,Pulisic,5,Chelsea,25,15
-120,Mason Mount,Mount,5,Chelsea,25,24
-121,Fikayo Tomori,Tomori,5,Chelsea,25,1
-122,Callum Hudson-Odoi,Hudson-Odoi,5,Chelsea,25,16
-123,Reece James,James,5,Chelsea,25,19
-124,Billy Gilmour,Gilmour,5,Chelsea,25,2
-232,Benjamin Chilwell,Chilwell,5,Chelsea,25,18
-490,Thiago Thiago,Thiago Silva,5,Chelsea,25,17
-500,Kai Havertz,Havertz,5,Chelsea,25,18
-548,Edouard Mendy,Mendy,5,Chelsea,23,20
-593,Karlo Ziger,Ziger,5,Chelsea,19,0
-605,Faustino Anjorin,Anjorin,5,Chelsea,14,0
-108,Michy Batshuayi,Batshuayi,6,Crystal Palace,25,16
-125,Gary Cahill,Cahill,6,Crystal Palace,25,10
-126,Wayne Hennessey,Hennessey,6,Crystal Palace,25,0
-127,Mamadou Sakho,Sakho,6,Crystal Palace,25,4
-128,Vicente Guaita,Guaita,6,Crystal Palace,25,25
-129,James Tomkins,Tomkins,6,Crystal Palace,25,5
-130,James McArthur,McArthur,6,Crystal Palace,25,18
-131,James McCarthy,McCarthy,6,Crystal Palace,25,9
-132,Christian Benteke,Benteke,6,Crystal Palace,25,18
-133,Cheikhou Kouyate,Kouyate,6,Crystal Palace,25,23
-134,Joel Ward,Ward,6,Crystal Palace,25,13
-135,Martin Kelly,Kelly,6,Crystal Palace,25,0
-136,Connor Wickham,Wickham,6,Crystal Palace,25,0
-137,Andros Townsend,Townsend,6,Crystal Palace,25,23
-138,Luka Milivojevic,Milivojevic,6,Crystal Palace,25,21
-139,Patrick van Aanholt,van Aanholt,6,Crystal Palace,25,14
-140,Jordan Ayew,Ayew,6,Crystal Palace,25,21
-141,Wilfried Zaha,Zaha,6,Crystal Palace,25,19
-142,Jeffrey Schlupp,Schlupp,6,Crystal Palace,25,15
-143,Max Meyer,Meyer,6,Crystal Palace,25,0
-144,Jairo Riedewald,Riedewald,6,Crystal Palace,25,21
-145,Nathan Ferguson,Ferguson,6,Crystal Palace,25,0
-146,Tyrick Mitchell,Mitchell,6,Crystal Palace,25,13
-147,Brandon Pierrick,Pierrick,6,Crystal Palace,25,0
-486,Scott Dann,Dann,6,Crystal Palace,25,12
-489,Eberechi Eze,Eze,6,Crystal Palace,25,23
-522,Sam Woods,Woods,6,Crystal Palace,25,0
-534,Ryan Inniss,Inniss,6,Crystal Palace,24,0
-577,Nathaniel Clyne,Clyne,6,Crystal Palace,21,13
-578,Stephen Henderson,Henderson,6,Crystal Palace,21,0
-586,Jack Butland,Butland,6,Crystal Palace,20,0
-641,Jean-Philippe Mateta,Mateta,6,Crystal Palace,6,3
-149,Fabian Delph,Delph,7,Everton,24,5
-150,Gylfi Sigurdsson,Sigurdsson,7,Everton,24,23
-151,Jonas Lossl,Lossl,7,Everton,24,0
-152,Seamus Coleman,Coleman,7,Everton,24,15
-153,Cenk Tosun,Tosun,7,Everton,24,5
-154,Bernard Anicio Caldeira Duarte,Bernard,7,Everton,24,7
-155,Lucas Digne,Digne,7,Everton,24,16
-156,Michael Keane,Keane,7,Everton,24,23
-157,Jordan Pickford,Pickford,7,Everton,24,19
-158,Andre Filipe Tavares Gomes,Andre Gomes,7,Everton,24,18
-159,Alex Iwobi,Iwobi,7,Everton,24,21
-160,Jonjoe Kenny,Kenny,7,Everton,24,4
-161,Jean-Philippe Gbamin,Gbamin,7,Everton,24,0
-162,Yerry Mina,Mina,7,Everton,24,19
-163,Tom Davies,Davies,7,Everton,24,16
-164,Dominic Calvert-Lewin,Calvert-Lewin,7,Everton,24,21
-165,Mason Holgate,Holgate,7,Everton,24,14
-166,Richarlison de Andrade,Richarlison,7,Everton,24,20
-167,Joao Virginia,Virginia,7,Everton,24,0
-168,Anthony Gordon,Gordon,7,Everton,24,3
-169,Moise Kean,Kean,7,Everton,24,2
-170,Jarrad Branthwaite,Branthwaite,7,Everton,24,0
-502,Allan Marques Loureiro,Allan,7,Everton,24,12
-508,James Rodriguez,Rodriguez,7,Everton,24,18
-512,Abdoulaye Doucoure,Doucoure,7,Everton,24,23
-559,Niels Nkounkou,Nkounkou,7,Everton,21,1
-566,Ben Godfrey,Godfrey,7,Everton,20,17
-573,Robin Olsen,Olsen,7,Everton,20,5
-596,Ellis Simms,Simms,7,Everton,18,0
-644,Tyler Onyango,Onyango,7,Everton,7,0
-651,Joshua King,King,7,Everton,5,4
-115,Ruben Loftus-Cheek,Loftus-Cheek,8,Fulham,25,20
-171,Fabricio Agosto Ramirez,Fabri,8,Fulham,25,0
-172,Kevin McDonald,McDonald,8,Fulham,25,0
-173,Maxime Le Marchand,Le Marchand,8,Fulham,25,2
-174,Stefan Johansen,Johansen,8,Fulham,25,0
-175,Tom Cairney,Cairney,8,Fulham,25,10
-176,Tim Ream,Ream,8,Fulham,25,5
-177,Anthony Knockaert,Knockaert,8,Fulham,25,0
-178,Michael Hector,Hector,8,Fulham,25,4
-179,Cyrus Christie,Christie,8,Fulham,25,0
-180,Neeskens Kebano,Kebano,8,Fulham,25,5
-181,Bobby Decordova-Reid,Decordova-Reid,8,Fulham,25,23
-182,Joe Bryan,Bryan,8,Fulham,25,11
-183,Marcus Bettinelli,Bettinelli,8,Fulham,25,0
-184,Aleksandar Mitrovic,Mitrovic,8,Fulham,25,18
-185,Alfie Mawson,Mawson,8,Fulham,25,0
-186,Marek Rodak,Rodak,8,Fulham,25,1
-187,Ivan Ricardo Neves Abreu Cavaleiro,Cavaleiro,8,Fulham,25,23
-188,Josh Onomah,Onomah,8,Fulham,25,5
-189,Jean Michael Seri,Seri,8,Fulham,25,0
-190,Aboubakar Kamara,Kamara,8,Fulham,25,11
-191,Andre-Frank Zambo Anguissa,Anguissa,8,Fulham,25,25
-192,Zeze Steven Sessegnon,Sessegnon,8,Fulham,25,0
-373,Harrison Reed,Reed,8,Fulham,25,21
-484,Antonee Robinson,Robinson,8,Fulham,25,19
-493,Mario Lemina,Lemina,8,Fulham,25,18
-516,Alphonse Areola,Areola,8,Fulham,25,24
-517,Kenny Tete,Tete,8,Fulham,25,12
-525,Denis Odoi,Odoi,8,Fulham,25,3
-557,Ademola Lookman,Lookman,8,Fulham,22,22
-562,Ola Aina,Aina,8,Fulham,22,21
-571,Joachim Andersen,Andersen,8,Fulham,21,19
-572,Tosin Adarabioyo,Adarabioyo,8,Fulham,21,21
-585,Terence Kongolo,Kongolo,8,Fulham,20,0
-665,Josh Maja,Maja,8,Fulham,4,4
-216,Wes Morgan,Morgan,9,Leicester,25,3
-217,Kasper Schmeichel,Schmeichel,9,Leicester,25,25
-218,Christian Fuchs,Fuchs,9,Leicester,25,9
-219,Jonny Evans,Evans,9,Leicester,25,21
-220,Adrien Silva,Silva,9,Leicester,25,0
-221,Marc Albrighton,Albrighton,9,Leicester,25,18
-222,Matty James,James,9,Leicester,25,0
-223,Danny Ward,Ward,9,Leicester,25,0
-224,Jamie Vardy,Vardy,9,Leicester,25,21
-225,Dennis Praet,Praet,9,Leicester,25,13
-226,Ricardo Domingos Barbosa Pereira,Pereira,9,Leicester,25,6
-227,Daniel Amartey,Amartey,9,Leicester,25,7
-228,Youri Tielemans,Tielemans,9,Leicester,25,25
-229,Ayoze Perez,Perez,9,Leicester,25,16
-230,Demarai Gray,Gray,9,Leicester,25,1
-231,James Maddison,Maddison,9,Leicester,25,23
-233,Kelechi Iheanacho,Iheanacho,9,Leicester,25,12
-234,Hamza Choudhury,Choudhury,9,Leicester,25,7
-235,Harvey Barnes,Barnes,9,Leicester,25,24
-236,Wilfred Ndidi,Ndidi,9,Leicester,25,13
-237,Filip Benkovic,Benkovic,9,Leicester,25,0
-238,Caglar Soyuncu,Soyuncu,9,Leicester,25,12
-239,James Justin,Justin,9,Leicester,25,23
-240,Luke Thomas,Thomas,9,Leicester,25,5
-498,Timothy Castagne,Castagne,9,Leicester,25,14
-518,Nampalys Mendy,Mendy,9,Leicester,25,19
-541,Cengiz Under,Under,9,Leicester,23,8
-561,Wesley Fofana,Fofana,9,Leicester,22,16
-579,Islam Slimani,Slimani,9,Leicester,21,1
-660,Vontae Daley-Campbell,Daley-Campbell,9,Leicester,4,0
-661,Thakgalo Leshabela,Leshabela,9,Leicester,4,0
+55,Dale Stephens,Stephens,4,Burnley,27,7
+81,James Tarkowski,Tarkowski,4,Burnley,26,24
+82,Phil Bardsley,Bardsley,4,Burnley,26,4
+83,Erik Pieters,Pieters,4,Burnley,26,16
+84,Jack Cork,Cork,4,Burnley,26,8
+85,Kevin Long,Long,4,Burnley,26,8
+86,Jay Rodriguez,Rodriguez,4,Burnley,26,21
+87,Ashley Barnes,Barnes,4,Burnley,26,18
+88,Ben Mee,Mee,4,Burnley,26,19
+89,Ashley Westwood,Westwood,4,Burnley,26,26
+90,Johann Berg Gudmundsson,Gudmundsson,4,Burnley,26,13
+91,Chris Wood,Wood,4,Burnley,26,21
+92,Matthew Lowton,Lowton,4,Burnley,26,22
+93,Matej Vydra,Vydra,4,Burnley,26,16
+94,Ben Gibson,Gibson,4,Burnley,26,0
+95,Robbie Brady,Brady,4,Burnley,26,17
+96,Nick Pope,Pope,4,Burnley,26,25
+97,Charlie Taylor,Taylor,4,Burnley,26,19
+98,Josh Brownhill,Brownhill,4,Burnley,26,21
+99,Bailey Peacock-Farrell,Peacock-Farrell,4,Burnley,26,1
+100,Dwight McNeil,McNeil,4,Burnley,26,24
+519,Jimmy Dunne,Dunne,4,Burnley,26,2
+520,Bobby Thomas,Thomas,4,Burnley,26,0
+535,Josh Benson,Benson,4,Burnley,26,6
+536,Anthony Driscoll-Glennon,Driscoll-Glennon,4,Burnley,26,0
+551,Mace Goodridge,Goodridge,4,Burnley,25,0
+583,Will Norris,Norris,4,Burnley,23,0
+591,Max Thompson,Thompson,4,Burnley,21,0
+592,Lewis Richardson,Richardson,4,Burnley,21,1
+612,Anthony Mancini,Mancini,4,Burnley,13,0
+613,Joel Mumbongo,Mumbongo,4,Burnley,13,3
+658,Richard Nartey,Nartey,4,Burnley,6,0
+101,Willy Caballero,Caballero,5,Chelsea,26,1
+102,Cesar Azpilicueta,Azpilicueta,5,Chelsea,26,16
+103,Olivier Giroud,Giroud,5,Chelsea,26,14
+104,Marcos Alonso,Alonso,5,Chelsea,26,8
+105,Jorge Luiz Frello Filho,Jorginho,5,Chelsea,26,17
+107,Mateo Kovacic,Kovacic,5,Chelsea,26,21
+109,Antonio Rudiger,Rudiger,5,Chelsea,26,11
+110,Kurt Zouma,Zouma,5,Chelsea,26,16
+111,Emerson Palmieri dos Santos,Emerson,5,Chelsea,26,2
+112,Kepa Arrizabalaga,Arrizabalaga,5,Chelsea,26,4
+113,N'Golo Kante,Kante,5,Chelsea,26,22
+114,Hakim Ziyech,Ziyech,5,Chelsea,26,13
+116,Andreas Christensen,Christensen,5,Chelsea,26,9
+117,Timo Werner,Werner,5,Chelsea,26,25
+118,Tammy Abraham,Abraham,5,Chelsea,26,20
+119,Christian Pulisic,Pulisic,5,Chelsea,26,16
+120,Mason Mount,Mount,5,Chelsea,26,25
+121,Fikayo Tomori,Tomori,5,Chelsea,26,1
+122,Callum Hudson-Odoi,Hudson-Odoi,5,Chelsea,26,17
+123,Reece James,James,5,Chelsea,26,20
+124,Billy Gilmour,Gilmour,5,Chelsea,26,2
+232,Benjamin Chilwell,Chilwell,5,Chelsea,26,19
+490,Thiago Thiago,Thiago Silva,5,Chelsea,26,17
+500,Kai Havertz,Havertz,5,Chelsea,26,18
+548,Edouard Mendy,Mendy,5,Chelsea,24,21
+593,Karlo Ziger,Ziger,5,Chelsea,20,0
+605,Faustino Anjorin,Anjorin,5,Chelsea,15,0
+108,Michy Batshuayi,Batshuayi,6,Crystal Palace,26,16
+125,Gary Cahill,Cahill,6,Crystal Palace,26,11
+126,Wayne Hennessey,Hennessey,6,Crystal Palace,26,0
+127,Mamadou Sakho,Sakho,6,Crystal Palace,26,4
+128,Vicente Guaita,Guaita,6,Crystal Palace,26,26
+129,James Tomkins,Tomkins,6,Crystal Palace,26,5
+130,James McArthur,McArthur,6,Crystal Palace,26,18
+131,James McCarthy,McCarthy,6,Crystal Palace,26,10
+132,Christian Benteke,Benteke,6,Crystal Palace,26,19
+133,Cheikhou Kouyate,Kouyate,6,Crystal Palace,26,24
+134,Joel Ward,Ward,6,Crystal Palace,26,14
+135,Martin Kelly,Kelly,6,Crystal Palace,26,0
+136,Connor Wickham,Wickham,6,Crystal Palace,26,0
+137,Andros Townsend,Townsend,6,Crystal Palace,26,24
+138,Luka Milivojevic,Milivojevic,6,Crystal Palace,26,22
+139,Patrick van Aanholt,van Aanholt,6,Crystal Palace,26,15
+140,Jordan Ayew,Ayew,6,Crystal Palace,26,22
+141,Wilfried Zaha,Zaha,6,Crystal Palace,26,19
+142,Jeffrey Schlupp,Schlupp,6,Crystal Palace,26,15
+143,Max Meyer,Meyer,6,Crystal Palace,26,0
+144,Jairo Riedewald,Riedewald,6,Crystal Palace,26,22
+145,Nathan Ferguson,Ferguson,6,Crystal Palace,26,0
+146,Tyrick Mitchell,Mitchell,6,Crystal Palace,26,13
+147,Brandon Pierrick,Pierrick,6,Crystal Palace,26,0
+486,Scott Dann,Dann,6,Crystal Palace,26,12
+489,Eberechi Eze,Eze,6,Crystal Palace,26,24
+522,Sam Woods,Woods,6,Crystal Palace,26,0
+534,Ryan Inniss,Inniss,6,Crystal Palace,25,0
+577,Nathaniel Clyne,Clyne,6,Crystal Palace,22,13
+578,Stephen Henderson,Henderson,6,Crystal Palace,22,0
+586,Jack Butland,Butland,6,Crystal Palace,21,0
+641,Jean-Philippe Mateta,Mateta,6,Crystal Palace,7,3
+675,Reece Hannam,Hannam,6,Crystal Palace,1,0
+149,Fabian Delph,Delph,7,Everton,25,5
+150,Gylfi Sigurdsson,Sigurdsson,7,Everton,25,24
+151,Jonas Lossl,Lossl,7,Everton,25,0
+152,Seamus Coleman,Coleman,7,Everton,25,15
+153,Cenk Tosun,Tosun,7,Everton,25,5
+154,Bernard Anicio Caldeira Duarte,Bernard,7,Everton,25,7
+155,Lucas Digne,Digne,7,Everton,25,17
+156,Michael Keane,Keane,7,Everton,25,24
+157,Jordan Pickford,Pickford,7,Everton,25,20
+158,Andre Filipe Tavares Gomes,Andre Gomes,7,Everton,25,19
+159,Alex Iwobi,Iwobi,7,Everton,25,22
+160,Jonjoe Kenny,Kenny,7,Everton,25,4
+161,Jean-Philippe Gbamin,Gbamin,7,Everton,25,0
+162,Yerry Mina,Mina,7,Everton,25,19
+163,Tom Davies,Davies,7,Everton,25,16
+164,Dominic Calvert-Lewin,Calvert-Lewin,7,Everton,25,22
+165,Mason Holgate,Holgate,7,Everton,25,15
+166,Richarlison de Andrade,Richarlison,7,Everton,25,21
+167,Joao Virginia,Virginia,7,Everton,25,0
+168,Anthony Gordon,Gordon,7,Everton,25,3
+169,Moise Kean,Kean,7,Everton,25,2
+170,Jarrad Branthwaite,Branthwaite,7,Everton,25,0
+502,Allan Marques Loureiro,Allan,7,Everton,25,13
+508,James Rodriguez,Rodriguez,7,Everton,25,18
+512,Abdoulaye Doucoure,Doucoure,7,Everton,25,24
+559,Niels Nkounkou,Nkounkou,7,Everton,22,1
+566,Ben Godfrey,Godfrey,7,Everton,21,18
+573,Robin Olsen,Olsen,7,Everton,21,5
+596,Ellis Simms,Simms,7,Everton,19,0
+644,Tyler Onyango,Onyango,7,Everton,8,0
+651,Joshua King,King,7,Everton,6,5
+679,Kyle John,John,7,Everton,1,0
+680,Nathan Broadhead,Broadhead,7,Everton,1,0
+681,Ryan Astley,Astley,7,Everton,1,0
+115,Ruben Loftus-Cheek,Loftus-Cheek,8,Fulham,26,21
+171,Fabricio Agosto Ramirez,Fabri,8,Fulham,26,0
+172,Kevin McDonald,McDonald,8,Fulham,26,0
+173,Maxime Le Marchand,Le Marchand,8,Fulham,26,2
+174,Stefan Johansen,Johansen,8,Fulham,26,0
+175,Tom Cairney,Cairney,8,Fulham,26,10
+176,Tim Ream,Ream,8,Fulham,26,5
+177,Anthony Knockaert,Knockaert,8,Fulham,26,0
+178,Michael Hector,Hector,8,Fulham,26,4
+179,Cyrus Christie,Christie,8,Fulham,26,0
+180,Neeskens Kebano,Kebano,8,Fulham,26,5
+181,Bobby Decordova-Reid,Decordova-Reid,8,Fulham,26,24
+182,Joe Bryan,Bryan,8,Fulham,26,11
+183,Marcus Bettinelli,Bettinelli,8,Fulham,26,0
+184,Aleksandar Mitrovic,Mitrovic,8,Fulham,26,19
+185,Alfie Mawson,Mawson,8,Fulham,26,0
+186,Marek Rodak,Rodak,8,Fulham,26,1
+187,Ivan Ricardo Neves Abreu Cavaleiro,Cavaleiro,8,Fulham,26,24
+188,Josh Onomah,Onomah,8,Fulham,26,5
+189,Jean Michael Seri,Seri,8,Fulham,26,0
+190,Aboubakar Kamara,Kamara,8,Fulham,26,11
+191,Andre-Frank Zambo Anguissa,Anguissa,8,Fulham,26,26
+192,Zeze Steven Sessegnon,Sessegnon,8,Fulham,26,0
+373,Harrison Reed,Reed,8,Fulham,26,22
+484,Antonee Robinson,Robinson,8,Fulham,26,20
+493,Mario Lemina,Lemina,8,Fulham,26,18
+516,Alphonse Areola,Areola,8,Fulham,26,25
+517,Kenny Tete,Tete,8,Fulham,26,13
+525,Denis Odoi,Odoi,8,Fulham,26,3
+557,Ademola Lookman,Lookman,8,Fulham,23,23
+562,Ola Aina,Aina,8,Fulham,23,22
+571,Joachim Andersen,Andersen,8,Fulham,22,20
+572,Tosin Adarabioyo,Adarabioyo,8,Fulham,22,22
+585,Terence Kongolo,Kongolo,8,Fulham,21,0
+665,Josh Maja,Maja,8,Fulham,5,5
+216,Wes Morgan,Morgan,9,Leicester,26,3
+217,Kasper Schmeichel,Schmeichel,9,Leicester,26,26
+218,Christian Fuchs,Fuchs,9,Leicester,26,9
+219,Jonny Evans,Evans,9,Leicester,26,22
+220,Adrien Silva,Silva,9,Leicester,26,0
+221,Marc Albrighton,Albrighton,9,Leicester,26,19
+222,Matty James,James,9,Leicester,26,0
+223,Danny Ward,Ward,9,Leicester,26,0
+224,Jamie Vardy,Vardy,9,Leicester,26,22
+225,Dennis Praet,Praet,9,Leicester,26,13
+226,Ricardo Domingos Barbosa Pereira,Pereira,9,Leicester,26,7
+227,Daniel Amartey,Amartey,9,Leicester,26,8
+228,Youri Tielemans,Tielemans,9,Leicester,26,26
+229,Ayoze Perez,Perez,9,Leicester,26,16
+230,Demarai Gray,Gray,9,Leicester,26,1
+231,James Maddison,Maddison,9,Leicester,26,23
+233,Kelechi Iheanacho,Iheanacho,9,Leicester,26,13
+234,Hamza Choudhury,Choudhury,9,Leicester,26,7
+235,Harvey Barnes,Barnes,9,Leicester,26,25
+236,Wilfred Ndidi,Ndidi,9,Leicester,26,14
+237,Filip Benkovic,Benkovic,9,Leicester,26,0
+238,Caglar Soyuncu,Soyuncu,9,Leicester,26,13
+239,James Justin,Justin,9,Leicester,26,23
+240,Luke Thomas,Thomas,9,Leicester,26,6
+498,Timothy Castagne,Castagne,9,Leicester,26,15
+518,Nampalys Mendy,Mendy,9,Leicester,26,19
+541,Cengiz Under,Under,9,Leicester,24,9
+561,Wesley Fofana,Fofana,9,Leicester,23,16
+579,Islam Slimani,Slimani,9,Leicester,22,1
+660,Vontae Daley-Campbell,Daley-Campbell,9,Leicester,5,0
+661,Thakgalo Leshabela,Leshabela,9,Leicester,5,0
+676,Sidnei Tavares,Tavares,9,Leicester,1,0
 193,Pablo Hernandez Dominguez,Hernandez,10,Leeds,26,13
 194,Francisco Casilla Cortes,Casilla,10,Leeds,26,1
 195,Liam Cooper,Cooper,10,Leeds,26,20
@@ -327,38 +332,40 @@ id,Name,web_name,Team number,Team,Team games,Played
 619,Niall Huggins,Huggins,10,Leeds,10,1
 620,Charlie Cresswell,Cresswell,10,Leeds,10,0
 667,Joe Gelhardt,Gelhardt,10,Leeds,5,0
-241,James Milner,Milner,11,Liverpool,25,16
-242,Konstantinos Tsimikas,Tsimikas,11,Liverpool,25,1
-243,Georginio Wijnaldum,Wijnaldum,11,Liverpool,25,25
-244,Jordan Henderson,Henderson,11,Liverpool,25,21
-245,Adrian San Miguel del Castillo,Adrian,11,Liverpool,25,2
-246,Joel Matip,Matip,11,Liverpool,25,10
-247,Xherdan Shaqiri,Shaqiri,11,Liverpool,25,11
-248,Alex Oxlade-Chamberlain,Chamberlain,11,Liverpool,25,7
-249,Roberto Firmino,Firmino,11,Liverpool,25,25
-250,Virgil van Dijk,van Dijk,11,Liverpool,25,5
-251,Sadio Mane,Mane,11,Liverpool,25,22
-252,Alisson Ramses Becker,Alisson,11,Liverpool,25,21
-253,Fabio Henrique Tavares,Fabinho,11,Liverpool,25,18
-254,Mohamed Salah,Salah,11,Liverpool,25,24
-255,Andrew Robertson,Robertson,11,Liverpool,25,25
-256,Divock Origi,Origi,11,Liverpool,25,9
-257,Harry Wilson,Harry Wilson,11,Liverpool,25,0
-259,Trent Alexander-Arnold,Alexander-Arnold,11,Liverpool,25,23
-260,Joseph Gomez,Gomez,11,Liverpool,25,7
-261,Naby Keita,Keita,11,Liverpool,25,7
-263,Curtis Jones,Jones,11,Liverpool,25,18
-264,Neco Williams,Neco Williams,11,Liverpool,25,4
-265,Harvey Elliott,Elliott,11,Liverpool,25,0
-468,Diogo Jota,Jota,11,Liverpool,25,9
-531,Thiago Alcantara do Nascimento,Thiago,11,Liverpool,24,12
-560,Caoimhin Kelleher,Kelleher,11,Liverpool,22,2
-589,Nathaniel Phillips,Phillips,11,Liverpool,20,7
-594,Rhys Williams,Rhys Williams,11,Liverpool,19,2
-601,Leighton Clarkson,Clarkson,11,Liverpool,17,0
-607,Jake Cain,Cain,11,Liverpool,14,0
-652,Ozan Kabak,Kabak,11,Liverpool,4,2
-653,Ben Davies,Davies,11,Liverpool,4,0
+241,James Milner,Milner,11,Liverpool,26,17
+242,Konstantinos Tsimikas,Tsimikas,11,Liverpool,26,1
+243,Georginio Wijnaldum,Wijnaldum,11,Liverpool,26,26
+244,Jordan Henderson,Henderson,11,Liverpool,26,21
+245,Adrian San Miguel del Castillo,Adrian,11,Liverpool,26,3
+246,Joel Matip,Matip,11,Liverpool,26,10
+247,Xherdan Shaqiri,Shaqiri,11,Liverpool,26,11
+248,Alex Oxlade-Chamberlain,Chamberlain,11,Liverpool,26,7
+249,Roberto Firmino,Firmino,11,Liverpool,26,26
+250,Virgil van Dijk,van Dijk,11,Liverpool,26,5
+251,Sadio Mane,Mane,11,Liverpool,26,23
+252,Alisson Ramses Becker,Alisson,11,Liverpool,26,21
+253,Fabio Henrique Tavares,Fabinho,11,Liverpool,26,18
+254,Mohamed Salah,Salah,11,Liverpool,26,25
+255,Andrew Robertson,Robertson,11,Liverpool,26,26
+256,Divock Origi,Origi,11,Liverpool,26,9
+257,Harry Wilson,Harry Wilson,11,Liverpool,26,0
+259,Trent Alexander-Arnold,Alexander-Arnold,11,Liverpool,26,24
+260,Joseph Gomez,Gomez,11,Liverpool,26,7
+261,Naby Keita,Keita,11,Liverpool,26,8
+263,Curtis Jones,Jones,11,Liverpool,26,19
+264,Neco Williams,Neco Williams,11,Liverpool,26,4
+265,Harvey Elliott,Elliott,11,Liverpool,26,0
+468,Diogo Jota,Jota,11,Liverpool,26,9
+531,Thiago Alcantara do Nascimento,Thiago,11,Liverpool,25,13
+560,Caoimhin Kelleher,Kelleher,11,Liverpool,23,2
+589,Nathaniel Phillips,Phillips,11,Liverpool,21,8
+594,Rhys Williams,Rhys Williams,11,Liverpool,20,2
+601,Leighton Clarkson,Clarkson,11,Liverpool,18,0
+607,Jake Cain,Cain,11,Liverpool,15,0
+652,Ozan Kabak,Kabak,11,Liverpool,5,3
+653,Ben Davies,Davies,11,Liverpool,5,0
+677,Liam Hughes,Hughes,11,Liverpool,1,0
+678,Jakub Ojrzynski,Ojrzynski,11,Liverpool,1,0
 266,Fernando Luiz Rosa,Fernandinho,12,Man City,26,13
 267,Claudio Bravo,Bravo,12,Man City,26,0
 268,Sergio Aguero,Aguero,12,Man City,26,6
@@ -393,43 +400,43 @@ id,Name,web_name,Team number,Team,Team games,Played
 622,Luke Mbete,Mbete,12,Man City,12,0
 623,Taylor Harwood-Bellis,Harwood-Bellis,12,Man City,12,0
 659,Claudio Gomes,Gomes,12,Man City,6,0
-289,Sergio Romero,Romero,13,Man Utd,25,0
-290,Juan Mata,Mata,13,Man Utd,25,7
-291,David de Gea,de Gea,13,Man Utd,25,23
-292,Chris Smalling,Smalling,13,Man Utd,25,0
-293,Odion Ighalo,Ighalo,13,Man Utd,25,1
-294,Marcos Rojo,Rojo,13,Man Utd,25,0
-295,Nemanja Matic,Matic,13,Man Utd,25,13
-296,Paul Pogba,Pogba,13,Man Utd,25,19
-297,Phil Jones,Jones,13,Man Utd,25,0
-298,Harry Maguire,Maguire,13,Man Utd,25,25
-299,Frederico Rodrigues de Paula Santos,Fred,13,Man Utd,25,19
-300,Luke Shaw,Shaw,13,Man Utd,25,21
-302,Bruno Miguel Borges Fernandes,Fernandes,13,Man Utd,25,25
-303,Anthony Martial,Martial,13,Man Utd,25,20
-304,Andreas Pereira,Pereira,13,Man Utd,25,0
-305,Dean Henderson,Henderson,13,Man Utd,25,3
-306,Marcus Rashford,Rashford,13,Man Utd,25,25
-307,Axel Tuanzebe,Tuanzebe,13,Man Utd,25,6
-308,Victor Lindelof,Lindelof,13,Man Utd,25,19
-309,Scott McTominay,McTominay,13,Man Utd,25,21
-310,Eric Bailly,Bailly,13,Man Utd,25,7
-311,Daniel James,James,13,Man Utd,25,8
-312,Timothy Fosu-Mensah,Fosu-Mensah,13,Man Utd,25,1
-313,Aaron Wan-Bissaka,Wan-Bissaka,13,Man Utd,25,23
-314,Jose Diogo Dalot Teixeira,Dalot,13,Man Utd,25,0
-315,Mason Greenwood,Greenwood,13,Man Utd,25,19
-316,Tahith Chong,Chong,13,Man Utd,25,0
-317,James Garner,Garner,13,Man Utd,25,0
-318,Brandon Williams,Williams,13,Man Utd,25,1
-319,Teden Mengi,Mengi,13,Man Utd,25,0
-495,Donny van de Beek,van de Beek,13,Man Utd,25,13
-568,Alex Nicolao Telles,Telles,13,Man Utd,22,7
-569,Edinson Cavani,Cavani,13,Man Utd,22,17
-575,Facundo Pellistri,Pellistri,13,Man Utd,22,0
-604,Lee Grant,Grant,13,Man Utd,16,0
-640,Amad Diallo,Diallo,13,Man Utd,6,0
-673,Shola Shoretire,Shoretire,13,Man Utd,1,1
+289,Sergio Romero,Romero,13,Man Utd,26,0
+290,Juan Mata,Mata,13,Man Utd,26,7
+291,David de Gea,de Gea,13,Man Utd,26,24
+292,Chris Smalling,Smalling,13,Man Utd,26,0
+293,Odion Ighalo,Ighalo,13,Man Utd,26,1
+294,Marcos Rojo,Rojo,13,Man Utd,26,0
+295,Nemanja Matic,Matic,13,Man Utd,26,13
+296,Paul Pogba,Pogba,13,Man Utd,26,19
+297,Phil Jones,Jones,13,Man Utd,26,0
+298,Harry Maguire,Maguire,13,Man Utd,26,26
+299,Frederico Rodrigues de Paula Santos,Fred,13,Man Utd,26,20
+300,Luke Shaw,Shaw,13,Man Utd,26,22
+302,Bruno Miguel Borges Fernandes,Fernandes,13,Man Utd,26,26
+303,Anthony Martial,Martial,13,Man Utd,26,21
+304,Andreas Pereira,Pereira,13,Man Utd,26,0
+305,Dean Henderson,Henderson,13,Man Utd,26,3
+306,Marcus Rashford,Rashford,13,Man Utd,26,26
+307,Axel Tuanzebe,Tuanzebe,13,Man Utd,26,6
+308,Victor Lindelof,Lindelof,13,Man Utd,26,20
+309,Scott McTominay,McTominay,13,Man Utd,26,22
+310,Eric Bailly,Bailly,13,Man Utd,26,7
+311,Daniel James,James,13,Man Utd,26,9
+312,Timothy Fosu-Mensah,Fosu-Mensah,13,Man Utd,26,1
+313,Aaron Wan-Bissaka,Wan-Bissaka,13,Man Utd,26,24
+314,Jose Diogo Dalot Teixeira,Dalot,13,Man Utd,26,0
+315,Mason Greenwood,Greenwood,13,Man Utd,26,20
+316,Tahith Chong,Chong,13,Man Utd,26,0
+317,James Garner,Garner,13,Man Utd,26,0
+318,Brandon Williams,Williams,13,Man Utd,26,1
+319,Teden Mengi,Mengi,13,Man Utd,26,0
+495,Donny van de Beek,van de Beek,13,Man Utd,26,13
+568,Alex Nicolao Telles,Telles,13,Man Utd,23,7
+569,Edinson Cavani,Cavani,13,Man Utd,23,17
+575,Facundo Pellistri,Pellistri,13,Man Utd,23,0
+604,Lee Grant,Grant,13,Man Utd,17,0
+640,Amad Diallo,Diallo,13,Man Utd,7,0
+673,Shola Shoretire,Shoretire,13,Man Utd,2,1
 20,Joseph Willock,Willock,14,Newcastle,26,11
 320,Andy Carroll,Carroll,14,Newcastle,26,14
 321,Jonjo Shelvey,Shelvey,14,Newcastle,26,18
@@ -464,107 +471,107 @@ id,Name,web_name,Team number,Team,Team games,Played
 513,Jamal Lewis,Lewis,14,Newcastle,26,23
 602,Elliot Anderson,Anderson,14,Newcastle,17,1
 606,Daniel Langley,Langley,14,Newcastle,16,0
-262,Rhian Brewster,Brewster,15,Sheffield Utd,25,18
-343,Billy Sharp,Sharp,15,Sheffield Utd,25,13
-344,David McGoldrick,McGoldrick,15,Sheffield Utd,25,23
-345,Chris Basham,Basham,15,Sheffield Utd,25,25
-346,John Fleck,Fleck,15,Sheffield Utd,25,18
-347,Enda Stevens,Stevens,15,Sheffield Utd,25,17
-348,Simon Moore,Moore,15,Sheffield Utd,25,0
-349,Oliver Norwood,Norwood,15,Sheffield Utd,25,19
-350,Wes Foderingham,Foderingham,15,Sheffield Utd,25,0
-351,George Baldock,Baldock,15,Sheffield Utd,25,20
-352,Jack Robinson,Jack Robinson,15,Sheffield Utd,25,8
-353,John Egan,Egan,15,Sheffield Utd,25,22
-354,Jack O'Connell,O'Connell,15,Sheffield Utd,25,2
-355,John Lundstram,Lundstram,15,Sheffield Utd,25,20
-356,Ben Osborn,Osborn,15,Sheffield Utd,25,13
-357,Oliver McBurnie,McBurnie,15,Sheffield Utd,25,18
-359,Lys Mousset,Mousset,15,Sheffield Utd,25,6
-360,Sander Berge,Berge,15,Sheffield Utd,25,13
-424,Oliver Burke,Burke,15,Sheffield Utd,25,16
-477,Luke Freeman,Freeman,15,Sheffield Utd,25,0
-483,Aaron Ramsdale,Ramsdale,15,Sheffield Utd,25,25
-509,Ethan Ampadu,Ampadu,15,Sheffield Utd,25,18
-510,Jayden Bogle,Bogle,15,Sheffield Utd,25,10
-511,Max Lowe,Lowe,15,Sheffield Utd,25,8
-529,Phil Jagielka,Jagielka,15,Sheffield Utd,25,6
-580,Michael Verrips,Verrips,15,Sheffield Utd,21,0
-603,Kean Bryan,Bryan,15,Sheffield Utd,16,6
-618,Antwoine Hackford,Hackford,15,Sheffield Utd,9,1
-646,Kyron Gordon,Gordon,15,Sheffield Utd,5,0
-656,Iliman Ndiaye,Ndiaye,15,Sheffield Utd,4,0
-657,Zak Brunt,Brunt,15,Sheffield Utd,4,0
-670,Frankie Maguire,Maguire,15,Sheffield Utd,2,0
-148,Theo Walcott,Walcott,16,Southampton,25,16
-258,Takumi Minamino,Minamino,16,Southampton,26,13
-361,Shane Long,Long,16,Southampton,25,11
-362,Ryan Bertrand,Bertrand,16,Southampton,25,23
-363,Alex McCarthy,McCarthy,16,Southampton,25,24
-364,Oriol Romeu Vidal,Oriol Romeu,16,Southampton,25,20
-365,Nathan Redmond,Redmond,16,Southampton,25,16
-366,Danny Ings,Ings,16,Southampton,25,20
-367,Jack Stephens,Stephens,16,Southampton,25,12
-368,Stuart Armstrong,Armstrong,16,Southampton,25,20
-369,Jannik Vestergaard,Vestergaard,16,Southampton,25,17
-370,James Ward-Prowse,Ward-Prowse,16,Southampton,25,25
-371,Angus Gunn,Gunn,16,Southampton,25,0
-372,Sofiane Boufal,Boufal,16,Southampton,25,0
-374,Josh Sims,Sims,16,Southampton,25,0
-375,Kyle Walker-Peters,Walker-Peters,16,Southampton,25,19
-376,Jan Bednarek,Bednarek,16,Southampton,25,25
-377,Che Adams,Adams,16,Southampton,25,24
-378,Yan Valery,Valery,16,Southampton,25,3
-379,William Smallbone,Smallbone,16,Southampton,25,3
-380,Jake Vokins,Vokins,16,Southampton,25,1
-381,Michael Obafemi,Obafemi,16,Southampton,25,1
-382,Moussa Djenepo,Djenepo,16,Southampton,25,18
-479,Mohammed Salisu,Salisu,16,Southampton,25,3
-523,Fraser Forster,Forster,16,Southampton,25,1
-524,Nathan Tella,Tella,16,Southampton,25,7
-565,Ibrahima Diallo,Diallo,16,Southampton,21,11
-590,Daniel N'Lundulu,N'Lundulu,16,Southampton,20,10
-598,Kayne Ramsay,Ramsay,16,Southampton,18,1
-624,Kgaogelo Chauke,Chauke,16,Southampton,9,0
-625,Harry Lewis,Lewis,16,Southampton,9,0
-634,Will Ferry,Ferry,16,Southampton,8,0
-635,Allan Tchaptchet,Tchaptchet,16,Southampton,8,1
-636,Caleb Watts,Watts,16,Southampton,8,1
-643,Alexandre Jankewitz,Jankewitz,16,Southampton,7,2
-655,Ryan Finnigan,Finnigan,16,Southampton,5,0
-383,Hugo Lloris,Lloris,17,Spurs,24,24
-384,Danny Rose,Rose,17,Spurs,24,0
-385,Moussa Sissoko,Sissoko,17,Spurs,24,18
-386,Toby Alderweireld,Alderweireld,17,Spurs,24,14
-387,Erik Lamela,Lamela,17,Spurs,24,13
-388,Harry Kane,Kane,17,Spurs,24,22
-389,Serge Aurier,Aurier,17,Spurs,24,13
-390,Heung-Min Son,Son,17,Spurs,24,24
-391,Eric Dier,Dier,17,Spurs,24,21
-392,Lucas Rodrigues Moura da Silva,Lucas Moura,17,Spurs,24,19
-393,Paulo Gazzaniga,Gazzaniga,17,Spurs,24,0
-394,Bamidele Alli,Alli,17,Spurs,24,6
-395,Ben Davies,Davies,17,Spurs,24,18
-396,Pierre-Emile Højbjerg,Højbjerg,17,Spurs,24,24
-397,Harry Winks,Winks,17,Spurs,24,9
-398,Davinson Sanchez,Sanchez,17,Spurs,24,11
-399,Ryan Sessegnon,Sessegnon,17,Spurs,24,0
-400,Steven Bergwijn,Bergwijn,17,Spurs,24,16
-401,Gedson Carvalho Fernandes,Fernandes,17,Spurs,24,0
-402,Japhet Tanganga,Tanganga,17,Spurs,24,2
-403,Giovani Lo Celso,Lo Celso,17,Spurs,24,11
-404,Oliver Skipp,Skipp,17,Spurs,24,0
-405,Tanguy Ndombele,Ndombele,17,Spurs,24,22
-406,Juan Foyth,Foyth,17,Spurs,24,0
-457,Matt Doherty,Doherty,17,Spurs,24,11
-482,Joe Hart,Hart,17,Spurs,24,0
-521,Cameron Carter-Vickers,Carter-Vickers,17,Spurs,24,0
-542,Sergio Reguilon,Reguilon,17,Spurs,22,14
-543,Gareth Bale,Bale,17,Spurs,22,8
-564,Carlos Vinicius Alves Morais,Carlos Vinicius,17,Spurs,20,6
-584,Joe Rodon,Rodon,17,Spurs,19,7
-650,Alfie Devine,Devine,17,Spurs,5,0
-666,Dane Scarlett,Scarlett,17,Spurs,3,1
+262,Rhian Brewster,Brewster,15,Sheffield Utd,26,18
+343,Billy Sharp,Sharp,15,Sheffield Utd,26,14
+344,David McGoldrick,McGoldrick,15,Sheffield Utd,26,24
+345,Chris Basham,Basham,15,Sheffield Utd,26,25
+346,John Fleck,Fleck,15,Sheffield Utd,26,19
+347,Enda Stevens,Stevens,15,Sheffield Utd,26,18
+348,Simon Moore,Moore,15,Sheffield Utd,26,0
+349,Oliver Norwood,Norwood,15,Sheffield Utd,26,20
+350,Wes Foderingham,Foderingham,15,Sheffield Utd,26,0
+351,George Baldock,Baldock,15,Sheffield Utd,26,21
+352,Jack Robinson,Jack Robinson,15,Sheffield Utd,26,8
+353,John Egan,Egan,15,Sheffield Utd,26,22
+354,Jack O'Connell,O'Connell,15,Sheffield Utd,26,2
+355,John Lundstram,Lundstram,15,Sheffield Utd,26,21
+356,Ben Osborn,Osborn,15,Sheffield Utd,26,14
+357,Oliver McBurnie,McBurnie,15,Sheffield Utd,26,19
+359,Lys Mousset,Mousset,15,Sheffield Utd,26,6
+360,Sander Berge,Berge,15,Sheffield Utd,26,13
+424,Oliver Burke,Burke,15,Sheffield Utd,26,17
+477,Luke Freeman,Freeman,15,Sheffield Utd,26,0
+483,Aaron Ramsdale,Ramsdale,15,Sheffield Utd,26,26
+509,Ethan Ampadu,Ampadu,15,Sheffield Utd,26,19
+510,Jayden Bogle,Bogle,15,Sheffield Utd,26,10
+511,Max Lowe,Lowe,15,Sheffield Utd,26,8
+529,Phil Jagielka,Jagielka,15,Sheffield Utd,26,7
+580,Michael Verrips,Verrips,15,Sheffield Utd,22,0
+603,Kean Bryan,Bryan,15,Sheffield Utd,17,7
+618,Antwoine Hackford,Hackford,15,Sheffield Utd,10,1
+646,Kyron Gordon,Gordon,15,Sheffield Utd,6,0
+656,Iliman Ndiaye,Ndiaye,15,Sheffield Utd,5,0
+657,Zak Brunt,Brunt,15,Sheffield Utd,5,0
+670,Frankie Maguire,Maguire,15,Sheffield Utd,3,0
+148,Theo Walcott,Walcott,16,Southampton,26,16
+258,Takumi Minamino,Minamino,16,Southampton,27,13
+361,Shane Long,Long,16,Southampton,26,11
+362,Ryan Bertrand,Bertrand,16,Southampton,26,24
+363,Alex McCarthy,McCarthy,16,Southampton,26,24
+364,Oriol Romeu Vidal,Oriol Romeu,16,Southampton,26,20
+365,Nathan Redmond,Redmond,16,Southampton,26,17
+366,Danny Ings,Ings,16,Southampton,26,21
+367,Jack Stephens,Stephens,16,Southampton,26,12
+368,Stuart Armstrong,Armstrong,16,Southampton,26,21
+369,Jannik Vestergaard,Vestergaard,16,Southampton,26,18
+370,James Ward-Prowse,Ward-Prowse,16,Southampton,26,26
+371,Angus Gunn,Gunn,16,Southampton,26,0
+372,Sofiane Boufal,Boufal,16,Southampton,26,0
+374,Josh Sims,Sims,16,Southampton,26,0
+375,Kyle Walker-Peters,Walker-Peters,16,Southampton,26,19
+376,Jan Bednarek,Bednarek,16,Southampton,26,26
+377,Che Adams,Adams,16,Southampton,26,25
+378,Yan Valery,Valery,16,Southampton,26,3
+379,William Smallbone,Smallbone,16,Southampton,26,3
+380,Jake Vokins,Vokins,16,Southampton,26,1
+381,Michael Obafemi,Obafemi,16,Southampton,26,1
+382,Moussa Djenepo,Djenepo,16,Southampton,26,19
+479,Mohammed Salisu,Salisu,16,Southampton,26,4
+523,Fraser Forster,Forster,16,Southampton,26,2
+524,Nathan Tella,Tella,16,Southampton,26,8
+565,Ibrahima Diallo,Diallo,16,Southampton,22,11
+590,Daniel N'Lundulu,N'Lundulu,16,Southampton,21,11
+598,Kayne Ramsay,Ramsay,16,Southampton,19,1
+624,Kgaogelo Chauke,Chauke,16,Southampton,10,0
+625,Harry Lewis,Lewis,16,Southampton,10,0
+634,Will Ferry,Ferry,16,Southampton,9,0
+635,Allan Tchaptchet,Tchaptchet,16,Southampton,9,1
+636,Caleb Watts,Watts,16,Southampton,9,2
+643,Alexandre Jankewitz,Jankewitz,16,Southampton,8,2
+655,Ryan Finnigan,Finnigan,16,Southampton,6,0
+383,Hugo Lloris,Lloris,17,Spurs,25,25
+384,Danny Rose,Rose,17,Spurs,25,0
+385,Moussa Sissoko,Sissoko,17,Spurs,25,18
+386,Toby Alderweireld,Alderweireld,17,Spurs,25,15
+387,Erik Lamela,Lamela,17,Spurs,25,14
+388,Harry Kane,Kane,17,Spurs,25,23
+389,Serge Aurier,Aurier,17,Spurs,25,14
+390,Heung-Min Son,Son,17,Spurs,25,25
+391,Eric Dier,Dier,17,Spurs,25,21
+392,Lucas Rodrigues Moura da Silva,Lucas Moura,17,Spurs,25,20
+393,Paulo Gazzaniga,Gazzaniga,17,Spurs,25,0
+394,Bamidele Alli,Alli,17,Spurs,25,7
+395,Ben Davies,Davies,17,Spurs,25,18
+396,Pierre-Emile Højbjerg,Højbjerg,17,Spurs,25,25
+397,Harry Winks,Winks,17,Spurs,25,9
+398,Davinson Sanchez,Sanchez,17,Spurs,25,12
+399,Ryan Sessegnon,Sessegnon,17,Spurs,25,0
+400,Steven Bergwijn,Bergwijn,17,Spurs,25,16
+401,Gedson Carvalho Fernandes,Fernandes,17,Spurs,25,0
+402,Japhet Tanganga,Tanganga,17,Spurs,25,2
+403,Giovani Lo Celso,Lo Celso,17,Spurs,25,11
+404,Oliver Skipp,Skipp,17,Spurs,25,0
+405,Tanguy Ndombele,Ndombele,17,Spurs,25,23
+406,Juan Foyth,Foyth,17,Spurs,25,0
+457,Matt Doherty,Doherty,17,Spurs,25,12
+482,Joe Hart,Hart,17,Spurs,25,0
+521,Cameron Carter-Vickers,Carter-Vickers,17,Spurs,25,0
+542,Sergio Reguilon,Reguilon,17,Spurs,23,15
+543,Gareth Bale,Bale,17,Spurs,23,9
+564,Carlos Vinicius Alves Morais,Carlos Vinicius,17,Spurs,21,6
+584,Joe Rodon,Rodon,17,Spurs,20,7
+650,Alfie Devine,Devine,17,Spurs,6,0
+666,Dane Scarlett,Scarlett,17,Spurs,4,1
 15,Ainsley Maitland-Niles,Maitland-Niles,18,West Brom,26,15
 56,David Button,Button,18,West Brom,26,1
 358,Callum Robinson,Callum Robinson,18,West Brom,26,21
