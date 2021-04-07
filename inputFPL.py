@@ -221,6 +221,7 @@ if sys.argv[1] != 'nothing':
     Players['Team number'] = [bigTable[bigTable['id'] == i]['team'].sum() for i in Players['id']]
     Players['Team'] = [dict(zip(pd.DataFrame(d1['teams'])['id'],pd.DataFrame(d1['teams'])['name']))\
                        [Players.at[i,'Team number']] for i in Players.index]
+    Players['Position'] = bigTable['element_type']
 
 
     if  not Table.empty:
