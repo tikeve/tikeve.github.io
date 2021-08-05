@@ -1,0 +1,171 @@
+﻿/*CSS form FPL in numbers project*/
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-family: sans- serif;
+    color: black;
+    text-align: center;
+    --my_variable: teal;
+}
+header, nav, main {
+    width: 98%;
+    margin: 0 1% 0 1%;
+}
+h2 {
+    /*line-height: 1.2em;
+    display: inline;*/
+    text-align: center;
+    margin-top: 1em;
+    text-shadow: 0px 1px 1px green;
+}
+
+h1 {
+    line-height: 0.2em;
+    /*font-size: 12px;*/
+    padding-bottom: 0.3px;
+}
+
+/*Everything form the HEADER*/
+header {
+    /*background-image: url("m4wNeC.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;*/
+    /*background: url("m4wNeC.jpg") no-repeat;*/ /*no-repeat fixed cover;*/
+    /*background: url("cyan_yellow_2560_1080.jpg") no-repeat;*/
+    background-image: linear-gradient(to right, white, white, #09bb9f);
+    background-size: cover;
+    border-bottom: 2px black solid;
+    display: table;
+}
+#pic {
+    float: left;
+    height: 100%;
+    /*opacity:0;*/
+}
+#octopus_link {
+    display: block;
+    height: 108px;
+    width: 100%;
+}
+#h_octopus {
+    width: 7em;
+    height: 108px;
+    overflow: auto;
+    /*height: 108px;*/
+    /*116px;*/
+}
+#glyph_home {
+    height: 25px;
+}
+input.table_button {
+    /*width: 70px;
+			height: 30px;
+			resize:horizontal;*/
+    width: 10em;
+}
+
+input.source_button {
+    width: 130px;
+    height: 3em;
+}
+form input:hover {
+    cursor: pointer;
+}
+
+form {
+    display: inline;
+    margin-bottom: 0.2em;
+    line-height: 1.5em;
+    /*width: 116px;*/
+}
+
+/*Everything form the MAIN*/
+main {
+}
+
+aside {
+    position: relative;
+    float: left;
+    border-right: 1px solid black;/*#9F1C1C;*/
+    width: 25%;
+    overflow: auto;
+    height: 940px;
+    /*height: 100%;*/
+    /*padding-bottom: 15%;*/
+}
+#forum {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width:100%
+}
+#textbox {
+    width: 97%;
+    margin-right: 3%;
+    border: solid black 1px;
+}
+textarea {
+    width: 97%;
+    margin-right: 3%;
+}
+
+#main-table {
+    float: left;
+    width: 75%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+@media(max-width: 800px) {
+    aside {
+        width: 100%;
+        height: 300px;
+        border: none;
+    }
+    #main-table {
+        width: 100%;
+    }
+}
+
+#tocenter {
+    background-color: blue;
+    align-self: center;
+    justify-self: center;
+}
+
+/*Everything form thead FOOTER*/
+footer {
+    clear: left;
+    background-color: #09bb9f;
+    border-top: 2px black solid;
+    /*overflow: hidden;*/
+    margin: 0 0 0 0;
+    width: 100%;
+}
+
+#copyright {
+    float: left;
+    margin-left: 1em;
+}
+#little_octopus {
+    height: 1em;
+    width: 1em;
+    margin-top: 3px;
+}
+#contact {
+    float:right;
+    margin-right: 1em;
+}
+
+
+
+
+/* And an example of random atribute style change*/
+[type="text/javascript!!!"] {
+    color: green;
+}
