@@ -42,7 +42,10 @@ else: folder = f'history/{year}/'
 
 Fixtures = pd.read_csv(Path(f'{folder}in/Fixtures.csv'))
 Teams = pd.read_csv(Path(f'{folder}in/Teams.csv'))
-Table = pd.read_csv(Path(f'{folder}in/Table_FPL.csv'))
+try:   #In case season did not started Table is empty and its reading causes error
+    Table = pd.read_csv(Path(f'{folder}in/Table_FPL.csv'))
+except:
+    Table = pd.DataFrame()
 Players = pd.read_csv(Path(f'{folder}in/Players.csv'))
 
 
@@ -141,6 +144,12 @@ if  not Table.empty:
 
         Player_all['GW'+str(j)] = [Table[(Table['element']==i)&\
         (Table['round']==j)][['fixture', 'opponent_team', 'minutes']].values for i in Players['id']]
+else:
+    lastGW = 0
+    Player_all = pd.DataFrame(np.nan, index=Players.index, columns = Team_fixtures.columns)
+    
+    
+    
 Player_all = no_lists(Player_all[Player_all.columns[::-1]])
 
 
@@ -148,19 +157,24 @@ x = pd.DataFrame(np.nan, index=Player_all.index, columns=Team_fixtures.columns)
 Player_played_fixtures = Player_all.applymap(lambda x: x[0] if type(x) in {list, np.ndarray} else np.nan)
 Player_minutes = Player_all.applymap(lambda x: x[2] if type(x) in {list, np.ndarray} else np.nan)
 Player_upcoming_fixtures = x.apply(lambda y: Team_upcoming_fixtures.iloc[Players.at[y.name,'Team number']-1], axis=1)
-Player_fixtures = x.apply(lambda x: Team_fixtures.iloc[Players.at[x.name,'Team number']-1], axis=1)
-Player_fixtures[Player_played_fixtures.columns] = Player_played_fixtures
-Player_played_fixtures = Player_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
-if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan) #adding empty columns for foture matches
-Player_fixtures[f'GW{lastGW}'] = [Player_upcoming_fixtures[f'GW{lastGW}'][i] \
-if np.isnan(Player_played_fixtures[f'GW{lastGW}'][i]) else Player_played_fixtures[f'GW{lastGW}'][i] \
-for i in range(len(Players))]
+if lastGW > 0:
+    Player_fixtures = x.apply(lambda x: Team_fixtures.iloc[Players.at[x.name,'Team number']-1], axis=1)
+    Player_fixtures[Player_played_fixtures.columns] = Player_played_fixtures
+    Player_played_fixtures = Player_fixtures.applymap(lambda x: np.nan if np.isnan(x) else x \
+    if Fixtures[Fixtures['id']==x]['finished'].iloc[0] else np.nan) #adding empty columns for foture matches
+    Player_fixtures[f'GW{lastGW}'] = [Player_upcoming_fixtures[f'GW{lastGW}'][i] \
+    if np.isnan(Player_played_fixtures[f'GW{lastGW}'][i]) else Player_played_fixtures[f'GW{lastGW}'][i] \
+    for i in range(len(Players))]
 
-Player_opponent_team = x.apply(lambda x: Team_opponent_team.iloc[Players.at[x.name,'Team number']-1], axis=1)
-#Opponents played against
-Pot = no_last_GW(Player_all.applymap(lambda x: x[1] if type(x) in {list, np.ndarray} else np.nan))
-Player_opponent_team[Pot.columns]  = Pot[Pot.columns]
-#Player_opponent_teamX = Pot.merge(Player_opponent_teamX)
+    Player_opponent_team = x.apply(lambda x: Team_opponent_team.iloc[Players.at[x.name,'Team number']-1], axis=1)
+    #Opponents played against
+    Pot = no_last_GW(Player_all.applymap(lambda x: x[1] if type(x) in {list, np.ndarray} else np.nan))
+    Player_opponent_team[Pot.columns]  = Pot[Pot.columns]
+    #Player_opponent_teamX = Pot.merge(Player_opponent_teamX)
+else:
+    Player_fixtures = Player_upcoming_fixtures
+    Player_played_fixtures = Player_fixtures.applymap(lambda x: np.nan)
+    Player_opponent_team = x.apply(lambda x: Team_opponent_team.iloc[Players.at[x.name,'Team number']-1], axis=1)
 def Phome(col):
     '''Function for apply to get home/away for players based on home/away of opposed team'''
     return [np.nan if np.isnan(col[i]) else 1 if Team_home.at[int(col[i])-1, col.name]==0 else 0 for i in range(len(col))]

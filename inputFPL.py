@@ -170,7 +170,10 @@ if sys.argv[1] != 'nothing':
         else Fixtures[Fixtures['id']==Table.at[i,'fixture']]['team_a'].values[0] for i in Table.index]
         Table['position'] = [positions[Table.at[i,'element']] for i in Table.index]
     Table = Table[Table.columns.sort_values()] #Give strict(alphabetical) order
-    lastGW = Table['round'].max()
+    if round in Table.columns:
+        lastGW = Table['round'].max()
+    else:
+        lastGW = 0
 
     #Deleteting double gameweeks for players changeg one PL cloub for another during GW ("Walcott case")
     #And matches from the current GW that are not played yet
@@ -184,12 +187,20 @@ if sys.argv[1] != 'nothing':
                     indexes_to_drop.append(i)
                 elif Table['minutes'][i+1] ==  0:
                     indexes_to_drop.append(i+1)
-    if indexes_to_drop != []:
-        '''
-            Large_Table is needed only for inputUndersat. To get FPL names when Understat data is already calculated
-            but FPL data is not. So players played are not excluded from the table but have zero data.
-        '''
-        Large_Table = Table.drop(indexes_to_drop).reset_index()
+                    
+    '''
+        Large_Table is needed only for inputUndersat. To get FPL names when Understat data is already calculated
+        but FPL data is not. So players played are not excluded from the table but have zero data.
+    '''                
+    Large_Table = Table.drop(indexes_to_drop).reset_index()
+    
+    
+#     if indexes_to_drop != []:
+#         '''
+#             Large_Table is needed only for inputUndersat. To get FPL names when Understat data is already calculated
+#             but FPL data is not. So players played are not excluded from the table but have zero data.
+#         '''
+#         Large_Table = Table.drop(indexes_to_drop).reset_index()
     
     print(f'\tDownloading FPL tables is over.\t It takes {str(time() - start)} sec\n')
     start = time()
