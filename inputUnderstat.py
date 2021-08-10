@@ -225,6 +225,14 @@ def Exc_dict(Name_Dictionary, name_understat, name_fpl):
     #print(name_understat)
     return Name_Dictionary
 
+
+
+# class StopExecution(Exception):
+#     def _render_traceback_(self):
+#         pass
+
+
+
 #Read data from fantasy.premierleague.com(FPL) to compare with
 '''
     Large_Table is needed only for inputUndersat. To get FPL names when Understat data is already calculated
@@ -232,80 +240,87 @@ def Exc_dict(Name_Dictionary, name_understat, name_fpl):
 '''
 try:
     Table_FPL = pd.read_csv('in/LTable_FPL.csv') #Main table of FPL
+    1/len(Table_FPL)
 except:
-    Table_FPL = pd.DataFrame()
-Fixtures = pd.read_csv('in/Fixtures.csv') #All fixtures with postponed
-Teams = pd.read_csv('in/Teams.csv') #Team Tables Template
-Players = pd.read_csv('in/Players.csv') #Player Table Template 
+    print("Table_FPL is empty or can't be read")
+    table_len = 0
+    pd.DataFrame().to_csv(Path('in/Table_Understat.csv'), index=False)
+    pd.DataFrame().to_csv(Path('in/Name_Dictionary.csv'), index=False)
+#     raise StopExecution
+    
+if table_len > 0:
+    Fixtures = pd.read_csv('in/Fixtures.csv') #All fixtures with postponed
+    Teams = pd.read_csv('in/Teams.csv') #Team Tables Template
+    Players = pd.read_csv('in/Players.csv') #Player Table Template 
 
-url = 'https://understat.com/match/11919' #match data by id
-url1 = 'https://understat.com/league/EPL' #url to get list of matches and their id
+    url = 'https://understat.com/match/11919' #match data by id
+    url1 = 'https://understat.com/league/EPL' #url to get list of matches and their id
 
-#Getting matches id and 
-p = constti.long_request(url1)
-pdecoded = codecs.decode(p.text,'unicode_escape')
-page = BeautifulSoup(p.text, 'html.parser')
-a = []
-for tags in page('script'):
-    if '= JSON.parse' in str(tags):
-        for els in str(tags).split():
-            if 'JSON' in els:
-                els = els[12:-3]
-                els = codecs.decode(els,'unicode_escape')
-                a.append(json.loads(els))
-TT = pd.DataFrame(a[1]).transpose()
-UnderstatTeams = dict(zip(TT['id'], TT['title']))
-Schedule = pd.DataFrame(a[0])
+    #Getting matches id and 
+    p = constti.long_request(url1)
+    pdecoded = codecs.decode(p.text,'unicode_escape')
+    page = BeautifulSoup(p.text, 'html.parser')
+    a = []
+    for tags in page('script'):
+        if '= JSON.parse' in str(tags):
+            for els in str(tags).split():
+                if 'JSON' in els:
+                    els = els[12:-3]
+                    els = codecs.decode(els,'unicode_escape')
+                    a.append(json.loads(els))
+    TT = pd.DataFrame(a[1]).transpose()
+    UnderstatTeams = dict(zip(TT['id'], TT['title']))
+    Schedule = pd.DataFrame(a[0])
 
-#Словарь для перевода understat команд к FPL именам Name_Dictionary
-teams_dtable = pd.DataFrame()
-teams_dtable['understat'] = ['Spurs' if i == 'Tottenham' else i for i in TT.sort_values(by=['title'])['title']]
-teams_dtable.index = np.arange(0, len(teams_dtable))
-teams_dtable['fpl'] = list(Teams.sort_values(by=['Teams'])['Teams'])
-teams_dict = dict(zip(teams_dtable['understat'], teams_dtable['fpl']))
+    #Словарь для перевода understat команд к FPL именам Name_Dictionary
+    teams_dtable = pd.DataFrame()
+    teams_dtable['understat'] = ['Spurs' if i == 'Tottenham' else i for i in TT.sort_values(by=['title'])['title']]
+    teams_dtable.index = np.arange(0, len(teams_dtable))
+    teams_dtable['fpl'] = list(Teams.sort_values(by=['Teams'])['Teams'])
+    teams_dict = dict(zip(teams_dtable['understat'], teams_dtable['fpl']))
 
-#Downloads all match data
-Table_Understat = pd.DataFrame()
-Name_Dictionary = pd.DataFrame(columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl'])
+    #Downloads all match data
+    Table_Understat = pd.DataFrame()
+    Name_Dictionary = pd.DataFrame(columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl'])
 
-#Adding exceptions to Dictionary
-#Name_Dictionary.append(['Franck Zambo','','Andre-Frank Zambo Anguissa','',''])
-Name_Dictionary = Exc_dict(Name_Dictionary, 'Franck Zambo','Andre-Frank Zambo Anguissa')
-Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby Decordova-Reid')
-#display(Name_Dictionary)
+    #Adding exceptions to Dictionary
+    #Name_Dictionary.append(['Franck Zambo','','Andre-Frank Zambo Anguissa','',''])
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Franck Zambo','Andre-Frank Zambo Anguissa')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby Decordova-Reid')
+    #display(Name_Dictionary)
 
-if not Table_FPL.empty:
-    for i in range(len(Schedule)):
-        if Schedule.at[i,'isResult']:
-            #print(Schedule.at[i,'id'])
-            MP, Name_Dictionary = add_match_to_dict(Schedule.at[i,'id'], Name_Dictionary)
-            Table_Understat = Table_Understat.append(MP, ignore_index=True)
+    if not Table_FPL.empty:
+        for i in range(len(Schedule)):
+            if Schedule.at[i,'isResult']:
+                #print(Schedule.at[i,'id'])
+                MP, Name_Dictionary = add_match_to_dict(Schedule.at[i,'id'], Name_Dictionary)
+                Table_Understat = Table_Understat.append(MP, ignore_index=True)
 
-print(f'\t All Data Downloaded.\t It takes {time() - start} sec')
-start = time()
-      
-# Add fpl_id and name_fpl for players not in FPL
-j=0
-for i in Name_Dictionary.index:
-    j+=1
-    if Name_Dictionary.at[i,'name_fpl']=='':
-        Name_Dictionary.at[i,'name_fpl'] = Name_Dictionary.at[i,'name_un']
-        Name_Dictionary.at[i,'id_fpl'] = 1000000 + j
-        
-name2id = dict(zip(Name_Dictionary['name_fpl'], Name_Dictionary['id_fpl']))
-Table_Understat['element'] = [name2id[Table_Understat.at[i, 'player']] for i in Table_Understat.index]
-Table_Understat = constti.change_column_name(Table_Understat, 'xG', 'threat')
-Table_Understat['threat']  = [100*float(Table_Understat['threat'][i]) for i in range(len(Table_Understat))]
-Table_Understat = constti.change_column_name(Table_Understat, 'xA', 'creativity')
-Table_Understat['creativity']  = [100*float(Table_Understat['creativity'][i]) for i in range(len(Table_Understat))]
-Table_Understat = constti.change_column_name(Table_Understat, 'player_id', 'Understat_id')
-Table_Understat = constti.change_column_name(Table_Understat, 'time', 'minutes')
+    print(f'\t All Data Downloaded.\t It takes {time() - start} sec')
+    start = time()
 
-Table_Understat.to_csv(Path('in/Table_Understat.csv'), index=False)
-Name_Dictionary.to_csv(Path('in/Name_Dictionary.csv'), index=False)
-      
-print(f'\t All Columns Added.\t It takes {time() - start} sec')
-print(f'inputUnderstat is over.\t It takes {time() - start_module} sec\n')
+    # Add fpl_id and name_fpl for players not in FPL
+    j=0
+    for i in Name_Dictionary.index:
+        j+=1
+        if Name_Dictionary.at[i,'name_fpl']=='':
+            Name_Dictionary.at[i,'name_fpl'] = Name_Dictionary.at[i,'name_un']
+            Name_Dictionary.at[i,'id_fpl'] = 1000000 + j
 
-if __name__ == '__main__':
-    display(Table_Understat)
+    name2id = dict(zip(Name_Dictionary['name_fpl'], Name_Dictionary['id_fpl']))
+    Table_Understat['element'] = [name2id[Table_Understat.at[i, 'player']] for i in Table_Understat.index]
+    Table_Understat = constti.change_column_name(Table_Understat, 'xG', 'threat')
+    Table_Understat['threat']  = [100*float(Table_Understat['threat'][i]) for i in range(len(Table_Understat))]
+    Table_Understat = constti.change_column_name(Table_Understat, 'xA', 'creativity')
+    Table_Understat['creativity']  = [100*float(Table_Understat['creativity'][i]) for i in range(len(Table_Understat))]
+    Table_Understat = constti.change_column_name(Table_Understat, 'player_id', 'Understat_id')
+    Table_Understat = constti.change_column_name(Table_Understat, 'time', 'minutes')
+
+    Table_Understat.to_csv(Path('in/Table_Understat.csv'), index=False)
+    Name_Dictionary.to_csv(Path('in/Name_Dictionary.csv'), index=False)
+
+    print(f'\t All Columns Added.\t It takes {time() - start} sec')
+    print(f'inputUnderstat is over.\t It takes {time() - start_module} sec\n')
+
+    if __name__ == '__main__':
+        display(Table_Understat)

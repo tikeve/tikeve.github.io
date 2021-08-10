@@ -53,6 +53,7 @@ id,Name,web_name,Team number,Team,Position
 50,Douglas Luiz Soares de Paulo,Douglas Luiz,2,Aston Villa,3
 51,Jacob Ramsey,Ramsey,2,Aston Villa,3
 52,Ashley Young,Young,2,Aston Villa,2
+283,Axel Tuanzebe,Tuanzebe,2,Aston Villa,2
 337,Danny Ings,Ings,2,Aston Villa,4
 492,Leon Bailey,Bailey,2,Aston Villa,3
 76,Pontus Jansson,Jansson,3,Brentford,2
@@ -174,6 +175,7 @@ id,Name,web_name,Team number,Team,Position
 474,Joel Ward,Ward,7,Crystal Palace,2
 477,Marc Guehi,Guehi,7,Crystal Palace,2
 488,Joachim Andersen,Andersen,7,Crystal Palace,2
+493,Nathaniel Clyne,Clyne,7,Crystal Palace,2
 163,Fabian Delph,Delph,8,Everton,3
 164,Gylfi Sigurdsson,Sigurdsson,8,Everton,3
 165,Seamus Coleman,Coleman,8,Everton,2
@@ -304,7 +306,6 @@ id,Name,web_name,Team number,Team,Position
 280,Dean Henderson,Henderson,13,Man Utd,1
 281,Marcus Rashford,Rashford,13,Man Utd,3
 282,Donny van de Beek,van de Beek,13,Man Utd,3
-283,Axel Tuanzebe,Tuanzebe,13,Man Utd,2
 284,Victor Lindelof,Lindelof,13,Man Utd,2
 285,Scott McTominay,McTominay,13,Man Utd,3
 286,Eric Bailly,Bailly,13,Man Utd,2
@@ -409,6 +410,7 @@ id,Name,web_name,Team number,Team,Position
 375,Tanguy Ndombele,Ndombele,17,Spurs,3
 486,Pierluigi Gollini,Gollini,17,Spurs,1
 487,Bryan Gil Salvatierra,Bryan,17,Spurs,3
+494,Cristian Romero,Romero,17,Spurs,2
 376,Ben Foster,Foster,18,Watford,1
 377,Danny Rose,Rose,18,Watford,2
 378,Dan Gosling,Gosling,18,Watford,3
@@ -445,6 +447,7 @@ id,Name,web_name,Team number,Team,Position
 468,Joshua King,King,18,Watford,4
 469,Adedapo Awokoya-Mebude,Mebude,18,Watford,4
 472,Juan Camilo Hernandez Suarez,Cucho,18,Watford,4
+495,Juraj Kucka,Kucka,18,Watford,3
 406,Mark Noble,Noble,19,West Ham,3
 407,Darren Randolph,Randolph,19,West Ham,1
 408,Lukasz Fabianski,Fabianski,19,West Ham,1

@@ -84,17 +84,17 @@ class Source:
         else: folder = f'history/{year}/'
         
         #Catching empty data at the start of the season. Avoiding mistake with reading empty file
-        try:
-            Table = pd.read_csv(Path(f'{folder}in/Table_'+source+'.csv')) # Main data. Row for player's played fixture
-        except:
-            print('!!!!!!!!')
-            Table = pd.DataFrame()
-            self.Table = Table
-            return
-        if len(Table)<1:
-            Table = pd.DataFrame()
-            self.Table = Table
-            return
+#         try:
+        Table = pd.read_csv(Path(f'{folder}in/Table_'+source+'.csv')) # Main data. Row for player's played fixture
+#         except:
+#             print('!!!!!!!!')
+#             Table = pd.DataFrame()
+#             self.Table = Table
+#             return
+#         if len(Table)<1:
+#             Table = pd.DataFrame()
+#             self.Table = Table
+#             return
     
         #in a game with columns 'element', 'round', 'fixture', 'threat', 'creativity', 'team', opponent_team'
         Fixtures = pd.read_csv(Path(f'{folder}in/Fixtures.csv')) # Table of rows for each fixture
@@ -551,162 +551,6 @@ def html_table_name(table_name):
     x = x.replace('Ad', 'Adjusted').replace('_', ' ').replace('TableTeams', 'Teams Ranking')
     return x
 
-
-# def write_table(df, name, key_col, xdf, class_args):
-#     '''
-#         Writing final tables to files and returning table itself and MA variant also
-#         df - Table to make final table out of it, name - the name of the table, key_col - column to sort,
-#         source - Understat or FPL, ma_num - number for MA(currently unused just calculated)
-#     '''
-#     def GW_forecast (df, xdf):
-#     #     a = df.copy()
-#         lastGW = get_gw_num(del_empty_col(df.copy()).columns[-1])
-#         Table = pd.DataFrame()
-#         for i in df.columns:
-#             Table[i] = [df.at[j,i] if np.isnan(xdf.at[j,i]) else xdf.at[j,i] for j in df.index]
-
-#         column_numbers = np.asarray(list(map(get_gw_num, Table.columns)))
-#         if max(column_numbers)>lastGW:
-#             n = lastGW + 1
-#         else:
-#             n = lastGW
-#         for i in Table.columns:
-#             if get_gw_num(i) > n:
-#                 del Table[i]
-#         return Table 
-#     def table2string(table):
-#         '''
-#         Converts table to view suitable for html. All number columns are actually strings with 1 digit after .
-#         '''
-#         df = table.copy()
-#         for j in df.columns:
-#             if ('GW' in j)|(' av' in j)|('xG' in j)|('xA' in j):
-#                 df[j] = [str(int(df.at[i,j]*10)/10) if not np.isnan(df.at[i,j]) else '' for i in df.index]
-
-#         return df
-    
-#     df = df.copy() # not to change initial df
-#     Teams, Players = class_args[:2]
-#     source, ma_num, folder = class_args[5:]
-    
-#     if name != 'TableTeams':
-#         # 1- finished, 0 - unfinished, np.nan - doesn't exist
-#         F_UF = pd.DataFrame()
-#         for i in df.columns:
-#             F_UF[i]=[np.nan if np.isnan(xdf.at[j,i])&np.isnan(df.at[j,i]) else 1 for j in df.index]
-#             F_UF[i] = [np.nan if np.isnan(F_UF.at[j,i]) else 1 if np.isnan(xdf.at[j,i]) else 0 for j in df.index]
-            
-#         if 'Team' in name:
-#             X = Teams.copy()
-#             X.columns = ['id', 'Teams', key_col, 'Matches']
-#             X[key_col] = df.mean(axis=1)
-#         else:
-#             X = Players.copy()
-#             n = Players.columns.get_loc('Team games')
-#             X.insert( n, key_col, df.mean(axis=1))
-#             X.insert(n + 1, key_col.replace('fixture','game'),X[key_col]*Players['Team games']/noZ(Players['Played']))
-            
-#         df = GW_forecast(df, xdf)
-        
-#         Y = df[df.columns[::-1]]
-#         X[Y.columns] = Y.copy()
-#         df = X.copy()
-#         del_empty_col(df)
-#     else:
-#         F_UF = df # Doen't matter. Just some dataFrame. Not really used
-    
-#     #Removes redundant columns
-#     del df['id']
-#     if 'Team number' in df.columns:
-#         del df['Team number']
-    
-#     F_UF[key_col] = df.copy()[key_col]
-#     # Sort decreasing for attack an increasing for defence
-#     if 'Opponent' in name:
-#         df.sort_values(key_col, ascending = True, inplace = True)
-#         F_UF.sort_values(key_col, ascending = True, inplace = True)
-#     else:
-#         df.sort_values(key_col, ascending = False, inplace = True)
-#         F_UF.sort_values(key_col, ascending = False, inplace = True)
-    
-#     df.index = np.arange(1, len(df) + 1)
-#     F_UF.index = np.arange(1, len(df) + 1)
-    
-#     # If moving average number is 0 no calculation needed. Use it to fasten the debug!
-#     if ma_num == 0:
-#         df_ma = df
-#     else:
-#         df_ma = MA(df, ma_num)
-    
-#     #Writes result to file
-#     df.to_csv(Path(f'{folder}out/{source}/{name}.csv'))
-    
-    
-#     # Add table created as table of stringe to existing html file replacing table tag with a new one
-#     #Also adding a new css
-#     if folder == '':
-#         dfString = table2string(df)
-        
-        
-        
-        
-        
-        
-# #         for i in dfString.columns:
-# #             dfString[i]=[[dfString.at[j,i],1] if np.isnan(xdf.at[j,i]) else [dfString.at[j,i],0] for j in dfString.index]
-        
-# #         display(dfString)
-#         dfStringStyler = dfString.style.apply(color_table, axis=None, F_UF=F_UF)
-#         dfStringStyler.set_table_attributes('class="DataTable"')
-#         html_table = dfStringStyler.render().replace('\n', '')
-#         BS_table = BeautifulSoup(html_table, 'html.parser')
-#         css = str(BS_table('style')[0])
-#         html_ = str(BS_table('table')[0])
-
-#         #Getting right paths for different tables
-#         if source=='FPL' and name=='TableTeams':
-#             html_path = Path(f'{folder}index.html')
-#             css_path = Path(f'{folder}html/FPL/css/TableTeams.css')
-#         else:
-#             html_path = Path(f'{folder}html/{source}/{name}.html')
-#             css_path = Path(f'{folder}html/{source}/css/{name}.css')
-
-#         #Making css for coloring butons
-
-#         css = ('#' + source + '-button {\n background-color: #82f5cf;\n}\n' +
-#                '#' + name + ' {\n background-color: lightgrey;\n}\n' + 
-#                css)
-
-#         #Rewriting html and css
-#         with open(f'{folder}index.html', 'r', encoding="utf-8") as file:
-#             old_file = file.read()
-#         tag_to_replace1 = str(BeautifulSoup(old_file, 'html.parser')('table', attrs={"class":"DataTable"})[0])
-#         tag_to_replace2 = str(BeautifulSoup(old_file, 'html.parser')('h2', attrs={"id":"DataTitle"})[0])
-#         new_file = old_file.replace(tag_to_replace1, html_)
-#         new_file = new_file.replace(tag_to_replace2, f'<h2 id="DataTitle"> {html_table_name(name)} </h2>')
-
-#         #Making links right
-
-#         if not(source=='FPL' and name=='TableTeams'):
-#             new_file = new_file.replace('html/FPL/', '')
-#             new_file = new_file.replace('"out/FPL/TableTeams.csv"', f'"../../out/{source}/{name}.csv"')#Download button
-#             new_file = new_file.replace(f'TableTeams', name)
-#             if name != 'TableTeams': #changes links for buttons FPL and Understat
-#                 str1 = 'class="header-form" action="index.html"'
-#                 str2 = f'class="header-form" action="../FPL/{name}.html"'
-#                 new_file = new_file.replace(str1, str2)
-#             else:
-#                 new_file = new_file.replace('form action="index.html"', f'form action="../../index.html"')
-#             new_file = new_file.replace('html/', '../')
-#             new_file = new_file.replace('"index.html"', '"../../index.html"')
-
-#         #Creating .html and special files for the Table
-#         with open(html_path, 'w', encoding="utf-8") as file:
-#             file.write(new_file)
-#         with open(css_path, 'w', encoding="utf-8") as file:
-#             file.write(css)
-    
-#     return df
 def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
     '''
         Writing final tables to files and returning table itself and MA variant also
@@ -750,7 +594,7 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
     Teams, Players = class_args[:2]
     source, ma_num, folder = class_args[5:]
     
-    if name != 'TableTeams':
+    if (name != 'TableTeams')&(len(df) > 0):
         # 1- finished, 0 - unfinished, np.nan - doesn't exist
         F_UF = pd.DataFrame()
         for i in df.columns:
@@ -777,7 +621,9 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
         F_UF = df # Doen't matter. Just some dataFrame. Not really used
     
     #Removes redundant columns
-    del df['id']
+#     del df['id']
+    if 'id' in df.columns:
+        del df['id']
     if 'Team number' in df.columns:
         del df['Team number']
     
