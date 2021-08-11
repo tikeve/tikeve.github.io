@@ -56,6 +56,8 @@ id,Name,web_name,Team number,Team,Position
 283,Axel Tuanzebe,Tuanzebe,2,Aston Villa,2
 337,Danny Ings,Ings,2,Aston Villa,4
 492,Leon Bailey,Bailey,2,Aston Villa,3
+496,Aaron Ramsey,Ramsey,2,Aston Villa,3
+497,Jaden Philogene-Bidace,Philogene-Bidace,2,Aston Villa,3
 76,Pontus Jansson,Jansson,3,Brentford,2
 77,Christian Nørgaard,Nørgaard,3,Brentford,3
 78,Ivan Toney,Toney,3,Brentford,4
@@ -80,6 +82,8 @@ id,Name,web_name,Team number,Team,Position
 97,Mads Bidstrup,Bidstrup,3,Brentford,3
 479,Frank Onyeka,Onyeka,3,Brentford,3
 483,Kristoffer Ajer,Ajer,3,Brentford,2
+498,Dominic Thompson,Thompson,3,Brentford,2
+499,Shandon Baptiste,Baptiste,3,Brentford,3
 53,Adam Lallana,Lallana,4,Brighton,3
 54,Jason Steele,Steele,4,Brighton,1
 55,Pascal Groß,Groß,4,Brighton,3
@@ -105,6 +109,7 @@ id,Name,web_name,Team number,Team,Position
 447,Danny Welbeck,Welbeck,4,Brighton,4
 462,Enock Mwepu,Mwepu,4,Brighton,3
 476,Kjell Scherpen,Scherpen,4,Brighton,1
+500,Florin Andone,Andone,4,Brighton,4
 98,James Tarkowski,Tarkowski,5,Burnley,2
 99,Phil Bardsley,Bardsley,5,Burnley,2
 100,Erik Pieters,Pieters,5,Burnley,2
@@ -153,6 +158,7 @@ id,Name,web_name,Team number,Team,Position
 141,Kai Havertz,Havertz,6,Chelsea,3
 142,Reece James,James,6,Chelsea,2
 143,Edouard Mendy,Mendy,6,Chelsea,1
+501,Malang Sarr,Sarr,6,Chelsea,2
 144,Conor Gallagher,Gallagher,7,Crystal Palace,3
 146,Vicente Guaita,Guaita,7,Crystal Palace,1
 147,James Tomkins,Tomkins,7,Crystal Palace,2
@@ -198,6 +204,9 @@ id,Name,web_name,Team number,Team,Position
 481,Asmir Begovic,Begovic,8,Everton,1
 482,Andros Townsend,Townsend,8,Everton,3
 484,Demarai Gray,Gray,8,Everton,3
+502,Jonjoe Kenny,Kenny,8,Everton,2
+503,Anthony Gordon,Gordon,8,Everton,3
+504,Jean-Philippe Gbamin,Gbamin,8,Everton,3
 200,Kasper Schmeichel,Schmeichel,9,Leicester,1
 201,Jonny Evans,Evans,9,Leicester,2
 202,Marc Albrighton,Albrighton,9,Leicester,3
@@ -222,6 +231,7 @@ id,Name,web_name,Team number,Team,Position
 455,Patson Daka,Daka,9,Leicester,4
 458,Boubakary Soumare,Soumare,9,Leicester,3
 473,Ryan Bertrand,Bertrand,9,Leicester,2
+505,Kiernan Dewsbury-Hall,Dewsbury-Hall,9,Leicester,3
 182,Pablo Hernandez Dominguez,Hernandez,10,Leeds,3
 183,Francisco Casilla Cortes,Casilla,10,Leeds,1
 184,Liam Cooper,Cooper,10,Leeds,2
@@ -271,6 +281,7 @@ id,Name,web_name,Team number,Team,Position
 246,Neco Williams,N.Williams,11,Liverpool,2
 247,Rhys Williams,R.Williams,11,Liverpool,2
 248,Ben Davies,Davies,11,Liverpool,2
+506,Harvey Elliott,Elliott,11,Liverpool,3
 33,Jack Grealish,Grealish,12,Man City,3
 249,Kyle Walker,Walker,12,Man City,2
 250,Ilkay Gundogan,Gundogan,12,Man City,3
@@ -292,6 +303,8 @@ id,Name,web_name,Team number,Team,Position
 266,Rodrigo Hernandez,Rodrigo,12,Man City,3
 268,Ferran Torres,Torres,12,Man City,3
 453,Fernando Luiz Rosa,Fernandinho,12,Man City,3
+507,Cole Palmer,Palmer,12,Man City,3
+508,Samuel Edozie,Edozie,12,Man City,3
 269,Edinson Cavani,Cavani,13,Man Utd,4
 270,David de Gea,de Gea,13,Man Utd,1
 271,Nemanja Matic,Matic,13,Man Utd,3
@@ -315,6 +328,10 @@ id,Name,web_name,Team number,Team,Position
 290,Brandon Williams,Williams,13,Man Utd,2
 459,Juan Mata,Mata,13,Man Utd,3
 485,Jadon Sancho,Sancho,13,Man Utd,3
+509,Tom Heaton,Heaton,13,Man Utd,1
+510,Jose Diogo Dalot Teixeira,Dalot,13,Man Utd,2
+511,Andreas Pereira,Pereira,13,Man Utd,3
+512,Anthony Elanga,Elanga,13,Man Utd,3
 291,Jonjo Shelvey,Shelvey,14,Newcastle,3
 292,Matt Ritchie,Ritchie,14,Newcastle,2
 293,Ciaran Clark,Clark,14,Newcastle,2
@@ -338,6 +355,8 @@ id,Name,web_name,Team number,Team,Position
 311,Jamal Lewis,Lewis,14,Newcastle,2
 312,Matthew Longstaff,M.Longstaff,14,Newcastle,3
 465,Federico Fernandez,Fernandez,14,Newcastle,2
+513,Freddie Woodman,Woodman,14,Newcastle,1
+514,Mark Gillespie,Gillespie,14,Newcastle,1
 145,Billy Gilmour,Gilmour,15,Norwich,3
 313,Michael McGovern,McGovern,15,Norwich,1
 314,Tim Krul,Krul,15,Norwich,1
@@ -363,6 +382,8 @@ id,Name,web_name,Team number,Team,Position
 456,Ben Gibson,Gibson,15,Norwich,2
 457,Dimitris Giannoulis,Giannoulis,15,Norwich,2
 471,Pierre Lees-Melou,Lees-Melou,15,Norwich,3
+515,Bali Mumba,Mumba,15,Norwich,2
+516,Joshua Sargent,Sargent,15,Norwich,4
 332,Theo Walcott,Walcott,16,Southampton,3
 333,Fraser Forster,Forster,16,Southampton,1
 334,Alex McCarthy,McCarthy,16,Southampton,1
@@ -384,6 +405,9 @@ id,Name,web_name,Team number,Team,Position
 351,Mohammed Salisu,Salisu,16,Southampton,2
 460,Romain Perraud,Perraud,16,Southampton,2
 491,Tino Livramento,Livramento,16,Southampton,2
+517,Mohamed Elyounoussi,Elyounoussi,16,Southampton,3
+518,Armando Broja,Broja,16,Southampton,4
+519,Shane Long,Long,16,Southampton,4
 352,Joe Hart,Hart,17,Spurs,1
 353,Hugo Lloris,Lloris,17,Spurs,1
 354,Moussa Sissoko,Sissoko,17,Spurs,3
@@ -411,6 +435,7 @@ id,Name,web_name,Team number,Team,Position
 486,Pierluigi Gollini,Gollini,17,Spurs,1
 487,Bryan Gil Salvatierra,Bryan,17,Spurs,3
 494,Cristian Romero,Romero,17,Spurs,2
+520,Dane Scarlett,Scarlett,17,Spurs,4
 376,Ben Foster,Foster,18,Watford,1
 377,Danny Rose,Rose,18,Watford,2
 378,Dan Gosling,Gosling,18,Watford,3
@@ -469,6 +494,8 @@ id,Name,web_name,Team number,Team,Position
 424,Issa Diop,Diop,19,West Ham,2
 425,Ben Johnson,Johnson,19,West Ham,2
 489,Alphonse Areola,Areola,19,West Ham,1
+521,Frederik Alves,Alves,19,West Ham,2
+522,Conor Coventry,Coventry,19,West Ham,3
 426,Joao Filipe Iria Santos Moutinho,Moutinho,20,Wolves,3
 427,Rui Pedro dos Santos Patricio,Patricio,20,Wolves,1
 428,Willy Boly,Boly,20,Wolves,2
@@ -494,3 +521,4 @@ id,Name,web_name,Team number,Team,Position
 461,Francisco Machado Mota de Castro Trincao,Trincao,20,Wolves,3
 470,Rayan Ait Nouri,Ait Nouri,20,Wolves,2
 475,Jose Malheiro de Sa,Sa,20,Wolves,1
+523,Patrick Cutrone,Cutrone,20,Wolves,4

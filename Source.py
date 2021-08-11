@@ -594,7 +594,7 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
     Teams, Players = class_args[:2]
     source, ma_num, folder = class_args[5:]
     
-    if (name != 'TableTeams')&(len(df) > 0):
+    if (name != 'TableTeams')&(len(xdf) > 0):
         # 1- finished, 0 - unfinished, np.nan - doesn't exist
         F_UF = pd.DataFrame()
         for i in df.columns:
@@ -654,7 +654,10 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
     if folder == '':
         dfString = table2string(df)
         
-        dfStringStyler = dfString.style.apply(color_table, axis=None, F_UF=F_UF)
+        if len(xdf) > 0:
+            dfStringStyler = dfString.style.apply(color_table, axis=None, F_UF=F_UF)
+        else:
+            dfStringStyler = dfString.style
         dfStringStyler.set_table_attributes('class="DataTable"')
         html_table = dfStringStyler.render().replace('\n', '')
         BS_table = BeautifulSoup(html_table, 'html.parser')
