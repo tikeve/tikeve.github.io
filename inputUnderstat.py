@@ -241,6 +241,7 @@ def Exc_dict(Name_Dictionary, name_understat, name_fpl):
 try:
     Table_FPL = pd.read_csv('in/LTable_FPL.csv') #Main table of FPL
     1/len(Table_FPL)
+    table_len = len(Table_FPL)
 except:
     print("Table_FPL is empty or can't be read")
     table_len = 0
@@ -284,9 +285,8 @@ if table_len > 0:
     Name_Dictionary = pd.DataFrame(columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl'])
 
     #Adding exceptions to Dictionary
-    #Name_Dictionary.append(['Franck Zambo','','Andre-Frank Zambo Anguissa','',''])
-    Name_Dictionary = Exc_dict(Name_Dictionary, 'Franck Zambo','Andre-Frank Zambo Anguissa')
-    Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby Decordova-Reid')
+    #Name_Dictionary = Exc_dict(Name_Dictionary, 'Franck Zambo','Andre-Frank Zambo Anguissa')
+    #Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby Decordova-Reid')
     #display(Name_Dictionary)
 
     if not Table_FPL.empty:
