@@ -3,41 +3,42 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Some calculations</title>
+	<title> Some calculations</title>
 	<link href="html/FPLstyle.css" rel="stylesheet" />
-    <link href="html/FPL/css/TableTeams.css" rel="stylesheet" />
+	<link href="html/FPL/css/TableTeams.css" rel="stylesheet" />
+	<script src="html/Script.js"></script>
 </head>
 
 <body>
 	<header>
-		<div class="history">
+		<div class="history" id="FromScript">
+			<form action = "index.html">
+				<input type="submit" class="history_button" value="2021 /    -    " />
+			</form>
+			<form action="html/2020_2021/index.html">
+				<input type="submit" class="history_button" value="2020 / 2021" />
+			</form>
 			<form action="html/2019_2020/index.html">
 				<input type="submit" class="history_button" value="2019 / 2020" />
 			</form>
-			<!--
-			</div>
+		</div>
+		<!--<script>
+            document.getElementById("FromScript").innerHTML = X;
+		</script>-->
 
-
-			<div class="history">
-			-->
-				<form action="html/2020_2021/index.html">
-					<input type="submit" class="history_button" value="2020 / 2021" />
-				</form>
-			</div>
-
-
-			<div id="pic">
+		<div id="pic">
 				<a href="index.html" id="octopus_link">
 					<img src="html/logo/monstro-brown.png" alt=" FPL" id="h_octopus">
 				</a>
-			</div>
-			<div class="table_header">
-				<a href="index.html">
-					<!--<h4>Main Page</h4>-->
-			<img src="html/home.ico" alt="Main Page" id="glyph_home">
+		</div>
+
+		<div class="table_header">
+			<a href="index.html">
+				<!--<h4>Main Page</h4>-->
+				<img src="html/home.ico" alt="Main Page" id="glyph_home">
 			</a>
 			<br />
-			<h1 class="non-blog"> FPL in Numbers</h1>
+				<h1 class="non-blog"> FPL in Numbers</h1>
 			<br />
 			<form class="header-form" action="index.html">
 				<input type="submit" class="source_button" id="FPL-button" value="FPL" />
@@ -134,7 +135,7 @@
 	<footer>
 
 		<span id="copyright">
-			&copy;FPL in Numbers 2020.
+			&copy;FPL in Numbers 2021.
 		</span>
 
 		<span id="middle_f">

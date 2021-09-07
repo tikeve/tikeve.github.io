@@ -150,14 +150,24 @@ table.DataTable th {
     padding-right: 2%;
     padding-left: 2%;*/
 }
-@media(max-width: 800px) {
-    aside {
+@media(max-width: 550px) {
+    /*aside {
         width: 100%;
         height: 300px;
         border: none;
     }
     #main-table {
         width: 100%;
+    }*/
+    #h_octopus {
+        width: 3em;
+        height: 3em;
+        overflow: auto;
+        /*height: 108px;*/
+        /*116px;*/
+    }
+    footer {
+        font-size: 10px;
     }
 }
 
