@@ -216,10 +216,15 @@ def add_match_to_dict(game_number, Dictionary):
 def Exc_dict(Name_Dictionary, name_understat, name_fpl):
     '''
     Adding exceptions to Name_Dictionary
+    name_understat - "player" column in Table_Understat
+    name_fpl - "first_name" + " " + "second_name" in bootstrap table
     '''
     Name_Dictionary = Name_Dictionary.append(pd.DataFrame([[name_understat,name_fpl,'','']], 
     columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
+#     display(Name_Dictionary)
+#     print("asdasd" + Name_Dictionary.at[len(Name_Dictionary)-1, 'id_fpl'])    
     Name_Dictionary.at[len(Name_Dictionary)-1, 'id_fpl'] = Players[Players['Name']==name_fpl]['id'].mean()
+#     display(Players[Players['Name']==name_fpl]['web_name'])
     Name_Dictionary.at[len(Name_Dictionary)-1, 'web_name_fpl'] = Players[Players['Name']==name_fpl]['web_name'].iat[0]
     #print(Name_Dictionary)
     #print(name_understat)
@@ -287,6 +292,7 @@ if table_len > 0:
     #Adding exceptions to Dictionary
     #Name_Dictionary = Exc_dict(Name_Dictionary, 'Franck Zambo','Andre-Frank Zambo Anguissa')
     #Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby Decordova-Reid')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Emerson','Emerson Aparecido Leite de Souza Junior')
     #display(Name_Dictionary)
 
     if not Table_FPL.empty:

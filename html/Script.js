@@ -15,3 +15,16 @@ var X = '<form action="index.html" ><input type="submit" class="history_button" 
 	//</form>
 
 console.log(X);
+
+$ajaxUtils
+	.sendGetRequest("2019_2020/index.html",
+		function (request) {
+			var name = request.responseText;
+
+			//document.querySelector("#content")
+			//	.innerHTML = "<h2>Hello " + name + "!</h2>";
+			console.log(name);
+		});
+
+
+console.log("asdasd");

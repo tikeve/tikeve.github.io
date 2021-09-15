@@ -110,6 +110,10 @@ form input:hover {
     z-index: 1;
     left: -2.5em;
 }
+.drop-menu {
+    //border-style: inset;
+    border: 1px solid grey;
+}
 
     /* Links inside the dropdown */
     .dropdown-content a {
