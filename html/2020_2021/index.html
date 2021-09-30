@@ -4,40 +4,43 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> Some calculations</title>
-	<link href="html/FPLstyle.css" rel="stylesheet" />
+	<link href="../FPLstyle.css" rel="stylesheet" />
     <link href="html/FPL/css/TableTeams.css" rel="stylesheet" />
 </head>
 
 <body>
 	<header>
-		<div class="history">
-            <form action="html/2019_2020/index.html">
-                <input type="submit" class="history_button" value="2019 / 2020"/>
-            </form>
-        </div>
-		<div id="pic">
-			<a href="index.html" id="octopus_link">
-				<img src="html/logo/monstro-brown.png" alt=" FPL" id="h_octopus">
-			</a>
-		</div>
-		<div class="table_header">
-			<a href="index.html">
-				<!--<h4>Main Page</h4>-->
-				<img src="html/home.ico" alt="Main Page" id="glyph_home">
-			</a>
-			<br />
-			<h1 class="non-blog"> FPL in Numbers</h1>
-			<br />
-			<form class="header-form" action="index.html">
-				<input type="submit" class="source_button" id="FPL-button" value="FPL" />
-			</form>
-			<form class="header-form" action="html/Understat/TableTeams.html">
-				<input type="submit" class="source_button" id="Understat-button" value="Understat" />
-			</form>
-		</div>
-
-
-	</header>
+<div class="dropdown">
+<img alt="Menu" id="glyph_home" src="../icons8-menu.svg"/>
+<div class="dropdown-content">
+<a class="drop-menu" href="index.html">2021 /    -    </a>
+<a class="drop-menu" href="html/2020_2021/index.html">2020 / 2021</a>
+<a class="drop-menu" href="html/2019_2020/index.html">2019 / 2020</a>
+</div>
+</div>
+<!--<script>
+		document.getElementById("FromScript").innerHTML = X;
+	</script>-->
+<div id="pic">
+<a href="index.html" id="octopus_link">
+<img alt=" FPL" id="h_octopus" src="html/logo/monstro-brown.png"/>
+</a>
+</div>
+<div class="table_header">
+<a href="index.html">
+<img alt="Main Page" id="glyph_home" src="html/home.ico"/>
+</a>
+<br/>
+<h1 class="non-blog"> FPL in Numbers</h1>
+<br/>
+<form action="index.html" class="header-form">
+<input class="source_button" id="FPL-button" type="submit" value="FPL"/>
+</form>
+<form action="html/Understat/TableTeams.html" class="header-form">
+<input class="source_button" id="Understat-button" type="submit" value="Understat"/>
+</form>
+</div>
+</header>
 	<nav>
 		<div>
 			<form class="header-form" action="html/FPL/Team_xG.html">
