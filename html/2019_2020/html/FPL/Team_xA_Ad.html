@@ -3,10 +3,16 @@
 <head>
 <script>
         var loc = window.location.pathname;
-        var locloc = loc.substring(loc.lastIndexOf('tikeve.github.io'), loc.length);
+        if (loc.includes('tikeve.github.io')) {
+			var locloc = loc.substring(loc.lastIndexOf('tikeve.github.io') + "tikeve.github.io".length + 1, loc.length);
+            var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
+        } else {
+			locloc = "/index.html" /*loc*/
+			var filename = "index";
+        }
         var dir = loc.substring(0, loc.lastIndexOf('/'));
-        var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
-        var depth = locloc.split("/").length - 2;
+        //var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
+        var depth = locloc.split("/").length - 1;
         var root_dir = "../".repeat(depth)
         var homepage = root_dir + "index.html";
         var logo = root_dir + "html/logo/monstro-brown.png";
@@ -21,7 +27,7 @@
         }
 
         if ((depth == 4) || ((depth == 2) && (table == "TableTeams") && (source == "FPL"))) {
-            year_root_dir = root_dir + "html/" + path_dirs[2] + "/";
+            year_root_dir = root_dir + "html/" + path_dirs[1] + "/";
         } else {
             year_root_dir = root_dir;
         }
@@ -152,34 +158,6 @@
 
 </html>
 <script id="end">
-	var loc = window.location.pathname;
-	if (loc.includes('tikeve.github.io')) {
-		var locloc = loc.substring(loc.lastIndexOf('tikeve.github.io') + "tikeve.github.io".length + 1, loc.length);
-	} else {
-		locloc = loc
-    }
-	var dir = loc.substring(0, loc.lastIndexOf('/'));
-	var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
-	var depth = locloc.split("/").length - 1;
-	var root_dir = "../".repeat(depth)
-	var homepage = root_dir + "index.html";
-	var logo = root_dir + "html/logo/monstro-brown.png";
-    var path_dirs = locloc.split("/")
-
-	if (filename == "index") {
-		source = "FPL";
-		table = "TableTeams";
-	} else {
-		table = filename;
-		source = path_dirs[path_dirs.length - 2];
-    }
-
-    if ((depth == 4)||((depth == 2)&&(table == "TableTeams")&&(source == "FPL"))) {
-        year_root_dir = root_dir + "html/" + path_dirs[1] + "/";
-    } else {
-        year_root_dir = root_dir;
-    }
-
 	console.log("folder: " + loc);
 	console.log("filename: " + filename);
 	console.log("depth: " + depth);

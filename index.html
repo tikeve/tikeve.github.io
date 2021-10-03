@@ -4,12 +4,14 @@
 	<script>
         var loc = window.location.pathname;
         if (loc.includes('tikeve.github.io')) {
-            var locloc = loc.substring(loc.lastIndexOf('tikeve.github.io') + "tikeve.github.io".length + 1, loc.length);
+			var locloc = loc.substring(loc.lastIndexOf('tikeve.github.io') + "tikeve.github.io".length + 1, loc.length);
+            var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
         } else {
-            locloc = loc
+			locloc = "/index.html" /*loc*/
+			var filename = "index";
         }
         var dir = loc.substring(0, loc.lastIndexOf('/'));
-        var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
+        //var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
         var depth = locloc.split("/").length - 1;
         var root_dir = "../".repeat(depth)
         var homepage = root_dir + "index.html";
