@@ -9,28 +9,34 @@
 
 <body>
     <header>
-        <div id="pic">
-            <a href="main.html" id="octopus_link">
-                <img src="../logo/monstro-brown.png" alt=" FPL" id="h_octopus">
-            </a>
-        </div>
-        <div class="table_header">
-            <a href="main.html">
-                <!--<h4>Main Page</h4>-->
-                <img src="../home.ico" alt="Main Page" id="glyph_home">
-            </a>
-            <br />
-            <h1> FPL in Numbers</h1>
-            <br />
-            <form action="../fpl/Team_Creativity.html">
-                <input type="submit" class="source_button" value="FPL" style="color: green;" />
-            </form>
-            <form action="Team_Creativity.html">
-                <input type="submit" class="source_button" value="Understat" style="        color: red;
-        background-color: #82f5cf;" />
-            </form>
-        </div>
-    </header>
+<div class="dropdown">
+<img alt="Menu" id="glyph_home" src="html/icons8-menu.svg"/>
+<div class="dropdown-content">
+<a class="drop-menu home_link">2021 /    -    </a>
+<a class="drop-menu" href="html/2020_2021/index.html">2020 / 2021</a>
+<a class="drop-menu" href="html/2019_2020/index.html">2019 / 2020</a>
+</div>
+</div>
+<div id="pic">
+<a class="home_link" id="octopus_link">
+<img alt=" FPL" id="h_octopus" src="html/logo/monstro-brown.png"/>
+</a>
+</div>
+<div class="table_header">
+<a class="home_link">
+<img alt="Main Page" id="glyph_home" src="html/home.ico"/>
+</a>
+<br/>
+<h1 class="non-blog"> FPL in Numbers</h1>
+<br/>
+<form action="index.html" class="header-form">
+<input class="source_button" id="FPL-button" type="submit" value="FPL"/>
+</form>
+<form action="html/Understat/TableTeams.html" class="header-form">
+<input class="source_button" id="Understat-button" type="submit" value="Understat"/>
+</form>
+</div>
+</header>
     <nav>
         <div>
             <form action="Team_Attack.html">

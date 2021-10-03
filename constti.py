@@ -4,6 +4,8 @@
 import unicodedata
 import numpy as np
 import requests
+import glob, os
+from bs4 import BeautifulSoup
 
 # 1. Tries to download page 6 times instead of 1
 def long_request(url):
@@ -108,6 +110,44 @@ def myisnan(x):
         return np.isnan(x)
     except:
         return False
+
+# 9. Same head, header and script at the end for all html files inside html folder
+
+def head_header_script (copy_head = 1, copy_header = 1, copy_script = 1, copy_nav=1):
+    '''
+        Same head, header and script at the end for all html files inside html folder
+    '''
+    with open('index.html', 'r', encoding="utf-8") as file:
+        main_html = file.read()
+        header = str(BeautifulSoup(main_html, 'html.parser')('header')[0])
+        head = str(BeautifulSoup(main_html, 'html.parser')('head')[0])
+        script = str(BeautifulSoup(main_html, 'html.parser')('script')[-1])
+        nav = str(BeautifulSoup(main_html, 'html.parser')('nav')[0])
+
+    my_path = os.getcwd()
+    file_pathes = glob.glob(my_path + '/html/**/*.html', recursive=True)
+
+    for path in file_pathes:
+        with open(path, 'r', encoding="utf-8") as file:
+            print(path)
+            file_text = file.read()
+            
+        if (file_text.find('<head>') != -1) & (copy_head == 1):
+            new_file = file_text.replace(file_text[file_text.find('<head>'):file_text.find('</head>')+7], head)
+        if (file_text.find('<header>') != -1) & (copy_header == 1):
+            new_file = new_file.replace(new_file[new_file.find('<header>'):new_file.find('</header>')+9], header)
+        if (new_file.find('<script id="end">') != -1) & (copy_script == 1):
+            #print("found!!")
+            new_file = new_file.replace(new_file[new_file.find('<script id="end">'):], script)
+        else:
+            #print("not found")
+            new_file = new_file + "\n" + script
+        if (file_text.find('<nav>') != -1) & (copy_nav == 1):
+            new_file = new_file.replace(new_file[new_file.find('<nav>'):new_file.find('</nav>')+6], nav)
+    #     if new_file.find('/n<script id="end">') != -1:
+    #         new_file = new_file.replace('/n<script id="end">', '<script id="end">')
+        with open(path, 'w', encoding="utf-8") as file:
+            file.write(new_file)
 
 if __name__=="__main__":
     print('Hello')
