@@ -9,16 +9,14 @@
 			locloc = loc.substring(1,loc.length) + "index.html";
 			filename = "index";
 		} else {
-            filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
+            filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5); //without .html
 			//for desktop
 			if (loc.includes('tikeve.github.io')) {
 				var locloc = loc.substring(loc.lastIndexOf('tikeve.github.io') + "tikeve.github.io".length + 1, loc.length);
-			} else { //for all other html files at tikeve.github.io
+			} else { //for all other html files at github
 				locloc = loc.substring(1, loc.length);
 			}
 		}
-		
-        //var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
         var depth = locloc.split("/").length - 1;
         var root_dir = "../".repeat(depth)
         var homepage = root_dir + "index.html";
@@ -145,22 +143,19 @@
     </main>
 
     <footer>
-
-        <span id="copyright">
-            &copy;FPL in Numbers 2020.
-        </span>
-
-        <span id="middle_f">
-            <a href="main.html">
-                <img src="../logo/monstro-brown.png" alt="logo" id="little_octopus">
-            </a>
-        </span>
-
-        <span id="contact">
-            imonyapa@gmail.com
-        </span>
-
-    </footer>
+<span id="copyright">
+			©FPL in Numbers 2021.
+		</span>
+<span id="middle_f">
+<!--href="index.html"-->
+<a class="home_link">
+<img alt="logo" id="little_octopus"/> <!--src="html/logo/monstro-brown.png"-->
+</a>
+</span>
+<span id="contact">
+			fplinnumbers@gmail.com
+		</span>
+</footer>
 </body>
 
 </html>
@@ -181,6 +176,7 @@
 	document.getElementById("glyph_menu").setAttribute("src", root_dir + "html/icons8-menu.svg");
 	document.getElementById("glyph_home").setAttribute("src", root_dir + "html/home.ico");
 	document.getElementById("h_octopus").setAttribute("src", root_dir + "html/logo/monstro-brown.png");
+    document.getElementById("little_octopus").setAttribute("src", root_dir + "html/logo/monstro-brown.png");
 	document.getElementById("2020_2021").setAttribute("href", root_dir + "html/2020_2021/index.html");
 	document.getElementById("2019_2020").setAttribute("href", root_dir + "html/2019_2020/index.html");
 
@@ -189,9 +185,11 @@
         document.getElementById("Understat").setAttribute("action", year_root_dir + "html/Understat/TableTeams.html");
 	} else {
 		document.getElementById("FPL").setAttribute("action", year_root_dir + "html/FPL/" + filename + ".html");
-        document.getElementById("Understat").setAttribute("action", year_root_dir + "html/Understat/" + filename + ".html");
+		document.getElementById("Understat").setAttribute("action", year_root_dir + "html/Understat/" + filename + ".html");
+        document.getElementById(table).classList.add("color_grey");
     }
 
+    document.getElementById(source + "-button").classList.add("color_green");
 	document.getElementById("TxG").setAttribute("action", year_root_dir + "html/" + source + "/Team_xG.html");
 	document.getElementById("TxA").setAttribute("action", year_root_dir + "html/" + source + "/Team_xA.html");
 	document.getElementById("TOxG").setAttribute("action", year_root_dir + "html/" + source + "/Team_Opponent_xG.html");
@@ -206,5 +204,6 @@
 	home_links = document.getElementsByClassName('home_link');
 	for (let i = 0; i < home_links.length; i++) {
 		home_links[i].setAttribute("href", homepage);
-    }
+	}
+
 </script>

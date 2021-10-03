@@ -674,9 +674,9 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
 
         #Making css for coloring butons
 
-        css = ('#' + source + '-button {\n background-color: #82f5cf;\n}\n' +
-               '#' + name + ' {\n background-color: lightgrey;\n}\n' + 
-               css)
+#         css = ('#' + source + '-button {\n background-color: #82f5cf;\n}\n' +
+#                '#' + name + ' {\n background-color: lightgrey;\n}\n' + 
+#                css)
 
         #Rewriting html and css
         with open(f'{folder}index.html', 'r', encoding="utf-8") as file:
@@ -688,18 +688,18 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
 
         #Making links right
 
-        if not(source=='FPL' and name=='TableTeams'):
-            new_file = new_file.replace('html/FPL/', '')
-            new_file = new_file.replace('"out/FPL/TableTeams.csv"', f'"../../out/{source}/{name}.csv"')#Download button
-            new_file = new_file.replace(f'TableTeams', name)
-            if name != 'TableTeams': #changes links for buttons FPL and Understat
-                str1 = 'class="header-form" action="index.html"'
-                str2 = f'class="header-form" action="../FPL/{name}.html"'
-                new_file = new_file.replace(str1, str2)
-            else:
-                new_file = new_file.replace('form action="index.html"', f'form action="../../index.html"')
-            new_file = new_file.replace('html/', '../')
-            new_file = new_file.replace('"index.html"', '"../../index.html"')
+#         if not(source=='FPL' and name=='TableTeams'):
+#             new_file = new_file.replace('html/FPL/', '')
+#             new_file = new_file.replace('"out/FPL/TableTeams.csv"', f'"../../out/{source}/{name}.csv"')#Download button
+#             new_file = new_file.replace(f'TableTeams', name)
+#             if name != 'TableTeams': #changes links for buttons FPL and Understat
+#                 str1 = 'class="header-form" action="index.html"'
+#                 str2 = f'class="header-form" action="../FPL/{name}.html"'
+#                 new_file = new_file.replace(str1, str2)
+#             else:
+#                 new_file = new_file.replace('form action="index.html"', f'form action="../../index.html"')
+#             new_file = new_file.replace('html/', '../')
+#             new_file = new_file.replace('"index.html"', '"../../index.html"')
 
         #Creating .html and special files for the Table
         with open(html_path, 'w', encoding="utf-8") as file:
