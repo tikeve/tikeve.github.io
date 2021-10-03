@@ -2,15 +2,22 @@
 <html>
 <head>
 	<script>
-        var loc = window.location.pathname;
-        if (loc.includes('tikeve.github.io')) {
-			var locloc = loc.substring(loc.lastIndexOf('tikeve.github.io') + "tikeve.github.io".length + 1, loc.length);
-            var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
-        } else {
-			locloc = "index.html" /*loc*/
-			var filename = "index";
-        }
-        var dir = loc.substring(0, loc.lastIndexOf('/'));
+		var loc = window.location.pathname;
+
+		//For root file tikeve.github.io
+		if (loc == "/") {
+			locloc = loc + "index.html"
+			filename = "index"
+		} else {
+            filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
+			//for desktop
+			if (loc.includes('tikeve.github.io')) {
+				var locloc = loc.substring(loc.lastIndexOf('tikeve.github.io') + "tikeve.github.io".length + 1, loc.length);
+			} else { //for all other html files at tikeve.github.io
+				locloc = loc
+			}
+		}
+		
         //var filename = loc.substring(loc.lastIndexOf('/') + 1, loc.length - 5);
         var depth = locloc.split("/").length - 1;
         var root_dir = "../".repeat(depth)
