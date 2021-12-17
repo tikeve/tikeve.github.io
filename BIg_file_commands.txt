@@ -1,0 +1,4 @@
+1. ”дал€ет всю историю о файле rating.csv
+git filter-branch --index-filter Уgit rm -r --cached --ignore-unmatch rating.csvФ HEAD
+2. ‘орсированна€ запись полученной версии в main
+git push -f origin main
