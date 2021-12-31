@@ -143,35 +143,35 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 653,Ed Turns,Turns,4,Brighton,2,3,0
 654,Marc Leonard,Leonard,4,Brighton,3,3,0
 655,Evan Ferguson,Ferguson,4,Brighton,4,3,0
-98,James Tarkowski,Tarkowski,5,Burnley,2,15,14
-99,Phil Bardsley,Bardsley,5,Burnley,2,15,0
-100,Erik Pieters,Pieters,5,Burnley,2,15,3
-101,Jack Cork,Cork,5,Burnley,3,15,6
-102,Dale Stephens,Stephens,5,Burnley,3,15,0
-103,Kevin Long,Long,5,Burnley,2,15,0
-104,Jay Rodriguez,Rodriguez,5,Burnley,4,15,12
-105,Ashley Barnes,Barnes,5,Burnley,4,15,8
-106,Ben Mee,Mee,5,Burnley,2,15,11
-107,Ashley Westwood,Westwood,5,Burnley,3,15,13
-108,Johann Berg Gudmundsson,Gudmundsson,5,Burnley,3,15,15
-109,Chris Wood,Wood,5,Burnley,4,15,15
-110,Matthew Lowton,Lowton,5,Burnley,2,15,15
-111,Matej Vydra,Vydra,5,Burnley,4,15,13
-112,Nick Pope,Pope,5,Burnley,1,15,15
-113,Charlie Taylor,Taylor,5,Burnley,2,15,14
-114,Will Norris,Norris,5,Burnley,1,15,0
-115,Josh Brownhill,Brownhill,5,Burnley,3,15,15
-116,Josh Benson,Benson,5,Burnley,3,15,0
-117,Bailey Peacock-Farrell,Peacock-Farrell,5,Burnley,1,15,0
-118,Dwight McNeil,McNeil,5,Burnley,3,15,15
-451,Nathan Collins,Collins,5,Burnley,2,15,5
-480,Wayne Hennessey,Hennessey,5,Burnley,1,15,0
-533,Lewis Richardson,Richardson,5,Burnley,4,15,0
-534,Bobby Thomas,Thomas,5,Burnley,2,15,0
-565,Owen Dodgson,Dodgson,5,Burnley,2,14,0
-575,Aaron Lennon,Lennon,5,Burnley,3,13,6
-578,Maxwel Cornet,Cornet,5,Burnley,3,12,9
-585,Connor Roberts,Roberts,5,Burnley,2,12,1
+98,James Tarkowski,Tarkowski,5,Burnley,2,16,15
+99,Phil Bardsley,Bardsley,5,Burnley,2,16,0
+100,Erik Pieters,Pieters,5,Burnley,2,16,4
+101,Jack Cork,Cork,5,Burnley,3,16,7
+102,Dale Stephens,Stephens,5,Burnley,3,16,1
+103,Kevin Long,Long,5,Burnley,2,16,0
+104,Jay Rodriguez,Rodriguez,5,Burnley,4,16,12
+105,Ashley Barnes,Barnes,5,Burnley,4,16,8
+106,Ben Mee,Mee,5,Burnley,2,16,12
+107,Ashley Westwood,Westwood,5,Burnley,3,16,14
+108,Johann Berg Gudmundsson,Gudmundsson,5,Burnley,3,16,16
+109,Chris Wood,Wood,5,Burnley,4,16,16
+110,Matthew Lowton,Lowton,5,Burnley,2,16,16
+111,Matej Vydra,Vydra,5,Burnley,4,16,14
+112,Nick Pope,Pope,5,Burnley,1,16,15
+113,Charlie Taylor,Taylor,5,Burnley,2,16,15
+114,Will Norris,Norris,5,Burnley,1,16,0
+115,Josh Brownhill,Brownhill,5,Burnley,3,16,15
+116,Josh Benson,Benson,5,Burnley,3,16,0
+117,Bailey Peacock-Farrell,Peacock-Farrell,5,Burnley,1,16,0
+118,Dwight McNeil,McNeil,5,Burnley,3,16,16
+451,Nathan Collins,Collins,5,Burnley,2,16,5
+480,Wayne Hennessey,Hennessey,5,Burnley,1,16,1
+533,Lewis Richardson,Richardson,5,Burnley,4,16,0
+534,Bobby Thomas,Thomas,5,Burnley,2,16,0
+565,Owen Dodgson,Dodgson,5,Burnley,2,15,0
+575,Aaron Lennon,Lennon,5,Burnley,3,14,7
+578,Maxwel Cornet,Cornet,5,Burnley,3,13,9
+585,Connor Roberts,Roberts,5,Burnley,2,13,1
 119,Cesar Azpilicueta,Azpilicueta,6,Chelsea,2,20,13
 120,Olivier Giroud,Giroud,6,Chelsea,4,20,0
 121,Thiago Emiliano da Silva,Thiago Silva,6,Chelsea,2,20,16
@@ -406,35 +406,35 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 629,James McAtee,McAtee,12,Man City,3,9,1
 651,Conrad Egan-Riley,Egan-Riley,12,Man City,2,4,0
 663,Kayky da Silva Chagas,Kayky,12,Man City,4,2,0
-269,Edinson Cavani,Cavani,13,Man Utd,4,17,6
-270,David de Gea,de Gea,13,Man Utd,1,17,17
-271,Nemanja Matic,Matic,13,Man Utd,3,17,9
-272,Paul Pogba,Pogba,13,Man Utd,3,17,9
-273,Harry Maguire,Maguire,13,Man Utd,2,17,15
-274,Frederico Rodrigues de Paula Santos,Fred,13,Man Utd,3,17,14
-275,Luke Shaw,Shaw,13,Man Utd,2,17,12
-276,Jesse Lingard,Lingard,13,Man Utd,3,17,8
-277,Bruno Miguel Borges Fernandes,Fernandes,13,Man Utd,3,17,17
-278,Anthony Martial,Martial,13,Man Utd,4,17,7
-279,Alex Nicolao Telles,Telles,13,Man Utd,2,17,6
-280,Dean Henderson,Henderson,13,Man Utd,1,17,0
-281,Marcus Rashford,Rashford,13,Man Utd,3,17,10
-282,Donny van de Beek,van de Beek,13,Man Utd,3,17,7
-284,Victor Lindelof,Lindelof,13,Man Utd,2,17,13
-285,Scott McTominay,McTominay,13,Man Utd,3,17,15
-286,Eric Bailly,Bailly,13,Man Utd,2,17,3
-288,Aaron Wan-Bissaka,Wan-Bissaka,13,Man Utd,2,17,13
-289,Mason Greenwood,Greenwood,13,Man Utd,3,17,13
-459,Juan Mata,Mata,13,Man Utd,3,17,0
-485,Jadon Sancho,Sancho,13,Man Utd,3,17,14
-509,Tom Heaton,Heaton,13,Man Utd,1,17,0
-510,Jose Diogo Dalot Teixeira,Dalot,13,Man Utd,2,17,8
-511,Andreas Pereira,Pereira,13,Man Utd,3,17,0
-512,Anthony Elanga,Elanga,13,Man Utd,3,17,1
-555,Raphael Varane,Varane,13,Man Utd,2,16,7
-579,Cristiano Ronaldo dos Santos Aveiro,Ronaldo,13,Man Utd,4,14,14
-632,Phil Jones,Jones,13,Man Utd,2,5,0
-636,Amad Diallo,Diallo,13,Man Utd,3,4,0
+269,Edinson Cavani,Cavani,13,Man Utd,4,18,7
+270,David de Gea,de Gea,13,Man Utd,1,18,18
+271,Nemanja Matic,Matic,13,Man Utd,3,18,10
+272,Paul Pogba,Pogba,13,Man Utd,3,18,9
+273,Harry Maguire,Maguire,13,Man Utd,2,18,16
+274,Frederico Rodrigues de Paula Santos,Fred,13,Man Utd,3,18,15
+275,Luke Shaw,Shaw,13,Man Utd,2,18,13
+276,Jesse Lingard,Lingard,13,Man Utd,3,18,8
+277,Bruno Miguel Borges Fernandes,Fernandes,13,Man Utd,3,18,17
+278,Anthony Martial,Martial,13,Man Utd,4,18,7
+279,Alex Nicolao Telles,Telles,13,Man Utd,2,18,6
+280,Dean Henderson,Henderson,13,Man Utd,1,18,0
+281,Marcus Rashford,Rashford,13,Man Utd,3,18,10
+282,Donny van de Beek,van de Beek,13,Man Utd,3,18,7
+284,Victor Lindelof,Lindelof,13,Man Utd,2,18,13
+285,Scott McTominay,McTominay,13,Man Utd,3,18,16
+286,Eric Bailly,Bailly,13,Man Utd,2,18,4
+288,Aaron Wan-Bissaka,Wan-Bissaka,13,Man Utd,2,18,14
+289,Mason Greenwood,Greenwood,13,Man Utd,3,18,14
+459,Juan Mata,Mata,13,Man Utd,3,18,0
+485,Jadon Sancho,Sancho,13,Man Utd,3,18,15
+509,Tom Heaton,Heaton,13,Man Utd,1,18,0
+510,Jose Diogo Dalot Teixeira,Dalot,13,Man Utd,2,18,9
+511,Andreas Pereira,Pereira,13,Man Utd,3,18,0
+512,Anthony Elanga,Elanga,13,Man Utd,3,18,1
+555,Raphael Varane,Varane,13,Man Utd,2,17,8
+579,Cristiano Ronaldo dos Santos Aveiro,Ronaldo,13,Man Utd,4,15,15
+632,Phil Jones,Jones,13,Man Utd,2,6,0
+636,Amad Diallo,Diallo,13,Man Utd,3,5,0
 19,Joseph Willock,Willock,14,Newcastle,3,19,16
 291,Jonjo Shelvey,Shelvey,14,Newcastle,3,19,11
 292,Matt Ritchie,Ritchie,14,Newcastle,2,19,16

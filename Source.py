@@ -658,7 +658,7 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
             dfStringStyler = dfString.style.apply(color_table, axis=None, F_UF=F_UF)
         else:
             dfStringStyler = dfString.style
-        dfStringStyler.set_table_attributes('class="DataTable"')
+        dfStringStyler.set_table_attributes('class="DataTable sortable"')
         html_table = dfStringStyler.render().replace('\n', '')
         BS_table = BeautifulSoup(html_table, 'html.parser')
         css = str(BS_table('style')[0])
