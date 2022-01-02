@@ -152,10 +152,10 @@ main {
 /*table {*/
 .DataTable {
     overflow: auto;
-    height: 450px;
+/*    height: 450px;
     width: 100%;
     display: block;
-    text-align: center;
+    text-align: center;*/
 }
 table.DataTable th {
     width: 7em;
@@ -164,6 +164,10 @@ table.DataTable th {
 
 #main-table {
     width: 100%;
+    overflow: auto;
+    height: 770px;
+    width: 100%;
+    display: block;
 }
 
 @media(max-width: 550px) {
@@ -218,10 +222,21 @@ h5 {
     margin-bottom: 15px;
 }
 
+.table_wrapper {
+    overflow: auto;
+    width: 100%;
+    display: block;
+}
+
+th {
+    padding: 4px;
+}
+
 table {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
+    /*display: block;*/
 }
 
 /*Everything from the FOOTER*/
