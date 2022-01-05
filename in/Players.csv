@@ -409,35 +409,35 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 629,James McAtee,McAtee,12,Man City,3,10,1
 651,Conrad Egan-Riley,Egan-Riley,12,Man City,2,5,0
 663,Kayky da Silva Chagas,Kayky,12,Man City,4,3,0
-269,Edinson Cavani,Cavani,13,Man Utd,4,18,7
-270,David de Gea,de Gea,13,Man Utd,1,18,18
-271,Nemanja Matic,Matic,13,Man Utd,3,18,10
-272,Paul Pogba,Pogba,13,Man Utd,3,18,9
-273,Harry Maguire,Maguire,13,Man Utd,2,18,16
-274,Frederico Rodrigues de Paula Santos,Fred,13,Man Utd,3,18,15
-275,Luke Shaw,Shaw,13,Man Utd,2,18,13
-276,Jesse Lingard,Lingard,13,Man Utd,3,18,8
-277,Bruno Miguel Borges Fernandes,Fernandes,13,Man Utd,3,18,17
-278,Anthony Martial,Martial,13,Man Utd,4,18,7
-279,Alex Nicolao Telles,Telles,13,Man Utd,2,18,6
-280,Dean Henderson,Henderson,13,Man Utd,1,18,0
-281,Marcus Rashford,Rashford,13,Man Utd,3,18,10
-282,Donny van de Beek,van de Beek,13,Man Utd,3,18,7
-284,Victor Lindelof,Lindelof,13,Man Utd,2,18,13
-285,Scott McTominay,McTominay,13,Man Utd,3,18,16
-286,Eric Bailly,Bailly,13,Man Utd,2,18,4
-288,Aaron Wan-Bissaka,Wan-Bissaka,13,Man Utd,2,18,14
-289,Mason Greenwood,Greenwood,13,Man Utd,3,18,14
-459,Juan Mata,Mata,13,Man Utd,3,18,0
-485,Jadon Sancho,Sancho,13,Man Utd,3,18,15
-509,Tom Heaton,Heaton,13,Man Utd,1,18,0
-510,Jose Diogo Dalot Teixeira,Dalot,13,Man Utd,2,18,9
-511,Andreas Pereira,Pereira,13,Man Utd,3,18,0
-512,Anthony Elanga,Elanga,13,Man Utd,3,18,1
-555,Raphael Varane,Varane,13,Man Utd,2,17,8
-579,Cristiano Ronaldo dos Santos Aveiro,Ronaldo,13,Man Utd,4,15,15
-632,Phil Jones,Jones,13,Man Utd,2,6,0
-636,Amad Diallo,Diallo,13,Man Utd,3,5,0
+269,Edinson Cavani,Cavani,13,Man Utd,4,19,8
+270,David de Gea,de Gea,13,Man Utd,1,19,19
+271,Nemanja Matic,Matic,13,Man Utd,3,19,11
+272,Paul Pogba,Pogba,13,Man Utd,3,19,9
+273,Harry Maguire,Maguire,13,Man Utd,2,19,16
+274,Frederico Rodrigues de Paula Santos,Fred,13,Man Utd,3,19,15
+275,Luke Shaw,Shaw,13,Man Utd,2,19,14
+276,Jesse Lingard,Lingard,13,Man Utd,3,19,8
+277,Bruno Miguel Borges Fernandes,Fernandes,13,Man Utd,3,19,18
+278,Anthony Martial,Martial,13,Man Utd,4,19,7
+279,Alex Nicolao Telles,Telles,13,Man Utd,2,19,6
+280,Dean Henderson,Henderson,13,Man Utd,1,19,0
+281,Marcus Rashford,Rashford,13,Man Utd,3,19,11
+282,Donny van de Beek,van de Beek,13,Man Utd,3,19,7
+284,Victor Lindelof,Lindelof,13,Man Utd,2,19,13
+285,Scott McTominay,McTominay,13,Man Utd,3,19,17
+286,Eric Bailly,Bailly,13,Man Utd,2,19,4
+288,Aaron Wan-Bissaka,Wan-Bissaka,13,Man Utd,2,19,15
+289,Mason Greenwood,Greenwood,13,Man Utd,3,19,15
+459,Juan Mata,Mata,13,Man Utd,3,19,0
+485,Jadon Sancho,Sancho,13,Man Utd,3,19,16
+509,Tom Heaton,Heaton,13,Man Utd,1,19,0
+510,Jose Diogo Dalot Teixeira,Dalot,13,Man Utd,2,19,9
+511,Andreas Pereira,Pereira,13,Man Utd,3,19,0
+512,Anthony Elanga,Elanga,13,Man Utd,3,19,2
+555,Raphael Varane,Varane,13,Man Utd,2,18,9
+579,Cristiano Ronaldo dos Santos Aveiro,Ronaldo,13,Man Utd,4,16,16
+632,Phil Jones,Jones,13,Man Utd,2,7,1
+636,Amad Diallo,Diallo,13,Man Utd,3,6,0
 19,Joseph Willock,Willock,14,Newcastle,3,19,16
 291,Jonjo Shelvey,Shelvey,14,Newcastle,3,19,11
 292,Matt Ritchie,Ritchie,14,Newcastle,2,19,16
@@ -637,37 +637,37 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 634,Sonny Perkins,Perkins,19,West Ham,3,7,0
 644,Ajibola Alese,Alese,19,West Ham,2,5,0
 652,Armstrong Oko-Flex,Oko-Flex,19,West Ham,3,4,0
-426,Joao Filipe Iria Santos Moutinho,Moutinho,20,Wolves,3,18,18
-427,Rui Pedro dos Santos Patricio,Patricio,20,Wolves,1,18,0
-428,Willy Boly,Boly,20,Wolves,2,18,0
-429,Conor Coady,Coady,20,Wolves,2,18,18
-430,Raul Jimenez,Jimenez,20,Wolves,4,18,17
-431,Romain Saiss,Saiss,20,Wolves,2,18,18
-432,Fernando Marcal,Marcal,20,Wolves,2,18,10
-433,Jonathan Castro Otto,Jonny,20,Wolves,2,18,0
-434,Leander Dendoncker,Dendoncker,20,Wolves,3,18,14
-435,Adama Traore,Traore,20,Wolves,3,18,17
-436,Ruben Diogo da Silva Neves,Neves,20,Wolves,3,18,17
-437,Nelson Cabral Semedo,Semedo,20,Wolves,2,18,16
-438,Daniel Castelo Podence,Podence,20,Wolves,3,18,12
-439,Max Kilman,Kilman,20,Wolves,2,18,18
-440,Morgan Gibbs-White,Gibbs-White,20,Wolves,3,18,2
-441,Pedro Lomba Neto,Neto,20,Wolves,3,18,0
-442,Owen Otasowie,Otasowie,20,Wolves,3,18,0
-443,Ki-Jana Hoever,Hoever,20,Wolves,2,18,6
-444,Andreas Sondergaard,Sondergaard,20,Wolves,1,18,0
-445,Fabio Silva,Fabio Silva,20,Wolves,4,18,8
-446,Yerson Mosquera Valdelamar,Mosquera,20,Wolves,2,18,0
-452,John Ruddy,Ruddy,20,Wolves,1,18,0
-461,Francisco Machado Mota de Castro Trincao,Trincao,20,Wolves,3,18,14
-470,Rayan Ait Nouri,Ait Nouri,20,Wolves,2,18,9
-475,Jose Malheiro de Sa,Sa,20,Wolves,1,18,18
-523,Patrick Cutrone,Cutrone,20,Wolves,4,18,0
-547,Luke Cundle,Cundle,20,Wolves,3,18,0
-548,Chem Campbell,Campbell,20,Wolves,3,18,0
-549,Christian Marques,Marques,20,Wolves,2,18,0
-583,Hee-Chan Hwang,Hwang,20,Wolves,4,15,14
-611,Louie Moulden,Moulden,20,Wolves,1,13,0
-621,James Storer,Storer,20,Wolves,1,9,0
-635,Hugo Bueno,Bueno,20,Wolves,2,5,0
-661,Bruno Andre Cavaco Jordao,Jordao,20,Wolves,3,1,0
+426,Joao Filipe Iria Santos Moutinho,Moutinho,20,Wolves,3,19,19
+427,Rui Pedro dos Santos Patricio,Patricio,20,Wolves,1,19,0
+428,Willy Boly,Boly,20,Wolves,2,19,0
+429,Conor Coady,Coady,20,Wolves,2,19,19
+430,Raul Jimenez,Jimenez,20,Wolves,4,19,18
+431,Romain Saiss,Saiss,20,Wolves,2,19,19
+432,Fernando Marcal,Marcal,20,Wolves,2,19,11
+433,Jonathan Castro Otto,Jonny,20,Wolves,2,19,0
+434,Leander Dendoncker,Dendoncker,20,Wolves,3,19,15
+435,Adama Traore,Traore,20,Wolves,3,19,18
+436,Ruben Diogo da Silva Neves,Neves,20,Wolves,3,19,18
+437,Nelson Cabral Semedo,Semedo,20,Wolves,2,19,17
+438,Daniel Castelo Podence,Podence,20,Wolves,3,19,13
+439,Max Kilman,Kilman,20,Wolves,2,19,19
+440,Morgan Gibbs-White,Gibbs-White,20,Wolves,3,19,2
+441,Pedro Lomba Neto,Neto,20,Wolves,3,19,0
+442,Owen Otasowie,Otasowie,20,Wolves,3,19,0
+443,Ki-Jana Hoever,Hoever,20,Wolves,2,19,6
+444,Andreas Sondergaard,Sondergaard,20,Wolves,1,19,0
+445,Fabio Silva,Fabio Silva,20,Wolves,4,19,9
+446,Yerson Mosquera Valdelamar,Mosquera,20,Wolves,2,19,0
+452,John Ruddy,Ruddy,20,Wolves,1,19,0
+461,Francisco Machado Mota de Castro Trincao,Trincao,20,Wolves,3,19,15
+470,Rayan Ait Nouri,Ait Nouri,20,Wolves,2,19,9
+475,Jose Malheiro de Sa,Sa,20,Wolves,1,19,19
+523,Patrick Cutrone,Cutrone,20,Wolves,4,19,0
+547,Luke Cundle,Cundle,20,Wolves,3,19,0
+548,Chem Campbell,Campbell,20,Wolves,3,19,0
+549,Christian Marques,Marques,20,Wolves,2,19,0
+583,Hee-Chan Hwang,Hwang,20,Wolves,4,16,14
+611,Louie Moulden,Moulden,20,Wolves,1,14,0
+621,James Storer,Storer,20,Wolves,1,10,0
+635,Hugo Bueno,Bueno,20,Wolves,2,6,0
+661,Bruno Andre Cavaco Jordao,Jordao,20,Wolves,3,2,0

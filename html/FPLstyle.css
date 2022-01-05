@@ -82,9 +82,11 @@ form input:hover {
 }
 #FPL-button {
     color: green;
+    font-weight: bold;
 }
 #Understat-button {
-    color: red;
+    color: #AB1717;
+    font-weight: bold;
 }
 /*.history {*/
     /*float:right;*/
@@ -195,11 +197,20 @@ table.DataTable th {
 }
 
 .posts {
-    border: 3px yellow solid;
+    border: 3px #09bb9f solid;
     margin: 5px;
     padding: 17px 10% 10px 10%;
-    overflow: auto;
     width: 100%-10px;
+    background-color: white;
+    overflow: hidden;
+    height: 350px;
+}
+.posts:not(:focus):hover {
+    background-color: lightgrey;
+}
+
+.posts:focus {
+    height: 100%;
 }
 
 .date {
@@ -215,6 +226,8 @@ p {
 }
 
 h3 {
+    font-size: 40px;
+    color: #15607a;
     margin-bottom: 15px;
 }
 
