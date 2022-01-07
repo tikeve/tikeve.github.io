@@ -107,6 +107,7 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 628,Maxwell Haygarth,Haygarth,3,Brentford,3,8,0
 640,Nathan Young-Coombes,Young-Coombes,3,Brentford,4,5,0
 662,Myles Peart-Harris,Peart-Harris,3,Brentford,3,3,0
+673,Jonas Lossl,Lossl,3,Brentford,1,1,0
 53,Adam Lallana,Lallana,4,Brighton,3,19,17
 54,Jason Steele,Steele,4,Brighton,1,19,1
 55,Pascal Groß,Groß,4,Brighton,3,19,12
@@ -273,6 +274,8 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 622,Cenk Tosun,Tosun,8,Everton,4,9,1
 623,Reece Welch,Welch,8,Everton,2,9,0
 630,Tyler Onyango,Onyango,8,Everton,3,7,2
+674,Nathan Patterson,Patterson,8,Everton,2,1,0
+675,Vitalii Mykolenko,Mykolenko,8,Everton,2,1,0
 200,Kasper Schmeichel,Schmeichel,9,Leicester,1,18,18
 201,Jonny Evans,Evans,9,Leicester,2,18,10
 202,Marc Albrighton,Albrighton,9,Leicester,3,18,8
