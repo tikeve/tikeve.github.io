@@ -60,7 +60,6 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 50,Douglas Luiz Soares de Paulo,Douglas Luiz,2,Aston Villa,3,19,15
 51,Jacob Ramsey,Ramsey,2,Aston Villa,3,19,17
 52,Ashley Young,Young,2,Aston Villa,2,19,12
-283,Axel Tuanzebe,Tuanzebe,2,Aston Villa,2,19,9
 337,Danny Ings,Ings,2,Aston Villa,4,19,14
 492,Leon Bailey,Bailey,2,Aston Villa,3,19,9
 496,Aaron Ramsey,Ramsey,2,Aston Villa,3,19,0
@@ -426,6 +425,7 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 280,Dean Henderson,Henderson,13,Man Utd,1,19,0
 281,Marcus Rashford,Rashford,13,Man Utd,3,19,11
 282,Donny van de Beek,van de Beek,13,Man Utd,3,19,7
+283,Axel Tuanzebe,Tuanzebe,13,Man Utd,2,19,9
 284,Victor Lindelof,Lindelof,13,Man Utd,2,19,13
 285,Scott McTominay,McTominay,13,Man Utd,3,19,17
 286,Eric Bailly,Bailly,13,Man Utd,2,19,4
@@ -469,6 +469,7 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 514,Mark Gillespie,Gillespie,14,Newcastle,1,19,0
 599,Joe White,White,14,Newcastle,3,16,0
 609,Elliot Anderson,Anderson,14,Newcastle,3,14,0
+678,Kieran Trippier,Trippier,14,Newcastle,2,0,0
 145,Billy Gilmour,Gilmour,15,Norwich,3,19,12
 290,Brandon Williams,Williams,15,Norwich,2,19,13
 313,Michael McGovern,McGovern,15,Norwich,1,19,0
@@ -609,6 +610,9 @@ id,Name,web_name,Team number,Team,Position,Team games,Played
 633,James Morris,Morris,18,Watford,2,6,0
 642,Vincent Angelini,Angelini,18,Watford,1,3,0
 669,Kamil Conteh,Conteh,18,Watford,3,2,0
+676,Hassane Kamara,Kamara,18,Watford,2,0,0
+677,Samir Caetano de Souza Santos,Samir,18,Watford,2,0,0
+679,Edo Kayembe,Kayembe,18,Watford,3,0,0
 128,Kurt Zouma,Zouma,19,West Ham,2,20,11
 406,Mark Noble,Noble,19,West Ham,3,20,4
 407,Darren Randolph,Randolph,19,West Ham,1,20,0

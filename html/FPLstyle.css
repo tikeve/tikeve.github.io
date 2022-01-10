@@ -26,7 +26,6 @@ h2.non-blog{
 
 h1.non-blog {
     line-height: 0.2em;
-    /*font-size: 12px;*/
     padding-bottom: 0.3px;
 }
 .color_green {
@@ -164,6 +163,7 @@ table.DataTable th {
 
 }
 
+/*Making table 1st row freeze and proritize over 1st column*/
 thead {
     position: sticky;
     top: 0;
@@ -171,6 +171,8 @@ thead {
     z-index: 3;
     background-color: white;
 }
+
+/*Making table 1st column freeze*/
 td.col0 {
     background-color: white;
     position: sticky;
@@ -180,7 +182,7 @@ td.col0 {
 #main-table {
     width: 100%;
     overflow: auto;
-    height: 770px;
+    /*height: 770px;*/
     width: 100%;
     display: block;
 }
