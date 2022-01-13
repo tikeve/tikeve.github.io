@@ -1,7 +1,7 @@
 id,Teams,XXX Target number XXX,Matches
 1,Arsenal,0.0,20
 2,Aston Villa,0.0,19
-3,Brentford,0.0,19
+3,Brentford,0.0,20
 4,Brighton,0.0,19
 5,Burnley,0.0,17
 6,Chelsea,0.0,21
@@ -13,9 +13,9 @@ id,Teams,XXX Target number XXX,Matches
 12,Man City,0.0,21
 13,Man Utd,0.0,19
 14,Newcastle,0.0,19
-15,Norwich,0.0,19
-16,Southampton,0.0,19
+15,Norwich,0.0,20
+16,Southampton,0.0,20
 17,Spurs,0.0,18
 18,Watford,0.0,18
-19,West Ham,0.0,20
+19,West Ham,0.0,21
 20,Wolves,0.0,19

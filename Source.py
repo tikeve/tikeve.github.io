@@ -595,6 +595,7 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
     source, ma_num, folder = class_args[5:]
     
     if (name != 'TableTeams')&(len(xdf) > 0):
+        #F_UF - is the dataframe of finished, unfinished or nonexiestent fixtures
         # 1- finished, 0 - unfinished, np.nan - doesn't exist
         F_UF = pd.DataFrame()
         for i in df.columns:
@@ -769,12 +770,13 @@ def color_table(df, F_UF):
     def color_table_row(row, x, F_UF):
         '''
             function for style.apply by rows where x is a table type
-            Subfunction of color_table_row
+            Subfunction of color_table
         '''
         str1 = 'Background-color: white'
-        tw = (row.name in ['Matches', 'Teams'])
-        pw = (row.name  in ['Team games', 'Played', 'Name', 'Team'])
-        ttw = (row.name in ['xG adjusted', 'xG', 'xA', 'xA adjusted'])
+        #Column names which shouldn't be colored
+        tw = (row.name in ['Matches', 'Teams'])#for teams
+        pw = (row.name  in ['Team games', 'Played', 'Name', 'Team', 'Position'])#for players
+        ttw = (row.name in ['xG adjusted', 'xG', 'xA', 'xA adjusted'])#for team defence
         
         if x=='Team':
             res = []

@@ -4,7 +4,7 @@
     Depending on sys.argv[1] 'full', 'medium' or anything else does full download (Optional module,
     medium download or nothing.
     
-    Uses module: Optional
+    Uses module: Optional    
 
     Sources:    FPL API
                 'in/bootstrap.csv'
@@ -77,7 +77,7 @@ bigTable = bigTable.applymap(lambda x: np.nan if x=='' else x)
 teams = dict(zip(pd.DataFrame(d1['teams'])['id'],pd.DataFrame(d1['teams'])['name']))
 players = dict(zip(bigTable['id'],bigTable['full_name']))
 teamplayers = dict(zip(bigTable['id'],bigTable['team']))
-pos_dict = {1: 'G', 2: 'D', 3: 'M', 4: 'F'}
+pos_dict = {1: 'Goalkeeper', 2: 'Defender', 3: 'Midfielder', 4: 'Forward'}
 positions = dict(zip(bigTable['id'],[pos_dict[bigTable.at[i,'element_type']] for i in bigTable.index]))
 team_number = len(teams)
 
@@ -232,7 +232,8 @@ if sys.argv[1] != 'nothing':
     Players['Team number'] = [bigTable[bigTable['id'] == i]['team'].sum() for i in Players['id']]
     Players['Team'] = [dict(zip(pd.DataFrame(d1['teams'])['id'],pd.DataFrame(d1['teams'])['name']))\
                        [Players.at[i,'Team number']] for i in Players.index]
-    Players['Position'] = bigTable['element_type']
+    #Players['Position'] = bigTable['element_type']
+    Players['Position'] = [pos_dict[bigTable.at[i,'element_type']] for i in bigTable.index]
 
 
     if  not Table.empty:

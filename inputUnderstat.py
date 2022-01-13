@@ -293,6 +293,7 @@ if table_len > 0:
     #Name_Dictionary = Exc_dict(Name_Dictionary, 'Franck Zambo','Andre-Frank Zambo Anguissa')
     #Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby Decordova-Reid')
     Name_Dictionary = Exc_dict(Name_Dictionary, 'Emerson','Emerson Aparecido Leite de Souza Junior')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Nicolas N&#039;Koulou','Nicolas Nkoulou')
     #display(Name_Dictionary)
 
     if not Table_FPL.empty:
