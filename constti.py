@@ -113,7 +113,7 @@ def myisnan(x):
 
 # 9. Same head, header and script at the end for all html files inside html folder
 
-def head_header_script (copy_head = 1, copy_header = 1, copy_script = 1, copy_nav=1):
+def head_header_script (copy_head = 1, copy_header = 1, copy_script = 1, copy_nav=1, copy_footer=1):
     '''
         Same head, header and script at the end for all html files inside html folder
     '''
@@ -123,15 +123,18 @@ def head_header_script (copy_head = 1, copy_header = 1, copy_script = 1, copy_na
         head = str(BeautifulSoup(main_html, 'html.parser')('head')[0])
         script = str(BeautifulSoup(main_html, 'html.parser')('script')[-1])
         nav = str(BeautifulSoup(main_html, 'html.parser')('nav')[0])
+        footer = str(BeautifulSoup(main_html, 'html.parser')('footer')[0])
+        
 
     my_path = os.getcwd()
-    file_pathes = glob.glob(my_path + '/html/**/*.html', recursive=True)
+    file_paths = glob.glob(my_path + '/html/**/*.html', recursive=True)
 
-    for path in file_pathes:
+    for path in file_paths:
         with open(path, 'r', encoding="utf-8") as file:
             print(path)
             file_text = file.read()
-            
+        
+        new_file = file_text
         if (file_text.find('<head>') != -1) & (copy_head == 1):
             new_file = file_text.replace(file_text[file_text.find('<head>'):file_text.find('</head>')+7], head)
         if (file_text.find('<header>') != -1) & (copy_header == 1):
@@ -139,15 +142,36 @@ def head_header_script (copy_head = 1, copy_header = 1, copy_script = 1, copy_na
         if (new_file.find('<script id="end">') != -1) & (copy_script == 1):
             #print("found!!")
             new_file = new_file.replace(new_file[new_file.find('<script id="end">'):], script)
-        else:
-            #print("not found")
-            new_file = new_file + "\n" + script
         if (file_text.find('<nav>') != -1) & (copy_nav == 1):
             new_file = new_file.replace(new_file[new_file.find('<nav>'):new_file.find('</nav>')+6], nav)
-    #     if new_file.find('/n<script id="end">') != -1:
-    #         new_file = new_file.replace('/n<script id="end">', '<script id="end">')
+        if (file_text.find('<footer>') != -1) & (copy_nav == 1):
+            new_file = new_file.replace(new_file[new_file.find('<footer>'):new_file.find('</footer>')+9], footer)
+
+#             file_text1 = str(BeautifulSoup(file_text, 'html.parser')('div', {id:"main-table"})[0])
+#             file_text2 = str(BeautifulSoup(file_text, 'html.parser')('div', {id:"blog"})[0])
+#             file_text = file_text1 + file_text2
+#             new_file = head + "<body>" + header + nav + file_text + "</body>" + footer + script
+        
+        #else:
+        #Check if it i not a Data page
+        if ('FPL' not in path.split('\\')) and ('Understat' not in path.split('\\')) and ('index.html' not in path.split('\\')):
+            if (file_text.find('<footer>') == -1): # If Ranking table already formatted then doing nothing
+                print('Changing Ranking!!!!!!!!!!!!!!!!!!!!!!')
+                new_file = head + "<body>" + header + "<main>" + file_text + "</main>" + "</body>" + footer + script
+            #Removing FPL and Understat buttons in non-data pages
+            div_sources = str(BeautifulSoup(main_html, 'html.parser')('div', {"id" : "Sources"})[0])
+            new_file = new_file.replace(div_sources, "")
         with open(path, 'w', encoding="utf-8") as file:
             file.write(new_file)
+            
+#     file_paths = glob.glob(my_path + '/Ranking/**/*.html', recursive=True)
+#     for path in file_paths:
+#         with open(path, 'r', encoding="utf-8") as file:
+#             print(path)
+#             file_text = file.read()
+#         new_file = head + header + file_text + footer + script
+#         with open(path, 'w', encoding="utf-8") as file:
+#             file.write(new_file)
 
 if __name__=="__main__":
     print('Hello')
