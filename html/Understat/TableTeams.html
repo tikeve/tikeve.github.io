@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<script>
+	<script>
 		var loc = window.location.pathname;
 
 		//For root file tikeve.github.io
@@ -37,11 +37,16 @@
 			year_root_dir = root_dir;
 		}
 	</script>
-<!--<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet"/>
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-<script>
+
+	<!--<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>-->
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
+	<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+	<script>
 		$(document).ready(function () {
 			//$('#T_4f0af446_6f59_11ec_91d0_001a7dda7113').DataTable({
 			$('.DataTable').DataTable({
@@ -53,13 +58,19 @@
 			});
 		});
 	</script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-<title> Some calculations</title>
-<link id="flavicon" rel="shortcut icon" type="image/jpg"/> <!--href="html/logo/favicon/f-32x32.png" />-->
-<link id="General-style" rel="stylesheet"/> <!--href="html/FPLstyle.css"-->
-<link id="Table-style" rel="stylesheet"/> <!--href="html/FPL/css/TableTeams.css"-->
-<script>
+
+
+
+
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> Some calculations</title>
+	<link rel="shortcut icon" id="flavicon" type="image/jpg"/> <!--href="html/logo/favicon/f-32x32.png" />-->
+
+	<link rel="stylesheet" id="General-style" /> <!--href="html/FPLstyle.css"-->
+	<link rel="stylesheet" id="Table-style" /> 	<!--href="html/FPL/css/TableTeams.css"-->
+	<script>
 		//document.getElementsByTagName("head")[0].insertAdjacentHTML("beforeend", '<link rel="stylesheet" id="General-style" href=' + root_dir + '"html/FPLstyle.css" />');
 		document.getElementById("General-style").setAttribute("href", root_dir + "html/FPLstyle.css");
 		document.getElementById("Table-style").setAttribute("href", year_root_dir + "html/" + source + "/css/" + table + ".css");
@@ -69,76 +80,78 @@
 
 <body>
 	<header>
-<div class="dropdown">
-<img alt="Menu" id="glyph_menu"/> <!--src="html/icons8-menu.svg"/-->
-<div class="dropdown-content">
-<a class="drop-menu home_link">2021 /    -    </a> <!--href="index.html"-->
-<a class="drop-menu" id="2020_2021">2020 / 2021</a> <!--href="html/2020_2021/index.html"-->
-<a class="drop-menu" id="2019_2020">2019 / 2020</a> <!--href="html/2019_2020/index.html"-->
-<a class="drop-menu" id="Ranking">Ranking</a> <!--href="html/Ranking/Ranking.html"-->
-</div>
-</div>
-<div id="pic">
-<a class="home_link" id="octopus_link">
-<img alt=" FPL" id="h_octopus"/> <!--src="html/logo/monstro-brown.png"-->
-</a>
-</div>
-<div class="table_header">
-<a class="home_link">
-<img alt="Main Page" id="glyph_home"/> <!--src="html/home.ico"-->
-</a>
-<br/>
-<h1 class="non-blog"> FPL in Numbers</h1>
-<br/>
-<div id="Sources">
-<form class="header-form" id="FPL">
-<!--action="index.html"-->
-<input class="source_button" id="FPL-button" type="submit" value="FPL"/>
-</form>
-<form class="header-form" id="Understat">
-<!--action="html/Understat/TableTeams.html"-->
-<input class="source_button" id="Understat-button" type="submit" value="Understat"/>
-</form>
-</div>
-</div>
-</header>
+		<div class="dropdown">
+			<img alt="Menu" id="glyph_menu"/>	<!--src="html/icons8-menu.svg"/-->
+			<div class="dropdown-content">
+				<a class="drop-menu home_link">2021 /    -    </a>	<!--href="index.html"-->
+				<a class="drop-menu" id="2020_2021">2020 / 2021</a>	<!--href="html/2020_2021/index.html"-->
+				<a class="drop-menu" id="2019_2020">2019 / 2020</a>	<!--href="html/2019_2020/index.html"-->
+				<a class="drop-menu" id="Ranking">Ranking</a>		<!--href="html/Ranking/Ranking.html"-->
+			</div>
+		</div>
+
+		<div id="pic">
+			<a class="home_link" id="octopus_link">
+				<img alt=" FPL" id="h_octopus" />  <!--src="html/logo/monstro-brown.png"-->
+			</a>
+		</div>
+
+		<div class="table_header">
+			<a class="home_link">
+				<img alt="Main Page" id="glyph_home" />   <!--src="html/home.ico"-->
+			</a>
+			<br />
+			<h1 class="non-blog"> FPL in Numbers</h1>
+			<br />
+			<div id="Sources">
+				<form class="header-form" id="FPL">
+					<!--action="index.html"-->
+					<input class="source_button" id="FPL-button" type="submit" value="FPL" />
+				</form>
+				<form class="header-form" id="Understat">
+					<!--action="html/Understat/TableTeams.html"-->
+					<input class="source_button" id="Understat-button" type="submit" value="Understat" />
+				</form>
+			</div>
+		</div>
+	</header>
 
 	<nav>
-<div>
-<form class="header-form" id="TxG"> <!--action="html/FPL/Team_xG.html"-->
-<input class="table_button" id="Team_xG" type="submit" value="Team xG"/>
-</form>
-<form class="header-form" id="TxA"> <!--action="html/FPL/Team_xA.html"-->
-<input class="table_button" id="Team_xA" type="submit" value="Team xA"/>
-</form>
-<form class="header-form" id="TOxG"> <!--action="html/FPL/Team_Opponent_xG.html"-->
-<input class="table_button" id="Team_Opponent_xG" type="submit" value="Team Defence"/>
-</form>
-<form class="header-form" id="TxGA"> <!--action="html/FPL/Team_xG_Ad.html"-->
-<input class="table_button" id="Team_xG_Ad" type="submit" value="Team xG Ad"/>
-</form>
-<form class="header-form" id="TxAA"> <!--action="html/FPL/Team_xA_Ad.html"-->
-<input class="table_button" id="Team_xA_Ad" type="submit" value="Team xA Ad"/>
-</form>
-<form class="header-form" id="TOxGA"> <!--action="html/FPL/Team_Opponent_xG_Ad.html"-->
-<input class="table_button" id="Team_Opponent_xG_Ad" type="submit" value="Team Defence Ad"/>
-</form>
-</div>
-<div>
-<form class="header-form" id="PxG"> <!--action="html/FPL/Player_xG.html"-->
-<input class="table_button" id="Player_xG" type="submit" value="Player xG"/>
-</form>
-<form class="header-form" id="PxA"> <!--action="html/FPL/Player_xA.html"-->
-<input class="table_button" id="Player_xA" type="submit" value="Player xA"/>
-</form>
-<form class="header-form" id="PxGA"> <!--action="html/FPL/Player_xG_Ad.html"-->
-<input class="table_button" id="Player_xG_Ad" type="submit" value="Player xG Ad"/>
-</form>
-<form class="header-form" id="PxAA"> <!--action="html/FPL/Player_xA_Ad.html"-->
-<input class="table_button" id="Player_xA_Ad" type="submit" value="Player xA Ad"/>
-</form>
-</div>
-</nav>
+		<div>
+			<form class="header-form" id="TxG">	<!--action="html/FPL/Team_xG.html"-->
+				<input type="submit" class="table_button" id="Team_xG" value="Team xG" />
+			</form>
+			<form class="header-form" id="TxA">	<!--action="html/FPL/Team_xA.html"-->
+				<input type="submit" class="table_button" id="Team_xA" value="Team xA" />
+			</form>
+			<form class="header-form" id="TOxG">	<!--action="html/FPL/Team_Opponent_xG.html"-->
+				<input type="submit" class="table_button" id="Team_Opponent_xG" value="Team Defence" />
+			</form>
+			<form class="header-form" id="TxGA">	<!--action="html/FPL/Team_xG_Ad.html"-->
+				<input type="submit" class="table_button" id="Team_xG_Ad" value="Team xG Ad" />
+			</form>
+			<form class="header-form" id="TxAA">	<!--action="html/FPL/Team_xA_Ad.html"-->
+				<input type="submit" class="table_button" id="Team_xA_Ad" value="Team xA Ad" />
+			</form>
+			<form class="header-form" id="TOxGA">	<!--action="html/FPL/Team_Opponent_xG_Ad.html"-->
+				<input type="submit" class="table_button" id="Team_Opponent_xG_Ad" value="Team Defence Ad" />
+			</form>
+		</div>
+		<div>
+			<form class="header-form" id="PxG">	<!--action="html/FPL/Player_xG.html"-->
+				<input type="submit" class="table_button" id="Player_xG" value="Player xG" />
+			</form>
+			<form class="header-form" id="PxA">	<!--action="html/FPL/Player_xA.html"-->
+				<input type="submit" class="table_button" id="Player_xA" value="Player xA" />
+			</form>
+			<form class="header-form" id="PxGA">	<!--action="html/FPL/Player_xG_Ad.html"-->
+				<input type="submit" class="table_button" id="Player_xG_Ad" value="Player xG Ad" />
+			</form>
+			<form class="header-form" id="PxAA">	<!--action="html/FPL/Player_xA_Ad.html"-->
+				<input type="submit" class="table_button" id="Player_xA_Ad" value="Player xA Ad" />
+			</form>
+		</div>
+	</nav>
 
 
 
@@ -147,7 +160,7 @@
 		<div id="main-table">
 			<h2 id="DataTitle" class="non-blog"> Teams Ranking </h2>
 
-			<table class="DataTable sortable" id="T_b6481_"> <thead> <tr> <th class="blank level0"> </th> <th class="col_heading level0 col0">Team</th> <th class="col_heading level0 col1">xG adjusted</th> <th class="col_heading level0 col2">xG</th> <th class="col_heading level0 col3">xA adjusted</th> <th class="col_heading level0 col4">xA</th> <th class="col_heading level0 col5">Opponent xG adjusted</th> <th class="col_heading level0 col6">Opponent xG</th> </tr> </thead> <tbody> <tr> <th class="row_heading level0 row0" id="T_b6481_level0_row0">1</th> <td class="data row0 col0" id="T_b6481_row0_col0">Liverpool</td> <td class="data row0 col1" id="T_b6481_row0_col1">265.5</td> <td class="data row0 col2" id="T_b6481_row0_col2">262.4</td> <td class="data row0 col3" id="T_b6481_row0_col3">182.0</td> <td class="data row0 col4" id="T_b6481_row0_col4">181.6</td> <td class="data row0 col5" id="T_b6481_row0_col5">104.7</td> <td class="data row0 col6" id="T_b6481_row0_col6">97.9</td> </tr> <tr> <th class="row_heading level0 row1" id="T_b6481_level0_row1">2</th> <td class="data row1 col0" id="T_b6481_row1_col0">Man City</td> <td class="data row1 col1" id="T_b6481_row1_col1">230.1</td> <td class="data row1 col2" id="T_b6481_row1_col2">238.0</td> <td class="data row1 col3" id="T_b6481_row1_col3">169.7</td> <td class="data row1 col4" id="T_b6481_row1_col4">174.7</td> <td class="data row1 col5" id="T_b6481_row1_col5">71.0</td> <td class="data row1 col6" id="T_b6481_row1_col6">67.2</td> </tr> <tr> <th class="row_heading level0 row2" id="T_b6481_level0_row2">3</th> <td class="data row2 col0" id="T_b6481_row2_col0">Chelsea</td> <td class="data row2 col1" id="T_b6481_row2_col1">178.7</td> <td class="data row2 col2" id="T_b6481_row2_col2">181.4</td> <td class="data row2 col3" id="T_b6481_row2_col3">133.7</td> <td class="data row2 col4" id="T_b6481_row2_col4">133.9</td> <td class="data row2 col5" id="T_b6481_row2_col5">92.1</td> <td class="data row2 col6" id="T_b6481_row2_col6">94.3</td> </tr> <tr> <th class="row_heading level0 row3" id="T_b6481_level0_row3">4</th> <td class="data row3 col0" id="T_b6481_row3_col0">Spurs</td> <td class="data row3 col1" id="T_b6481_row3_col1">168.1</td> <td class="data row3 col2" id="T_b6481_row3_col2">164.7</td> <td class="data row3 col3" id="T_b6481_row3_col3">121.9</td> <td class="data row3 col4" id="T_b6481_row3_col4">120.1</td> <td class="data row3 col5" id="T_b6481_row3_col5">126.3</td> <td class="data row3 col6" id="T_b6481_row3_col6">126.0</td> </tr> <tr> <th class="row_heading level0 row4" id="T_b6481_level0_row4">5</th> <td class="data row4 col0" id="T_b6481_row4_col0">Leicester</td> <td class="data row4 col1" id="T_b6481_row4_col1">164.0</td> <td class="data row4 col2" id="T_b6481_row4_col2">146.1</td> <td class="data row4 col3" id="T_b6481_row4_col3">108.9</td> <td class="data row4 col4" id="T_b6481_row4_col4">94.0</td> <td class="data row4 col5" id="T_b6481_row4_col5">186.1</td> <td class="data row4 col6" id="T_b6481_row4_col6">190.2</td> </tr> <tr> <th class="row_heading level0 row5" id="T_b6481_level0_row5">6</th> <td class="data row5 col0" id="T_b6481_row5_col0">West Ham</td> <td class="data row5 col1" id="T_b6481_row5_col1">161.6</td> <td class="data row5 col2" id="T_b6481_row5_col2">166.4</td> <td class="data row5 col3" id="T_b6481_row5_col3">114.6</td> <td class="data row5 col4" id="T_b6481_row5_col4">118.3</td> <td class="data row5 col5" id="T_b6481_row5_col5">147.5</td> <td class="data row5 col6" id="T_b6481_row5_col6">142.7</td> </tr> <tr> <th class="row_heading level0 row6" id="T_b6481_level0_row6">7</th> <td class="data row6 col0" id="T_b6481_row6_col0">Arsenal</td> <td class="data row6 col1" id="T_b6481_row6_col1">158.2</td> <td class="data row6 col2" id="T_b6481_row6_col2">166.9</td> <td class="data row6 col3" id="T_b6481_row6_col3">100.3</td> <td class="data row6 col4" id="T_b6481_row6_col4">107.4</td> <td class="data row6 col5" id="T_b6481_row6_col5">129.2</td> <td class="data row6 col6" id="T_b6481_row6_col6">141.3</td> </tr> <tr> <th class="row_heading level0 row7" id="T_b6481_level0_row7">8</th> <td class="data row7 col0" id="T_b6481_row7_col0">Man Utd</td> <td class="data row7 col1" id="T_b6481_row7_col1">152.2</td> <td class="data row7 col2" id="T_b6481_row7_col2">154.6</td> <td class="data row7 col3" id="T_b6481_row7_col3">110.9</td> <td class="data row7 col4" id="T_b6481_row7_col4">114.4</td> <td class="data row7 col5" id="T_b6481_row7_col5">162.1</td> <td class="data row7 col6" id="T_b6481_row7_col6">152.3</td> </tr> <tr> <th class="row_heading level0 row8" id="T_b6481_level0_row8">9</th> <td class="data row8 col0" id="T_b6481_row8_col0">Crystal Palace</td> <td class="data row8 col1" id="T_b6481_row8_col1">147.5</td> <td class="data row8 col2" id="T_b6481_row8_col2">139.3</td> <td class="data row8 col3" id="T_b6481_row8_col3">112.3</td> <td class="data row8 col4" id="T_b6481_row8_col4">104.6</td> <td class="data row8 col5" id="T_b6481_row8_col5">119.8</td> <td class="data row8 col6" id="T_b6481_row8_col6">124.0</td> </tr> <tr> <th class="row_heading level0 row9" id="T_b6481_level0_row9">10</th> <td class="data row9 col0" id="T_b6481_row9_col0">Leeds</td> <td class="data row9 col1" id="T_b6481_row9_col1">134.8</td> <td class="data row9 col2" id="T_b6481_row9_col2">133.3</td> <td class="data row9 col3" id="T_b6481_row9_col3">93.6</td> <td class="data row9 col4" id="T_b6481_row9_col4">93.5</td> <td class="data row9 col5" id="T_b6481_row9_col5">177.2</td> <td class="data row9 col6" id="T_b6481_row9_col6">181.5</td> </tr> <tr> <th class="row_heading level0 row10" id="T_b6481_level0_row10">11</th> <td class="data row10 col0" id="T_b6481_row10_col0">Brentford</td> <td class="data row10 col1" id="T_b6481_row10_col1">132.8</td> <td class="data row10 col2" id="T_b6481_row10_col2">126.3</td> <td class="data row10 col3" id="T_b6481_row10_col3">87.9</td> <td class="data row10 col4" id="T_b6481_row10_col4">84.5</td> <td class="data row10 col5" id="T_b6481_row10_col5">138.1</td> <td class="data row10 col6" id="T_b6481_row10_col6">131.0</td> </tr> <tr> <th class="row_heading level0 row11" id="T_b6481_level0_row11">12</th> <td class="data row11 col0" id="T_b6481_row11_col0">Southampton</td> <td class="data row11 col1" id="T_b6481_row11_col1">128.5</td> <td class="data row11 col2" id="T_b6481_row11_col2">122.7</td> <td class="data row11 col3" id="T_b6481_row11_col3">81.5</td> <td class="data row11 col4" id="T_b6481_row11_col4">80.9</td> <td class="data row11 col5" id="T_b6481_row11_col5">153.9</td> <td class="data row11 col6" id="T_b6481_row11_col6">157.3</td> </tr> <tr> <th class="row_heading level0 row12" id="T_b6481_level0_row12">13</th> <td class="data row12 col0" id="T_b6481_row12_col0">Everton</td> <td class="data row12 col1" id="T_b6481_row12_col1">128.3</td> <td class="data row12 col2" id="T_b6481_row12_col2">126.7</td> <td class="data row12 col3" id="T_b6481_row12_col3">87.4</td> <td class="data row12 col4" id="T_b6481_row12_col4">88.1</td> <td class="data row12 col5" id="T_b6481_row12_col5">162.3</td> <td class="data row12 col6" id="T_b6481_row12_col6">154.1</td> </tr> <tr> <th class="row_heading level0 row13" id="T_b6481_level0_row13">14</th> <td class="data row13 col0" id="T_b6481_row13_col0">Brighton</td> <td class="data row13 col1" id="T_b6481_row13_col1">127.9</td> <td class="data row13 col2" id="T_b6481_row13_col2">122.7</td> <td class="data row13 col3" id="T_b6481_row13_col3">92.8</td> <td class="data row13 col4" id="T_b6481_row13_col4">89.7</td> <td class="data row13 col5" id="T_b6481_row13_col5">127.0</td> <td class="data row13 col6" id="T_b6481_row13_col6">120.3</td> </tr> <tr> <th class="row_heading level0 row14" id="T_b6481_level0_row14">15</th> <td class="data row14 col0" id="T_b6481_row14_col0">Burnley</td> <td class="data row14 col1" id="T_b6481_row14_col1">109.5</td> <td class="data row14 col2" id="T_b6481_row14_col2">99.6</td> <td class="data row14 col3" id="T_b6481_row14_col3">89.7</td> <td class="data row14 col4" id="T_b6481_row14_col4">81.4</td> <td class="data row14 col5" id="T_b6481_row14_col5">163.3</td> <td class="data row14 col6" id="T_b6481_row14_col6">164.7</td> </tr> <tr> <th class="row_heading level0 row15" id="T_b6481_level0_row15">16</th> <td class="data row15 col0" id="T_b6481_row15_col0">Watford</td> <td class="data row15 col1" id="T_b6481_row15_col1">108.8</td> <td class="data row15 col2" id="T_b6481_row15_col2">112.5</td> <td class="data row15 col3" id="T_b6481_row15_col3">84.1</td> <td class="data row15 col4" id="T_b6481_row15_col4">87.2</td> <td class="data row15 col5" id="T_b6481_row15_col5">198.3</td> <td class="data row15 col6" id="T_b6481_row15_col6">190.9</td> </tr> <tr> <th class="row_heading level0 row16" id="T_b6481_level0_row16">17</th> <td class="data row16 col0" id="T_b6481_row16_col0">Aston Villa</td> <td class="data row16 col1" id="T_b6481_row16_col1">108.2</td> <td class="data row16 col2" id="T_b6481_row16_col2">103.7</td> <td class="data row16 col3" id="T_b6481_row16_col3">85.9</td> <td class="data row16 col4" id="T_b6481_row16_col4">80.8</td> <td class="data row16 col5" id="T_b6481_row16_col5">144.9</td> <td class="data row16 col6" id="T_b6481_row16_col6">149.9</td> </tr> <tr> <th class="row_heading level0 row17" id="T_b6481_level0_row17">18</th> <td class="data row17 col0" id="T_b6481_row17_col0">Wolves</td> <td class="data row17 col1" id="T_b6481_row17_col1">104.1</td> <td class="data row17 col2" id="T_b6481_row17_col2">110.0</td> <td class="data row17 col3" id="T_b6481_row17_col3">68.9</td> <td class="data row17 col4" id="T_b6481_row17_col4">71.8</td> <td class="data row17 col5" id="T_b6481_row17_col5">132.6</td> <td class="data row17 col6" id="T_b6481_row17_col6">128.3</td> </tr> <tr> <th class="row_heading level0 row18" id="T_b6481_level0_row18">19</th> <td class="data row18 col0" id="T_b6481_row18_col0">Newcastle</td> <td class="data row18 col1" id="T_b6481_row18_col1">90.9</td> <td class="data row18 col2" id="T_b6481_row18_col2">96.0</td> <td class="data row18 col3" id="T_b6481_row18_col3">61.8</td> <td class="data row18 col4" id="T_b6481_row18_col4">65.9</td> <td class="data row18 col5" id="T_b6481_row18_col5">201.7</td> <td class="data row18 col6" id="T_b6481_row18_col6">203.2</td> </tr> <tr> <th class="row_heading level0 row19" id="T_b6481_level0_row19">20</th> <td class="data row19 col0" id="T_b6481_row19_col0">Norwich</td> <td class="data row19 col1" id="T_b6481_row19_col1">82.0</td> <td class="data row19 col2" id="T_b6481_row19_col2">81.6</td> <td class="data row19 col3" id="T_b6481_row19_col3">58.0</td> <td class="data row19 col4" id="T_b6481_row19_col4">56.5</td> <td class="data row19 col5" id="T_b6481_row19_col5">187.2</td> <td class="data row19 col6" id="T_b6481_row19_col6">185.1</td> </tr> </tbody></table>
+			<table class="DataTable sortable" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113"><thead> <tr> <th class="blank level0"></th> <th class="col_heading level0 col0">Team</th> <th class="col_heading level0 col1">xG adjusted</th> <th class="col_heading level0 col2">xG</th> <th class="col_heading level0 col3">xA adjusted</th> <th class="col_heading level0 col4">xA</th> <th class="col_heading level0 col5">Opponent xG adjusted</th> <th class="col_heading level0 col6">Opponent xG</th> </tr></thead><tbody> <tr> <th class="row_heading level0 row0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row0">1</th> <td class="data row0 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row0_col0">Liverpool</td> <td class="data row0 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row0_col1">262.5</td> <td class="data row0 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row0_col2">262.9</td> <td class="data row0 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row0_col3">178.1</td> <td class="data row0 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row0_col4">179.1</td> <td class="data row0 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row0_col5">102.7</td> <td class="data row0 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row0_col6">96.0</td> </tr> <tr> <th class="row_heading level0 row1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row1">2</th> <td class="data row1 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row1_col0">Man City</td> <td class="data row1 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row1_col1">229.5</td> <td class="data row1 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row1_col2">236.4</td> <td class="data row1 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row1_col3">166.2</td> <td class="data row1 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row1_col4">170.6</td> <td class="data row1 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row1_col5">70.3</td> <td class="data row1 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row1_col6">66.3</td> </tr> <tr> <th class="row_heading level0 row2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row2">3</th> <td class="data row2 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row2_col0">Chelsea</td> <td class="data row2 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row2_col1">178.1</td> <td class="data row2 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row2_col2">181.4</td> <td class="data row2 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row2_col3">133.1</td> <td class="data row2 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row2_col4">133.9</td> <td class="data row2 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row2_col5">91.6</td> <td class="data row2 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row2_col6">94.3</td> </tr> <tr> <th class="row_heading level0 row3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row3">4</th> <td class="data row3 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row3_col0">Spurs</td> <td class="data row3 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row3_col1">167.8</td> <td class="data row3 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row3_col2">165.1</td> <td class="data row3 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row3_col3">123.7</td> <td class="data row3 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row3_col4">122.5</td> <td class="data row3 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row3_col5">129.5</td> <td class="data row3 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row3_col6">128.2</td> </tr> <tr> <th class="row_heading level0 row4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row4">5</th> <td class="data row4 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row4_col0">Leicester</td> <td class="data row4 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row4_col1">160.9</td> <td class="data row4 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row4_col2">141.7</td> <td class="data row4 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row4_col3">107.6</td> <td class="data row4 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row4_col4">91.9</td> <td class="data row4 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row4_col5">183.8</td> <td class="data row4 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row4_col6">194.2</td> </tr> <tr> <th class="row_heading level0 row5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row5">6</th> <td class="data row5 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row5_col0">Arsenal</td> <td class="data row5 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row5_col1">159.2</td> <td class="data row5 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row5_col2">166.5</td> <td class="data row5 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row5_col3">103.0</td> <td class="data row5 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row5_col4">109.3</td> <td class="data row5 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row5_col5">127.1</td> <td class="data row5 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row5_col6">137.8</td> </tr> <tr> <th class="row_heading level0 row6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row6">7</th> <td class="data row6 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row6_col0">West Ham</td> <td class="data row6 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row6_col1">158.2</td> <td class="data row6 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row6_col2">163.6</td> <td class="data row6 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row6_col3">112.1</td> <td class="data row6 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row6_col4">116.3</td> <td class="data row6 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row6_col5">141.5</td> <td class="data row6 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row6_col6">138.2</td> </tr> <tr> <th class="row_heading level0 row7" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row7">8</th> <td class="data row7 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row7_col0">Man Utd</td> <td class="data row7 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row7_col1">152.9</td> <td class="data row7 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row7_col2">155.9</td> <td class="data row7 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row7_col3">110.5</td> <td class="data row7 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row7_col4">114.3</td> <td class="data row7 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row7_col5">159.8</td> <td class="data row7 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row7_col6">149.0</td> </tr> <tr> <th class="row_heading level0 row8" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row8">9</th> <td class="data row8 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row8_col0">Crystal Palace</td> <td class="data row8 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row8_col1">145.0</td> <td class="data row8 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row8_col2">138.6</td> <td class="data row8 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row8_col3">108.0</td> <td class="data row8 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row8_col4">101.0</td> <td class="data row8 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row8_col5">116.2</td> <td class="data row8 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row8_col6">119.9</td> </tr> <tr> <th class="row_heading level0 row9" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row9">10</th> <td class="data row9 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row9_col0">Leeds</td> <td class="data row9 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row9_col1">140.0</td> <td class="data row9 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row9_col2">138.8</td> <td class="data row9 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row9_col3">93.8</td> <td class="data row9 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row9_col4">93.7</td> <td class="data row9 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row9_col5">177.5</td> <td class="data row9 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row9_col6">180.1</td> </tr> <tr> <th class="row_heading level0 row10" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row10">11</th> <td class="data row10 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row10_col0">Brentford</td> <td class="data row10 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row10_col1">131.8</td> <td class="data row10 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row10_col2">123.0</td> <td class="data row10 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row10_col3">88.2</td> <td class="data row10 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row10_col4">82.8</td> <td class="data row10 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row10_col5">136.1</td> <td class="data row10 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row10_col6">133.9</td> </tr> <tr> <th class="row_heading level0 row11" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row11">12</th> <td class="data row11 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row11_col0">Southampton</td> <td class="data row11 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row11_col1">131.7</td> <td class="data row11 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row11_col2">124.9</td> <td class="data row11 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row11_col3">85.5</td> <td class="data row11 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row11_col4">84.0</td> <td class="data row11 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row11_col5">153.5</td> <td class="data row11 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row11_col6">158.1</td> </tr> <tr> <th class="row_heading level0 row12" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row12">13</th> <td class="data row12 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row12_col0">Brighton</td> <td class="data row12 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row12_col1">128.2</td> <td class="data row12 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row12_col2">122.7</td> <td class="data row12 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row12_col3">92.8</td> <td class="data row12 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row12_col4">89.7</td> <td class="data row12 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row12_col5">127.6</td> <td class="data row12 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row12_col6">120.3</td> </tr> <tr> <th class="row_heading level0 row13" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row13">14</th> <td class="data row13 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row13_col0">Everton</td> <td class="data row13 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row13_col1">125.1</td> <td class="data row13 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row13_col2">124.6</td> <td class="data row13 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row13_col3">85.9</td> <td class="data row13 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row13_col4">87.5</td> <td class="data row13 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row13_col5">173.3</td> <td class="data row13 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row13_col6">159.8</td> </tr> <tr> <th class="row_heading level0 row14" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row14">15</th> <td class="data row14 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row14_col0">Aston Villa</td> <td class="data row14 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row14_col1">108.6</td> <td class="data row14 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row14_col2">105.9</td> <td class="data row14 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row14_col3">86.3</td> <td class="data row14 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row14_col4">82.9</td> <td class="data row14 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row14_col5">150.4</td> <td class="data row14 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row14_col6">154.7</td> </tr> <tr> <th class="row_heading level0 row15" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row15">16</th> <td class="data row15 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row15_col0">Burnley</td> <td class="data row15 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row15_col1">105.0</td> <td class="data row15 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row15_col2">97.4</td> <td class="data row15 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row15_col3">85.8</td> <td class="data row15 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row15_col4">79.2</td> <td class="data row15 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row15_col5">159.9</td> <td class="data row15 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row15_col6">162.1</td> </tr> <tr> <th class="row_heading level0 row16" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row16">17</th> <td class="data row16 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row16_col0">Watford</td> <td class="data row16 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row16_col1">103.7</td> <td class="data row16 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row16_col2">108.0</td> <td class="data row16 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row16_col3">81.2</td> <td class="data row16 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row16_col4">85.0</td> <td class="data row16 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row16_col5">187.5</td> <td class="data row16 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row16_col6">181.6</td> </tr> <tr> <th class="row_heading level0 row17" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row17">18</th> <td class="data row17 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row17_col0">Wolves</td> <td class="data row17 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row17_col1">102.0</td> <td class="data row17 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row17_col2">108.0</td> <td class="data row17 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row17_col3">67.4</td> <td class="data row17 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row17_col4">70.4</td> <td class="data row17 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row17_col5">132.0</td> <td class="data row17 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row17_col6">129.7</td> </tr> <tr> <th class="row_heading level0 row18" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row18">19</th> <td class="data row18 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row18_col0">Newcastle</td> <td class="data row18 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row18_col1">98.5</td> <td class="data row18 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row18_col2">104.1</td> <td class="data row18 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row18_col3">65.4</td> <td class="data row18 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row18_col4">69.6</td> <td class="data row18 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row18_col5">196.5</td> <td class="data row18 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row18_col6">197.7</td> </tr> <tr> <th class="row_heading level0 row19" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113level0_row19">20</th> <td class="data row19 col0" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row19_col0">Norwich</td> <td class="data row19 col1" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row19_col1">79.8</td> <td class="data row19 col2" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row19_col2">79.3</td> <td class="data row19 col3" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row19_col3">56.4</td> <td class="data row19 col4" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row19_col4">54.9</td> <td class="data row19 col5" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row19_col5">184.4</td> <td class="data row19 col6" id="T_ffedeaca_8bea_11ec_b380_001a7dda7113row19_col6">182.4</td> </tr> </tbody></table>
 
 				
 			<br />
@@ -242,19 +255,23 @@
 	</main>
 
 	<footer>
-<span id="copyright">
-			©FPL in Numbers 2022.
+
+		<span id="copyright">
+			&copy;FPL in Numbers 2022.
 		</span>
-<span id="middle_f">
-<!--href="index.html"-->
-<a class="home_link">
-<img alt="logo" id="little_octopus"/> <!--src="html/logo/monstro-brown.png"-->
-</a>
-</span>
-<span id="contact">
+
+		<span id="middle_f">
+			<!--href="index.html"-->
+			<a class="home_link">
+				<img alt="logo" id="little_octopus">	<!--src="html/logo/monstro-brown.png"-->
+			</a>
+		</span>
+
+		<span id="contact">
 			fplinnumbers@gmail.com
 		</span>
-</footer>
+
+	</footer>
 </body>
 
 </html>

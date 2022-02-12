@@ -210,6 +210,8 @@ td.col0 {
 #blog {
     border: 3px grey solid;
     overflow: auto;
+    width: 100%;
+    display: block;
 }
 
 .posts {
