@@ -10,8 +10,11 @@ from bs4 import BeautifulSoup
 # 1. Tries to download page 6 times instead of 1
 def long_request(url):
     for j in range(6):
+#         headers = {'user-agent': 
+#                    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) \
+#                    Chrome/86.0.4240.75 Safari/537.36'}
         try:
-            p = requests.get(url)
+            p = requests.get(url)#, headers=headers)
             return p
             #break
         except Exception as e:
@@ -147,8 +150,7 @@ def head_header_script (copy_head = 1, copy_header = 1, copy_script = 1, copy_na
         if (file_text.find('<footer>') != -1) & (copy_nav == 1):
             new_file = new_file.replace(new_file[new_file.find('<footer>'):new_file.find('</footer>')+9], footer)
 
-#             file_text1 = str(BeautifulSoup(file_text, 'html.parser')('div', {id:"main-table"})[0])
-#             file_text2 = str(BeautifulSoup(file_text, 'html.parser')('div', {id:"blog"})[0])
+
 #             file_text = file_text1 + file_text2
 #             new_file = head + "<body>" + header + nav + file_text + "</body>" + footer + script
         
@@ -163,15 +165,6 @@ def head_header_script (copy_head = 1, copy_header = 1, copy_script = 1, copy_na
             new_file = new_file.replace(div_sources, "")
         with open(path, 'w', encoding="utf-8") as file:
             file.write(new_file)
-            
-#     file_paths = glob.glob(my_path + '/Ranking/**/*.html', recursive=True)
-#     for path in file_paths:
-#         with open(path, 'r', encoding="utf-8") as file:
-#             print(path)
-#             file_text = file.read()
-#         new_file = head + header + file_text + footer + script
-#         with open(path, 'w', encoding="utf-8") as file:
-#             file.write(new_file)
 
 if __name__=="__main__":
     print('Hello')
