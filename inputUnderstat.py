@@ -39,9 +39,13 @@ def  check_equal(Table, col_name): #Check doubles in column col_name of the tabl
         if Table[col_name][i] in set(Table[col_name][:i]):
             if (len(repetitions)>0):
                 if not (Table[col_name][i] in set(repetitions[col_name])):
-                    repetitions = repetitions.append(Table[Table[col_name]==Table[col_name][i]])
+                    #repetitions = repetitions.append(Table[Table[col_name]==Table[col_name][i]])
+                    repetitions = pd.concat([repetitions,Table[Table[col_name]==Table[col_name][i]]], 
+                                            ignore_index=True)
             else:
-                repetitions = repetitions.append(Table[Table[col_name]==Table[col_name][i]])
+                #repetitions = repetitions.append(Table[Table[col_name]==Table[col_name][i]])
+                repetitions = pd.concat([repetitions,Table[Table[col_name]==Table[col_name][i]]], 
+                                            ignore_index=True)
             #print('Check Equal', Table.iloc[i])
     print(repetitions)
 
@@ -115,11 +119,12 @@ def add_match_to_dict(game_number, Dictionary):
                 if 'JSON' in els:
                     els = els[12:-3]
                     els = codecs.decode(els,'unicode_escape')
-                    tempList.append(json.loads(els))
-    
+                    tempList.append(json.loads(els))    
     away_players = pd.DataFrame(tempList[2]['a']).transpose()
     home_players = pd.DataFrame(tempList[2]['h']).transpose()
-    match_players = away_players.append(home_players)
+    #match_players = away_players.append(home_players)
+    match_players = pd.concat([away_players, home_players], ignore_index=True)
+    
     
     if tempList[1]['team_h'] == 'Tottenham': tempList[1]['team_h'] = 'Spurs' 
     if tempList[1]['team_a'] == 'Tottenham': tempList[1]['team_a'] = 'Spurs'
@@ -166,10 +171,11 @@ def add_match_to_dict(game_number, Dictionary):
     Dictionary_strong = Dictionary[Dictionary['id_fpl']!='']
 
     for i in match_players.index:
-        match_players.at[i,'player'] = match_players.at[i,'player']
+        #match_players.at[i,'player'] = match_players.at[i,'player']
         if not(match_players.at[i,'player'] in set(Dictionary_strong['name_un'])):
             
             for t in range(6):
+                #There are 6 types of name comparisons. The lower, the better is precision.
                 for j in FPL_names.index:
                     if same_player(match_players.at[i,'player'], FPL_names.at[j,'player'], FPL_names.at[j,'web_name'], t):
                         match_players.at[i,'in_FPL'] = 1
@@ -190,7 +196,8 @@ def add_match_to_dict(game_number, Dictionary):
                 
                 
             if name_un in set(Dictionary['name_un']):
-                print('SMTH went wrong')
+                print(f'SMTH went wrong. Probably the player "{name_un}" was not found in FPL')
+                #print(name_un)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 if name_fpl != '':
                     for u in Dictionary.index:
                         if name_un == Dictionary.at[u,'name_un']:
@@ -199,9 +206,13 @@ def add_match_to_dict(game_number, Dictionary):
                             Dictionary.at[u,'web_name_fpl'] = web_name_fpl
             else:
 
-                Dictionary = Dictionary.append(pd.DataFrame(\
+#                 Dictionary = Dictionary.append(pd.DataFrame(\
+#                     [[name_un, name_fpl, id_fpl, web_name_fpl]],\
+#                     columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
+                Dictionary = pd.concat([Dictionary, pd.DataFrame(\
                     [[name_un, name_fpl, id_fpl, web_name_fpl]],\
-                    columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
+                    columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl'])],
+                                       ignore_index=True)
         else:
             match_players.at[i, 'player'] = dict(zip(Dictionary['name_un'], Dictionary['name_fpl']))\
                 [match_players.at[i, 'player']]
@@ -219,8 +230,10 @@ def Exc_dict(Name_Dictionary, name_understat, name_fpl):
     name_understat - "player" column in Table_Understat
     name_fpl - "first_name" + " " + "second_name" in bootstrap table
     '''
-    Name_Dictionary = Name_Dictionary.append(pd.DataFrame([[name_understat,name_fpl,'','']], 
-    columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
+#     Name_Dictionary = Name_Dictionary.append(pd.DataFrame([[name_understat,name_fpl,'','']], 
+#     columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl']), ignore_index=True)
+    Name_Dictionary = pd.concat([Name_Dictionary, pd.DataFrame([[name_understat,name_fpl,'','']], 
+    columns=["name_un", 'name_fpl', 'id_fpl', 'web_name_fpl'])], ignore_index=True)
 #     display(Name_Dictionary)
 #     print("asdasd" + Name_Dictionary.at[len(Name_Dictionary)-1, 'id_fpl'])    
     Name_Dictionary.at[len(Name_Dictionary)-1, 'id_fpl'] = Players[Players['Name']==name_fpl]['id'].mean()
@@ -291,9 +304,12 @@ if table_len > 0:
 
     #Adding exceptions to Dictionary
     #Name_Dictionary = Exc_dict(Name_Dictionary, 'Franck Zambo','Andre-Frank Zambo Anguissa')
-    #Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby Decordova-Reid')
-    Name_Dictionary = Exc_dict(Name_Dictionary, 'Emerson','Emerson Aparecido Leite de Souza Junior')
-    Name_Dictionary = Exc_dict(Name_Dictionary, 'Nicolas N&#039;Koulou','Nicolas Nkoulou')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Bobby Reid','Bobby De Cordova-Reid')
+    #Name_Dictionary = Exc_dict(Name_Dictionary, 'Emerson','Emerson Aparecido Leite de Souza Junior')
+    #Name_Dictionary = Exc_dict(Name_Dictionary, 'Nicolas N&#039;Koulou','Nicolas Nkoulou')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Rayan Ait Nouri','Rayan Ait-Nouri')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Cheick Oumar Doucoure','Cheick Doucoure')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Armel Bella Kotchap','Armel Bella-Kotchap')
     #display(Name_Dictionary)
 
     if not Table_FPL.empty:
@@ -301,7 +317,8 @@ if table_len > 0:
             if Schedule.at[i,'isResult']:
                 #print(Schedule.at[i,'id'])
                 MP, Name_Dictionary = add_match_to_dict(Schedule.at[i,'id'], Name_Dictionary)
-                Table_Understat = Table_Understat.append(MP, ignore_index=True)
+                #Table_Understat = Table_Understat.append(MP, ignore_index=True)
+                Table_Understat = pd.concat([Table_Understat, MP], ignore_index=True)
 
     print(f'\t All Data Downloaded.\t It takes {time() - start} sec')
     start = time()

@@ -1,0 +1,304 @@
+﻿/*CSS form FPL in numbers project*/
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-family: sans- serif;
+    color: black;
+    text-align: center;
+    --my_variable: teal;
+}
+header, nav, main {
+    width: 98%;
+    margin: 0 1% 0 1%;
+}
+h2.non-blog{
+    /*line-height: 1.2em;
+    display: inline;*/
+    text-align: center;
+    margin-top: 1em;
+    /*text-shadow: 0px 1px 1px green;*/
+}
+
+h1.non-blog {
+    line-height: 0.2em;
+    padding-bottom: 0.3px;
+}
+.color_green {
+    background-color: #82f5cf;
+}
+
+.color_grey {
+    background-color: lightgrey;
+}
+
+/*Everything form the HEADER*/
+header {
+    background-image: linear-gradient(to right, white, white, #09bb9f);
+    background-size: cover;
+    border-bottom: 2px black solid;
+    /*display: table;*/
+    height: 110px;
+}
+#pic {
+    /*float: left;*/
+    height: 100%;
+    /*opacity:0;*/
+    position: absolute;
+}
+#octopus_link {
+    display: block;
+    height: 108px;
+    width: 100%;
+}
+#h_octopus {
+    width: 7em;
+    height: 108px;
+    overflow: auto;
+    /*height: 108px;*/
+    /*116px;*/
+}
+#glyph_home {
+    height: 25px;
+}
+input.table_button {
+    /*width: 70px;
+			height: 30px;
+			resize:horizontal;*/
+    width: 10em;
+}
+
+input.source_button {
+    width: 130px;
+    height: 3em;
+}
+form input:hover {
+    cursor: pointer;
+}
+#FPL-button {
+    color: green;
+    font-weight: bold;
+}
+#Understat-button {
+    color: #AB1717;
+    font-weight: bold;
+}
+/*.history {*/
+    /*float:right;*/
+    /*position: absolute;
+    right: 2%;
+    top: 1px;*/
+    /*margin-right: 4px;*/
+/*}*/
+
+
+/* Dropdown Menu */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    /*    position: relative;
+    display: inline-block;
+    float: right;*/
+    position: absolute;
+    right: 6%;
+    top: 50px;
+    z-index: 33;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+/*    z-index: 1;
+*/    left: -2.5em;
+}
+.drop-menu {
+    border: 1px solid grey;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-size: 14px;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+form.header-form {
+    display: inline;
+    margin-bottom: 0.2em;
+    line-height: 1.5em;
+    /*width: 116px;*/
+}
+
+/*Everything form the MAIN*/
+main {
+}
+/*table {*/
+.DataTable {
+    overflow: auto;
+    /*    height: 450px;
+    width: 100%;
+    display: block;
+    text-align: center;*/
+}
+}
+table.DataTable th {
+    width: 7em;
+
+}
+
+/*Making table 1st row freeze and proritize over 1st column*/
+thead {
+    position: sticky;
+    top: 0;
+    /*opacity: 1;*/
+    z-index: 3;
+    background-color: white;
+}
+
+/*Making table 1st column freeze*/
+td.col0 {
+    background-color: white;
+    position: sticky;
+    left: 0;
+}
+
+#main-table {
+    width: 100%;
+    overflow: auto;
+    height: 80vh;
+    display: block;
+}
+
+@media(max-width: 550px) {
+    #h_octopus {
+        width: 3em;
+        height: 3em;
+        overflow: auto;
+        /*height: 108px;*/
+        /*116px;*/
+    }
+    footer {
+        font-size: 10px;
+    }
+}
+
+#tocenter {
+    background-color: blue;
+    align-self: center;
+    justify-self: center;
+}
+
+#blog {
+    border: 3px grey solid;
+    overflow: auto;
+    width: 100%;
+    display: block;
+}
+
+.posts {
+    border: 3px #09bb9f solid;
+    margin: 5px;
+    padding: 17px 10% 10px 10%;
+    width: 100%-10px;
+    background-color: white;
+    overflow: hidden;
+    height: 350px;
+}
+.posts:not(:focus):hover {
+    background-color: lightgrey;
+}
+
+.posts:focus {
+    height: 100%;
+}
+
+.date {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+p {
+    text-align: left;
+    text-indent: 40px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 40px;
+    color: #15607a;
+    margin-bottom: 15px;
+}
+
+h5 {
+    margin-bottom: 15px;
+}
+
+.table_wrapper {
+    overflow: auto;
+    width: 100%;
+    display: block;
+}
+
+th {
+    padding: 4px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    /*display: block;*/
+}
+
+/*Everything from the FOOTER*/
+footer {
+    clear: left;
+    background-color: #09bb9f;
+    border-top: 2px black solid;
+    /*overflow: hidden;*/
+    margin: 0 0 0 0;
+    width: 100%;
+}
+
+#copyright {
+    float: left;
+    margin-left: 1em;
+}
+#little_octopus {
+    height: 1em;
+    width: 1em;
+    margin-top: 3px;
+}
+#contact {
+    float:right;
+    margin-right: 1em;
+}
+
+
+
+
+/* And an example of random atribute style change*/
+[type="text/javascript!!!"] {
+    color: green;
+}
+

@@ -77,7 +77,9 @@ bigTable = bigTable.applymap(lambda x: np.nan if x=='' else x)
 teams = dict(zip(pd.DataFrame(d1['teams'])['id'],pd.DataFrame(d1['teams'])['name']))
 players = dict(zip(bigTable['id'],bigTable['full_name']))
 teamplayers = dict(zip(bigTable['id'],bigTable['team']))
+#pos_dict - correspondence between 'element_type' number and position
 pos_dict = {1: 'Goalkeeper', 2: 'Defender', 3: 'Midfielder', 4: 'Forward'}
+#positions - correspondence between player'id' and position
 positions = dict(zip(bigTable['id'],[pos_dict[bigTable.at[i,'element_type']] for i in bigTable.index]))
 team_number = len(teams)
 
@@ -156,7 +158,8 @@ if sys.argv[1] != 'nothing':
         p = long_request(url)
         d = json.loads(p.text)
         dd = pd.DataFrame(d['history'])
-        Table = Table.append(dd, ignore_index=True)
+#         Table = Table.append(dd, ignore_index=True)
+        Table = pd.concat([Table, dd], ignore_index=True)
         
     #Checking that Table is not empty (start of the season)
     if 'threat' in Table.columns:
