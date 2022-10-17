@@ -1,632 +1,644 @@
 id,Name,web_name,Team number,Team,Position,Team games,Played
-1,Cedric Alves Soares,Cedric,1,Arsenal,Defender,7,0
-3,Granit Xhaka,Xhaka,1,Arsenal,Midfielder,7,7
-4,Mohamed Elneny,Elneny,1,Arsenal,Midfielder,7,1
-5,Rob Holding,Holding,1,Arsenal,Defender,7,2
-6,Thomas Partey,Partey,1,Arsenal,Midfielder,7,4
-7,Martin Ødegaard,Ødegaard,1,Arsenal,Midfielder,7,6
-8,Kieran Tierney,Tierney,1,Arsenal,Defender,7,6
-9,Nicolas Pepe,Pepe,1,Arsenal,Midfielder,7,0
-10,Benjamin White,White,1,Arsenal,Defender,7,7
-11,Eddie Nketiah,Nketiah,1,Arsenal,Forward,7,7
-12,Emile Smith Rowe,Smith Rowe,1,Arsenal,Midfielder,7,4
-13,Bukayo Saka,Saka,1,Arsenal,Midfielder,7,7
-14,Takehiro Tomiyasu,Tomiyasu,1,Arsenal,Defender,7,6
-15,Aaron Ramsdale,Ramsdale,1,Arsenal,Goalkeeper,7,7
-16,Gabriel dos Santos Magalhaes,Gabriel,1,Arsenal,Defender,7,7
-17,Nuno Varela Tavares,Tavares,1,Arsenal,Defender,7,0
-18,Albert Sambi Lokonga,Sambi,1,Arsenal,Midfielder,7,5
-19,Gabriel Martinelli Silva,Martinelli,1,Arsenal,Midfielder,7,7
-20,Pablo Mari Villar,Pablo Mari,1,Arsenal,Defender,7,0
-22,Lucas Torreira di Pascua,Torreira,1,Arsenal,Midfielder,7,0
-23,Reiss Nelson,Nelson,1,Arsenal,Midfielder,7,0
-24,Matt Turner,Turner,1,Arsenal,Goalkeeper,7,0
-25,Fabio Ferreira Vieira,Fabio Vieira,1,Arsenal,Midfielder,7,2
-26,William Saliba,Saliba,1,Arsenal,Defender,7,7
-27,Marcus Oliveira Alencar,Marquinhos,1,Arsenal,Midfielder,7,1
-28,Gabriel Fernando de Jesus,Jesus,1,Arsenal,Forward,7,7
-313,Oleksandr Zinchenko,Zinchenko,1,Arsenal,Defender,7,4
-607,Matthew Smith,Smith,1,Arsenal,Midfielder,3,0
-630,Ethan Nwaneri,Nwaneri,1,Arsenal,Midfielder,1,1
-631,Lino Sousa,Sousa,1,Arsenal,Defender,1,0
-29,Philippe Coutinho Correia,Coutinho,2,Aston Villa,Midfielder,7,7
-30,Danny Ings,Ings,2,Aston Villa,Forward,7,6
-31,Emiliano Martinez Romero,Martinez,2,Aston Villa,Goalkeeper,7,7
-32,Calum Chambers,Chambers,2,Aston Villa,Defender,7,2
-33,Lucas Digne,Digne,2,Aston Villa,Defender,7,7
-34,Bertrand Traore,Traore,2,Aston Villa,Midfielder,7,0
-35,Robin Olsen,Olsen,2,Aston Villa,Goalkeeper,7,0
-36,Morgan Sanson,Sanson,2,Aston Villa,Midfielder,7,0
-37,John McGinn,McGinn,2,Aston Villa,Midfielder,7,7
-38,Kortney Hause,Hause,2,Aston Villa,Defender,7,0
-39,Tyrone Mings,Mings,2,Aston Villa,Defender,7,5
-40,Ollie Watkins,Watkins,2,Aston Villa,Forward,7,7
-41,Marvelous Nakamba,Nakamba,2,Aston Villa,Midfielder,7,0
-42,Emiliano Buendia Stati,Buendia,2,Aston Villa,Midfielder,7,7
-43,Matty Cash,Cash,2,Aston Villa,Defender,7,6
-44,Ezri Konsa Ngoyo,Konsa,2,Aston Villa,Defender,7,7
-45,Leon Bailey,Bailey,2,Aston Villa,Midfielder,7,7
-46,Douglas Luiz Soares de Paulo,Douglas Luiz,2,Aston Villa,Midfielder,7,6
-47,Jacob Ramsey,Ramsey,2,Aston Villa,Midfielder,7,7
-49,Tim Iroegbunam,Iroegbunam,2,Aston Villa,Midfielder,7,0
-50,Diego Carlos Santos Silva,Diego Carlos,2,Aston Villa,Defender,7,2
-51,Anwar El Ghazi,El Ghazi,2,Aston Villa,Midfielder,7,0
-52,Keinan Davis,Davis,2,Aston Villa,Forward,7,0
-53,Boubacar Kamara,Kamara,2,Aston Villa,Midfielder,7,7
-54,Cameron Archer,Archer,2,Aston Villa,Forward,7,2
-55,Jaden Philogene-Bidace,Philogene-Bidace,2,Aston Villa,Midfielder,7,0
-56,Frederic Guilbert,Guilbert,2,Aston Villa,Defender,7,0
-410,Jan Bednarek,Bednarek,2,Aston Villa,Defender,7,2
-479,Leander Dendoncker,Dendoncker,2,Aston Villa,Midfielder,7,5
-525,Ludwig Augustinsson,Augustinsson,2,Aston Villa,Defender,7,0
-537,Kaine Kesler Hayden,Kesler Hayden,2,Aston Villa,Defender,7,0
-538,Ashley Young,Young,2,Aston Villa,Defender,7,3
-57,Adam Smith,Smith,3,Bournemouth,Defender,7,7
-58,Junior Stanislas,Stanislas,3,Bournemouth,Midfielder,7,2
-59,Ryan Fredericks,Fredericks,3,Bournemouth,Defender,7,2
-60,David Brooks,Brooks,3,Bournemouth,Midfielder,7,0
-61,Jamal Lowe,Lowe,3,Bournemouth,Midfielder,7,1
-62,Kieffer Moore,Moore,3,Bournemouth,Forward,7,7
-63,Emiliano Marcondes,Marcondes,3,Bournemouth,Midfielder,7,1
-64,Jefferson Lerma Solis,Lerma,3,Bournemouth,Midfielder,7,7
-65,Jack Stacey,Stacey,3,Bournemouth,Defender,7,3
-66,Dominic Solanke,Solanke,3,Bournemouth,Forward,7,5
-67,Lewis Cook,Cook,3,Bournemouth,Midfielder,7,7
-68,Ben Pearson,Pearson,3,Bournemouth,Midfielder,7,4
-69,Ryan Christie,Christie,3,Bournemouth,Midfielder,7,7
-70,Philip Billing,Billing,3,Bournemouth,Midfielder,7,7
-71,Chris Mepham,Mepham,3,Bournemouth,Defender,7,7
-72,Mark Travers,Travers,3,Bournemouth,Goalkeeper,7,4
-73,Lloyd Kelly,Kelly,3,Bournemouth,Defender,7,5
-74,Siriki Dembele,Dembele,3,Bournemouth,Midfielder,7,0
-75,Jaidon Anthony,Anthony,3,Bournemouth,Midfielder,7,5
-76,Jordan Zemura,Zemura,3,Bournemouth,Defender,7,6
-77,Will Dennis,Dennis,3,Bournemouth,Goalkeeper,7,0
-404,Jack Stephens,Stephens,3,Bournemouth,Defender,7,3
-505,Joe Rothwell,Rothwell,3,Bournemouth,Midfielder,7,0
-535,Marcus Tavernier,Tavernier,3,Bournemouth,Midfielder,7,7
-539,James Hill,Hill,3,Bournemouth,Defender,7,0
-574,Norberto Murara Neto,Neto,3,Bournemouth,Goalkeeper,6,3
-576,Marcos Senesi,Senesi,3,Bournemouth,Defender,6,4
-597,Christian Saydee,Saydee,3,Bournemouth,Forward,4,0
-598,Owen Bevan,Bevan,3,Bournemouth,Defender,4,1
-78,Pontus Jansson,Jansson,4,Brentford,Defender,7,5
-79,Christian Nørgaard,Nørgaard,4,Brentford,Midfielder,7,4
-80,Ivan Toney,Toney,4,Brentford,Forward,7,7
-81,David Raya Martin,Raya,4,Brentford,Goalkeeper,7,7
-82,Sergi Canos Tenes,Canos,4,Brentford,Defender,7,0
-83,Josh Dasilva,Dasilva,4,Brentford,Midfielder,7,7
-84,Kristoffer Ajer,Ajer,4,Brentford,Defender,7,1
-85,Rico Henry,Henry,4,Brentford,Defender,7,7
-86,Vitaly Janelt,Janelt,4,Brentford,Midfielder,7,7
-87,Saman Ghoddos,Ghoddos,4,Brentford,Midfielder,7,2
-88,Mathias Jensen,Jensen,4,Brentford,Midfielder,7,7
-89,Yoane Wissa,Wissa,4,Brentford,Midfielder,7,7
-90,Mads Roerslev Rasmussen,Roerslev,4,Brentford,Defender,7,1
-91,Mads Bech Sørensen,Bech,4,Brentford,Defender,7,3
-92,Ethan Pinnock,Pinnock,4,Brentford,Defender,7,0
-93,Frank Onyeka,Onyeka,4,Brentford,Midfielder,7,4
-94,Shandon Baptiste,Baptiste,4,Brentford,Midfielder,7,7
-95,Bryan Mbeumo,Mbeumo,4,Brentford,Forward,7,7
-96,Charlie Goode,Goode,4,Brentford,Defender,7,0
-97,Marcus Forss,Forss,4,Brentford,Forward,7,0
-98,Dominic Thompson,Thompson,4,Brentford,Defender,7,0
-99,Mads Bidstrup,Bidstrup,4,Brentford,Midfielder,7,0
-100,Ellery Balcombe,Balcombe,4,Brentford,Goalkeeper,7,0
-510,Aaron Hickey,Hickey,4,Brentford,Defender,7,7
-515,Keane Lewis-Potter,Lewis-Potter,4,Brentford,Midfielder,7,5
-517,Thomas Strakosha,Strakosha,4,Brentford,Goalkeeper,7,0
-526,Ben Mee,Mee,4,Brentford,Defender,7,7
-540,Fin Stevens,Stevens,4,Brentford,Defender,7,0
-541,Halil Dervisoglu,Dervisoglu,4,Brentford,Forward,7,1
-580,Mikkel Damsgaard,Damsgaard,4,Brentford,Midfielder,6,4
-595,Mathias Jorgensen,Zanka,4,Brentford,Defender,4,3
-101,Adam Lallana,Lallana,5,Brighton,Midfielder,6,3
-102,Jason Steele,Steele,5,Brighton,Goalkeeper,6,0
-103,Danny Welbeck,Welbeck,5,Brighton,Forward,6,6
-104,Pascal Groß,Groß,5,Brighton,Midfielder,6,6
-106,Lewis Dunk,Dunk,5,Brighton,Defender,6,6
-107,Solly March,March,5,Brighton,Midfielder,6,6
-108,Adam Webster,Webster,5,Brighton,Defender,6,6
-109,Joel Veltman,Veltman,5,Brighton,Defender,6,6
-111,Leandro Trossard,Trossard,5,Brighton,Midfielder,6,6
-113,Robert Sanchez,Sanchez,5,Brighton,Goalkeeper,6,6
-114,Tariq Lamptey,Lamptey,5,Brighton,Defender,6,5
-115,Steven Alzate,Alzate,5,Brighton,Midfielder,6,0
-116,Alexis Mac Allister,Mac Allister,5,Brighton,Midfielder,6,6
-117,Jakub Moder,Moder,5,Brighton,Midfielder,6,0
-118,Enock Mwepu,Mwepu,5,Brighton,Midfielder,6,6
-119,Jeremy Sarmiento Morante,Sarmiento,5,Brighton,Midfielder,6,0
-120,Moises Caicedo Corozo,Caicedo,5,Brighton,Midfielder,6,6
-121,Taylor Richards,Richards,5,Brighton,Midfielder,6,0
-122,Haydon Roberts,Roberts,5,Brighton,Defender,6,0
-123,Deniz Undav,Undav,5,Brighton,Forward,6,3
-124,Kaoru Mitoma,Mitoma,5,Brighton,Midfielder,6,4
-125,Julio Enciso,Enciso,5,Brighton,Forward,6,0
-126,Kacper Kozłowski,Kozłowski,5,Brighton,Midfielder,6,0
-149,Billy Gilmour,Gilmour,5,Brighton,Midfielder,6,1
-542,Kjell Scherpen,Scherpen,5,Brighton,Goalkeeper,6,0
-543,Matt Clarke,Clarke,5,Brighton,Defender,6,0
-544,Jan Paul van Hecke,Van Hecke,5,Brighton,Defender,6,1
-559,Levi Colwill,Colwill,5,Brighton,Defender,6,2
-586,Pervis Estupinan,Estupinan,5,Brighton,Defender,4,4
-596,Evan Ferguson,Ferguson,5,Brighton,Forward,3,0
-48,Carney Chukwuemeka,Chukwuemeka,6,Chelsea,Midfielder,6,0
-112,Marc Cucurella Saseta,Cucurella,6,Chelsea,Defender,6,6
-127,Cesar Azpilicueta,Azpilicueta,6,Chelsea,Defender,6,5
-128,Thiago Emiliano da Silva,Thiago Silva,6,Chelsea,Defender,6,6
-129,Marcos Alonso,Alonso,6,Chelsea,Defender,6,0
-130,Jorge Luiz Frello Filho,Jorginho,6,Chelsea,Midfielder,6,6
-131,Ross Barkley,Barkley,6,Chelsea,Midfielder,6,0
-132,Mateo Kovacic,Kovacic,6,Chelsea,Midfielder,6,3
-133,Kepa Arrizabalaga,Arrizabalaga,6,Chelsea,Goalkeeper,6,0
-134,N'Golo Kante,Kante,6,Chelsea,Midfielder,6,2
-135,Hakim Ziyech,Ziyech,6,Chelsea,Midfielder,6,2
-136,Ruben Loftus-Cheek,Loftus-Cheek,6,Chelsea,Midfielder,6,6
-137,Timo Werner,Werner,6,Chelsea,Forward,6,0
-138,Robert Kenedy Nunes do Nascimento,Kenedy,6,Chelsea,Defender,6,0
-139,Ben Chilwell,Chilwell,6,Chelsea,Defender,6,5
-140,Christian Pulisic,Pulisic,6,Chelsea,Midfielder,6,6
-141,Trevoh Chalobah,Chalobah,6,Chelsea,Defender,6,1
-142,Mason Mount,Mount,6,Chelsea,Midfielder,6,6
-143,Malang Sarr,Sarr,6,Chelsea,Defender,6,0
-144,Callum Hudson-Odoi,Hudson-Odoi,6,Chelsea,Midfielder,6,0
-145,Kai Havertz,Havertz,6,Chelsea,Forward,6,6
-146,Reece James,James,6,Chelsea,Defender,6,5
-147,Edouard Mendy,Mendy,6,Chelsea,Goalkeeper,6,6
-148,Conor Gallagher,Gallagher,6,Chelsea,Midfielder,6,5
-150,Armando Broja,Broja,6,Chelsea,Forward,6,4
-151,Ethan Ampadu,Ampadu,6,Chelsea,Defender,6,0
-272,Wesley Fofana,Fofana,6,Chelsea,Defender,6,3
-304,Raheem Sterling,Sterling,6,Chelsea,Midfielder,6,6
-520,Kalidou Koulibaly,Koulibaly,6,Chelsea,Defender,6,5
-606,Harvey Vale,Vale,6,Chelsea,Midfielder,2,0
-616,Denis Zakaria,Zakaria,6,Chelsea,Midfielder,1,0
-617,Pierre-Emerick Aubameyang,Aubameyang,6,Chelsea,Forward,1,0
-152,Vicente Guaita,Guaita,7,Crystal Palace,Goalkeeper,6,6
-153,James Tomkins,Tomkins,7,Crystal Palace,Defender,6,0
-154,James McArthur,McArthur,7,Crystal Palace,Midfielder,6,0
-155,Christian Benteke,Benteke,7,Crystal Palace,Forward,6,0
-156,Joel Ward,Ward,7,Crystal Palace,Defender,6,5
-157,Nathaniel Clyne,Clyne,7,Crystal Palace,Defender,6,5
-158,Luka Milivojevic,Milivojevic,7,Crystal Palace,Midfielder,6,4
-159,Jordan Ayew,Ayew,7,Crystal Palace,Midfielder,6,6
-160,Wilfried Zaha,Zaha,7,Crystal Palace,Midfielder,6,5
-161,Jeffrey Schlupp,Schlupp,7,Crystal Palace,Midfielder,6,6
-162,Jack Butland,Butland,7,Crystal Palace,Goalkeeper,6,0
-163,Will Hughes,Hughes,7,Crystal Palace,Midfielder,6,4
-164,Jairo Riedewald,Riedewald,7,Crystal Palace,Midfielder,6,0
-165,Joachim Andersen,Andersen,7,Crystal Palace,Defender,6,6
-166,Odsonne Edouard,Edouard,7,Crystal Palace,Forward,6,6
-167,Marc Guehi,Guehi,7,Crystal Palace,Defender,6,6
-168,Jean-Philippe Mateta,Mateta,7,Crystal Palace,Forward,6,5
-169,Eberechi Eze,Eze,7,Crystal Palace,Midfielder,6,6
-170,Tyrick Mitchell,Mitchell,7,Crystal Palace,Defender,6,6
-171,Michael Olise,Olise,7,Crystal Palace,Midfielder,6,5
-172,Jesurun Rak-Sakyi,Rak-Sakyi,7,Crystal Palace,Midfielder,6,0
-173,Malcolm Ebiowei,Ebiowei,7,Crystal Palace,Midfielder,6,1
-174,Nathan Ferguson,Ferguson,7,Crystal Palace,Defender,6,0
-175,Sam Johnstone,Johnstone,7,Crystal Palace,Goalkeeper,6,0
-495,Remi Matthews,Matthews,7,Crystal Palace,Goalkeeper,6,0
-496,Luke Plange,Plange,7,Crystal Palace,Forward,6,0
-514,Cheick Doucoure,C.Doucoure,7,Crystal Palace,Midfielder,6,6
-530,Chris Richards,Richards,7,Crystal Palace,Defender,6,3
-590,Joseph Whitworth,Whitworth,7,Crystal Palace,Goalkeeper,4,0
-601,Kaden Rodney,Rodney,7,Crystal Palace,Midfielder,3,0
-604,Killian Phillips,Phillips,7,Crystal Palace,Midfielder,2,0
-110,Neal Maupay,Maupay,8,Everton,Forward,7,2
-176,Asmir Begovic,Begovic,8,Everton,Goalkeeper,7,1
-177,Salomon Rondon,Rondon,8,Everton,Forward,7,4
-178,Seamus Coleman,Coleman,8,Everton,Defender,7,0
-179,Andros Townsend,Townsend,8,Everton,Midfielder,7,0
-180,Michael Keane,Keane,8,Everton,Defender,7,1
-181,Dele Alli,Dele,8,Everton,Midfielder,7,2
-182,Jordan Pickford,Pickford,8,Everton,Goalkeeper,7,6
-183,Allan Marques Loureiro,Allan,8,Everton,Midfielder,7,0
-184,Andre Tavares Gomes,Andre Gomes,8,Everton,Midfielder,7,0
-185,Abdoulaye Doucoure,A.Doucoure,8,Everton,Midfielder,7,3
-186,Alex Iwobi,Iwobi,8,Everton,Midfielder,7,7
-187,Jean-Philippe Gbamin,Gbamin,8,Everton,Midfielder,7,0
-188,Yerry Mina,Mina,8,Everton,Defender,7,1
-189,Demarai Gray,Gray,8,Everton,Midfielder,7,7
-190,Tom Davies,Davies,8,Everton,Midfielder,7,5
-191,Dominic Calvert-Lewin,Calvert-Lewin,8,Everton,Forward,7,0
-192,Mason Holgate,Holgate,8,Everton,Defender,7,4
-193,Ben Godfrey,Godfrey,8,Everton,Defender,7,1
-194,Vitalii Mykolenko,Mykolenko,8,Everton,Defender,7,7
-195,Anthony Gordon,Gordon,8,Everton,Midfielder,7,7
-196,Jarrad Branthwaite,Branthwaite,8,Everton,Defender,7,0
-197,Nathan Patterson,Patterson,8,Everton,Defender,7,7
-198,Niels Nkounkou,Nkounkou,8,Everton,Defender,7,0
-199,James Tarkowski,Tarkowski,8,Everton,Defender,7,7
-475,Conor Coady,Coady,8,Everton,Defender,7,6
-531,Ruben Nascimento Vinagre,Vinagre,8,Everton,Defender,7,2
-534,Dwight McNeil,McNeil,8,Everton,Midfielder,7,7
-560,Stanley Mills,Mills,8,Everton,Midfielder,7,0
-561,Lewis Warrington,Warrington,8,Everton,Midfielder,7,0
-570,James Garner,Garner,8,Everton,Midfielder,7,0
-577,Amadou Onana,Onana,8,Everton,Midfielder,6,6
-605,Reece Welch,Welch,8,Everton,Defender,3,0
-611,Idrissa Gueye,Gueye,8,Everton,Midfielder,2,2
-627,Eldin Jakupovic,Jakupovic,8,Everton,Goalkeeper,1,0
-2,Bernd Leno,Leno,9,Fulham,Goalkeeper,7,5
-105,Shane Duffy,Duffy,9,Fulham,Defender,7,2
-200,Tom Cairney,Cairney,9,Fulham,Midfielder,7,7
-201,Tim Ream,Ream,9,Fulham,Defender,7,7
-202,Anthony Knockaert,Knockaert,9,Fulham,Midfielder,7,0
-203,Nathaniel Chalobah,Chalobah,9,Fulham,Midfielder,7,2
-204,Neeskens Kebano,Kebano,9,Fulham,Midfielder,7,6
-205,Bobby De Cordova-Reid,De Cordova-Reid,9,Fulham,Midfielder,7,7
-206,Joe Bryan,Bryan,9,Fulham,Defender,7,0
-207,Paulo Gazzaniga Farias,Gazzaniga,9,Fulham,Goalkeeper,7,0
-208,Terence Kongolo,Kongolo,9,Fulham,Defender,7,0
-209,Tosin Adarabioyo,Tosin,9,Fulham,Defender,7,7
-210,Aleksandar Mitrovic,Mitrovic,9,Fulham,Forward,7,7
-211,Harrison Reed,Reed,9,Fulham,Midfielder,7,7
-212,Harry Wilson,Wilson,9,Fulham,Midfielder,7,0
-213,Marek Rodak,Rodak,9,Fulham,Goalkeeper,7,2
-214,Ivan Neves Abreu Cavaleiro,Cavaleiro,9,Fulham,Midfielder,7,0
-215,Kenny Tete,Tete,9,Fulham,Defender,7,7
-216,Josh Onomah,Onomah,9,Fulham,Midfielder,7,0
-217,Antonee Robinson,Robinson,9,Fulham,Defender,7,6
-218,Rodrigo Muniz Carvalho,Muniz,9,Fulham,Forward,7,0
-219,Jay Stansfield,Stansfield,9,Fulham,Forward,7,3
-220,Joao Palhinha Goncalves,Palhinha,9,Fulham,Midfielder,7,7
-231,Daniel James,James,9,Fulham,Midfielder,7,6
-346,Andreas Hoelgebaum Pereira,Andreas,9,Fulham,Midfielder,7,7
-470,Issa Diop,Diop,9,Fulham,Defender,7,2
-521,Tyrese Francois,Francois,9,Fulham,Midfielder,7,1
-532,Kevin Mbabu,Mbabu,9,Fulham,Defender,7,4
-546,Luke Harris,Harris,9,Fulham,Midfielder,7,0
-562,Manor Solomon,Solomon,9,Fulham,Midfielder,7,1
-591,Terry Ablade,Ablade,9,Fulham,Forward,5,0
-613,Layvin Kurzawa,Kurzawa,9,Fulham,Defender,2,0
-614,Willian Borges da Silva,Willian,9,Fulham,Midfielder,2,2
-618,Carlos Vinicius Alves Morais,Vinicius,9,Fulham,Forward,2,2
-248,Kasper Schmeichel,Schmeichel,10,Leicester,Goalkeeper,7,0
-249,Jonny Evans,Evans,10,Leicester,Defender,7,7
-250,Ryan Bertrand,Bertrand,10,Leicester,Defender,7,0
-251,Marc Albrighton,Albrighton,10,Leicester,Midfielder,7,0
-252,Nampalys Mendy,Mendy,10,Leicester,Midfielder,7,0
-253,Jannik Vestergaard,Vestergaard,10,Leicester,Defender,7,0
-254,Danny Ward,Ward,10,Leicester,Goalkeeper,7,7
-255,Jamie Vardy,Vardy,10,Leicester,Forward,7,7
-256,Ricardo Barbosa Pereira,Ricardo,10,Leicester,Defender,7,0
-257,Daniel Amartey,Amartey,10,Leicester,Defender,7,5
-258,Timothy Castagne,Castagne,10,Leicester,Defender,7,6
-259,Youri Tielemans,Tielemans,10,Leicester,Midfielder,7,7
-260,Ayoze Perez,Perez,10,Leicester,Midfielder,7,2
-261,James Maddison,Maddison,10,Leicester,Midfielder,7,6
-262,Kelechi Iheanacho,Iheanacho,10,Leicester,Forward,7,6
-263,Hamza Choudhury,Choudhury,10,Leicester,Midfielder,7,0
-264,Harvey Barnes,Barnes,10,Leicester,Midfielder,7,5
-265,Wilfred Ndidi,Ndidi,10,Leicester,Midfielder,7,7
-266,Kiernan Dewsbury-Hall,Dewsbury-Hall,10,Leicester,Midfielder,7,7
-267,Caglar Soyuncu,Soyuncu,10,Leicester,Defender,7,0
-268,James Justin,Justin,10,Leicester,Defender,7,7
-269,Boubakary Soumare,Soumare,10,Leicester,Midfielder,7,4
-270,Luke Thomas,Thomas,10,Leicester,Defender,7,2
-271,Patson Daka,Daka,10,Leicester,Forward,7,6
-273,Lewis Brunt,Brunt,10,Leicester,Defender,7,0
-548,Daniel Iversen,Iversen,10,Leicester,Goalkeeper,7,0
-549,Dennis Praet,Praet,10,Leicester,Midfielder,7,2
-581,Alex Smithies,Smithies,10,Leicester,Goalkeeper,5,0
-612,Wout Faes,Faes,10,Leicester,Defender,2,1
-221,Liam Cooper,Cooper,11,Leeds,Defender,6,0
-222,Luke Ayling,Ayling,11,Leeds,Defender,6,1
-223,Mateusz Klich,Klich,11,Leeds,Midfielder,6,6
-224,Adam Forshaw,Forshaw,11,Leeds,Midfielder,6,3
-225,Rodrigo Moreno,Rodrigo,11,Leeds,Midfielder,6,5
-226,Stuart Dallas,Dallas,11,Leeds,Defender,6,0
-227,Patrick Bamford,Bamford,11,Leeds,Forward,6,4
-228,Diego Llorente,Llorente,11,Leeds,Defender,6,6
-229,Tyler Roberts,Roberts,11,Leeds,Midfielder,6,0
-230,Robin Koch,Koch,11,Leeds,Defender,6,6
-232,Raphael Dias Belloli,Raphinha,11,Leeds,Midfielder,6,0
-233,Jack Harrison,Harrison,11,Leeds,Midfielder,6,6
-234,Jamie Shackleton,Shackleton,11,Leeds,Midfielder,6,0
-235,Pascal Struijk,Struijk,11,Leeds,Defender,6,6
-236,Kristoffer Klaesson,Klaesson,11,Leeds,Goalkeeper,6,0
-237,Sam Greenwood,Greenwood,11,Leeds,Forward,6,3
-238,Illan Meslier,Meslier,11,Leeds,Goalkeeper,6,6
-239,Junior Firpo Adames,Firpo,11,Leeds,Defender,6,0
-240,Crysencio Summerville,Summerville,11,Leeds,Midfielder,6,2
-241,Lewis Bate,Bate,11,Leeds,Midfielder,6,0
-242,Joe Gelhardt,Gelhardt,11,Leeds,Forward,6,5
-243,Leo Fuhr Hjelde,Hjelde,11,Leeds,Defender,6,0
-244,Rasmus Kristensen,Kristensen,11,Leeds,Defender,6,5
-245,Marc Roca Junque,Roca,11,Leeds,Midfielder,6,6
-246,Brenden Aaronson,Aaronson,11,Leeds,Midfielder,6,6
-247,Darko Gyabi,Gyabi,11,Leeds,Midfielder,6,0
-506,Tyler Adams,Adams,11,Leeds,Midfielder,6,6
-508,Luis Sinisterra Lucumi,Sinisterra,11,Leeds,Midfielder,6,5
-547,Cody Drameh,Drameh,11,Leeds,Defender,6,1
-565,Archie Gray,Gray,11,Leeds,Midfielder,6,0
-578,Joel Robles,Robles,11,Leeds,Goalkeeper,5,0
-619,Wilfried Gnonto,Gnonto,11,Leeds,Forward,1,0
-274,James Milner,Milner,12,Liverpool,Midfielder,6,6
-275,Jordan Henderson,Henderson,12,Liverpool,Midfielder,6,5
-276,Joel Matip,Matip,12,Liverpool,Defender,6,2
-277,Thiago Alcantara do Nascimento,Thiago,12,Liverpool,Midfielder,6,1
-278,Alex Oxlade-Chamberlain,Chamberlain,12,Liverpool,Midfielder,6,0
-279,Roberto Firmino,Firmino,12,Liverpool,Forward,6,5
-280,Virgil van Dijk,Van Dijk,12,Liverpool,Defender,6,6
-281,Alisson Ramses Becker,Alisson,12,Liverpool,Goalkeeper,6,6
-282,Fabio Henrique Tavares,Fabinho,12,Liverpool,Midfielder,6,6
-283,Mohamed Salah,Salah,12,Liverpool,Midfielder,6,6
-284,Andrew Robertson,Robertson,12,Liverpool,Defender,6,6
-285,Trent Alexander-Arnold,Alexander-Arnold,12,Liverpool,Defender,6,6
-286,Joseph Gomez,Gomez,12,Liverpool,Defender,6,5
-287,Naby Keita,Keita,12,Liverpool,Midfielder,6,0
-288,Diogo Teixeira da Silva,Diogo Jota,12,Liverpool,Forward,6,1
-289,Caoimhin Kelleher,Kelleher,12,Liverpool,Goalkeeper,6,0
-290,Ibrahima Konate,Konate,12,Liverpool,Defender,6,0
-291,Curtis Jones,Jones,12,Liverpool,Midfielder,6,0
-292,Konstantinos Tsimikas,Tsimikas,12,Liverpool,Defender,6,5
-293,Luis Diaz,Luis Diaz,12,Liverpool,Midfielder,6,6
-294,Harvey Elliott,Elliott,12,Liverpool,Midfielder,6,6
-296,Fabio Freitas Gouveia Carvalho,Carvalho,12,Liverpool,Midfielder,6,6
-297,Darwin Nunez Ribeiro,Darwin,12,Liverpool,Forward,6,3
-298,Calvin Ramsay,Ramsay,12,Liverpool,Defender,6,0
-497,Adrian San Miguel del Castillo,Adrian,12,Liverpool,Goalkeeper,6,0
-498,Rhys Williams,R.Williams,12,Liverpool,Defender,6,0
-499,Ben Davies,Davies,12,Liverpool,Defender,6,0
-500,Sepp van den Berg,Van den Berg,12,Liverpool,Defender,6,0
-501,Nathaniel Phillips,Phillips,12,Liverpool,Defender,6,1
-563,Luke Chambers,Chambers,12,Liverpool,Defender,6,0
-564,Stefan Bajcetic,Bajcetic,12,Liverpool,Midfielder,6,1
-584,Bobby Clark,Clark,12,Liverpool,Midfielder,5,1
-592,Harvey Davies,H.Davies,12,Liverpool,Goalkeeper,4,0
-620,Arthur Henrique Ramos de Oliveira Melo,Arthur,12,Liverpool,Midfielder,1,0
-299,Kyle Walker,Walker,13,Man City,Defender,7,6
-300,Ilkay Gundogan,Gundogan,13,Man City,Midfielder,7,7
-301,Kevin De Bruyne,De Bruyne,13,Man City,Midfielder,7,7
-302,John Stones,Stones,13,Man City,Defender,7,6
-303,Riyad Mahrez,Mahrez,13,Man City,Midfielder,7,6
-305,Jack Grealish,Grealish,13,Man City,Midfielder,7,3
-306,Joao Cancelo,Cancelo,13,Man City,Defender,7,7
-307,Ederson Santana de Moraes,Ederson,13,Man City,Goalkeeper,7,7
-308,Nathan Ake,Ake,13,Man City,Defender,7,4
-309,Aymeric Laporte,Laporte,13,Man City,Defender,7,0
-310,Zack Steffen,Steffen,13,Man City,Goalkeeper,7,0
-311,Bernardo Veiga de Carvalho e Silva,Bernardo,13,Man City,Midfielder,7,7
-312,Ruben Gato Alves Dias,Dias,13,Man City,Defender,7,7
-314,Phil Foden,Foden,13,Man City,Midfielder,7,7
-315,Rodrigo Hernandez,Rodri,13,Man City,Midfielder,7,7
-316,Cole Palmer,Palmer,13,Man City,Midfielder,7,4
-317,James McAtee,McAtee,13,Man City,Midfielder,7,0
-318,Erling Haaland,Haaland,13,Man City,Forward,7,7
-319,Julian Alvarez,Alvarez,13,Man City,Forward,7,5
-320,Luke Mbete-Tabu,Mbete,13,Man City,Defender,7,0
-322,Josh Wilson-Esbrand,Wilson-Esbrand,13,Man City,Defender,7,0
-323,Liam Delap,Delap,13,Man City,Forward,7,0
-324,Stefan Ortega Moreno,Ortega,13,Man City,Goalkeeper,7,0
-325,Kalvin Phillips,Phillips,13,Man City,Midfielder,7,1
-502,Scott Carson,Carson,13,Man City,Goalkeeper,7,0
-573,Rico Lewis,Lewis,13,Man City,Defender,7,2
-587,Sergio Gomez,Sergio Gomez,13,Man City,Defender,5,3
-599,Claudio Gomes,Gomes,13,Man City,Midfielder,4,0
-600,Ben Knight,Knight,13,Man City,Midfielder,4,0
-610,Manuel Akanji,Akanji,13,Man City,Defender,2,1
-326,Cristiano Ronaldo dos Santos Aveiro,Ronaldo,14,Man Utd,Forward,6,6
-327,David De Gea Quintana,De Gea,14,Man Utd,Goalkeeper,6,6
-328,Phil Jones,Jones,14,Man Utd,Defender,6,0
-329,Raphael Varane,Varane,14,Man Utd,Defender,6,5
-330,Harry Maguire,Maguire,14,Man Utd,Defender,6,3
-331,Frederico Rodrigues de Paula Santos,Fred,14,Man Utd,Midfielder,6,6
-332,Luke Shaw,Shaw,14,Man Utd,Defender,6,2
-333,Bruno Borges Fernandes,Fernandes,14,Man Utd,Midfielder,6,6
-334,Alex Telles,Telles,14,Man Utd,Defender,6,0
-335,Marcus Rashford,Rashford,14,Man Utd,Midfielder,6,6
-336,Donny van de Beek,Van de Beek,14,Man Utd,Midfielder,6,3
-337,Victor Lindelof,Lindelof,14,Man Utd,Defender,6,0
-338,Scott McTominay,McTominay,14,Man Utd,Midfielder,6,6
-339,Eric Bailly,Bailly,14,Man Utd,Defender,6,0
-340,Jadon Sancho,Sancho,14,Man Utd,Midfielder,6,6
-341,Aaron Wan-Bissaka,Wan-Bissaka,14,Man Utd,Defender,6,1
-342,Diogo Dalot Teixeira,Dalot,14,Man Utd,Defender,6,6
-343,Brandon Williams,B.Williams,14,Man Utd,Defender,6,0
-344,Anthony Elanga,Elanga,14,Man Utd,Midfielder,6,5
-345,Anthony Martial,Martial,14,Man Utd,Forward,6,1
-347,Facundo Pellistri Rebollo,Pellistri,14,Man Utd,Midfielder,6,0
-348,Tom Heaton,Heaton,14,Man Utd,Goalkeeper,6,0
-355,Martin Dubravka,Dubravka,14,Man Utd,Goalkeeper,6,0
-504,Tyrell Malacia,Malacia,14,Man Utd,Defender,6,6
-519,Christian Eriksen,Eriksen,14,Man Utd,Midfielder,6,6
-533,Lisandro Martinez,Martinez,14,Man Utd,Defender,6,6
-550,Amad Diallo,Amad,14,Man Utd,Midfielder,6,0
-551,Zidane Iqbal,Iqbal,14,Man Utd,Midfielder,6,0
-569,Alejandro Garnacho,Garnacho,14,Man Utd,Midfielder,6,1
-593,Carlos Henrique Casimiro,Casemiro,14,Man Utd,Midfielder,3,3
-609,Antony Matheus dos Santos,Antony,14,Man Utd,Midfielder,1,1
-615,Matej Kovar,Kovar,14,Man Utd,Goalkeeper,2,0
-349,Jonjo Shelvey,Shelvey,15,Newcastle,Midfielder,7,0
-350,Matt Ritchie,Ritchie,15,Newcastle,Defender,7,1
-351,Federico Fernandez,Fernandez,15,Newcastle,Defender,7,0
-352,Ciaran Clark,Clark,15,Newcastle,Defender,7,0
-353,Karl Darlow,Darlow,15,Newcastle,Goalkeeper,7,0
-354,Chris Wood,Wood,15,Newcastle,Forward,7,7
-356,Callum Wilson,Wilson,15,Newcastle,Forward,7,3
-357,Kieran Trippier,Trippier,15,Newcastle,Defender,7,7
-358,Dan Burn,Burn,15,Newcastle,Defender,7,7
-359,Ryan Fraser,Fraser,15,Newcastle,Midfielder,7,5
-360,Jamaal Lascelles,Lascelles,15,Newcastle,Defender,7,1
-361,Dwight Gayle,Gayle,15,Newcastle,Forward,7,0
-362,Paul Dummett,Dummett,15,Newcastle,Defender,7,0
-363,Javier Manquillo Gaitan,Manquillo,15,Newcastle,Defender,7,0
-364,Emil Krafth,Krafth,15,Newcastle,Defender,7,1
-365,Jacob Murphy,Murphy,15,Newcastle,Midfielder,7,7
-366,Fabian Schar,Schar,15,Newcastle,Defender,7,6
-367,Matt Targett,Targett,15,Newcastle,Defender,7,5
-368,Allan Saint-Maximin,Saint-Maximin,15,Newcastle,Midfielder,7,4
-369,Miguel Almiron Rejala,Almiron,15,Newcastle,Midfielder,7,7
-370,Sean Longstaff,S.Longstaff,15,Newcastle,Midfielder,7,7
-371,Joelinton Cassio Apolinario de Lira,Joelinton,15,Newcastle,Midfielder,7,7
-372,Jamal Lewis,Lewis,15,Newcastle,Defender,7,0
-373,Joe Willock,Willock,15,Newcastle,Midfielder,7,7
-374,Bruno Guimaraes Rodriguez Moura,Bruno Guimaraes,15,Newcastle,Midfielder,7,4
-375,Jeff Hendrick,Hendrick,15,Newcastle,Midfielder,7,0
-376,Nick Pope,Pope,15,Newcastle,Goalkeeper,7,7
-377,Sven Botman,Botman,15,Newcastle,Defender,7,5
-552,Elliot Anderson,Anderson,15,Newcastle,Midfielder,7,3
-594,Alexander Isak,Isak,15,Newcastle,Forward,4,3
-626,Loris Karius,Karius,15,Newcastle,Goalkeeper,1,0
-295,Neco Williams,N.Williams,16,Nott'm Forest,Defender,7,7
-378,Harry Arter,Arter,16,Nott'm Forest,Midfielder,7,0
-379,Steve Cook,Cook,16,Nott'm Forest,Defender,7,5
-380,Lyle Taylor,Taylor,16,Nott'm Forest,Forward,7,0
-381,Jack Colback,Colback,16,Nott'm Forest,Midfielder,7,3
-382,Brice Samba,Samba,16,Nott'm Forest,Goalkeeper,7,0
-383,Carlos Ribeiro Dias,Cafu,16,Nott'm Forest,Midfielder,7,1
-384,Joe Lolley,Lolley,16,Nott'm Forest,Midfielder,7,0
-385,Scott McKenna,McKenna,16,Nott'm Forest,Defender,7,7
-386,Mohamed Drager,Drager,16,Nott'm Forest,Defender,7,0
-387,Ryan Yates,Yates,16,Nott'm Forest,Midfielder,7,5
-388,Joe Worrall,Worrall,16,Nott'm Forest,Defender,7,7
-389,Jonathan Panzo,Panzo,16,Nott'm Forest,Defender,7,0
-390,Xande Nascimento da Costa Silva,Xande Silva,16,Nott'm Forest,Midfielder,7,0
-391,Sam Surridge,Surridge,16,Nott'm Forest,Forward,7,4
-392,Richie Laryea,Laryea,16,Nott'm Forest,Defender,7,0
-393,Loic Mbe Soh,Mbe Soh,16,Nott'm Forest,Defender,7,0
-394,Brennan Johnson,Johnson,16,Nott'm Forest,Forward,7,7
-395,Alex Mighten,Mighten,16,Nott'm Forest,Midfielder,7,1
-396,Braian Ojeda Rodriguez,Ojeda,16,Nott'm Forest,Midfielder,7,0
-397,Taiwo Awoniyi,Awoniyi,16,Nott'm Forest,Forward,7,7
-398,Dean Henderson,Henderson,16,Nott'm Forest,Goalkeeper,7,7
-399,Giulian Biancone,Biancone,16,Nott'm Forest,Defender,7,1
-474,Willy Boly,Boly,16,Nott'm Forest,Defender,7,1
-493,Morgan Gibbs-White,Gibbs-White,16,Nott'm Forest,Midfielder,7,7
-507,Moussa Niakhate,Niakhate,16,Nott'm Forest,Defender,7,2
-511,Omar Richards,Richards,16,Nott'm Forest,Defender,7,0
-518,Wayne Hennessey,Hennessey,16,Nott'm Forest,Goalkeeper,7,0
-523,Harry Toffolo,Toffolo,16,Nott'm Forest,Defender,7,5
-524,Lewis O'Brien,O'Brien,16,Nott'm Forest,Midfielder,7,6
-527,Jesse Lingard,Lingard,16,Nott'm Forest,Midfielder,7,6
-536,Orel Mangala,Mangala,16,Nott'm Forest,Midfielder,7,3
-553,Oliver Hammond,Hammond,16,Nott'm Forest,Midfielder,7,0
-582,Remo Freuler,Freuler,16,Nott'm Forest,Midfielder,5,3
-583,Cheikhou Kouyate,Kouyate,16,Nott'm Forest,Midfielder,5,4
-585,Emmanuel Dennis,Dennis,16,Nott'm Forest,Forward,5,4
-602,Renan Augusto Lodi dos Santos,Renan Lodi,16,Nott'm Forest,Defender,3,3
-621,Loic Bade,Bade,16,Nott'm Forest,Defender,2,0
-628,Serge Aurier,Aurier,16,Nott'm Forest,Defender,1,0
-21,Ainsley Maitland-Niles,Maitland-Niles,17,Southampton,Midfielder,7,1
-321,Romeo Lavia,Lavia,17,Southampton,Midfielder,7,5
-400,Theo Walcott,Walcott,17,Southampton,Midfielder,7,0
-401,Alex McCarthy,McCarthy,17,Southampton,Goalkeeper,7,0
-402,Oriol Romeu Vidal,Romeu,17,Southampton,Midfielder,7,1
-403,Nathan Redmond,Redmond,17,Southampton,Midfielder,7,1
-405,Stuart Armstrong,S.Armstrong,17,Southampton,Midfielder,7,6
-406,Mohamed Elyounoussi,Elyounoussi,17,Southampton,Midfielder,7,6
-407,James Ward-Prowse,Ward-Prowse,17,Southampton,Midfielder,7,7
-408,Adam Armstrong,A.Armstrong,17,Southampton,Forward,7,7
-409,Kyle Walker-Peters,Walker-Peters,17,Southampton,Defender,7,7
-411,Che Adams,Adams,17,Southampton,Forward,7,6
-412,Nathan Tella,Tella,17,Southampton,Midfielder,7,0
-413,Lyanco Silveira Neves Vojnovic,Lyanco,17,Southampton,Defender,7,3
-414,Yan Valery,Valery,17,Southampton,Defender,7,1
-415,Will Smallbone,Smallbone,17,Southampton,Midfielder,7,0
-416,Ibrahima Diallo,Diallo,17,Southampton,Midfielder,7,4
-417,Romain Perraud,Perraud,17,Southampton,Defender,7,5
-418,Moussa Djenepo,Djenepo,17,Southampton,Midfielder,7,7
-419,Tino Livramento,Livramento,17,Southampton,Defender,7,0
-420,Mohammed Salisu,Salisu,17,Southampton,Defender,7,7
-421,Mateusz Lis,Lis,17,Southampton,Goalkeeper,7,0
-422,Gavin Bazunu,Bazunu,17,Southampton,Goalkeeper,7,7
-423,Armel Bella-Kotchap,Bella-Kotchap,17,Southampton,Defender,7,6
-424,Willy Caballero,Caballero,17,Southampton,Goalkeeper,7,0
-512,Joe Ayodele-Aribo,Aribo,17,Southampton,Midfielder,7,7
-528,Sekou Mara,Mara,17,Southampton,Forward,7,5
-622,Juan Larios Lopez,Larios,17,Southampton,Defender,2,1
-623,Duje Caleta-Car,Caleta-Car,17,Southampton,Defender,2,0
-624,Samuel Edozie,Edozie,17,Southampton,Midfielder,2,2
-425,Hugo Lloris,Lloris,18,Spurs,Goalkeeper,7,7
-426,Fraser Forster,Forster,18,Spurs,Goalkeeper,7,0
-427,Harry Kane,Kane,18,Spurs,Forward,7,7
-428,Son Heung-min,Son,18,Spurs,Midfielder,7,7
-429,Matt Doherty,Doherty,18,Spurs,Defender,7,1
-430,Eric Dier,Dier,18,Spurs,Defender,7,7
-431,Lucas Rodrigues Moura da Silva,Lucas Moura,18,Spurs,Midfielder,7,2
-432,Ben Davies,Davies,18,Spurs,Defender,7,5
-433,Pierre-Emile Højbjerg,Højbjerg,18,Spurs,Midfielder,7,7
-434,Harry Winks,Winks,18,Spurs,Midfielder,7,0
-435,Davinson Sanchez,Sanchez,18,Spurs,Defender,7,4
-436,Ryan Sessegnon,R.Sessegnon,18,Spurs,Defender,7,6
-437,Steven Bergwijn,Bergwijn,18,Spurs,Midfielder,7,0
-438,Sergio Reguilon,Reguilon,18,Spurs,Defender,7,0
-439,Japhet Tanganga,Tanganga,18,Spurs,Defender,7,0
-440,Rodrigo Bentancur,Bentancur,18,Spurs,Midfielder,7,6
-441,Oliver Skipp,Skipp,18,Spurs,Midfielder,7,0
-442,Joe Rodon,Rodon,18,Spurs,Defender,7,0
-443,Cristian Romero,Romero,18,Spurs,Defender,7,4
-444,Yves Bissouma,Bissouma,18,Spurs,Midfielder,7,6
-445,Emerson Leite de Souza Junior,Emerson Royal,18,Spurs,Defender,7,7
-446,Dejan Kulusevski,Kulusevski,18,Spurs,Midfielder,7,7
-447,Dane Scarlett,Scarlett,18,Spurs,Forward,7,0
-448,Ivan Perisic,Perisic,18,Spurs,Defender,7,7
-449,Harvey White,White,18,Spurs,Midfielder,7,0
-450,Pape Matar Sarr,Sarr,18,Spurs,Midfielder,7,0
-451,Brandon Austin,Austin,18,Spurs,Goalkeeper,7,0
-452,Alfie Devine,Devine,18,Spurs,Midfielder,7,0
-453,Troy Parrott,Parrott,18,Spurs,Forward,7,0
-454,Richarlison de Andrade,Richarlison,18,Spurs,Forward,7,6
-513,Clement Lenglet,Lenglet,18,Spurs,Defender,7,3
-522,Djed Spence,Spence,18,Spurs,Defender,7,1
-554,Bryan Gil Salvatierra,Bryan,18,Spurs,Midfielder,7,0
-455,Lukasz Fabianski,Fabianski,19,West Ham,Goalkeeper,7,7
-456,Angelo Ogbonna,Ogbonna,19,West Ham,Defender,7,2
-457,Aaron Cresswell,Cresswell,19,West Ham,Defender,7,6
-458,Michail Antonio,Antonio,19,West Ham,Forward,7,7
-459,Craig Dawson,Dawson,19,West Ham,Defender,7,0
-460,Manuel Lanzini,Lanzini,19,West Ham,Midfielder,7,3
-461,Kurt Zouma,Zouma,19,West Ham,Defender,7,7
-462,Arthur Masuaku,Masuaku,19,West Ham,Defender,7,0
-463,Vladimir Coufal,Coufal,19,West Ham,Defender,7,7
-464,Said Benrahma,Benrahma,19,West Ham,Midfielder,7,7
-465,Jarrod Bowen,Bowen,19,West Ham,Midfielder,7,7
-466,Nikola Vlasic,Vlasic,19,West Ham,Midfielder,7,0
-467,Declan Rice,Rice,19,West Ham,Midfielder,7,7
-468,Tomas Soucek,Soucek,19,West Ham,Midfielder,7,7
-469,Pablo Fornals Malla,Fornals,19,West Ham,Midfielder,7,7
-471,Ben Johnson,Johnson,19,West Ham,Defender,7,4
-472,Nayef Aguerd,Aguerd,19,West Ham,Defender,7,0
-473,Alphonse Areola,Areola,19,West Ham,Goalkeeper,7,1
-509,Flynn Downes,Downes,19,West Ham,Midfielder,7,1
-529,Gianluca Scamacca,Scamacca,19,West Ham,Forward,7,5
-545,Emerson Palmieri dos Santos,Emerson,19,West Ham,Defender,7,4
-555,Harrison Ashby,Ashby,19,West Ham,Defender,7,0
-556,Conor Coventry,Coventry,19,West Ham,Midfielder,7,1
-571,Darren Randolph,Randolph,19,West Ham,Goalkeeper,7,0
-572,Armstrong Oko-Flex,Oko-Flex,19,West Ham,Midfielder,7,0
-575,Maxwel Cornet,Cornet,19,West Ham,Midfielder,6,4
-588,Thilo Kehrer,Kehrer,19,West Ham,Defender,5,5
-603,Lucas Tolentino Coelho de Lima,Paqueta,19,West Ham,Midfielder,3,3
-476,Raul Jimenez,Jimenez,20,Wolves,Forward,7,3
-477,Jonathan Castro Otto,Jonny,20,Wolves,Defender,7,7
-478,Jose Malheiro de Sa,Sa,20,Wolves,Goalkeeper,7,7
-480,Ruben da Silva Neves,Neves,20,Wolves,Midfielder,7,7
-481,Hwang Hee-chan,Hwang,20,Wolves,Midfielder,7,6
-482,Nelson Cabral Semedo,Semedo,20,Wolves,Defender,7,5
-483,Daniel Castelo Podence,Podence,20,Wolves,Midfielder,7,7
-484,Max Kilman,Kilman,20,Wolves,Defender,7,7
-485,Luke Cundle,Cundle,20,Wolves,Midfielder,7,0
-486,Pedro Lomba Neto,Neto,20,Wolves,Midfielder,7,7
-487,Rayan Ait-Nouri,Ait-Nouri,20,Wolves,Defender,7,6
-488,Fabio Silva,Fabio Silva,20,Wolves,Forward,7,0
-489,Toti Antonio Gomes,Toti,20,Wolves,Defender,7,0
-490,Francisco Jorge Tomas Oliveira,Chiquinho,20,Wolves,Midfielder,7,0
-491,Adama Traore Diarra,Adama,20,Wolves,Midfielder,7,4
-492,Matija Sarkic,Sarkic,20,Wolves,Goalkeeper,7,0
-494,Yerson Mosquera Valdelamar,Mosquera,20,Wolves,Defender,7,0
-503,Joao Filipe Iria Santos Moutinho,Moutinho,20,Wolves,Midfielder,7,5
-516,Nathan Collins,Collins,20,Wolves,Defender,7,7
-557,Jackson Smith,Smith,20,Wolves,Goalkeeper,7,0
-558,Hugo Bueno Lopez,Bueno,20,Wolves,Defender,7,0
-566,Joseph Hodge,Hodge,20,Wolves,Midfielder,7,0
-567,Connor Ronan,Ronan,20,Wolves,Midfielder,7,0
-568,Chem Campbell,Campbell,20,Wolves,Midfielder,7,2
-579,Goncalo Manuel Ganchinho Guedes,Guedes,20,Wolves,Midfielder,6,6
-589,Matheus Luiz Nunes,Matheus,20,Wolves,Midfielder,5,5
-608,Sasa Kalajdzic,Kalajdzic,20,Wolves,Forward,2,1
-625,Diego Da Silva Costa,Diego Costa,20,Wolves,Forward,1,0
-629,Boubacar Traore,Traore,20,Wolves,Midfielder,1,1
+1,Cedric Alves Soares,Cedric,1,Arsenal,Defender,10,0
+3,Granit Xhaka,Xhaka,1,Arsenal,Midfielder,10,10
+4,Mohamed Elneny,Elneny,1,Arsenal,Midfielder,10,1
+5,Rob Holding,Holding,1,Arsenal,Defender,10,3
+6,Thomas Partey,Partey,1,Arsenal,Midfielder,10,7
+7,Martin Ødegaard,Ødegaard,1,Arsenal,Midfielder,10,9
+8,Kieran Tierney,Tierney,1,Arsenal,Defender,10,9
+9,Nicolas Pepe,Pepe,1,Arsenal,Midfielder,10,0
+10,Benjamin White,White,1,Arsenal,Defender,10,10
+11,Eddie Nketiah,Nketiah,1,Arsenal,Forward,10,10
+12,Emile Smith Rowe,Smith Rowe,1,Arsenal,Midfielder,10,4
+13,Bukayo Saka,Saka,1,Arsenal,Midfielder,10,10
+14,Takehiro Tomiyasu,Tomiyasu,1,Arsenal,Defender,10,9
+15,Aaron Ramsdale,Ramsdale,1,Arsenal,Goalkeeper,10,10
+16,Gabriel dos Santos Magalhaes,Gabriel,1,Arsenal,Defender,10,10
+17,Nuno Varela Tavares,Tavares,1,Arsenal,Defender,10,0
+18,Albert Sambi Lokonga,Sambi,1,Arsenal,Midfielder,10,6
+19,Gabriel Martinelli Silva,Martinelli,1,Arsenal,Midfielder,10,10
+20,Pablo Mari Villar,Pablo Mari,1,Arsenal,Defender,10,0
+22,Lucas Torreira di Pascua,Torreira,1,Arsenal,Midfielder,10,0
+23,Reiss Nelson,Nelson,1,Arsenal,Midfielder,10,0
+24,Matt Turner,Turner,1,Arsenal,Goalkeeper,10,0
+25,Fabio Ferreira Vieira,Fabio Vieira,1,Arsenal,Midfielder,10,5
+26,William Saliba,Saliba,1,Arsenal,Defender,10,10
+27,Marcus Oliveira Alencar,Marquinhos,1,Arsenal,Midfielder,10,1
+28,Gabriel Fernando de Jesus,Jesus,1,Arsenal,Forward,10,10
+313,Oleksandr Zinchenko,Zinchenko,1,Arsenal,Defender,10,5
+607,Matthew Smith,Smith,1,Arsenal,Midfielder,6,0
+630,Ethan Nwaneri,Nwaneri,1,Arsenal,Midfielder,4,1
+631,Lino Sousa,Sousa,1,Arsenal,Defender,4,0
+29,Philippe Coutinho Correia,Coutinho,2,Aston Villa,Midfielder,10,10
+30,Danny Ings,Ings,2,Aston Villa,Forward,10,9
+31,Emiliano Martinez Romero,Martinez,2,Aston Villa,Goalkeeper,10,10
+32,Calum Chambers,Chambers,2,Aston Villa,Defender,10,2
+33,Lucas Digne,Digne,2,Aston Villa,Defender,10,7
+34,Bertrand Traore,Traore,2,Aston Villa,Midfielder,10,0
+35,Robin Olsen,Olsen,2,Aston Villa,Goalkeeper,10,0
+36,Morgan Sanson,Sanson,2,Aston Villa,Midfielder,10,0
+37,John McGinn,McGinn,2,Aston Villa,Midfielder,10,10
+38,Kortney Hause,Hause,2,Aston Villa,Defender,10,0
+39,Tyrone Mings,Mings,2,Aston Villa,Defender,10,8
+40,Ollie Watkins,Watkins,2,Aston Villa,Forward,10,10
+41,Marvelous Nakamba,Nakamba,2,Aston Villa,Midfielder,10,0
+42,Emiliano Buendia Stati,Buendia,2,Aston Villa,Midfielder,10,10
+43,Matty Cash,Cash,2,Aston Villa,Defender,10,8
+44,Ezri Konsa Ngoyo,Konsa,2,Aston Villa,Defender,10,10
+45,Leon Bailey,Bailey,2,Aston Villa,Midfielder,10,9
+46,Douglas Luiz Soares de Paulo,Douglas Luiz,2,Aston Villa,Midfielder,10,9
+47,Jacob Ramsey,Ramsey,2,Aston Villa,Midfielder,10,10
+49,Tim Iroegbunam,Iroegbunam,2,Aston Villa,Midfielder,10,0
+50,Diego Carlos Santos Silva,Diego Carlos,2,Aston Villa,Defender,10,2
+51,Anwar El Ghazi,El Ghazi,2,Aston Villa,Midfielder,10,0
+52,Keinan Davis,Davis,2,Aston Villa,Forward,10,0
+53,Boubacar Kamara,Kamara,2,Aston Villa,Midfielder,10,7
+54,Cameron Archer,Archer,2,Aston Villa,Forward,10,3
+55,Jaden Philogene-Bidace,Philogene-Bidace,2,Aston Villa,Midfielder,10,0
+56,Frederic Guilbert,Guilbert,2,Aston Villa,Defender,10,0
+410,Jan Bednarek,Bednarek,2,Aston Villa,Defender,10,3
+479,Leander Dendoncker,Dendoncker,2,Aston Villa,Midfielder,10,7
+525,Ludwig Augustinsson,Augustinsson,2,Aston Villa,Defender,10,1
+537,Kaine Kesler Hayden,Kesler Hayden,2,Aston Villa,Defender,10,0
+538,Ashley Young,Young,2,Aston Villa,Defender,10,6
+638,Lamare Bogarde,Bogarde,2,Aston Villa,Defender,3,0
+57,Adam Smith,Smith,3,Bournemouth,Defender,10,10
+58,Junior Stanislas,Stanislas,3,Bournemouth,Midfielder,10,2
+59,Ryan Fredericks,Fredericks,3,Bournemouth,Defender,10,4
+60,David Brooks,Brooks,3,Bournemouth,Midfielder,10,0
+61,Jamal Lowe,Lowe,3,Bournemouth,Midfielder,10,1
+62,Kieffer Moore,Moore,3,Bournemouth,Forward,10,10
+63,Emiliano Marcondes,Marcondes,3,Bournemouth,Midfielder,10,1
+64,Jefferson Lerma Solis,Lerma,3,Bournemouth,Midfielder,10,10
+65,Jack Stacey,Stacey,3,Bournemouth,Defender,10,5
+66,Dominic Solanke,Solanke,3,Bournemouth,Forward,10,8
+67,Lewis Cook,Cook,3,Bournemouth,Midfielder,10,10
+68,Ben Pearson,Pearson,3,Bournemouth,Midfielder,10,4
+69,Ryan Christie,Christie,3,Bournemouth,Midfielder,10,10
+70,Philip Billing,Billing,3,Bournemouth,Midfielder,10,10
+71,Chris Mepham,Mepham,3,Bournemouth,Defender,10,10
+72,Mark Travers,Travers,3,Bournemouth,Goalkeeper,10,4
+73,Lloyd Kelly,Kelly,3,Bournemouth,Defender,10,5
+74,Siriki Dembele,Dembele,3,Bournemouth,Midfielder,10,0
+75,Jaidon Anthony,Anthony,3,Bournemouth,Midfielder,10,7
+76,Jordan Zemura,Zemura,3,Bournemouth,Defender,10,8
+77,Will Dennis,Dennis,3,Bournemouth,Goalkeeper,10,0
+404,Jack Stephens,Stephens,3,Bournemouth,Defender,10,3
+505,Joe Rothwell,Rothwell,3,Bournemouth,Midfielder,10,0
+535,Marcus Tavernier,Tavernier,3,Bournemouth,Midfielder,10,10
+539,James Hill,Hill,3,Bournemouth,Defender,10,0
+574,Norberto Murara Neto,Neto,3,Bournemouth,Goalkeeper,9,6
+576,Marcos Senesi,Senesi,3,Bournemouth,Defender,9,7
+597,Christian Saydee,Saydee,3,Bournemouth,Forward,7,0
+598,Owen Bevan,Bevan,3,Bournemouth,Defender,7,1
+78,Pontus Jansson,Jansson,4,Brentford,Defender,10,6
+79,Christian Nørgaard,Nørgaard,4,Brentford,Midfielder,10,4
+80,Ivan Toney,Toney,4,Brentford,Forward,10,10
+81,David Raya Martin,Raya,4,Brentford,Goalkeeper,10,10
+82,Sergi Canos Tenes,Canos,4,Brentford,Defender,10,1
+83,Josh Dasilva,Dasilva,4,Brentford,Midfielder,10,10
+84,Kristoffer Ajer,Ajer,4,Brentford,Defender,10,4
+85,Rico Henry,Henry,4,Brentford,Defender,10,10
+86,Vitaly Janelt,Janelt,4,Brentford,Midfielder,10,10
+87,Saman Ghoddos,Ghoddos,4,Brentford,Midfielder,10,4
+88,Mathias Jensen,Jensen,4,Brentford,Midfielder,10,10
+89,Yoane Wissa,Wissa,4,Brentford,Midfielder,10,10
+90,Mads Roerslev Rasmussen,Roerslev,4,Brentford,Defender,10,2
+91,Mads Bech Sørensen,Bech,4,Brentford,Defender,10,3
+92,Ethan Pinnock,Pinnock,4,Brentford,Defender,10,2
+93,Frank Onyeka,Onyeka,4,Brentford,Midfielder,10,7
+94,Shandon Baptiste,Baptiste,4,Brentford,Midfielder,10,10
+95,Bryan Mbeumo,Mbeumo,4,Brentford,Forward,10,10
+96,Charlie Goode,Goode,4,Brentford,Defender,10,0
+97,Marcus Forss,Forss,4,Brentford,Forward,10,0
+98,Dominic Thompson,Thompson,4,Brentford,Defender,10,0
+99,Mads Bidstrup,Bidstrup,4,Brentford,Midfielder,10,0
+100,Ellery Balcombe,Balcombe,4,Brentford,Goalkeeper,10,0
+510,Aaron Hickey,Hickey,4,Brentford,Defender,10,9
+515,Keane Lewis-Potter,Lewis-Potter,4,Brentford,Midfielder,10,5
+517,Thomas Strakosha,Strakosha,4,Brentford,Goalkeeper,10,0
+526,Ben Mee,Mee,4,Brentford,Defender,10,10
+540,Fin Stevens,Stevens,4,Brentford,Defender,10,0
+541,Halil Dervisoglu,Dervisoglu,4,Brentford,Forward,10,1
+580,Mikkel Damsgaard,Damsgaard,4,Brentford,Midfielder,9,6
+595,Mathias Jorgensen,Zanka,4,Brentford,Defender,7,4
+632,Ryan Trevitt,Trevitt,4,Brentford,Midfielder,3,0
+633,Matthew Cox,Cox,4,Brentford,Goalkeeper,3,0
+101,Adam Lallana,Lallana,5,Brighton,Midfielder,9,6
+102,Jason Steele,Steele,5,Brighton,Goalkeeper,9,0
+103,Danny Welbeck,Welbeck,5,Brighton,Forward,9,9
+104,Pascal Groß,Groß,5,Brighton,Midfielder,9,9
+106,Lewis Dunk,Dunk,5,Brighton,Defender,9,9
+107,Solly March,March,5,Brighton,Midfielder,9,9
+108,Adam Webster,Webster,5,Brighton,Defender,9,9
+109,Joel Veltman,Veltman,5,Brighton,Defender,9,9
+111,Leandro Trossard,Trossard,5,Brighton,Midfielder,9,9
+113,Robert Sanchez,Sanchez,5,Brighton,Goalkeeper,9,9
+114,Tariq Lamptey,Lamptey,5,Brighton,Defender,9,7
+115,Steven Alzate,Alzate,5,Brighton,Midfielder,9,0
+116,Alexis Mac Allister,Mac Allister,5,Brighton,Midfielder,9,9
+117,Jakub Moder,Moder,5,Brighton,Midfielder,9,0
+118,Enock Mwepu,Mwepu,5,Brighton,Midfielder,9,6
+119,Jeremy Sarmiento Morante,Sarmiento,5,Brighton,Midfielder,9,0
+120,Moises Caicedo Corozo,Caicedo,5,Brighton,Midfielder,9,9
+121,Taylor Richards,Richards,5,Brighton,Midfielder,9,0
+122,Haydon Roberts,Roberts,5,Brighton,Defender,9,0
+123,Deniz Undav,Undav,5,Brighton,Forward,9,4
+124,Kaoru Mitoma,Mitoma,5,Brighton,Midfielder,9,7
+125,Julio Enciso,Enciso,5,Brighton,Forward,9,0
+126,Kacper Kozłowski,Kozłowski,5,Brighton,Midfielder,9,0
+149,Billy Gilmour,Gilmour,5,Brighton,Midfielder,9,2
+542,Kjell Scherpen,Scherpen,5,Brighton,Goalkeeper,9,0
+543,Matt Clarke,Clarke,5,Brighton,Defender,9,0
+544,Jan Paul van Hecke,Van Hecke,5,Brighton,Defender,9,1
+559,Levi Colwill,Colwill,5,Brighton,Defender,9,2
+586,Pervis Estupinan,Estupinan,5,Brighton,Defender,7,7
+596,Evan Ferguson,Ferguson,5,Brighton,Forward,6,0
+640,Ed Turns,Turns,5,Brighton,Defender,2,0
+48,Carney Chukwuemeka,Chukwuemeka,6,Chelsea,Midfielder,9,1
+112,Marc Cucurella Saseta,Cucurella,6,Chelsea,Defender,9,8
+127,Cesar Azpilicueta,Azpilicueta,6,Chelsea,Defender,9,7
+128,Thiago Emiliano da Silva,Thiago Silva,6,Chelsea,Defender,9,8
+129,Marcos Alonso,Alonso,6,Chelsea,Defender,9,0
+130,Jorge Luiz Frello Filho,Jorginho,6,Chelsea,Midfielder,9,9
+131,Ross Barkley,Barkley,6,Chelsea,Midfielder,9,0
+132,Mateo Kovacic,Kovacic,6,Chelsea,Midfielder,9,6
+133,Kepa Arrizabalaga,Arrizabalaga,6,Chelsea,Goalkeeper,9,3
+134,N'Golo Kante,Kante,6,Chelsea,Midfielder,9,2
+135,Hakim Ziyech,Ziyech,6,Chelsea,Midfielder,9,3
+136,Ruben Loftus-Cheek,Loftus-Cheek,6,Chelsea,Midfielder,9,9
+137,Timo Werner,Werner,6,Chelsea,Forward,9,0
+138,Robert Kenedy Nunes do Nascimento,Kenedy,6,Chelsea,Defender,9,0
+139,Ben Chilwell,Chilwell,6,Chelsea,Defender,9,7
+140,Christian Pulisic,Pulisic,6,Chelsea,Midfielder,9,8
+141,Trevoh Chalobah,Chalobah,6,Chelsea,Defender,9,3
+142,Mason Mount,Mount,6,Chelsea,Midfielder,9,9
+143,Malang Sarr,Sarr,6,Chelsea,Defender,9,0
+144,Callum Hudson-Odoi,Hudson-Odoi,6,Chelsea,Midfielder,9,0
+145,Kai Havertz,Havertz,6,Chelsea,Forward,9,9
+146,Reece James,James,6,Chelsea,Defender,9,7
+147,Edouard Mendy,Mendy,6,Chelsea,Goalkeeper,9,6
+148,Conor Gallagher,Gallagher,6,Chelsea,Midfielder,9,8
+150,Armando Broja,Broja,6,Chelsea,Forward,9,7
+151,Ethan Ampadu,Ampadu,6,Chelsea,Defender,9,0
+272,Wesley Fofana,Fofana,6,Chelsea,Defender,9,4
+304,Raheem Sterling,Sterling,6,Chelsea,Midfielder,9,8
+520,Kalidou Koulibaly,Koulibaly,6,Chelsea,Defender,9,7
+606,Harvey Vale,Vale,6,Chelsea,Midfielder,5,0
+616,Denis Zakaria,Zakaria,6,Chelsea,Midfielder,4,0
+617,Pierre-Emerick Aubameyang,Aubameyang,6,Chelsea,Forward,4,2
+635,Marcus Bettinelli,Bettinelli,6,Chelsea,Goalkeeper,3,0
+152,Vicente Guaita,Guaita,7,Crystal Palace,Goalkeeper,9,9
+153,James Tomkins,Tomkins,7,Crystal Palace,Defender,9,1
+154,James McArthur,McArthur,7,Crystal Palace,Midfielder,9,0
+155,Christian Benteke,Benteke,7,Crystal Palace,Forward,9,0
+156,Joel Ward,Ward,7,Crystal Palace,Defender,9,8
+157,Nathaniel Clyne,Clyne,7,Crystal Palace,Defender,9,6
+158,Luka Milivojevic,Milivojevic,7,Crystal Palace,Midfielder,9,6
+159,Jordan Ayew,Ayew,7,Crystal Palace,Midfielder,9,9
+160,Wilfried Zaha,Zaha,7,Crystal Palace,Midfielder,9,8
+161,Jeffrey Schlupp,Schlupp,7,Crystal Palace,Midfielder,9,9
+162,Jack Butland,Butland,7,Crystal Palace,Goalkeeper,9,0
+163,Will Hughes,Hughes,7,Crystal Palace,Midfielder,9,6
+164,Jairo Riedewald,Riedewald,7,Crystal Palace,Midfielder,9,1
+165,Joachim Andersen,Andersen,7,Crystal Palace,Defender,9,8
+166,Odsonne Edouard,Edouard,7,Crystal Palace,Forward,9,9
+167,Marc Guehi,Guehi,7,Crystal Palace,Defender,9,9
+168,Jean-Philippe Mateta,Mateta,7,Crystal Palace,Forward,9,8
+169,Eberechi Eze,Eze,7,Crystal Palace,Midfielder,9,9
+170,Tyrick Mitchell,Mitchell,7,Crystal Palace,Defender,9,9
+171,Michael Olise,Olise,7,Crystal Palace,Midfielder,9,8
+172,Jesurun Rak-Sakyi,Rak-Sakyi,7,Crystal Palace,Midfielder,9,0
+173,Malcolm Ebiowei,Ebiowei,7,Crystal Palace,Midfielder,9,1
+174,Nathan Ferguson,Ferguson,7,Crystal Palace,Defender,9,0
+175,Sam Johnstone,Johnstone,7,Crystal Palace,Goalkeeper,9,0
+495,Remi Matthews,Matthews,7,Crystal Palace,Goalkeeper,9,0
+496,Luke Plange,Plange,7,Crystal Palace,Forward,9,0
+514,Cheick Doucoure,C.Doucoure,7,Crystal Palace,Midfielder,9,9
+530,Chris Richards,Richards,7,Crystal Palace,Defender,9,3
+590,Joseph Whitworth,Whitworth,7,Crystal Palace,Goalkeeper,7,0
+601,Kaden Rodney,Rodney,7,Crystal Palace,Midfielder,6,0
+604,Killian Phillips,Phillips,7,Crystal Palace,Midfielder,5,0
+634,John-Kymani Gordon,Gordon,7,Crystal Palace,Forward,3,0
+642,Kofi Balmer,Balmer,7,Crystal Palace,Defender,1,0
+110,Neal Maupay,Maupay,8,Everton,Forward,10,5
+176,Asmir Begovic,Begovic,8,Everton,Goalkeeper,10,1
+177,Salomon Rondon,Rondon,8,Everton,Forward,10,7
+178,Seamus Coleman,Coleman,8,Everton,Defender,10,3
+179,Andros Townsend,Townsend,8,Everton,Midfielder,10,0
+180,Michael Keane,Keane,8,Everton,Defender,10,1
+181,Dele Alli,Dele,8,Everton,Midfielder,10,2
+182,Jordan Pickford,Pickford,8,Everton,Goalkeeper,10,9
+183,Allan Marques Loureiro,Allan,8,Everton,Midfielder,10,0
+184,Andre Tavares Gomes,Andre Gomes,8,Everton,Midfielder,10,0
+185,Abdoulaye Doucoure,A.Doucoure,8,Everton,Midfielder,10,4
+186,Alex Iwobi,Iwobi,8,Everton,Midfielder,10,10
+187,Jean-Philippe Gbamin,Gbamin,8,Everton,Midfielder,10,0
+188,Yerry Mina,Mina,8,Everton,Defender,10,1
+189,Demarai Gray,Gray,8,Everton,Midfielder,10,10
+190,Tom Davies,Davies,8,Everton,Midfielder,10,6
+191,Dominic Calvert-Lewin,Calvert-Lewin,8,Everton,Forward,10,2
+192,Mason Holgate,Holgate,8,Everton,Defender,10,4
+193,Ben Godfrey,Godfrey,8,Everton,Defender,10,1
+194,Vitalii Mykolenko,Mykolenko,8,Everton,Defender,10,10
+195,Anthony Gordon,Gordon,8,Everton,Midfielder,10,9
+196,Jarrad Branthwaite,Branthwaite,8,Everton,Defender,10,0
+197,Nathan Patterson,Patterson,8,Everton,Defender,10,7
+198,Niels Nkounkou,Nkounkou,8,Everton,Defender,10,0
+199,James Tarkowski,Tarkowski,8,Everton,Defender,10,10
+475,Conor Coady,Coady,8,Everton,Defender,10,9
+531,Ruben Nascimento Vinagre,Vinagre,8,Everton,Defender,10,2
+534,Dwight McNeil,McNeil,8,Everton,Midfielder,10,10
+560,Stanley Mills,Mills,8,Everton,Midfielder,10,0
+561,Lewis Warrington,Warrington,8,Everton,Midfielder,10,0
+570,James Garner,Garner,8,Everton,Midfielder,10,2
+577,Amadou Onana,Onana,8,Everton,Midfielder,9,9
+605,Reece Welch,Welch,8,Everton,Defender,6,0
+611,Idrissa Gueye,Gueye,8,Everton,Midfielder,5,5
+627,Eldin Jakupovic,Jakupovic,8,Everton,Goalkeeper,4,0
+637,Kyle John,John,8,Everton,Defender,3,0
+2,Bernd Leno,Leno,9,Fulham,Goalkeeper,10,8
+105,Shane Duffy,Duffy,9,Fulham,Defender,10,3
+200,Tom Cairney,Cairney,9,Fulham,Midfielder,10,10
+201,Tim Ream,Ream,9,Fulham,Defender,10,10
+202,Anthony Knockaert,Knockaert,9,Fulham,Midfielder,10,0
+203,Nathaniel Chalobah,Chalobah,9,Fulham,Midfielder,10,3
+204,Neeskens Kebano,Kebano,9,Fulham,Midfielder,10,9
+205,Bobby De Cordova-Reid,De Cordova-Reid,9,Fulham,Midfielder,10,10
+206,Joe Bryan,Bryan,9,Fulham,Defender,10,0
+207,Paulo Gazzaniga Farias,Gazzaniga,9,Fulham,Goalkeeper,10,0
+208,Terence Kongolo,Kongolo,9,Fulham,Defender,10,0
+209,Tosin Adarabioyo,Tosin,9,Fulham,Defender,10,9
+210,Aleksandar Mitrovic,Mitrovic,9,Fulham,Forward,10,9
+211,Harrison Reed,Reed,9,Fulham,Midfielder,10,10
+212,Harry Wilson,Wilson,9,Fulham,Midfielder,10,2
+213,Marek Rodak,Rodak,9,Fulham,Goalkeeper,10,2
+214,Ivan Neves Abreu Cavaleiro,Cavaleiro,9,Fulham,Midfielder,10,0
+215,Kenny Tete,Tete,9,Fulham,Defender,10,7
+216,Josh Onomah,Onomah,9,Fulham,Midfielder,10,1
+217,Antonee Robinson,Robinson,9,Fulham,Defender,10,8
+218,Rodrigo Muniz Carvalho,Muniz,9,Fulham,Forward,10,0
+219,Jay Stansfield,Stansfield,9,Fulham,Forward,10,3
+220,Joao Palhinha Goncalves,Palhinha,9,Fulham,Midfielder,10,9
+231,Daniel James,James,9,Fulham,Midfielder,10,9
+346,Andreas Hoelgebaum Pereira,Andreas,9,Fulham,Midfielder,10,10
+470,Issa Diop,Diop,9,Fulham,Defender,10,4
+521,Tyrese Francois,Francois,9,Fulham,Midfielder,10,1
+532,Kevin Mbabu,Mbabu,9,Fulham,Defender,10,5
+546,Luke Harris,Harris,9,Fulham,Midfielder,10,0
+562,Manor Solomon,Solomon,9,Fulham,Midfielder,10,1
+591,Terry Ablade,Ablade,9,Fulham,Forward,8,0
+613,Layvin Kurzawa,Kurzawa,9,Fulham,Defender,5,1
+614,Willian Borges da Silva,Willian,9,Fulham,Midfielder,5,3
+618,Carlos Vinicius Alves Morais,Vinicius,9,Fulham,Forward,5,5
+636,Stefan Parkes,Parkes,9,Fulham,Defender,3,0
+641,Martial Godo,Godo,9,Fulham,Midfielder,2,0
+248,Kasper Schmeichel,Schmeichel,10,Leicester,Goalkeeper,10,0
+249,Jonny Evans,Evans,10,Leicester,Defender,10,9
+250,Ryan Bertrand,Bertrand,10,Leicester,Defender,10,0
+251,Marc Albrighton,Albrighton,10,Leicester,Midfielder,10,1
+252,Nampalys Mendy,Mendy,10,Leicester,Midfielder,10,1
+253,Jannik Vestergaard,Vestergaard,10,Leicester,Defender,10,0
+254,Danny Ward,Ward,10,Leicester,Goalkeeper,10,10
+255,Jamie Vardy,Vardy,10,Leicester,Forward,10,10
+256,Ricardo Barbosa Pereira,Ricardo,10,Leicester,Defender,10,0
+257,Daniel Amartey,Amartey,10,Leicester,Defender,10,7
+258,Timothy Castagne,Castagne,10,Leicester,Defender,10,9
+259,Youri Tielemans,Tielemans,10,Leicester,Midfielder,10,10
+260,Ayoze Perez,Perez,10,Leicester,Midfielder,10,3
+261,James Maddison,Maddison,10,Leicester,Midfielder,10,9
+262,Kelechi Iheanacho,Iheanacho,10,Leicester,Forward,10,8
+263,Hamza Choudhury,Choudhury,10,Leicester,Midfielder,10,0
+264,Harvey Barnes,Barnes,10,Leicester,Midfielder,10,8
+265,Wilfred Ndidi,Ndidi,10,Leicester,Midfielder,10,8
+266,Kiernan Dewsbury-Hall,Dewsbury-Hall,10,Leicester,Midfielder,10,10
+267,Caglar Soyuncu,Soyuncu,10,Leicester,Defender,10,0
+268,James Justin,Justin,10,Leicester,Defender,10,10
+269,Boubakary Soumare,Soumare,10,Leicester,Midfielder,10,7
+270,Luke Thomas,Thomas,10,Leicester,Defender,10,2
+271,Patson Daka,Daka,10,Leicester,Forward,10,9
+273,Lewis Brunt,Brunt,10,Leicester,Defender,10,0
+548,Daniel Iversen,Iversen,10,Leicester,Goalkeeper,10,0
+549,Dennis Praet,Praet,10,Leicester,Midfielder,10,4
+581,Alex Smithies,Smithies,10,Leicester,Goalkeeper,8,0
+612,Wout Faes,Faes,10,Leicester,Defender,5,4
+639,Sammy Braybrooke,Braybrooke,10,Leicester,Midfielder,2,0
+221,Liam Cooper,Cooper,11,Leeds,Defender,9,3
+222,Luke Ayling,Ayling,11,Leeds,Defender,9,3
+223,Mateusz Klich,Klich,11,Leeds,Midfielder,9,9
+224,Adam Forshaw,Forshaw,11,Leeds,Midfielder,9,3
+225,Rodrigo Moreno,Rodrigo,11,Leeds,Midfielder,9,8
+226,Stuart Dallas,Dallas,11,Leeds,Defender,9,0
+227,Patrick Bamford,Bamford,11,Leeds,Forward,9,7
+228,Diego Llorente,Llorente,11,Leeds,Defender,9,6
+229,Tyler Roberts,Roberts,11,Leeds,Midfielder,9,0
+230,Robin Koch,Koch,11,Leeds,Defender,9,9
+232,Raphael Dias Belloli,Raphinha,11,Leeds,Midfielder,9,0
+233,Jack Harrison,Harrison,11,Leeds,Midfielder,9,9
+234,Jamie Shackleton,Shackleton,11,Leeds,Midfielder,9,0
+235,Pascal Struijk,Struijk,11,Leeds,Defender,9,9
+236,Kristoffer Klaesson,Klaesson,11,Leeds,Goalkeeper,9,0
+237,Sam Greenwood,Greenwood,11,Leeds,Forward,9,3
+238,Illan Meslier,Meslier,11,Leeds,Goalkeeper,9,9
+239,Junior Firpo Adames,Firpo,11,Leeds,Defender,9,1
+240,Crysencio Summerville,Summerville,11,Leeds,Midfielder,9,5
+241,Lewis Bate,Bate,11,Leeds,Midfielder,9,0
+242,Joe Gelhardt,Gelhardt,11,Leeds,Forward,9,7
+243,Leo Fuhr Hjelde,Hjelde,11,Leeds,Defender,9,0
+244,Rasmus Kristensen,Kristensen,11,Leeds,Defender,9,8
+245,Marc Roca Junque,Roca,11,Leeds,Midfielder,9,9
+246,Brenden Aaronson,Aaronson,11,Leeds,Midfielder,9,9
+247,Darko Gyabi,Gyabi,11,Leeds,Midfielder,9,0
+506,Tyler Adams,Adams,11,Leeds,Midfielder,9,9
+508,Luis Sinisterra Lucumi,Sinisterra,11,Leeds,Midfielder,9,7
+547,Cody Drameh,Drameh,11,Leeds,Defender,9,1
+565,Archie Gray,Gray,11,Leeds,Midfielder,9,0
+578,Joel Robles,Robles,11,Leeds,Goalkeeper,8,0
+619,Wilfried Gnonto,Gnonto,11,Leeds,Forward,4,0
+274,James Milner,Milner,12,Liverpool,Midfielder,9,8
+275,Jordan Henderson,Henderson,12,Liverpool,Midfielder,9,8
+276,Joel Matip,Matip,12,Liverpool,Defender,9,4
+277,Thiago Alcantara do Nascimento,Thiago,12,Liverpool,Midfielder,9,4
+278,Alex Oxlade-Chamberlain,Chamberlain,12,Liverpool,Midfielder,9,0
+279,Roberto Firmino,Firmino,12,Liverpool,Forward,9,8
+280,Virgil van Dijk,Van Dijk,12,Liverpool,Defender,9,9
+281,Alisson Ramses Becker,Alisson,12,Liverpool,Goalkeeper,9,9
+282,Fabio Henrique Tavares,Fabinho,12,Liverpool,Midfielder,9,9
+283,Mohamed Salah,Salah,12,Liverpool,Midfielder,9,9
+284,Andrew Robertson,Robertson,12,Liverpool,Defender,9,7
+285,Trent Alexander-Arnold,Alexander-Arnold,12,Liverpool,Defender,9,9
+286,Joseph Gomez,Gomez,12,Liverpool,Defender,9,7
+287,Naby Keita,Keita,12,Liverpool,Midfielder,9,0
+288,Diogo Teixeira da Silva,Diogo Jota,12,Liverpool,Forward,9,4
+289,Caoimhin Kelleher,Kelleher,12,Liverpool,Goalkeeper,9,0
+290,Ibrahima Konate,Konate,12,Liverpool,Defender,9,1
+291,Curtis Jones,Jones,12,Liverpool,Midfielder,9,0
+292,Konstantinos Tsimikas,Tsimikas,12,Liverpool,Defender,9,8
+293,Luis Diaz,Luis Diaz,12,Liverpool,Midfielder,9,8
+294,Harvey Elliott,Elliott,12,Liverpool,Midfielder,9,9
+296,Fabio Freitas Gouveia Carvalho,Carvalho,12,Liverpool,Midfielder,9,8
+297,Darwin Nunez Ribeiro,Darwin,12,Liverpool,Forward,9,6
+298,Calvin Ramsay,Ramsay,12,Liverpool,Defender,9,0
+497,Adrian San Miguel del Castillo,Adrian,12,Liverpool,Goalkeeper,9,0
+498,Rhys Williams,R.Williams,12,Liverpool,Defender,9,0
+499,Ben Davies,Davies,12,Liverpool,Defender,9,0
+500,Sepp van den Berg,Van den Berg,12,Liverpool,Defender,9,0
+501,Nathaniel Phillips,Phillips,12,Liverpool,Defender,9,1
+563,Luke Chambers,Chambers,12,Liverpool,Defender,9,0
+564,Stefan Bajcetic,Bajcetic,12,Liverpool,Midfielder,9,1
+584,Bobby Clark,Clark,12,Liverpool,Midfielder,8,1
+592,Harvey Davies,H.Davies,12,Liverpool,Goalkeeper,7,0
+620,Arthur Henrique Ramos de Oliveira Melo,Arthur,12,Liverpool,Midfielder,4,0
+299,Kyle Walker,Walker,13,Man City,Defender,10,7
+300,Ilkay Gundogan,Gundogan,13,Man City,Midfielder,10,9
+301,Kevin De Bruyne,De Bruyne,13,Man City,Midfielder,10,10
+302,John Stones,Stones,13,Man City,Defender,10,6
+303,Riyad Mahrez,Mahrez,13,Man City,Midfielder,10,8
+305,Jack Grealish,Grealish,13,Man City,Midfielder,10,5
+306,Joao Cancelo,Cancelo,13,Man City,Defender,10,10
+307,Ederson Santana de Moraes,Ederson,13,Man City,Goalkeeper,10,10
+308,Nathan Ake,Ake,13,Man City,Defender,10,7
+309,Aymeric Laporte,Laporte,13,Man City,Defender,10,1
+310,Zack Steffen,Steffen,13,Man City,Goalkeeper,10,0
+311,Bernardo Veiga de Carvalho e Silva,Bernardo,13,Man City,Midfielder,10,10
+312,Ruben Gato Alves Dias,Dias,13,Man City,Defender,10,9
+314,Phil Foden,Foden,13,Man City,Midfielder,10,10
+315,Rodrigo Hernandez,Rodri,13,Man City,Midfielder,10,9
+316,Cole Palmer,Palmer,13,Man City,Midfielder,10,6
+317,James McAtee,McAtee,13,Man City,Midfielder,10,0
+318,Erling Haaland,Haaland,13,Man City,Forward,10,10
+319,Julian Alvarez,Alvarez,13,Man City,Forward,10,8
+320,Luke Mbete-Tabu,Mbete,13,Man City,Defender,10,0
+322,Josh Wilson-Esbrand,Wilson-Esbrand,13,Man City,Defender,10,0
+323,Liam Delap,Delap,13,Man City,Forward,10,0
+324,Stefan Ortega Moreno,Ortega,13,Man City,Goalkeeper,10,0
+325,Kalvin Phillips,Phillips,13,Man City,Midfielder,10,1
+502,Scott Carson,Carson,13,Man City,Goalkeeper,10,0
+573,Rico Lewis,Lewis,13,Man City,Defender,10,3
+587,Sergio Gomez,Sergio Gomez,13,Man City,Defender,8,5
+599,Claudio Gomes,Gomes,13,Man City,Midfielder,7,0
+600,Ben Knight,Knight,13,Man City,Midfielder,7,0
+610,Manuel Akanji,Akanji,13,Man City,Defender,5,4
+326,Cristiano Ronaldo dos Santos Aveiro,Ronaldo,14,Man Utd,Forward,9,8
+327,David De Gea Quintana,De Gea,14,Man Utd,Goalkeeper,9,9
+328,Phil Jones,Jones,14,Man Utd,Defender,9,0
+329,Raphael Varane,Varane,14,Man Utd,Defender,9,8
+330,Harry Maguire,Maguire,14,Man Utd,Defender,9,3
+331,Frederico Rodrigues de Paula Santos,Fred,14,Man Utd,Midfielder,9,8
+332,Luke Shaw,Shaw,14,Man Utd,Defender,9,5
+333,Bruno Borges Fernandes,Fernandes,14,Man Utd,Midfielder,9,9
+334,Alex Telles,Telles,14,Man Utd,Defender,9,0
+335,Marcus Rashford,Rashford,14,Man Utd,Midfielder,9,9
+336,Donny van de Beek,Van de Beek,14,Man Utd,Midfielder,9,3
+337,Victor Lindelof,Lindelof,14,Man Utd,Defender,9,2
+338,Scott McTominay,McTominay,14,Man Utd,Midfielder,9,8
+339,Eric Bailly,Bailly,14,Man Utd,Defender,9,0
+340,Jadon Sancho,Sancho,14,Man Utd,Midfielder,9,8
+341,Aaron Wan-Bissaka,Wan-Bissaka,14,Man Utd,Defender,9,1
+342,Diogo Dalot Teixeira,Dalot,14,Man Utd,Defender,9,9
+343,Brandon Williams,B.Williams,14,Man Utd,Defender,9,0
+344,Anthony Elanga,Elanga,14,Man Utd,Midfielder,9,5
+345,Anthony Martial,Martial,14,Man Utd,Forward,9,3
+347,Facundo Pellistri Rebollo,Pellistri,14,Man Utd,Midfielder,9,0
+348,Tom Heaton,Heaton,14,Man Utd,Goalkeeper,9,0
+355,Martin Dubravka,Dubravka,14,Man Utd,Goalkeeper,9,0
+504,Tyrell Malacia,Malacia,14,Man Utd,Defender,9,7
+519,Christian Eriksen,Eriksen,14,Man Utd,Midfielder,9,8
+533,Lisandro Martinez,Martinez,14,Man Utd,Defender,9,9
+550,Amad Diallo,Amad,14,Man Utd,Midfielder,9,0
+551,Zidane Iqbal,Iqbal,14,Man Utd,Midfielder,9,0
+569,Alejandro Garnacho,Garnacho,14,Man Utd,Midfielder,9,1
+593,Carlos Henrique Casimiro,Casemiro,14,Man Utd,Midfielder,6,6
+609,Antony Matheus dos Santos,Antony,14,Man Utd,Midfielder,4,4
+615,Matej Kovar,Kovar,14,Man Utd,Goalkeeper,5,0
+643,Kobbie Mainoo,Mainoo,14,Man Utd,Midfielder,1,0
+349,Jonjo Shelvey,Shelvey,15,Newcastle,Midfielder,10,0
+350,Matt Ritchie,Ritchie,15,Newcastle,Defender,10,1
+351,Federico Fernandez,Fernandez,15,Newcastle,Defender,10,0
+352,Ciaran Clark,Clark,15,Newcastle,Defender,10,0
+353,Karl Darlow,Darlow,15,Newcastle,Goalkeeper,10,0
+354,Chris Wood,Wood,15,Newcastle,Forward,10,9
+356,Callum Wilson,Wilson,15,Newcastle,Forward,10,6
+357,Kieran Trippier,Trippier,15,Newcastle,Defender,10,10
+358,Dan Burn,Burn,15,Newcastle,Defender,10,10
+359,Ryan Fraser,Fraser,15,Newcastle,Midfielder,10,7
+360,Jamaal Lascelles,Lascelles,15,Newcastle,Defender,10,3
+361,Dwight Gayle,Gayle,15,Newcastle,Forward,10,0
+362,Paul Dummett,Dummett,15,Newcastle,Defender,10,0
+363,Javier Manquillo Gaitan,Manquillo,15,Newcastle,Defender,10,0
+364,Emil Krafth,Krafth,15,Newcastle,Defender,10,1
+365,Jacob Murphy,Murphy,15,Newcastle,Midfielder,10,10
+366,Fabian Schar,Schar,15,Newcastle,Defender,10,9
+367,Matt Targett,Targett,15,Newcastle,Defender,10,8
+368,Allan Saint-Maximin,Saint-Maximin,15,Newcastle,Midfielder,10,5
+369,Miguel Almiron Rejala,Almiron,15,Newcastle,Midfielder,10,10
+370,Sean Longstaff,S.Longstaff,15,Newcastle,Midfielder,10,10
+371,Joelinton Cassio Apolinario de Lira,Joelinton,15,Newcastle,Midfielder,10,9
+372,Jamal Lewis,Lewis,15,Newcastle,Defender,10,1
+373,Joe Willock,Willock,15,Newcastle,Midfielder,10,10
+374,Bruno Guimaraes Rodriguez Moura,Bruno Guimaraes,15,Newcastle,Midfielder,10,7
+375,Jeff Hendrick,Hendrick,15,Newcastle,Midfielder,10,0
+376,Nick Pope,Pope,15,Newcastle,Goalkeeper,10,10
+377,Sven Botman,Botman,15,Newcastle,Defender,10,8
+552,Elliot Anderson,Anderson,15,Newcastle,Midfielder,10,5
+594,Alexander Isak,Isak,15,Newcastle,Forward,7,3
+626,Loris Karius,Karius,15,Newcastle,Goalkeeper,4,0
+295,Neco Williams,N.Williams,16,Nott'm Forest,Defender,10,10
+378,Harry Arter,Arter,16,Nott'm Forest,Midfielder,10,0
+379,Steve Cook,Cook,16,Nott'm Forest,Defender,10,8
+380,Lyle Taylor,Taylor,16,Nott'm Forest,Forward,10,0
+381,Jack Colback,Colback,16,Nott'm Forest,Midfielder,10,3
+382,Brice Samba,Samba,16,Nott'm Forest,Goalkeeper,10,0
+383,Carlos Ribeiro Dias,Cafu,16,Nott'm Forest,Midfielder,10,1
+384,Joe Lolley,Lolley,16,Nott'm Forest,Midfielder,10,0
+385,Scott McKenna,McKenna,16,Nott'm Forest,Defender,10,10
+386,Mohamed Drager,Drager,16,Nott'm Forest,Defender,10,0
+387,Ryan Yates,Yates,16,Nott'm Forest,Midfielder,10,8
+388,Joe Worrall,Worrall,16,Nott'm Forest,Defender,10,7
+389,Jonathan Panzo,Panzo,16,Nott'm Forest,Defender,10,0
+390,Xande Nascimento da Costa Silva,Xande Silva,16,Nott'm Forest,Midfielder,10,0
+391,Sam Surridge,Surridge,16,Nott'm Forest,Forward,10,6
+392,Richie Laryea,Laryea,16,Nott'm Forest,Defender,10,0
+393,Loic Mbe Soh,Mbe Soh,16,Nott'm Forest,Defender,10,0
+394,Brennan Johnson,Johnson,16,Nott'm Forest,Forward,10,10
+395,Alex Mighten,Mighten,16,Nott'm Forest,Midfielder,10,1
+396,Braian Ojeda Rodriguez,Ojeda,16,Nott'm Forest,Midfielder,10,0
+397,Taiwo Awoniyi,Awoniyi,16,Nott'm Forest,Forward,10,9
+398,Dean Henderson,Henderson,16,Nott'm Forest,Goalkeeper,10,10
+399,Giulian Biancone,Biancone,16,Nott'm Forest,Defender,10,1
+474,Willy Boly,Boly,16,Nott'm Forest,Defender,10,1
+493,Morgan Gibbs-White,Gibbs-White,16,Nott'm Forest,Midfielder,10,10
+507,Moussa Niakhate,Niakhate,16,Nott'm Forest,Defender,10,2
+511,Omar Richards,Richards,16,Nott'm Forest,Defender,10,0
+518,Wayne Hennessey,Hennessey,16,Nott'm Forest,Goalkeeper,10,0
+523,Harry Toffolo,Toffolo,16,Nott'm Forest,Defender,10,7
+524,Lewis O'Brien,O'Brien,16,Nott'm Forest,Midfielder,10,8
+527,Jesse Lingard,Lingard,16,Nott'm Forest,Midfielder,10,8
+536,Orel Mangala,Mangala,16,Nott'm Forest,Midfielder,10,5
+553,Oliver Hammond,Hammond,16,Nott'm Forest,Midfielder,10,0
+582,Remo Freuler,Freuler,16,Nott'm Forest,Midfielder,8,6
+583,Cheikhou Kouyate,Kouyate,16,Nott'm Forest,Midfielder,8,7
+585,Emmanuel Dennis,Dennis,16,Nott'm Forest,Forward,8,7
+602,Renan Augusto Lodi dos Santos,Renan Lodi,16,Nott'm Forest,Defender,6,4
+621,Loic Bade,Bade,16,Nott'm Forest,Defender,5,0
+628,Serge Aurier,Aurier,16,Nott'm Forest,Defender,4,2
+21,Ainsley Maitland-Niles,Maitland-Niles,17,Southampton,Midfielder,10,3
+321,Romeo Lavia,Lavia,17,Southampton,Midfielder,10,5
+400,Theo Walcott,Walcott,17,Southampton,Midfielder,10,0
+401,Alex McCarthy,McCarthy,17,Southampton,Goalkeeper,10,0
+402,Oriol Romeu Vidal,Romeu,17,Southampton,Midfielder,10,1
+403,Nathan Redmond,Redmond,17,Southampton,Midfielder,10,1
+405,Stuart Armstrong,S.Armstrong,17,Southampton,Midfielder,10,9
+406,Mohamed Elyounoussi,Elyounoussi,17,Southampton,Midfielder,10,9
+407,James Ward-Prowse,Ward-Prowse,17,Southampton,Midfielder,10,10
+408,Adam Armstrong,A.Armstrong,17,Southampton,Forward,10,10
+409,Kyle Walker-Peters,Walker-Peters,17,Southampton,Defender,10,10
+411,Che Adams,Adams,17,Southampton,Forward,10,9
+412,Nathan Tella,Tella,17,Southampton,Midfielder,10,0
+413,Lyanco Silveira Neves Vojnovic,Lyanco,17,Southampton,Defender,10,3
+414,Yan Valery,Valery,17,Southampton,Defender,10,1
+415,Will Smallbone,Smallbone,17,Southampton,Midfielder,10,0
+416,Ibrahima Diallo,Diallo,17,Southampton,Midfielder,10,6
+417,Romain Perraud,Perraud,17,Southampton,Defender,10,8
+418,Moussa Djenepo,Djenepo,17,Southampton,Midfielder,10,8
+419,Tino Livramento,Livramento,17,Southampton,Defender,10,0
+420,Mohammed Salisu,Salisu,17,Southampton,Defender,10,9
+421,Mateusz Lis,Lis,17,Southampton,Goalkeeper,10,0
+422,Gavin Bazunu,Bazunu,17,Southampton,Goalkeeper,10,10
+423,Armel Bella-Kotchap,Bella-Kotchap,17,Southampton,Defender,10,9
+424,Willy Caballero,Caballero,17,Southampton,Goalkeeper,10,0
+512,Joe Ayodele-Aribo,Aribo,17,Southampton,Midfielder,10,10
+528,Sekou Mara,Mara,17,Southampton,Forward,10,8
+622,Juan Larios Lopez,Larios,17,Southampton,Defender,5,3
+623,Duje Caleta-Car,Caleta-Car,17,Southampton,Defender,5,2
+624,Samuel Edozie,Edozie,17,Southampton,Midfielder,5,4
+425,Hugo Lloris,Lloris,18,Spurs,Goalkeeper,10,10
+426,Fraser Forster,Forster,18,Spurs,Goalkeeper,10,0
+427,Harry Kane,Kane,18,Spurs,Forward,10,10
+428,Son Heung-min,Son,18,Spurs,Midfielder,10,10
+429,Matt Doherty,Doherty,18,Spurs,Defender,10,4
+430,Eric Dier,Dier,18,Spurs,Defender,10,10
+431,Lucas Rodrigues Moura da Silva,Lucas Moura,18,Spurs,Midfielder,10,3
+432,Ben Davies,Davies,18,Spurs,Defender,10,7
+433,Pierre-Emile Højbjerg,Højbjerg,18,Spurs,Midfielder,10,10
+434,Harry Winks,Winks,18,Spurs,Midfielder,10,0
+435,Davinson Sanchez,Sanchez,18,Spurs,Defender,10,6
+436,Ryan Sessegnon,R.Sessegnon,18,Spurs,Defender,10,8
+437,Steven Bergwijn,Bergwijn,18,Spurs,Midfielder,10,0
+438,Sergio Reguilon,Reguilon,18,Spurs,Defender,10,0
+439,Japhet Tanganga,Tanganga,18,Spurs,Defender,10,0
+440,Rodrigo Bentancur,Bentancur,18,Spurs,Midfielder,10,9
+441,Oliver Skipp,Skipp,18,Spurs,Midfielder,10,3
+442,Joe Rodon,Rodon,18,Spurs,Defender,10,0
+443,Cristian Romero,Romero,18,Spurs,Defender,10,7
+444,Yves Bissouma,Bissouma,18,Spurs,Midfielder,10,9
+445,Emerson Leite de Souza Junior,Emerson Royal,18,Spurs,Defender,10,8
+446,Dejan Kulusevski,Kulusevski,18,Spurs,Midfielder,10,7
+447,Dane Scarlett,Scarlett,18,Spurs,Forward,10,0
+448,Ivan Perisic,Perisic,18,Spurs,Defender,10,10
+449,Harvey White,White,18,Spurs,Midfielder,10,0
+450,Pape Matar Sarr,Sarr,18,Spurs,Midfielder,10,0
+451,Brandon Austin,Austin,18,Spurs,Goalkeeper,10,0
+452,Alfie Devine,Devine,18,Spurs,Midfielder,10,0
+453,Troy Parrott,Parrott,18,Spurs,Forward,10,0
+454,Richarlison de Andrade,Richarlison,18,Spurs,Forward,10,9
+513,Clement Lenglet,Lenglet,18,Spurs,Defender,10,4
+522,Djed Spence,Spence,18,Spurs,Defender,10,2
+554,Bryan Gil Salvatierra,Bryan,18,Spurs,Midfielder,10,0
+455,Lukasz Fabianski,Fabianski,19,West Ham,Goalkeeper,10,10
+456,Angelo Ogbonna,Ogbonna,19,West Ham,Defender,10,2
+457,Aaron Cresswell,Cresswell,19,West Ham,Defender,10,9
+458,Michail Antonio,Antonio,19,West Ham,Forward,10,10
+459,Craig Dawson,Dawson,19,West Ham,Defender,10,2
+460,Manuel Lanzini,Lanzini,19,West Ham,Midfielder,10,4
+461,Kurt Zouma,Zouma,19,West Ham,Defender,10,9
+462,Arthur Masuaku,Masuaku,19,West Ham,Defender,10,0
+463,Vladimir Coufal,Coufal,19,West Ham,Defender,10,8
+464,Said Benrahma,Benrahma,19,West Ham,Midfielder,10,8
+465,Jarrod Bowen,Bowen,19,West Ham,Midfielder,10,10
+466,Nikola Vlasic,Vlasic,19,West Ham,Midfielder,10,0
+467,Declan Rice,Rice,19,West Ham,Midfielder,10,10
+468,Tomas Soucek,Soucek,19,West Ham,Midfielder,10,10
+469,Pablo Fornals Malla,Fornals,19,West Ham,Midfielder,10,9
+471,Ben Johnson,Johnson,19,West Ham,Defender,10,5
+472,Nayef Aguerd,Aguerd,19,West Ham,Defender,10,0
+473,Alphonse Areola,Areola,19,West Ham,Goalkeeper,10,1
+509,Flynn Downes,Downes,19,West Ham,Midfielder,10,2
+529,Gianluca Scamacca,Scamacca,19,West Ham,Forward,10,8
+545,Emerson Palmieri dos Santos,Emerson,19,West Ham,Defender,10,7
+555,Harrison Ashby,Ashby,19,West Ham,Defender,10,0
+556,Conor Coventry,Coventry,19,West Ham,Midfielder,10,1
+571,Darren Randolph,Randolph,19,West Ham,Goalkeeper,10,0
+572,Armstrong Oko-Flex,Oko-Flex,19,West Ham,Midfielder,10,0
+575,Maxwel Cornet,Cornet,19,West Ham,Midfielder,9,5
+588,Thilo Kehrer,Kehrer,19,West Ham,Defender,8,8
+603,Lucas Tolentino Coelho de Lima,Paqueta,19,West Ham,Midfielder,6,6
+476,Raul Jimenez,Jimenez,20,Wolves,Forward,10,3
+477,Jonathan Castro Otto,Jonny,20,Wolves,Defender,10,10
+478,Jose Malheiro de Sa,Sa,20,Wolves,Goalkeeper,10,10
+480,Ruben da Silva Neves,Neves,20,Wolves,Midfielder,10,9
+481,Hwang Hee-chan,Hwang,20,Wolves,Midfielder,10,8
+482,Nelson Cabral Semedo,Semedo,20,Wolves,Defender,10,8
+483,Daniel Castelo Podence,Podence,20,Wolves,Midfielder,10,10
+484,Max Kilman,Kilman,20,Wolves,Defender,10,10
+485,Luke Cundle,Cundle,20,Wolves,Midfielder,10,0
+486,Pedro Lomba Neto,Neto,20,Wolves,Midfielder,10,8
+487,Rayan Ait-Nouri,Ait-Nouri,20,Wolves,Defender,10,9
+488,Fabio Silva,Fabio Silva,20,Wolves,Forward,10,0
+489,Toti Antonio Gomes,Toti,20,Wolves,Defender,10,2
+490,Francisco Jorge Tomas Oliveira,Chiquinho,20,Wolves,Midfielder,10,0
+491,Adama Traore Diarra,Adama,20,Wolves,Midfielder,10,7
+492,Matija Sarkic,Sarkic,20,Wolves,Goalkeeper,10,0
+494,Yerson Mosquera Valdelamar,Mosquera,20,Wolves,Defender,10,0
+503,Joao Filipe Iria Santos Moutinho,Moutinho,20,Wolves,Midfielder,10,8
+516,Nathan Collins,Collins,20,Wolves,Defender,10,7
+557,Jackson Smith,Smith,20,Wolves,Goalkeeper,10,0
+558,Hugo Bueno Lopez,Bueno,20,Wolves,Defender,10,1
+566,Joseph Hodge,Hodge,20,Wolves,Midfielder,10,2
+567,Connor Ronan,Ronan,20,Wolves,Midfielder,10,0
+568,Chem Campbell,Campbell,20,Wolves,Midfielder,10,4
+579,Goncalo Manuel Ganchinho Guedes,Guedes,20,Wolves,Midfielder,9,8
+589,Matheus Luiz Nunes,Matheus,20,Wolves,Midfielder,8,8
+608,Sasa Kalajdzic,Kalajdzic,20,Wolves,Forward,5,1
+625,Diego Da Silva Costa,Diego Costa,20,Wolves,Forward,4,3
+629,Boubacar Traore,Traore,20,Wolves,Midfielder,4,3
