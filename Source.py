@@ -660,8 +660,11 @@ def write_table(df, name, key_col, xdf, df_n, xdf_n, class_args):
         else:
             dfStringStyler = dfString.style
         dfStringStyler.set_table_attributes('class="DataTable sortable"')
-        #html_table = dfStringStyler.render().replace('\n', '')
-        html_table = dfStringStyler.to_html().replace('\n', '')
+        
+        
+        
+        html_table = dfStringStyler.render().replace('\n', '')
+        #html_table = dfStringStyler.to_html().replace('\n', '')
         BS_table = BeautifulSoup(html_table, 'html.parser')
         css = str(BS_table('style')[0])
         html_ = str(BS_table('table')[0])
