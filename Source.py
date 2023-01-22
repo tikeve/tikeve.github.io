@@ -888,12 +888,19 @@ def adjustment(name, df, class_args):
     else:
         dfAdjusted = Players.copy()
         weight = Player_Attack_weight_unadj
-        
-    dfAd = df/weight #Main formula
     
-    X = dfAd[dfAd.columns[::-1]]
+#     print(name)
+#     print(df.columns)
+#     print(weight.columns)
+    dfAd = df/weight #Main formula
+    #print(dfAd.columns)
+    dfAd = dfAd[list(df.columns)]
+    
+    X = dfAd[list(df.columns[::-1])]
     dfAdjusted[X.columns] = X
     del_empty_col(dfAdjusted)
+#     print(dfAdjusted.columns)
+    #print(dfAdjusted)
     
     if Name[0] == 'Team':
         dfAdjusted[f'{key_par} av adj'] = dfAd.mean(axis=1)
@@ -903,7 +910,8 @@ def adjustment(name, df, class_args):
         a = dfAdjusted[f'{key_par} per fixture adj']
         dfAdjusted.insert(n+1, f'{key_par} per game adj', a*Players['Team games']/noZ(Players['Played']))
     
-    
+#     print(dfAd.columns)
+#     print(dfAdjusted.columns)
     return dfAd, dfAdjusted
         
 if __name__ == '__main__':
