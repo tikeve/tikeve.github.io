@@ -309,7 +309,7 @@ if table_len > 0:
     #Name_Dictionary = Exc_dict(Name_Dictionary, 'Nicolas N&#039;Koulou','Nicolas Nkoulou')
     Name_Dictionary = Exc_dict(Name_Dictionary, 'Rayan Ait Nouri','Rayan Ait-Nouri')
     Name_Dictionary = Exc_dict(Name_Dictionary, 'Cheick Oumar Doucoure','Cheick Doucoure')
-    Name_Dictionary = Exc_dict(Name_Dictionary, 'Armel Bella Kotchap','Armel Bella-Kotchap')
+#     Name_Dictionary = Exc_dict(Name_Dictionary, 'Armel Bella Kotchap','Armel Bella-Kotchap')
     Name_Dictionary = Exc_dict(Name_Dictionary, 'Hamed Junior Traore','Hamed Traore')
     Name_Dictionary = Exc_dict(Name_Dictionary, 'Emerson','Emerson Leite de Souza Junior')
     #display(Name_Dictionary)
