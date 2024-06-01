@@ -312,6 +312,18 @@ if table_len > 0:
 #     Name_Dictionary = Exc_dict(Name_Dictionary, 'Armel Bella Kotchap','Armel Bella-Kotchap')
     Name_Dictionary = Exc_dict(Name_Dictionary, 'Hamed Junior Traore','Hamed Traore')
     Name_Dictionary = Exc_dict(Name_Dictionary, 'Emerson','Emerson Leite de Souza Junior')
+    
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Vinicius Souza','Vini de Souza Costa')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Diogo Jota','Diogo Teixeira da Silva')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Lucas Paqueta','Lucas Tolentino Coelho de Lima')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Ameen Al Dakhil','Ameen Al-Dakhil')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Naif Aguerd','Nayef Aguerd')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Odisseas Vlachodimos','Odysseas Vlachodimos')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Benoit Badiashile Mukinayi','Benoit Badiashile')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Fode Toure','Fode Ballo-Toure')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Yehor Yarmolyuk','Yegor Yarmoliuk')
+    Name_Dictionary = Exc_dict(Name_Dictionary, 'Kaine Hayden','Kaine Kesler-Hayden')
+    
     #display(Name_Dictionary)
 
     if not Table_FPL.empty:
